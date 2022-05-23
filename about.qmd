@@ -1,6 +1,6 @@
 ---
 title: "Welcome!"
-image: profile.jpg
+image: data/images/about-profile-circular-scaled-75.png
 about:
   template: jolla
   links:

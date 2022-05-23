@@ -26,5 +26,19 @@
     "title": "Welcome!",
     "section": "",
     "text": "This is my personal website which contains info about my research and where I blog about various topics of interest in statistics and machine learning.\nPlease browse around, and feel free to leave a comment."
+  },
+  {
+    "objectID": "data/rmds/acknowledgment_profile_salil.html",
+    "href": "data/rmds/acknowledgment_profile_salil.html",
+    "title": "ss_personal_quarto_blog",
+    "section": "",
+    "text": "I’d like to thank Salil Shrotriya for taking my profile pic which is the preview image for this post."
+  },
+  {
+    "objectID": "data/rmds/acknowledgment_preview_tidyfun_salil.html",
+    "href": "data/rmds/acknowledgment_preview_tidyfun_salil.html",
+    "title": "ss_personal_quarto_blog",
+    "section": "",
+    "text": "I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker png files were sourced from here"
   }
 ]
