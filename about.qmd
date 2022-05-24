@@ -9,11 +9,10 @@ about:
       href: https://twitter.com/shamindraas
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/shamindras/
+      href: https://www.linkedin.com/in/shamindras
     - icon: github
       text: Github
       href: https://github.com/shamindras
-      
 ---
 
 Hi - I’m **Shamindra**. I am fortunate to be a graduate student

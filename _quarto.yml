@@ -2,18 +2,28 @@ project:
   type: website
 
 website:
-  title: "ss_personal_quarto_blog"
+  title: "Shamindra Shrotriya"
+  site-url: https://www.shamindras.com/
+  repo-url: https://github.com/shamindras/ss_personal_quarto_blog
+  repo-actions: [edit, issue]
+  open-graph: true
+  twitter-card:
+    creator: "@shamindraas"
+    card-style: summary_large_image
   navbar:
     right:
-      - about.qmd
+      - posts.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/shamindras
       - icon: twitter
-        href: https://twitter.com
+        href: https://twitter.com/shamindraas
+  google-analytics: "UA-145015693-1"
+  page-footer: 
+    right:
+      - text: blog source
+        href: https://github.com/shamindras/ss_personal_quarto_blog
+
 format:
   html:
-    theme: cosmo
+    theme: ember.scss
     css: styles.css
-
-
-

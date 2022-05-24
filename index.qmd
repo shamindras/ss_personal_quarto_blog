@@ -1,14 +1,28 @@
 ---
-title: "ss_personal_quarto_blog"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: true
+title: "Welcome"
+image: data/images/about-profile-circular-scaled-75.png
+about:
+  template: jolla
+  image-width: 10em
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/shamindraas
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/shamindras
+    - icon: github
+      text: Github
+      href: https://github.com/shamindras
 ---
 
+Hi - I’m **Shamindra**. I am fortunate to be a graduate student
+in the **Department of Statistics and Data Science** at **Carnegie Mellon
+University**.
+
+This is my personal website which contains info about my research and where I
+blog about various topics of interest in statistics and machine
+learning.
+
+Please browse around, and feel free to leave a comment.
 
