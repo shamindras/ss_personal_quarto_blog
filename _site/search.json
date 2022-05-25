@@ -46,7 +46,7 @@
     "href": "posts.html",
     "title": "Blog Posts",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nWelcome to Shamindra’s Site\n\n\nDetailing interesting things in the life of a PhD statistics student at CMU\n\n\n\n\npersonal\n\n\n\n\n\n\n\n\n\n\n\nJul 10, 2019\n\n\nShamindra Shrotriya\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nWelcome to Shamindra’s Site\n\n\n\n\n\n\n\npersonal\n\n\n\n\nDetailing interesting things in the life of a PhD statistics student at CMU\n\n\n\n\n\n\nJul 10, 2019\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2019-07-10-shrotriya2019welcome/shrotriya2019welcome.html",
@@ -75,5 +75,26 @@
     "title": "Welcome to Shamindra’s Site",
     "section": "Credits",
     "text": "Credits\nThe credit to starting this blog goes to the following people. I hope to not disappoint and create some useful content here 🖖.\n\nYihui Xie, JJ Allaire and Rich Iannone - for co-developing the fantastic distill package which upon which this blog/ site is based\nRachel Thomas for posting this fantastic blog post encouraging people like me to (finally!) create a blog\nMy parents for encouraging to communicate my passion for statistics. I secretly think that this is their way of minimizing my passionate rants about the bootstrap in our regular Skype chats (the rants will still continue though…)."
+  },
+  {
+    "objectID": "posts/2019-07-10-shrotriya2019welcome/index.html#acknowledgments",
+    "href": "posts/2019-07-10-shrotriya2019welcome/index.html#acknowledgments",
+    "title": "Welcome to Shamindra’s Site",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\n\nI’d like to thank Salil Shrotriya for taking my profile pic which is the preview image for this post."
+  },
+  {
+    "objectID": "data/qmds/acknowledgment_preview_tidyfun_salil.html",
+    "href": "data/qmds/acknowledgment_preview_tidyfun_salil.html",
+    "title": "Shamindra Shrotriya",
+    "section": "",
+    "text": "I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker png files were sourced from here"
+  },
+  {
+    "objectID": "data/qmds/acknowledgment_profile_salil.html",
+    "href": "data/qmds/acknowledgment_profile_salil.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "I’d like to thank Salil Shrotriya for taking my profile pic which is the preview image for this post."
   }
 ]

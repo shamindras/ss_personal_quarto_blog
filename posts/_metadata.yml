@@ -4,5 +4,28 @@
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
 freeze: true
 
+author:
+  - name: Shamindra Shrotriya
+    url: https://www.shamindras.com
+
+# Default for table of contents
+toc: true
+toc-title: Table of contents
+toc-location: left
+
 # Enable banner style title blocks
 title-block-banner: true
+
+share: [twitter, linkedin]
+
+# Default knitr options
+execute:
+  echo: true
+  message: true
+  warning: true
+  
+# Default fields for citation
+citation: true
+
+# Enable CC licence appendix
+license: "CC BY"

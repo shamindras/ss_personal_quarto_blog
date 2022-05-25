@@ -64,9 +64,9 @@ ul.task-list{list-style: none;}
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -95,7 +95,7 @@ ga('send', {
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Shamindra Shrotriya - Blog Posts">
+<link rel="alternate" type="application/rss+xml" title="Shamindra Shrotriya" href="posts.xml"><meta property="og:title" content="Shamindra Shrotriya - Blog Posts">
 <meta property="og:site-name" content="Shamindra Shrotriya">
 <meta name="twitter:title" content="Shamindra Shrotriya - Blog Posts">
 <meta name="twitter:creator" content="@shamindraas">
@@ -119,6 +119,12 @@ ga('send', {
   <li class="nav-item">
     <a class="nav-link active" href="./posts.html" aria-current="page">blog</a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data/pdfs/CV.pdf">cv</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data/pdfs/resume.pdf">resume</a>
+  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/shamindras"><i class="bi bi-github" role="img">
 </i> 
@@ -126,6 +132,11 @@ ga('send', {
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/shamindraas"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="./index.xml"><i class="bi bi-rss" role="img">
 </i> 
  </a>
   </li>  
@@ -197,7 +208,7 @@ ga('send', {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="personal" data-listing-date-sort="1562731200000" data-listing-file-modified-sort="1653422788469" data-listing-reading-time-sort="1.19">
+<div class="quarto-post image-right" data-index="0" data-categories="personal" data-listing-date-sort="1562731200000" data-listing-file-modified-sort="1653497537868" data-listing-reading-time-sort="1.26">
 <div class="thumbnail">
 <p><a href="./posts/2019-07-10-shrotriya2019welcome/index.html"> <img src="./posts/2019-07-10-shrotriya2019welcome/images/about-profile-circular-scaled-hex.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -207,7 +218,7 @@ ga('send', {
 Welcome to Shamindra’s Site
 </h3>
 <div class="listing-subtitle">
-<p>Detailing interesting things in the life of a PhD statistics student at CMU</p>
+
 </div>
 </a>
 <div class="listing-categories">
@@ -217,7 +228,7 @@ personal
 </div>
 <a href="./posts/2019-07-10-shrotriya2019welcome/index.html">
 <div class="listing-description">
-Hi there! I’m <strong>Shamindra Shrotriya</strong>, a graduate student in the Department of Statistics and Data Science at the wonderful Carnegie Mellon University. I’ve decided to start blogging to document my learning and development in statistics as a graduate student.
+<p>Detailing interesting things in the life of a PhD statistics student at CMU</p>
 </div>
 </a>
 </div>
@@ -225,9 +236,6 @@ Hi there! I’m <strong>Shamindra Shrotriya</strong>, a graduate student in the 
 <a href="./posts/2019-07-10-shrotriya2019welcome/index.html">
 <div class="listing-date">
 Jul 10, 2019
-</div>
-<div class="listing-author">
-Shamindra Shrotriya
 </div>
 </a>
 </div>

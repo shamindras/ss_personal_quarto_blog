@@ -3,7 +3,7 @@ project:
 
 website:
   title: "Shamindra Shrotriya"
-  site-url: https://www.shamindras.com/
+  site-url: https://www.shamindras.com
   repo-url: https://github.com/shamindras/ss_personal_quarto_blog
   repo-actions: [edit, issue]
   open-graph: true
@@ -14,10 +14,16 @@ website:
     right:
       - text: blog
         file: posts.qmd
+      - text: "cv"
+        href: data/pdfs/CV.pdf
+      - text: "resume"
+        href: data/pdfs/resume.pdf
       - icon: github
         href: https://github.com/shamindras
       - icon: twitter
         href: https://twitter.com/shamindraas
+      - icon: rss
+        href: index.xml
   google-analytics: "UA-145015693-1"
   page-footer: 
     right:
