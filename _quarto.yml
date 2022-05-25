@@ -12,7 +12,8 @@ website:
     card-style: summary_large_image
   navbar:
     right:
-      - posts.qmd
+      - text: blog
+        file: posts.qmd
       - icon: github
         href: https://github.com/shamindras
       - icon: twitter
