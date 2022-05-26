@@ -26,32 +26,6 @@ library(bookdown)
 library(emo)
 ```
 
-<!-- Place fontawesome kit's code here -->
-
-```{=html}
-<script src="https://kit.fontawesome.com/a403fab802.js" crossorigin="anonymous"></script>
-```
-```{css, include=FALSE}
-a.wiki-preview {
-  color: #0645ad;
-  text-decoration: none;
-  border-bottom: 1px dotted #0645ad;
-}
-.wiki-preview::after {
-  font-family: serif;
-  content: " W";
-  vertical-align: super;
-  font-size: 6pt;
-}
-```
-
-<!-- https://chimeces.com/context-cards/ -->
-
-<!-- Source: https://mpopov.com/wikipedia-context-cards-test/ -->
-
-```{=html}
-<script src="https://unpkg.com/context-cards/dist/context-cards.js"></script>
-```
 # TL;DR
 
 I walkthrough a cool and possibly less known result connecting convexity and

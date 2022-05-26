@@ -14,7 +14,7 @@
 <item>
   <title>Characterizing norm triangle inequalites via convexity</title>
   <link>https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/index.html</link>
-  <description><![CDATA[ <!-- Place fontawesome kit's code here --><script src="https://kit.fontawesome.com/a403fab802.js" crossorigin="anonymous"></script><!-- https://chimeces.com/context-cards/ --><!-- Source: https://mpopov.com/wikipedia-context-cards-test/ --><script src="https://unpkg.com/context-cards/dist/context-cards.js"></script><section id="tldr" class="level1 page-columns page-full"><h1>TL;DR</h1>
+  <description><![CDATA[ <section id="tldr" class="level1 page-columns page-full"><h1>TL;DR</h1>
 <p>I walkthrough a cool and possibly less known result connecting convexity and the triangle inequalities for norms. Using this result, typical proofs of the triangle inequality for a proposed norm function are significantly simplified. This exposition is based on <span class="citation" data-cites="robinson2020introfuncanalysis_book">(Chapter 3, Robinson 2020)</span> <sup>1</sup>.</p>
 <aside><p><span class="citation" data-cites="robinson2020introfuncanalysis_book">(Robinson 2020)</span> is a wonderful functional analysis book, highly recommend it 💯!</p>
 </aside></section><section id="background---norms" class="level1 page-columns page-full"><h1>Background - Norms</h1>
