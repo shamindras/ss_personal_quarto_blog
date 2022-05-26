@@ -21,8 +21,8 @@ Hi - I’m **Shamindra**! I am fortunate to be a graduate student in the
 [Carnegie Mellon University](https://www.cmu.edu/).
 
 This is my personal website which contains info about my research and where I
-blog about various topics of interest in statistics and machine
-learning.
+[blog](https://www.shamindras.com/posts.html) about various topics of interest 
+in statistics and machine learning.
 
 Please browse around, and feel free to leave a comment.
 
