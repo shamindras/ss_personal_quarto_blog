@@ -16,9 +16,9 @@ about:
       href: https://github.com/shamindras
 ---
 
-Hi - I’m **Shamindra**. I am fortunate to be a graduate student
-in the **Department of Statistics and Data Science** at **Carnegie Mellon
-University**.
+Hi - I’m **Shamindra**! I am fortunate to be a graduate student in the 
+[Department of Statistics and Data Science](http://www.stat.cmu.edu/) at 
+[Carnegie Mellon University](https://www.cmu.edu/).
 
 This is my personal website which contains info about my research and where I
 blog about various topics of interest in statistics and machine

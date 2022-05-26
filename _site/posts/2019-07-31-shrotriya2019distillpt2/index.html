@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.433">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Shamindra Shrotriya">
+<meta name="dcterms.date" content="2019-07-31">
+<meta name="description" content="The second part of a series on how I upgraded this Distill themed blog">
+<title>shamindra shrotriya - Upgrading Distill Blog Settings</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script><script src="../../site_libs/quarto-nav/headroom.min.js"></script><script src="../../site_libs/clipboard/clipboard.min.js"></script><meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../../site_libs/quarto-search/fuse.min.js"></script><script src="../../site_libs/quarto-search/quarto-search.js"></script><script src="../../site_libs/quarto-html/quarto.js"></script><script src="../../site_libs/quarto-html/popper.min.js"></script><script src="../../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../../site_libs/quarto-html/anchor.min.js"></script><link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script><link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-145015693-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script><link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="shamindra shrotriya - Upgrading Distill Blog Settings">
+<meta property="og:description" content="The second part of a series on how I upgraded this `Distill` themed blog
+">
+<meta property="og:image" content="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png">
+<meta property="og:site-name" content="shamindra shrotriya">
+<meta property="og:image:height" content="568">
+<meta property="og:image:width" content="706">
+<meta name="twitter:title" content="shamindra shrotriya - Upgrading Distill Blog Settings">
+<meta name="twitter:description" content="The second part of a series on how I upgraded this `Distill` themed blog
+">
+<meta name="twitter:image" content="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png">
+<meta name="twitter:creator" content="@shamindraas">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="568">
+<meta name="twitter:image-width" content="706">
+</head>
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">shamindra shrotriya</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../posts.html">blog</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../data/pdfs/CV.pdf">cv</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../data/pdfs/resume.pdf">resume</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/shamindras"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/shamindraas"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+<div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Upgrading Distill Blog Settings</h1>
+                  <div>
+        <div class="description">
+          <p>The second part of a series on how I upgraded this <code>Distill</code> themed blog</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">distill</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Shamindra Shrotriya </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 31, 2019</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#step-0-introduction" id="toc-step-0-introduction" class="nav-link active" data-scroll-target="#step-0-introduction">Step 0: Introduction</a></li>
+  <li><a href="#step-1-setup-disqus-comments" id="toc-step-1-setup-disqus-comments" class="nav-link" data-scroll-target="#step-1-setup-disqus-comments">Step 1: Setup Disqus comments</a></li>
+  <li><a href="#step-2-setup-google-analytics-tracking" id="toc-step-2-setup-google-analytics-tracking" class="nav-link" data-scroll-target="#step-2-setup-google-analytics-tracking">Step 2: Setup Google Analytics tracking</a></li>
+  <li><a href="#step-3-add-netlify-status-badge" id="toc-step-3-add-netlify-status-badge" class="nav-link" data-scroll-target="#step-3-add-netlify-status-badge">Step 3: Add Netlify Status Badge</a></li>
+  <li><a href="#step-4-add-blog-post-sharing-options" id="toc-step-4-add-blog-post-sharing-options" class="nav-link" data-scroll-target="#step-4-add-blog-post-sharing-options">Step 4: Add blog post sharing options</a></li>
+  <li><a href="#step-5-add-correctionschange-tracking-and-rss-feed" id="toc-step-5-add-correctionschange-tracking-and-rss-feed" class="nav-link" data-scroll-target="#step-5-add-correctionschange-tracking-and-rss-feed">Step 5: Add Corrections/Change Tracking and RSS feed</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#concluding-thoughts" id="toc-concluding-thoughts" class="nav-link" data-scroll-target="#concluding-thoughts">Concluding Thoughts</a></li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shamindras/ss_personal_quarto_blog/edit/main/posts/2019-07-31-shrotriya2019distillpt2/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shamindras/ss_personal_quarto_blog/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content"><section id="step-0-introduction" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-0-introduction">Step 0: Introduction</h2>
+<p>This is a meta blogpost and a second-part in a series to describe how I setup this personal academic blog using the amazing <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="h//www.rstudio.com/" target="_blank">RStudio</a> team.</p>
+<p>The first part of this meta blogpost series can be <a href="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/" target="_blank">found here</a>, where I detailed the steps to setup this blog using Netlify and Google Domains. If you haven’t setup a <code>distill</code> themed blog then you are encouraged to check it out before reading this post.</p>
+<p>Fortunately <code>distill</code> comes with easy to configure settings as well see below. I’ve only implemented some of the options available. I should note that the RStudio <code>distill</code> team has already created an <a href="https://rstudio.github.io/distill/blog.html" target="_blank">excellent distill blog creation tutorial</a> which I thoroughly used and highly recommend to new users to check out.</p>
+<aside>
+Admittedly this blogpost is verbose, but hopefully the details help <strong>new users</strong> of the <code>distill</code> blogging package.
+</aside><p>With that said, here are some key upgrades I made to this blog.</p>
+</section><section id="step-1-setup-disqus-comments" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-1-setup-disqus-comments">Step 1: Setup Disqus comments</h2>
+<p>I really wanted to setup some comments system for each blogpost. This way I can learn new tips from readers and find out how to improve posts going forward. I will go with the recommended <a href="https://disqus.com" target="_blank">Disqus comments option</a> from the <a href="https://rstudio.github.io/distill/blog.html#comments-and-sharing" target="_blank">distill blog</a>. I simply created a <a href="https://disqus.com" target="_blank">Disqus</a> account and selected <strong>Get Started</strong>. I then clicked the following button to <em>Install Disqus on my site</em>.</p>
+<center>
+<div class="cell" data-hash="index_cache/html/step-01-02-screenshot_284ea3c24477471600645327fcbc2d0c">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="../../Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png" class="external img-fluid figure-img" width="353"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Getting Started with Disqus</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</center>
+<p>I was then presented with the following Disqus site configuration menu. I entered <code>https:://www.shamindras.com/</code> for my <strong>Website Name</strong> and manually set my <strong>Disqus shortname</strong> to be <code>shamindras-distill</code> to be easier to remember and specific to this site, in case I make more websites later on. This Disqus shortname is important to note down (🖊) as we’ll see shortly.</p>
+<center>
+<div class="cell" data-hash="index_cache/html/step-01-03-screenshot_8e0768c3e1586aff5324e81eb90fb763">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="../../Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_03.png" class="external img-fluid figure-img" width="668"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Setup Disqus shortname</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</center>
+<p>After clicking <strong>Create Site</strong> in the previous menu I proceeded to select the <em>free</em> plan option by subscribing to the <em>Basic, Free, Ads Supported</em> comments option as seen below:</p>
+<aside>
+As a student got to always know when to get a freebie <code>r emo::ji("smile")</code>
+</aside><center>
+<div class="cell" data-hash="index_cache/html/step-01-04-screenshot_946d4e57962cfff8f43b7996ec16b5f9">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="../../Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_04.png" class="external img-fluid figure-img" width="776"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Select Basic (Free, Ads supported) mode</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</center>
+<p>In terms of implementing <code>Disqus</code> on my site, I clicked on the following button to install Disqus on my site manually:</p>
+<center>
+<div class="cell" data-hash="index_cache/html/step-01-05-screenshot_ceeaa6562af3548c532fa4d841e39e22">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="../../Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_05.png" class="external img-fluid figure-img" width="507"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Manual installation of Disqus</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</center>
+<p>Before finishing the manual installation of <code>Disqus</code> I ensured that I set the following configuration options. I particularly like setting an opiononated comments policy and selected the <a href="https://grist.org/grist-comment-policy/" target="_blank">Grist Comment Policy</a>:</p>
+<center>
+<div class="cell" data-hash="index_cache/html/step-01-06-screenshot_cbd2f1838e8932e8ef966a4090092cce">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="../../Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_06.png" class="external img-fluid figure-img" width="822"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Disqus Configuration Settings</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</center>
+<p>Finally to ensure that the implementation is completed I added the following line to the <code>_site.yml</code> post using the <strong>Disqus shortname</strong> set earlier i.e. <code>shamindras-distill</code> and ensuring <code>hidden: true</code> so that the comments are not expanded by default:</p>
+<aside><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
+</aside><div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">collections:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">posts:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">disqus:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="ex">shortname:</span> shamindras-distill</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="ex">hidden:</span> true</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We now see the following comments option at the bottom of every post:</p>
+<center>
+<div class="cell" data-hash="index_cache/html/step-01-07-screenshot_95823c8754870d63ee07fb1c087e7f83">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="../../Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_07.png" class="external img-fluid figure-img" width="230"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Distill Disqus Comments Selection</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</center>
+<p>You can read more about setting up comments from the official <code>distill</code> blog <a href="https://rstudio.github.io/distill/blog.html#comments-and-sharing">here</a></p>
+</section><section id="step-2-setup-google-analytics-tracking" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-2-setup-google-analytics-tracking">Step 2: Setup Google Analytics tracking</h2>
+<p>I also wanted to setup basic user viewing tracking for my site. Fortunately <code>distill</code> can be easily configured to work with <a href="https://analytics.google.com/analytics/web" target="_blank">Google Analytics</a>. In order to set this up I simply created an account for <code>Google Analytics</code> (using my personal gmail account). I then logged in and selected the option to track my website as follows:</p>
+<center>
+<div class="cell" data-hash="index_cache/html/step-02-01-screenshot_a5c412cf4387943fac80c562b66314c2">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="../../Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_02_ga_01.png" class="external img-fluid figure-img" width="417"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Google Analytics Settings</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</center>
+<p>Note that I specified the <strong>Website Name</strong> field to be <code>shamindras-distill</code>. This is indeed the same as the Disqus shortname from earlier but did not have to be. I just did it for consistency and easy reference. I was then given a <strong>Google Analytics token</strong> and concluded this setup by adding the token to the <code>_site.yml</code> file as follows:</p>
+<aside><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
+</aside><div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">google_analytics:</span> <span class="st">"UA-145015693-1"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can read more about setting up Google Analytics from the official <code>distill</code> blog <a href="https://rstudio.github.io/distill/website.html#google-analytics">here</a></p>
+</section><section id="step-3-add-netlify-status-badge" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-3-add-netlify-status-badge">Step 3: Add Netlify Status Badge</h2>
+<p>Since <a href="https://www.netlify.com" target="_blank">Netlify</a> is the web hosting platform for my site (see setup details <a href="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/#step-8-deploy-your-website" target="_blank">here</a>). I just logged into my Netlify account and went to my <strong>Site Details</strong> and obtained the following code from the <strong>Status Badges</strong> option.</p>
+<center>
+<div class="cell" data-hash="index_cache/html/step-03-01-screenshot_e215eec759022bcb615cc2b536b7d33d">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="../../Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_03_netlify_01.png" class="external img-fluid figure-img" width="1234"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Netlify Badge Code</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</center>
+<p>I copy-pasted the above code in at the top of my site <code>README.md</code> file. This let’s me quickly know whether my website is up and running as expected by simply checking out my <a href="https://github.com/shamindras/ss_personal_distill_blog" target="_blank">github page</a>.</p>
+<aside><strong>Note:</strong> You can see my <code>README.md</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md">here</a>
+</aside></section><section id="step-4-add-blog-post-sharing-options" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-4-add-blog-post-sharing-options">Step 4: Add blog post sharing options</h2>
+<p>It is easy to configure distill to allow for easy sharing of posts using a variety of social media platforms. I allow for <strong>twitter, linkedin, pinterest, and facebook.</strong> I did this by simply adding the following line in the <code>_site.yml</code> file:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">collections:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">posts:</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">share:</span> [twitter, linkedin, pinterest, facebook]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now the following sharing options appear at the bottom of every post:</p>
+<center>
+<div class="cell" data-hash="index_cache/html/step-04-01-screenshot_b4bd9d3eb344ac8c296ccd2159a3c8b1">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="../../Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_04_sharing_01.png" class="external img-fluid figure-img" width="191"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Distill Sharing Options</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</center>
+<p>I also added in the following lines to <code>_site.yml</code> to ensure that <a href="https://rstudio.github.io/distill/metadata.html#twitter-card" target="_blank">twitter cards</a> are correctly generated when posts are shared on twitter:</p>
+<aside><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
+</aside><div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">twitter:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">site:</span> <span class="st">"@shamindraas"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">creator:</span> <span class="st">"@shamindraas"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="step-5-add-correctionschange-tracking-and-rss-feed" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-5-add-correctionschange-tracking-and-rss-feed">Step 5: Add Corrections/Change Tracking and RSS feed</h2>
+<p>I frequently make edits to blogposts and intend to do so going forward. Fortunately <code>distill</code> makes it easy <strong>track changes/corrections</strong> made to blogposts. I did this by simply adding the site repo url to the <code>_site.yml</code> as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">repository_url:</span> https://github.com/shamindras/ss_personal_distill_blog</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now the following appears at the bottom of all blogposts:</p>
+<center>
+<div class="cell" data-hash="index_cache/html/step-05-01-screenshot_d0a0c3a55aabefdae52f0b6a62141c4c">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="../../Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_05_trackcorr_01.png" class="external img-fluid figure-img" width="489"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Changes and Corrections Tracking</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</center>
+<p>So users can easily track changes or file any concerns as issues, though hopefully the <code>Disqus</code> comment feature makes this easier for everyone.</p>
+<p>Finally it is easy to add an <strong>RSS feed</strong> for the blog by simply adding the following to <code>_site.yml</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">base_url:</span> https://www.shamindras.com/</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">navbar:</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">left:</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">-</span> icon: fa fa-rss</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>      <span class="ex">href:</span> index.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<aside><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
+</aside><p>The critical elements are adding in the <code>base_url</code> fields and adding in <code>fa fa-rss</code> which is derived from the <code>index.xml</code> file. The <code>index.xml</code> file is automatically generated from the <code>index.Rmd</code> when you render the <code>distill</code> blog using the usual command:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rmarkdown::render_site</span><span class="er">(</span><span class="fu">here::here()</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="next-steps" class="level2"><h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>In terms of core <code>distill</code> blog settings, these are the main options that I’m happy to implement for now. For me the next steps are more about <strong>customizing my own blog workflow</strong>. This will involve setting up utilities to automatically:</p>
+<ul>
+<li>
+<strong>Wrap Rmd files</strong> to 80 characters for consistency</li>
+<li>Quickly <strong>delete unused files</strong> e.g.&nbsp;<code>DS_Store</code> files on mac</li>
+<li>
+<strong>Clear knitr cache</strong> for all posts and thoroughly re-render the site</li>
+</ul>
+<p>I expect to do this using a combination of <code>R</code> functions/<code>Makefile</code> workflow, but do stay tuned!</p>
+</section><section id="concluding-thoughts" class="level2"><h2 class="anchored" data-anchor-id="concluding-thoughts">Concluding Thoughts</h2>
+<p>As it can be seen it is quite easy to customize <code>distill</code> for commonly required features. Really great work by the RStudio team in making such customizations so user-friendly 👍.</p>
+
+
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
+  author = {Shamindra Shrotriya},
+  title = {Upgrading {Distill} {Blog} {Settings}},
+  date = {2019-07-31},
+  url = {https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2019" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Shamindra Shrotriya. 2019. <span>“Upgrading Distill Blog
+Settings.”</span> July 31, 2019. <a href="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2">https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2</a>.
+</div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="https://github.com/shamindras/ss_personal_quarto_blog">blog source</a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+</body></html>

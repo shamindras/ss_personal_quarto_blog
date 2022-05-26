@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.433">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Shamindra Shrotriya">
+<meta name="dcterms.date" content="2019-08-24">
+<meta name="description" content="Second part in a series of doing useful tasks with the Tidyverse. This time auto-generating sequential LaTeX newcommand macros">
+<title>Shamindra Shrotriya - Tidyverse Fun - Part 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script><script src="../../site_libs/quarto-nav/headroom.min.js"></script><script src="../../site_libs/clipboard/clipboard.min.js"></script><meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../../site_libs/quarto-search/fuse.min.js"></script><script src="../../site_libs/quarto-search/quarto-search.js"></script><script src="../../site_libs/quarto-html/quarto.js"></script><script src="../../site_libs/quarto-html/popper.min.js"></script><script src="../../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../../site_libs/quarto-html/anchor.min.js"></script><link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script><link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-145015693-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Shamindra Shrotriya - Tidyverse Fun - Part 2">
+<meta property="og:description" content="Second part in a series of doing useful tasks with
+the `Tidyverse`. This time auto-generating sequential
+LaTeX `newcommand` macros
+">
+<meta property="og:image" content="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg">
+<meta property="og:site-name" content="Shamindra Shrotriya">
+<meta name="twitter:title" content="Shamindra Shrotriya - Tidyverse Fun - Part 2">
+<meta name="twitter:description" content="Second part in a series of doing useful tasks with
+the `Tidyverse`. This time auto-generating sequential
+LaTeX `newcommand` macros
+">
+<meta name="twitter:image" content="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg">
+<meta name="twitter:creator" content="@shamindraas">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Shamindra Shrotriya</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../posts.html">blog</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../data/pdfs/CV.pdf">cv</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../data/pdfs/resume.pdf">resume</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/shamindras"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/shamindraas"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+<div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Tidyverse Fun - Part 2</h1>
+                  <div>
+        <div class="description">
+          <p>Second part in a series of doing useful tasks with the <code>Tidyverse</code>. This time auto-generating sequential LaTeX <code>newcommand</code> macros</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">tidyverse</div>
+                <div class="quarto-category">rstats</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Shamindra Shrotriya </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 24, 2019</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li>
+<a href="#task-generating-latex-newcommand-macros" id="toc-task-generating-latex-newcommand-macros" class="nav-link active" data-scroll-target="#task-generating-latex-newcommand-macros">Task: Generating LaTeX newcommand macros</a>
+  <ul class="collapse">
+<li><a href="#the-central-problem" id="toc-the-central-problem" class="nav-link" data-scroll-target="#the-central-problem">The central problem</a></li>
+  <li><a href="#the-tidy-approach" id="toc-the-tidy-approach" class="nav-link" data-scroll-target="#the-tidy-approach">The <code>tidy</code> approach</a></li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shamindras/ss_personal_quarto_blog/edit/main/posts/2019-08-21-shrotriya2019tidyfunpt2/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shamindras/ss_personal_quarto_blog/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><section id="task-generating-latex-newcommand-macros" class="level2"><h2 class="anchored" data-anchor-id="task-generating-latex-newcommand-macros">Task: Generating LaTeX newcommand macros</h2>
+<section id="the-central-problem" class="level3"><h3 class="anchored" data-anchor-id="the-central-problem">The central problem</h3>
+<p>In a custom <span class="math inline">\(\LaTeX\)</span> macro file I needed to generate several sequential <span class="math inline">\(\LaTeX\)</span> <code>newcommand</code> entries of the form:</p>
+<pre class="markup"><code>\newcommand{\bfa}{\mathbf{a}}
+\newcommand{\bfA}{\mathbf{A}}</code></pre>
+<p>Where using <code>$\bfa$</code> produces <span class="math inline">\(\mathbf{a}\)</span> and using <code>$\bfA$</code> produces <span class="math inline">\(\mathbf{A}\)</span> i.e the lowecase/uppercase <code>mathbf</code> commands respectively.</p>
+<p>Specifically I needed to construct 52 such combined sequential entries for both lowercase/uppercase letter versions of these <code>newcommand</code> <span class="math inline">\(\LaTeX\)</span> macros. Rather than do this manually, I realized that this would be another fun scripting exercise with using the <code>tidyverse</code> packages <code>glue</code>, <code>purrr</code>, and <code>stringr</code> similar to this similar <a href="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/">previous post here</a>.</p>
+<p><strong>Goal:</strong> Create 52 such lowercase/uppercase <code>newcommand</code> entries and print to the console to directly-copy paste to my <span class="math inline">\(\LaTeX\)</span> macros file.</p>
+</section><section id="the-tidy-approach" class="level3"><h3 class="anchored" data-anchor-id="the-tidy-approach">The <code>tidy</code> approach</h3>
+<p>First step is to write a function that takes as an input the following:</p>
+<ul>
+<li>a single letter (case-sensitive) e.g.&nbsp;<code>"a"</code>
+</li>
+<li>the macro shortcut command prefix you prefer e.g <code>"bf"</code> (for <strong>b</strong>old <strong>f</strong>ont in case you were wondering!)</li>
+<li>the specific <span class="math inline">\(\LaTeX\)</span> command that we are creating a macro shortcut for i.e.&nbsp;<code>"mathbf"</code> in this case</li>
+</ul>
+<p>The function then outputs a single <code>newcommand</code> entry for that lecture i.e <code>\newcommand{\bfa}{\mathbf{a}}</code> in this case. Let’s do it!</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="co"># Load required libraries</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/tidyverse/glue">glue</a></span><span class="op">)</span>
+
+<span class="co"># Create LaTeX macro newcommand</span>
+<span class="va">get_lec_newcmd</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">inp_letr</span>, <span class="va">mac_type</span>, <span class="va">mac_ref</span><span class="op">)</span><span class="op">{</span>
+    <span class="va">out_str</span> <span class="op">&lt;-</span> <span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">'\\newcommand{\\&lt;mac_type&gt;&lt;inp_letr&gt;}{\\&lt;mac_ref&gt;{&lt;inp_letr&gt;}}'</span>,
+                          .open <span class="op">=</span> <span class="st">"&lt;"</span>, .close <span class="op">=</span> <span class="st">"&gt;"</span><span class="op">)</span>
+    <span class="fu">base</span><span class="fu">::</span><span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">out_str</span><span class="op">)</span>
+<span class="op">}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s just test this out quickly:</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"A"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_chr</a></span><span class="op">(</span>.x <span class="op">=</span> <span class="va">.</span>, .f <span class="op">=</span> <span class="op">~</span><span class="fu">get_lec_newcmd</span><span class="op">(</span>inp_letr <span class="op">=</span> <span class="va">.x</span>,
+                                                mac_type <span class="op">=</span> <span class="st">"bf"</span>,
+                                                mac_ref <span class="op">=</span> <span class="st">"mathbf"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+    <span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="va">.</span>, sep <span class="op">=</span> <span class="st">"\n"</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>\newcommand{\bfa}{\mathbf{a}}
+\newcommand{\bfA}{\mathbf{A}}</code></pre>
+</div>
+</div>
+<p>Great - looks like it is working as required!</p>
+<p>Note that we can easily generate other <span class="math inline">\(\LaTeX\)</span> macros like follows</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"A"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_chr</a></span><span class="op">(</span>.x <span class="op">=</span> <span class="va">.</span>, .f <span class="op">=</span> <span class="op">~</span><span class="fu">get_lec_newcmd</span><span class="op">(</span>inp_letr <span class="op">=</span> <span class="va">.x</span>,
+                                                mac_type <span class="op">=</span> <span class="st">"mc"</span>,
+                                                mac_ref <span class="op">=</span> <span class="st">"mathcal"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
+    <span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="va">.</span>, sep <span class="op">=</span> <span class="st">"\n"</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>\newcommand{\mca}{\mathcal{a}}
+\newcommand{\mcA}{\mathcal{A}}</code></pre>
+</div>
+</div>
+<p>Which generates the corresponding <code>mathcal</code> macros for <span class="math inline">\(\mathcal{a}\)</span> and <span class="math inline">\(\mathcal{A}\)</span> respectively.</p>
+<p>So finally we can generate all 52 letter macros at time by simply replacing <code>c("a", "A")</code> with <code>c(letters, LETTERS)</code> which uses the input lowercase/uppercase <code>letters</code>/<code>LETTERS</code> vectors in base <code>R</code>:</p>
+<div class="cell-output-display">
+<details closed=""><summary><span title="Click to Expand"> Full newcommand Demo Output </span>
+</summary><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfa}{\mathbf{a}}</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfb}{\mathbf{b}}</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfc}{\mathbf{c}}</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfd}{\mathbf{d}}</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfe}{\mathbf{e}}</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>\newcommand{\bff}{\mathbf{f}}</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfg}{\mathbf{g}}</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfh}{\mathbf{h}}</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfi}{\mathbf{i}}</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfj}{\mathbf{j}}</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfk}{\mathbf{k}}</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfl}{\mathbf{l}}</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfm}{\mathbf{m}}</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfn}{\mathbf{n}}</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfo}{\mathbf{o}}</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfp}{\mathbf{p}}</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfq}{\mathbf{q}}</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfr}{\mathbf{r}}</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfs}{\mathbf{s}}</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>\newcommand{\bft}{\mathbf{t}}</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfu}{\mathbf{u}}</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfv}{\mathbf{v}}</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfw}{\mathbf{w}}</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfx}{\mathbf{x}}</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfy}{\mathbf{y}}</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfz}{\mathbf{z}}</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfA}{\mathbf{A}}</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfB}{\mathbf{B}}</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfC}{\mathbf{C}}</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfD}{\mathbf{D}}</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfE}{\mathbf{E}}</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfF}{\mathbf{F}}</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfG}{\mathbf{G}}</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfH}{\mathbf{H}}</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfI}{\mathbf{I}}</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfJ}{\mathbf{J}}</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfK}{\mathbf{K}}</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfL}{\mathbf{L}}</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfM}{\mathbf{M}}</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfN}{\mathbf{N}}</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfO}{\mathbf{O}}</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfP}{\mathbf{P}}</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfQ}{\mathbf{Q}}</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfR}{\mathbf{R}}</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfS}{\mathbf{S}}</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfT}{\mathbf{T}}</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfU}{\mathbf{U}}</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfV}{\mathbf{V}}</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfW}{\mathbf{W}}</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfX}{\mathbf{X}}</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfY}{\mathbf{Y}}</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfZ}{\mathbf{Z}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><p><br></p>
+</div>
+<p>Hope you have fun using this to quickly generate your <span class="math inline">\(\LaTeX\)</span> <code>newcommand</code> macros ✌️.</p>
+
+
+</section></section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
+  author = {Shamindra Shrotriya},
+  title = {Tidyverse {Fun} - {Part} 2},
+  date = {2019-08-24},
+  url = {https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2019" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 2.”</span> August
+24, 2019. <a href="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2">https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2</a>.
+</div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="https://github.com/shamindras/ss_personal_quarto_blog">blog source</a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+</body></html>

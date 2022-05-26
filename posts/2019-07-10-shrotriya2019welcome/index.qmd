@@ -7,21 +7,25 @@ categories: [personal]
 slug: shrotriya2019welcome
 date: "2019-07-10"
 image: images/about-profile-circular-scaled-hex.jpg
+format: 
+  html:
+    code-link: true
+execute:
+  echo: true
 editor_options: 
   markdown: 
     wrap: 80
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
 library(emo) # For emoji's
 ```
 
 ## Welcome - Let's Get Statistical!
 
 Hi there! I'm **Shamindra Shrotriya**, a graduate student in the [Department of
-Statistics and Data Science](http://www.stat.cmu.edu/){target="_blank"} at the
-wonderful [Carnegie Mellon University](https://www.cmu.edu/){target="_blank"}.
+Statistics and Data Science](http://www.stat.cmu.edu/) at the
+wonderful [Carnegie Mellon University](https://www.cmu.edu/).
 I've decided to start blogging to document my learning and development in
 statistics as a graduate student.
 
@@ -54,4 +58,5 @@ disappoint and create some useful content here `r emo::ji("vulcan_salute")`.
 
 ## Acknowledgments {.appendix}
 
-I'd like to thank Salil Shrotriya for taking my profile pic which is the preview image for this post.
+I'd like to thank Salil Shrotriya for taking my profile pic which is the preview
+image for this post.

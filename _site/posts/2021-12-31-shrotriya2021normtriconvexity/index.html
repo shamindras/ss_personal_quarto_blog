@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.433">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Shamindra Shrotriya">
+<meta name="dcterms.date" content="2022-02-12">
+<meta name="description" content="A simple approach to proving the triangle inequality for a given norm-like function using convexity.">
+<title>Shamindra Shrotriya - Characterizing norm triangle inequalites via convexity</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script><script src="../../site_libs/quarto-nav/headroom.min.js"></script><script src="../../site_libs/clipboard/clipboard.min.js"></script><meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../../site_libs/quarto-search/fuse.min.js"></script><script src="../../site_libs/quarto-search/quarto-search.js"></script><script src="../../site_libs/quarto-html/quarto.js"></script><script src="../../site_libs/quarto-html/popper.min.js"></script><script src="../../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../../site_libs/quarto-html/anchor.min.js"></script><link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script><link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-145015693-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Shamindra Shrotriya - Characterizing norm triangle inequalites via convexity">
+<meta property="og:description" content="A simple approach to proving the triangle inequality for a given _norm-like_ function using convexity.
+">
+<meta property="og:image" content="https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/images/preview-shrotriya2021normtriconvexity.png">
+<meta property="og:site-name" content="Shamindra Shrotriya">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:width" content="1920">
+<meta name="twitter:title" content="Shamindra Shrotriya - Characterizing norm triangle inequalites via convexity">
+<meta name="twitter:description" content="A simple approach to proving the triangle inequality for a given _norm-like_ function using convexity.
+">
+<meta name="twitter:image" content="https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/images/preview-shrotriya2021normtriconvexity.png">
+<meta name="twitter:creator" content="@shamindraas">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="1080">
+<meta name="twitter:image-width" content="1920">
+</head>
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Shamindra Shrotriya</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../posts.html">blog</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../data/pdfs/CV.pdf">cv</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../data/pdfs/resume.pdf">resume</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/shamindras"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/shamindraas"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+<div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Characterizing norm triangle inequalites via convexity</h1>
+                  <div>
+        <div class="description">
+          <p>A simple approach to proving the triangle inequality for a given <em>norm-like</em> function using convexity.</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">linear algebra</div>
+                <div class="quarto-category">math</div>
+                <div class="quarto-category">norms</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Shamindra Shrotriya </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 12, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TL;DR</a></li>
+  <li><a href="#background---norms" id="toc-background---norms" class="nav-link" data-scroll-target="#background---norms">Background - Norms</a></li>
+  <li><a href="#main-theorem" id="toc-main-theorem" class="nav-link" data-scroll-target="#main-theorem">Main theorem</a></li>
+  <li>
+<a href="#applications-minkowski-inequalities" id="toc-applications-minkowski-inequalities" class="nav-link" data-scroll-target="#applications-minkowski-inequalities">Applications: Minkowski inequalities</a>
+  <ul class="collapse">
+<li><a href="#application-1-ell_p-norm-triangle-inequality-in-mathbbfn" id="toc-application-1-ell_p-norm-triangle-inequality-in-mathbbfn" class="nav-link" data-scroll-target="#application-1-ell_p-norm-triangle-inequality-in-mathbbfn">Application 1: <span class="math inline">\(\ell_{p}\)</span>-norm triangle inequality in <span class="math inline">\(\mathbb{F}^{n}\)</span></a></li>
+  <li><a href="#application-2-l_p-norm-triangle-inequality" id="toc-application-2-l_p-norm-triangle-inequality" class="nav-link" data-scroll-target="#application-2-l_p-norm-triangle-inequality">Application 2: <span class="math inline">\(L_{p}\)</span>-norm triangle inequality</a></li>
+  </ul>
+</li>
+  <li><a href="#punchline-what-did-theorem-1-buy-us" id="toc-punchline-what-did-theorem-1-buy-us" class="nav-link" data-scroll-target="#punchline-what-did-theorem-1-buy-us">Punchline: what did Theorem 1 buy us?</a></li>
+  <li>
+<a href="#proof-of-theorem-1" id="toc-proof-of-theorem-1" class="nav-link" data-scroll-target="#proof-of-theorem-1">Proof of Theorem 1</a>
+  <ul class="collapse">
+<li><a href="#proof---easy-direction" id="toc-proof---easy-direction" class="nav-link" data-scroll-target="#proof---easy-direction">Proof - easy direction</a></li>
+  <li><a href="#proof---interesting-direction" id="toc-proof---interesting-direction" class="nav-link" data-scroll-target="#proof---interesting-direction">Proof - interesting direction</a></li>
+  </ul>
+</li>
+  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shamindras/ss_personal_quarto_blog/edit/main/posts/2021-12-31-shrotriya2021normtriconvexity/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shamindras/ss_personal_quarto_blog/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content"><!-- Place fontawesome kit's code here --><script src="https://kit.fontawesome.com/a403fab802.js" crossorigin="anonymous"></script><!-- https://chimeces.com/context-cards/ --><!-- Source: https://mpopov.com/wikipedia-context-cards-test/ --><script src="https://unpkg.com/context-cards/dist/context-cards.js"></script><section id="tldr" class="level1 page-columns page-full"><h1>TL;DR</h1>
+<p>I walkthrough a cool and possibly less known result connecting convexity and the triangle inequalities for norms. Using this result, typical proofs of the triangle inequality for a proposed norm function are significantly simplified. This exposition is based on <span class="citation" data-cites="robinson2020introfuncanalysis_book">(Chapter 3, <a href="#ref-robinson2020introfuncanalysis_book" role="doc-biblioref">Robinson 2020</a>)</span> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<aside><p><span class="citation" data-cites="robinson2020introfuncanalysis_book">(<a href="#ref-robinson2020introfuncanalysis_book" role="doc-biblioref">Robinson 2020</a>)</span> is a wonderful functional analysis book, highly recommend it 💯!</p>
+</aside></section><section id="background---norms" class="level1 page-columns page-full"><h1>Background - Norms</h1>
+<aside><p><br><br> Experienced readers can freely skip this Background section.</p>
+</aside><p>Normed linear spaces are a natural setting for much applied mathematics and statistics. These are vector spaces, <span class="math inline">\(V\)</span>, endowed with a norm function, <span class="math inline">\(\lVert \cdot \rVert_{V}\)</span>. Intuitively, norms give us a “yardstick” to measure the “lengths” of individual vectors in the given vector space space. A standard definition of a norm is as follows:</p>
+<div id="def-norm" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Norms in vector spaces) </strong></span>For a given vector space <span class="math inline">\(V\)</span>, a norm <span class="math inline">\(\lVert \cdot \rVert_{V}: V \to \mathbb{R}\)</span>, is a function satisfying the following three properties.</p>
+<ol type="1">
+<li>
+<strong>Positive definiteness:</strong> For all <span class="math inline">\(\mathbf{x} \in V\)</span>, if <span class="math inline">\(\lVert \mathbf{x} \rVert = 0\)</span> then <span class="math inline">\(\mathbf{x} = \mathbf{0}_{V}\)</span>.</li>
+<li>
+<strong>Absolute homogeneity:</strong> <span class="math inline">\(\lVert \lambda \mathbf{x} \rVert = | \lambda | \lVert \mathbf{x} \rVert\)</span>, for all <span class="math inline">\(\mathbf{x} \in V, \lambda \in \mathbb{R}\)</span>.</li>
+<li>
+<strong>Triangle inequality:</strong> <span class="math inline">\(\lVert \mathbf{x} + \mathbf{y} \rVert \leq \lVert \mathbf{x} \rVert + \lVert \mathbf{y} \rVert\)</span>, for all <span class="math inline">\(\mathbf{x}, \mathbf{y} \in V\)</span>.</li>
+</ol>
+</div>
+<aside><p>We often use many norms on a given vector space, depending on which seems “meaningful” for the given purpose. See <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)#Examples" class="wiki">here</a> for common examples.</p>
+</aside><details><summary><p>Remarks</p>
+</summary><div class="remark proof">
+<p><span class="proof-title"><em>Remark</em> (Derived properties from <a href="#def-norm">Definition&nbsp;1</a>). </span>We note that a norm, per <a href="#def-norm">Definition&nbsp;1</a>, in fact, <strong>implies</strong> the following properties:</p>
+<ol type="1">
+<li><p>In <a href="#def-norm">Definition&nbsp;1</a>, we can always replace <strong>positive definiteness</strong> with the stronger claim, namely that <span class="math display">\[\begin{equation}
+\text{For all $\mathbf{x} \in V$, if $\lVert \mathbf{x} \rVert = 0 \iff \mathbf{x} = \mathbf{0}_{V}$.}
+\end{equation}\]</span> In short, we want to show that the reverse implication to <strong>positive definiteness</strong> always holds, i.e., <span class="math inline">\(\mathbf{x} = \mathbf{0}_{V} \implies \lVert \mathbf{x} \rVert = 0\)</span>. To prove this observe that using <strong>absolute homogeneity</strong> in Definition @def-norm, we have: <span class="math display">\[\begin{equation}
+\lVert \mathbf{x} \rVert
+= \lVert \mathbf{0}_{V} \rVert
+= \lVert 0 (\mathbf{0}_{V}) \rVert
+= |0| \lVert \mathbf{0}_{V} \rVert = 0
+\end{equation}\]</span> As required.</p></li>
+<li><p>We also have that <span class="math inline">\(\lVert \mathbf{x} \rVert \geq 0\)</span>, for all <span class="math inline">\(\mathbf{x} \in V\)</span>. To see this, observe that for all <span class="math inline">\(\mathbf{x} \in V\)</span> <span class="math display">\[\begin{equation}
+\begin{split}
+0
+&amp; = \lVert \mathbf{0}_{V} \rVert
+\quad\text{(by previous part of this remark)}\\
+&amp; = \lVert \mathbf{x} + (-\mathbf{x}) \rVert \\
+&amp;\leq \lVert \mathbf{x} \rVert + \lVert -\mathbf{x} \rVert
+\quad\text{(by the triangle inequality)} \\
+&amp;= \lVert \mathbf{x} \rVert +
+    \lvert -1 \rvert \lVert \mathbf{x} \rVert
+    \quad\text{(by absolute homogeneity)} \\
+&amp;= 2 \lVert \mathbf{x} \rVert \\
+\implies \lVert \mathbf{x} \rVert
+&amp; \geq 0
+\end{split}
+\end{equation}\]</span> In effect this means the co-domain can <em>always</em> be changed from <span class="math inline">\(\lVert \cdot \rVert_{V}: V \to \mathbb{R}\)</span> to <span class="math inline">\(\lVert \cdot \rVert_{V}: V \to \mathbb{R}_{\geq 0}\)</span>.</p></li>
+<li><p>Since these can always be derived directly from <a href="#def-norm">Definition&nbsp;1</a>, as shown, we can keep <a href="#def-norm">Definition&nbsp;1</a> in its minimal form as noted here.</p></li>
+<li><p>These ideas work for <em>seminorms</em> as well, see <a href="https://en.wikipedia.org/wiki/Seminorm#Definition" class="wiki">here</a> for more details.</p></li>
+</ol>
+</div>
+</details></section><section id="main-theorem" class="level1 page-columns page-full"><h1>Main theorem</h1>
+<aside><p><br><br> This is based on <span class="citation" data-cites="robinson2020introfuncanalysis_book">(Lemmas 3.3-3.4 <a href="#ref-robinson2020introfuncanalysis_book" role="doc-biblioref">Robinson 2020</a>)</span>.</p>
+</aside><div id="thm-normtrichar" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Characterization of norm triangle inequality) </strong></span>Let <span class="math inline">\(N: V \to \mathbb{R_{\geq 0}}\)</span>, be a function satisfying the following two properties<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<ol type="1">
+<li>
+<strong>Positive definiteness:</strong> For all <span class="math inline">\(\mathbf{x} \in V\)</span>, if <span class="math inline">\(N(\mathbf{x}) = 0\)</span> then <span class="math inline">\(\mathbf{x} = \mathbf{0}_{V}\)</span>.</li>
+<li>
+<strong>Absolute homogeneity:</strong> <span class="math inline">\(N(\lambda \mathbf{x}) = | \lambda | N(\mathbf{x})\)</span>, for all <span class="math inline">\(\mathbf{x} \in V, \lambda \in \mathbb{R}\)</span>.</li>
+</ol>
+<p>We then have that:</p>
+<p><span id="eq-normtrichar-01"><span class="math display">\[
+    N(\mathbf{x} + \mathbf{y}) \leq N(\mathbf{x}) + N(\mathbf{y})
+    \text{, for each } \mathbf{x}, \mathbf{y} \in V
+    \iff \mathbb{B} := \{\mathbf{z} \in V \:|\: N(\mathbf{z}) \leq 1 \}
+    \text{ is convex}
+\qquad(1)\]</span></span></p>
+</div>
+<p>In simple terms, the importance of <a href="#thm-normtrichar">Theorem&nbsp;1</a> (as captured by <a href="#eq-normtrichar-01">Equation&nbsp;1</a>) can be summarized as follows:</p>
+<blockquote class="blockquote">
+<p>Let <span class="math inline">\(N : V \to [0, \infty)\)</span> be a function satisfying positive definiteness and absolute homogeneity. Then <span class="math inline">\(N\)</span> satisfies the triangle inequality if and only if the unit ball induced by <span class="math inline">\(N\)</span>, i.e., <span class="math inline">\(\mathbb{B} := \{\mathbf{z} \in V \:|\: N(\mathbf{z}) \leq 1 \}\)</span>, is a convex set.</p>
+</blockquote>
+<details><summary><p>Remarks</p>
+</summary><div class="remark proof">
+<p><span class="proof-title"><em>Remark</em>. </span>In <a href="#thm-normtrichar">Theorem&nbsp;1</a>, we note the following:</p>
+<ol type="1">
+<li>The function <span class="math inline">\(N : V \to \mathbb{R}_{\geq 0}\)</span>, is a <em>norm-like</em> function, and only becomes a valid norm per <a href="#def-norm">Definition&nbsp;1</a> <strong><em>once</em></strong> we establish the triangle inequality, i.e., <span class="math inline">\(N(\mathbf{x} + \mathbf{y}) \leq N(\mathbf{x}) + N(\mathbf{y})\)</span>.</li>
+<li>To prove the triangle inequality for <span class="math inline">\(N : V \to \mathbb{R}_{\geq 0}\)</span>, the necessary condition of <a href="#thm-normtrichar">Theorem&nbsp;1</a> to establish is: <span id="eq-normtrichar-02"><span class="math display">\[
+\mathbb{B} := \{\mathbf{z} \in V \:|\: N(\mathbf{z}) \leq 1 \}
+\text{ is convex}
+\qquad(2)\]</span></span> which will imply the triangle inequality for <span class="math inline">\(N\)</span> - huzzah!</li>
+<li>The nice thing is, proving the convexity of <span class="math inline">\(\mathbb{B}\)</span> can be <em>much easier</em> to show than trying to prove the triangle inequality property of <span class="math inline">\(N\)</span> directly, as we will soon see.</li>
+<li>
+<strong>Subtle point:</strong> note that here we had to <em>assume</em> that the co-domain of <span class="math inline">\(N\)</span> is non-negative (not <span class="math inline">\(\mathbb{R}\)</span>), i.e., <span class="math inline">\(N : V \to \mathbb{R}_{\geq 0}\)</span>. This is because in a typical norm, which satisfies the triangle inequality, is always shown to be non-negative (see remark below <a href="#def-norm">Definition&nbsp;1</a> for more details). Here we <em>impose</em> non-negativity of <span class="math inline">\(N\)</span> as an additional constraint to <em>establish</em> the triangle inequality property for <span class="math inline">\(N\)</span>. This is not an issue, since one would always first check the non-negativity of a candidate <em>norm-like</em> function <span class="math inline">\(N\)</span>.</li>
+</ol>
+</div>
+</details></section><section id="applications-minkowski-inequalities" class="level1 page-columns page-full"><h1>Applications: Minkowski inequalities</h1>
+<p>Before getting into the details of the proof, let’s just see what Theorem <a href="#thm-normtrichar">Theorem&nbsp;1</a> can do! We’ll consider two related applications taken from <span class="citation" data-cites="robinson2020introfuncanalysis_book">(Lemma 3.6, Example 3.13 <a href="#ref-robinson2020introfuncanalysis_book" role="doc-biblioref">Robinson 2020</a>)</span>, respectively.</p>
+<section id="application-1-ell_p-norm-triangle-inequality-in-mathbbfn" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="application-1-ell_p-norm-triangle-inequality-in-mathbbfn">Application 1: <span class="math inline">\(\ell_{p}\)</span>-norm triangle inequality in <span class="math inline">\(\mathbb{F}^{n}\)</span>
+</h3>
+<div id="exm-normtrilpsum" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (Minkowski inequality in finite dimensions) </strong></span>Let us consider <span class="math inline">\((\mathbb{F}^{n}, \mathbb{F})\)</span>, where <span class="math inline">\(\mathbb{F} = \mathbb{R} \text{ or } \mathbb{C}\)</span>. We then define the <em>norm-like</em> function <span class="math inline">\(N_{\ell^{p}}: \mathbb{F}^{n} \to \mathbb{R}_{\geq 0}\)</span>:</p>
+<p><span id="eq-normtrilpsum-01"><span class="math display">\[
+    N_{\ell^{p}}(\mathbf{x})
+    :=\left(\sum_{j=1}^{n}\left|x_{j}\right|^{p}\right)^{1 / p}
+    , \quad 1 \leq p&lt;\infty
+\qquad(3)\]</span></span></p>
+</div>
+<p>One can show that <span class="math inline">\(N_{\ell^{p}}\)</span> satisfies positive definiteness and absolute homogeneity. To show that <span class="math inline">\(N_{\ell^{p}}\)</span> is a norm function we need to prove the triangle inequality. We will use <a href="#thm-normtrichar">Theorem&nbsp;1</a>. Let us define <span class="math inline">\(\mathbb{B} := \{\mathbf{z} \in \mathbb{F}^{n} \:|\: N_{\ell^{p}}(\mathbf{z}) \leq 1 \} = \{\mathbf{z} \in \mathbb{F}^{n} \:|\: N_{\ell^{p}}^{p}(\mathbf{z}) \leq 1 \}\)</span>. We now need to show that <span class="math inline">\(\mathbb{B}\)</span> is convex. We will need to use the fact that for each <span class="math inline">\(t \in \mathbb{R}, t \mapsto |t|^{p}\)</span> is convex. Let <span class="math inline">\(\mathbf{x}, \mathbf{y} \in \mathbb{B}\)</span>, we then have that for <span class="math inline">\(\lambda \in [0, 1]\)</span>:</p>
+<aside><p><strong>Note:</strong> <span class="math inline">\(t \mapsto |t|^{p}\)</span>, is convex, for each <span class="math inline">\(t \in \mathbb{R}\)</span> and <span class="math inline">\(p \in [1, \infty)\)</span>. <strong>Sketch:</strong> We have, <span class="math inline">\(|t|^{p} =: h(t) := (g \circ f) (t)\)</span>. Here, for each <span class="math inline">\(x \in \mathbb{R}\)</span>, we observe <span class="math inline">\(g : x \mapsto x^{p}\)</span> is increasing and convex, and <span class="math inline">\(f : x \mapsto |x|\)</span> is convex. Thus, <span class="math inline">\(h(t) := |t|^{p}\)</span> is convex. <span class="math inline">\(\blacksquare\)</span></p>
+</aside><span class="math display">\[\begin{equation}
+\begin{split}
+    N_{\ell^{p}}^{p}(\lambda \mathbf{x} + (1 - \lambda) \mathbf{y})
+    &amp; = \sum_{j=1}^{n}|\lambda| x_{j}|+(1-\lambda)| y_{j}||^{p}
+    \quad\text{(by definition)} \\
+    &amp; \leq \sum_{j=1}^{n} \lambda\left|x_{j}\right|^{p}+(1-\lambda)\left|y_{j}\right|^{p}
+    \quad\text{(since $t \mapsto |t|^{p}$ is convex for each $t \in \mathbb{R}$)} \\
+    &amp; = \lambda \sum_{j=1}^{n} \left|x_{j}\right|^{p}
+    + (1 - \lambda) \sum_{j=1}^{n} \left|y_{j}\right|^{p} \\
+    &amp; \leq 1
+    \quad\text{(since $\mathbf{x}, \mathbf{y} \in \mathbb{B}$.)}
+\end{split}
+\end{equation}\]</span>
+<p>It follows that <span class="math inline">\(N_{\ell^{p}}(\lambda \mathbf{x} + (1 - \lambda) \mathbf{y}) \leq 1\)</span>, and so <span class="math inline">\(\lambda \mathbf{x} + (1 - \lambda) \mathbf{y} \in \mathbb{B}\)</span>, as required <span class="math inline">\(\blacksquare\)</span>.</p>
+<aside><p>This triangle inequality is proved in just four lines 🔥!</p>
+</aside><p>In fact, since it <span class="math inline">\(N_{\ell^{p}}\)</span> satisfies the three conditions for a norm per <a href="#def-norm">Definition&nbsp;1</a> we can now denote it using the conventional <span class="math inline">\(\ell_{p}\)</span>-norm form, i.e., <span class="math inline">\(\| \mathbf{x} \|_{\ell^{p}} := N_{\ell^{p}}(\mathbf{x})\)</span></p>
+</section><section id="application-2-l_p-norm-triangle-inequality" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="application-2-l_p-norm-triangle-inequality">Application 2: <span class="math inline">\(L_{p}\)</span>-norm triangle inequality</h3>
+<p>We can also similarly prove the triangle inequality norms involving integrals efficiently. This is seen in the next example.</p>
+<aside><p>Here <span class="math inline">\(C([0, 1])\)</span> is the space of continuous functions on the interval <span class="math inline">\([0, 1]\)</span>.</p>
+</aside><div id="normtrilpint" class="example" name="Minkowski inequality in integral form">
+<p>Let us consider <span class="math inline">\((C([0, 1]), \mathbb{R})\)</span>. We then define the <em>norm-like</em> function <span class="math inline">\(N_{L^{p}}: C([0, 1]) \to \mathbb{R}_{\geq 0}\)</span>:</p>
+<p><span id="eq-normtrilpint-01"><span class="math display">\[
+    N_{L^{p}}(\mathbf{x})
+    :=\left(\int_{0}^{1}\left|f(x)\right|^{p}\right)^{1 / p}
+    , \quad 1 \leq p&lt;\infty
+\qquad(4)\]</span></span></p>
+</div>
+<p>Let us define <span class="math inline">\(\mathbb{B} := \{h \in C([0, 1]) \:|\: N_{L^{p}}(h) \leq 1 \} = \{h \in C([0, 1]) \:|\: N_{L^{p}}^{p}(h) \leq 1 \}\)</span>. We now need to show that <span class="math inline">\(\mathbb{B}\)</span> is convex. Let <span class="math inline">\(f, g \in \mathbb{B}\)</span>, we then have that for <span class="math inline">\(\lambda \in [0, 1]\)</span>:</p>
+<aside><p>Once again, one can show that <span class="math inline">\(N_{\ell^{p}}\)</span> satisfies positive definiteness and absolute homogeneity.</p>
+</aside><span class="math display">\[\begin{equation}
+\begin{split}
+    N_{L^{p}}^{p}(\lambda f + (1 - \lambda) g)
+    &amp; = \int_{0}^{1}|\lambda f(x) + (1-\lambda) g(x)|^{p} dx
+    \quad\text{(by definition)} \\
+    &amp; \leq \int_{0}^{1}\lambda |f(x)|^{p} + (1-\lambda) |g(x)|^{p} dx
+    \quad\text{(since $t \mapsto |t|^{p}$ is convex for each $t \in \mathbb{R}$)} \\
+    &amp; = \lambda \int_{0}^{1} |f(x)|^{p} dx + (1-\lambda) \int_{0}^{1} |g(x)|^{p} dx \\
+    &amp; \leq 1
+    \quad\text{(since $f, g \in \mathbb{B}$.)}
+\end{split}
+\end{equation}\]</span>
+<p>It follows that <span class="math inline">\(N_{L^{p}}(\lambda f + (1 - \lambda) g) \leq 1\)</span>, and so <span class="math inline">\(\lambda f + (1 - \lambda) g \in \mathbb{B}\)</span>, as required <span class="math inline">\(\blacksquare\)</span>.</p>
+<p>Again, we can now denote <span class="math inline">\(N_{L^{p}}\)</span> using the conventional <span class="math inline">\(L_{p}\)</span>-norm form, i.e., <span class="math inline">\(\| f \|_{L^{p}} := N_{L^{p}}(f)\)</span>.</p>
+</section></section><section id="punchline-what-did-theorem-1-buy-us" class="level1 page-columns page-full"><h1>Punchline: what did Theorem 1 buy us?</h1>
+<p>We just saw that applying <a href="#thm-normtrichar">Theorem&nbsp;1</a> enabled us to write <strong>very short proofs</strong> of <a href="https://en.wikipedia.org/wiki/Minkowski_inequality" class="wiki"><strong>Minkowski’s inequality</strong></a> in <span class="math inline">\(\mathbb{F}^{n}\)</span> and <span class="math inline">\(C([0, 1])\)</span>.</p>
+<p>To appreciate this approach, note that proving Minkowski’s inequality typically requires one to first prove <a href="https://en.wikipedia.org/wiki/Young%27s_inequality_for_products" class="wiki"><strong>Young’s inequality</strong></a> and then <a href="https://en.wikipedia.org/wiki/H%C3%B6lder%27s_inequality" class="wiki"><strong>Hölder’s inequality</strong></a>. Moreover these need to be done separately in <span class="math inline">\(\mathbb{F}^{n}\)</span> and <span class="math inline">\(C([0, 1])\)</span>. Using <a href="#thm-normtrichar">Theorem&nbsp;1</a> allowed us to achieve both of these goals using near identical style of proofs 🎉!</p>
+<aside><p><strong>Note:</strong> The proofs of Young’s and Hölder’s inequality are beautiful and studying them is also insightful.</p>
+</aside></section><section id="proof-of-theorem-1" class="level1 page-columns page-full"><h1>Proof of Theorem 1</h1>
+<p>Assuming <span class="math inline">\(N: V \to \mathbb{R_{\geq 0}}\)</span> satisfies the two properties in Theorem <a href="#thm-normtrichar">Theorem&nbsp;1</a>, we need to prove both implications in Equation <a href="#eq-normtrichar-01">Equation&nbsp;1</a>.</p>
+<section id="proof---easy-direction" class="level3"><h3 class="anchored" data-anchor-id="proof---easy-direction">Proof - easy direction</h3>
+<p>Assume that <span class="math inline">\(N(\mathbf{x} + \mathbf{y}) \leq N(\mathbf{x}) + N(\mathbf{y})\)</span>, for each <span class="math inline">\(\mathbf{x}, \mathbf{y} \in V\)</span>. Let <span class="math inline">\(\lambda \in [0, 1]\)</span> be arbitrary. We need to show that this implies for each <span class="math inline">\(\mathbf{x}, \mathbf{y} \in \mathbb{B}\)</span> that the expression <span class="math inline">\(\lambda \mathbf{x} + (1 - \lambda) \mathbf{y} \in \mathbb{B}\)</span> holds. This implies the convexity of <span class="math inline">\(\mathbb{B}\)</span>.</p>
+<details><summary><p>Proof</p>
+</summary><div id="normtrichar-easy" class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>(<span class="math inline">\(\implies\)</span>) We proceed directly.</p>
+<p>Assume that <span class="math inline">\(N(\mathbf{x} + \mathbf{y}) \leq N(\mathbf{x}) + N(\mathbf{y})\)</span>, for each <span class="math inline">\(\mathbf{x}, \mathbf{y} \in V\)</span>. Let <span class="math inline">\(\lambda \in [0, 1]\)</span> be arbitrary. We need to show that this implies for each <span class="math inline">\(\mathbf{x}, \mathbf{y} \in \mathbb{B}\)</span> that the expression <span class="math inline">\(\lambda \mathbf{x} + (1 - \lambda) \mathbf{y} \in \mathbb{B}\)</span> holds. This implies the convexity of <span class="math inline">\(\mathbb{B}\)</span>.</p>
+<p>We observe that for <span class="math inline">\(\lambda \in \{0, 1\}\)</span> our required expression is equal to either <span class="math inline">\(\mathbf{x}\)</span> or <span class="math inline">\(\mathbf{y}\)</span> which are both in <span class="math inline">\(\mathbb{B}\)</span>, by assumption. Now fix <span class="math inline">\(\lambda \in (0, 1)\)</span>. We then note:</p>
+<span class="math display">\[\begin{equation}
+\begin{split}
+    N(\lambda \mathbf{x} + (1 - \lambda) \mathbf{y})
+    &amp; \leq N(\lambda \mathbf{x}) + N((1 - \lambda) \mathbf{y})
+    \quad\text{($N$ satisfies triangle inequality)} \\
+    &amp; = \lvert \lambda \rvert N(\mathbf{x}) + \lvert 1 - \lambda \rvert N(\mathbf{y})
+    \quad\text{(by absolute homogeneity of $N$)} \\
+    &amp; = \lambda N(\mathbf{x}) + 1 - \lambda N(\mathbf{y})
+    \quad\text{(since $\lambda &gt; 0$)} \\
+    &amp; \leq (\lambda) (1) + (1 - \lambda) (1)
+    \quad\text{(since $N(\mathbf{z}) \leq 1$, for $\mathbf{z} \in \mathbb{B}$)} \\
+    &amp; = 1 \\
+\implies \lambda \mathbf{x} + (1 - \lambda) \mathbf{y}
+    &amp; \in \mathbb{B}
+\end{split}
+\end{equation}\]</span>
+<p>Which implies the convexity of <span class="math inline">\(\mathbb{B}\)</span>, as required. <span class="math inline">\(\blacksquare\)</span></p>
+</div>
+</details></section><section id="proof---interesting-direction" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="proof---interesting-direction">Proof - interesting direction</h3>
+<p>Assume <span class="math inline">\(\mathbb{B}\)</span> is a convex set. We need to show that this implies that <span class="math inline">\(N(\mathbf{x} + \mathbf{y}) \leq N(\mathbf{x}) + N(\mathbf{y})\)</span>, for each <span class="math inline">\(\mathbf{x}, \mathbf{y} \in V\)</span>.</p>
+<aside><p><strong>Tip:</strong> In linear algebra proofs, it is best to <strong>first</strong> deal with the zero vector, <span class="math inline">\(\mathbf{0}_{V}\)</span>, separately.</p>
+</aside><details><summary><p>Proof</p>
+</summary><div id="normtrichar-hard" class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>(<span class="math inline">\(\impliedby\)</span>) We proceed directly.</p>
+<p>Assume <span class="math inline">\(\mathbb{B}\)</span> is a convex set. We need to show that this implies that <span class="math inline">\(N(\mathbf{x} + \mathbf{y}) \leq N(\mathbf{x}) + N(\mathbf{y})\)</span>, for each <span class="math inline">\(\mathbf{x}, \mathbf{y} \in V\)</span>.</p>
+<p>Let <span class="math inline">\(\mathbf{x}, \mathbf{y} \in V\)</span>. We will consider four cases.</p>
+<p><strong>Case 1:</strong> Let <span class="math inline">\(\mathbf{x} = \mathbf{y} = \mathbf{0}_{V}\)</span>. Then <span class="math inline">\(N(\mathbf{x}) = N(\mathbf{y}) = N(\mathbf{0}_{V}) = N(0 \mathbf{0}_{V}) = |0| N(\mathbf{0}_{V})= 0\)</span>, by absolute homogeneity of <span class="math inline">\(N\)</span>. Indeed we then have that <span class="math inline">\(N(\mathbf{x} + \mathbf{y}) = N(\mathbf{0}_{V}) = 0 = N(\mathbf{x}) + N(\mathbf{y})\)</span>, as required.</p>
+<p><strong>Case 2:</strong> Let <span class="math inline">\(\mathbf{x} = \mathbf{0}_{V}, \mathbf{y} \in V \setminus \{\mathbf{0}_{V}\}\)</span>. Then <span class="math inline">\(N(\mathbf{y}) = 0\)</span>, and it follows that <span class="math inline">\(N(\mathbf{x} + \mathbf{y}) = N(\mathbf{x} + \mathbf{0}_{V}) = N(\mathbf{x}) = N(\mathbf{x}) + 0 = N(\mathbf{x}) + N(\mathbf{y})\)</span>, as required.</p>
+<p><strong>Case 3:</strong> Let <span class="math inline">\(\mathbf{x} \in V \setminus \{\mathbf{0}_{V}\}, \mathbf{y} = \mathbf{0}_{V}\)</span>. Same as <strong>Case 2</strong>, with the roles of <span class="math inline">\(\mathbf{x}, \mathbf{y}\)</span> reversed.</p>
+<p><strong>Case 4:</strong> Let <span class="math inline">\(\mathbf{x}, \mathbf{y} \in V \setminus \{\mathbf{0}_{V}\}\)</span>. It then follows that <span class="math inline">\(N(\mathbf{x}), N(\mathbf{y}) &gt; 0\)</span>, since <span class="math inline">\(N(\mathbf{z}) \geq 0\)</span>, for each <span class="math inline">\(\mathbf{z} \in V\)</span>, and <span class="math inline">\(N(\mathbf{z}) = 0 \iff \mathbf{z} = \mathbf{0}_{V}\)</span>. Moreover we then have that <span class="math inline">\(\lvert N(\mathbf{x}) \rvert = N(\mathbf{x}) &gt; 0\)</span> and <span class="math inline">\(\lvert N(\mathbf{y}) \rvert = N(\mathbf{y}) &gt; 0\)</span>. So we can safely divide by these quantities. Let us then define <span class="math inline">\(\tilde{\mathbf{x}} := \frac{\mathbf{x}}{N(\mathbf{x})}, \tilde{\mathbf{y}} := \frac{\mathbf{y}}{N(\mathbf{y})}\)</span>. We then have by absolute homogeneity of <span class="math inline">\(N\)</span> that, <span class="math inline">\(N(\tilde{\mathbf{x}}) := N\left(\frac{\mathbf{x}}{N(\mathbf{x})}\right) = \left \lvert \frac{1}{N(\mathbf{x})} \right \rvert N(\mathbf{x}) = 1 \implies \tilde{\mathbf{x}} \in \mathbb{B}\)</span>. Similarly <span class="math inline">\(\tilde{\mathbf{y}} \in \mathbb{B}\)</span>. Let us denote <span class="math inline">\(\lambda := \frac{N(\mathbf{x})}{N(\mathbf{x}) + N(\mathbf{y})} \in (0, 1)\)</span>, and <span class="math inline">\(\mathbf{z} := \frac{\mathbf{x} + \mathbf{y}}{N(\mathbf{x}) + N(\mathbf{y})}\)</span>. We then have: <span class="math display">\[\begin{equation}
+\begin{split}
+    \mathbf{z}
+    &amp; := \frac{\mathbf{x} + \mathbf{y}}{N(\mathbf{x}) + N(\mathbf{y})} \\
+    &amp; = \left(\frac{N(\mathbf{x})}{N(\mathbf{x}) + N(\mathbf{y})}\right)
+        \left(\frac{\mathbf{x}}{N(\mathbf{x})}\right) +
+        \left(\frac{N(\mathbf{y})}{N(\mathbf{x}) + N(\mathbf{y})}\right)
+        \left(\frac{\mathbf{y}}{N(\mathbf{y})}\right) \\
+    &amp; = \left(\frac{N(\mathbf{x})}{N(\mathbf{x}) + N(\mathbf{y})}\right)
+        \tilde{\mathbf{x}} +
+        \left(\frac{N(\mathbf{y})}{N(\mathbf{x}) + N(\mathbf{y})}\right)
+        \tilde{\mathbf{y}} \\
+    &amp; = \lambda \tilde{\mathbf{x}} +
+        (1 - \lambda) \tilde{\mathbf{y}} \\
+    &amp; \in \mathbb{B}
+\end{split}
+\end{equation}\]</span></p>
+<p>By the assumed convexity of <span class="math inline">\(\mathbb{B}\)</span>. We then have that <span class="math inline">\(\mathbf{z} := \frac{\mathbf{x} + \mathbf{y}}{N(\mathbf{x}) + N(\mathbf{y})} \in \mathbb{B} \implies N(\mathbf{z}) \leq 1\)</span>. We then observe: <span class="math display">\[\begin{equation}
+\begin{split}
+    N(\mathbf{z})
+    &amp; \leq 1
+    \quad\text{(since $\mathbf{z} \in \mathbb{B}$.)} \\
+\iff N\left( \frac{\mathbf{x} + \mathbf{y}}{N(\mathbf{x}) + N(\mathbf{y})}\right)
+    &amp; \leq 1
+    \quad\text{(by definition of $\mathbf{z}$.)} \\
+\iff \left\lvert \frac{1}{N(\mathbf{x}) + N(\mathbf{y})}\right\rvert
+     N(\mathbf{x} + \mathbf{y})
+    &amp; \leq 1
+    \quad\text{(absolute homogeneity of $N$.)} \\
+\iff \frac{1}{N(\mathbf{x}) + N(\mathbf{y})}
+     N(\mathbf{x} + \mathbf{y})
+    &amp; \leq 1
+    \quad\text{(since $N(\mathbf{x}), N(\mathbf{y}) &gt; 0$.)} \\
+\iff N(\mathbf{x} + \mathbf{y})
+    &amp; \leq N(\mathbf{x}) + N(\mathbf{y})
+\end{split}
+\end{equation}\]</span></p>
+<p>As required. <span class="math inline">\(\blacksquare\)</span></p>
+</div>
+</details></section></section><section id="recap" class="level1"><h1>Recap</h1>
+<p>In this article we learned the following about <a href="#thm-normtrichar">Theorem&nbsp;1</a>:</p>
+<ul>
+<li>It gives an alternative way to <strong>characterize</strong> the triangle inequality for <em>norm-like</em> functions.</li>
+<li>Using this characterization <strong>we can prove the triangle inequality</strong> for such norm-like functions using the convexity of the unit ball induced by such functions.</li>
+<li>This is usually easier since we have lots of <strong>tools from convex analysis</strong> to help us prove the convexity of <span class="math inline">\(\mathbb{B}\)</span>.</li>
+<li>We saw this in action since <a href="#thm-normtrichar">Theorem&nbsp;1</a> enabled us to write <strong>very short proofs</strong> of <strong>Minkowski’s inequality</strong> in <span class="math inline">\(\mathbb{F}^{n}\)</span> and <span class="math inline">\(C([0, 1])\)</span>.</li>
+</ul>
+<p>In summary, if you have a norm-like function for which you are trying to establish the triangle inequality, try out <a href="#thm-normtrichar">Theorem&nbsp;1</a> 💯!</p>
+</section><div id="quarto-appendix" class="default"><section id="acknowledgements" class="level1 appendix"><h2 class="quarto-appendix-heading">Acknowledgements</h2><div class="quarto-appendix-contents">
+<p>I thank <a href="https://warwick.ac.uk/fac/sci/maths/people/staff/james_robinson">Prof.&nbsp;James Robinson</a> for providing several technical clarifications on <a href="#thm-normtrichar">Theorem&nbsp;1</a>. I thank <a href="https://mpopov.com/about/">Mikhail Popov</a> for creating the <a href="https://bearloga.github.io/wikipediapreview-r/"><code>wikipediapreview</code> R package</a>, which enable an easy interface for Wikipedia <a href="https://chimeces.com/context-cards/">Context Cards</a> in <code>Rmd</code> files. These Context Cards enable the hover over preview for Wikipedia articles. I thank <a href="https://jeweljohnsonj.github.io/jewel_resume/">Jewel Johnson</a> for providing <a href="https://jeweljohnsonj.github.io/jeweljohnson.github.io/posts/2021-12-18-quality-of-life-modifications-for-your-distill-webistes/#making-the-table-of-contents-more-useful">this helpful guide</a> to enable fixed TOC for this article. I thank <a href="https://www.joelnitta.com/">Dr.&nbsp;Joel Nitta</a> for providing <a href="https://www.joelnitta.com/posts/2021-11-24_using-giscus/">these instructions</a> to enable us to switch to the <a href="https://giscus.app/">giscus</a> comments system. Much of these distill site improvements were brought to our attention due to the excellent <a href="https://distillery.rbind.io/tips_and_tricks.html">distillery</a> site run by <a href="https://www.jhelvy.com/">Prof.&nbsp;John Paul Helveston</a>.</p>
+
+
+
+</div></section><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-robinson2020introfuncanalysis_book" class="csl-entry" role="doc-biblioentry">
+Robinson, James C. 2020. <em><span class="nocase">An Introduction to Functional Analysis</span></em>. Cambridge University Press.
+</div>
+</div></section><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1" role="doc-endnote"><p><strong>Note:</strong> The presentation in this post is <strong><em>intentionally</em></strong> verbose. The goal is to give lots of intuition of the key result and its usefulness, and ensure that the proofs are rigorous. It is written with an empathetic mindset to newcomers, and to myself for future reference.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>We refer to such an <span class="math inline">\(N: V \to \mathbb{R_{\geq 0}}\)</span> satisfying these properties, as a <em>norm-like</em> function.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2022,
+  author = {Shamindra Shrotriya},
+  title = {Characterizing Norm Triangle Inequalites via Convexity},
+  date = {2022-02-12},
+  url = {https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Shamindra Shrotriya. 2022. <span>“Characterizing Norm Triangle
+Inequalites via Convexity.”</span> February 12, 2022. <a href="https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity">https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity</a>.
+</div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item">
+    <a class="nav-link" href="https://github.com/shamindras/ss_personal_quarto_blog">blog source</a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+</body></html>

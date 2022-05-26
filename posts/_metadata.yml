@@ -16,16 +16,13 @@ toc-location: left
 # Enable banner style title blocks
 title-block-banner: true
 
-share: [twitter, linkedin]
-
-# Default knitr options
-execute:
-  echo: true
-  message: true
-  warning: true
-  
 # Default fields for citation
 citation: true
 
 # Enable CC licence appendix
 license: "CC BY"
+
+# markdown editor options
+editor_options: 
+  markdown: 
+    wrap: 80
