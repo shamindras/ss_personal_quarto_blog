@@ -1429,7 +1429,7 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 1.”</span> July
   <title>Setting up a Distill Blog with Netlify</title>
   <link>https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/index.html</link>
   <description><![CDATA[ <section id="step-0-introduction" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-0-introduction">Step 0: Introduction</h2>
-<p>This is a meta blogpost to describe how I setup this personal academic blog. It is based on the relatively new <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="h//www.rstudio.com/" target="_blank">RStudio</a> team. The main tools used I used to create this blog are:</p>
+<p>This is a meta blogpost to describe how I setup this personal academic blog. It is based on the relatively new <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="https://www.rstudio.com/" target="_blank">RStudio</a> team. The main tools used I used to create this blog are:</p>
 <ul>
 <li>My personal <a href="https://github.com/shamindras" target="_blank">Github account</a>
 </li>

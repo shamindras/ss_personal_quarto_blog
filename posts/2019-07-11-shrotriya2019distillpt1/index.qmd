@@ -16,18 +16,12 @@ editor_options:
     wrap: 80
 ---
 
-```{r setup, include=FALSE}
-IMAGES_PATH <- here::here("posts",
-                          "2019-07-11-shrotriya2019distillpt1",
-                          "images")
-```
-
 ## Step 0: Introduction
 
 This is a meta blogpost to describe how I setup this personal academic blog. It
 is based on the relatively new
 [distill](https://rstudio.github.io/distill/){target="_blank"} package by the
-[RStudio](h//www.rstudio.com/){target="_blank"} team. The main tools used I used
+[RStudio](https://www.rstudio.com/){target="_blank"} team. The main tools used I used
 to create this blog are:
 
 -   My personal [Github account](https://github.com/shamindras){target="_blank"}
