@@ -19,6 +19,11 @@ title-block-banner: true
 # Default fields for citation
 citation: true
 
+# Enable giscus for comments
+comments:
+  giscus: 
+    repo: shamindras/ss_personal_quarto_blog
+
 # Enable CC licence appendix
 license: "CC BY"
 
