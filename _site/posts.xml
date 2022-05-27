@@ -648,74 +648,42 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 2.”</span> August
 <p>This is a meta blogpost and a second-part in a series to describe how I setup this personal academic blog using the amazing <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="h//www.rstudio.com/" target="_blank">RStudio</a> team.</p>
 <p>The first part of this meta blogpost series can be <a href="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/" target="_blank">found here</a>, where I detailed the steps to setup this blog using Netlify and Google Domains. If you haven’t setup a <code>distill</code> themed blog then you are encouraged to check it out before reading this post.</p>
 <p>Fortunately <code>distill</code> comes with easy to configure settings as well see below. I’ve only implemented some of the options available. I should note that the RStudio <code>distill</code> team has already created an <a href="https://rstudio.github.io/distill/blog.html" target="_blank">excellent distill blog creation tutorial</a> which I thoroughly used and highly recommend to new users to check out.</p>
-<aside>
-Admittedly this blogpost is verbose, but hopefully the details help <strong>new users</strong> of the <code>distill</code> blogging package.
+<aside><p>Admittedly this blogpost is verbose, but hopefully the details help <strong>new users</strong> of the <code>distill</code> blogging package.</p>
 </aside><p>With that said, here are some key upgrades I made to this blog.</p>
 </section><section id="step-1-setup-disqus-comments" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-1-setup-disqus-comments">Step 1: Setup Disqus comments</h2>
 <p>I really wanted to setup some comments system for each blogpost. This way I can learn new tips from readers and find out how to improve posts going forward. I will go with the recommended <a href="https://disqus.com" target="_blank">Disqus comments option</a> from the <a href="https://rstudio.github.io/distill/blog.html#comments-and-sharing" target="_blank">distill blog</a>. I simply created a <a href="https://disqus.com" target="_blank">Disqus</a> account and selected <strong>Get Started</strong>. I then clicked the following button to <em>Install Disqus on my site</em>.</p>
-<center>
-<div class="cell" data-hash="index_cache/html/step-01-02-screenshot_284ea3c24477471600645327fcbc2d0c">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://www.shamindras.com/Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png" class="external img-fluid figure-img" width="353"></p>
+<div id="step-01-02-screenshot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png" class="img-fluid figure-img" alt="Screenshot of getting started with Disqus"></p>
 <p></p><p></p>
 </figure>
 </div>
-</div>
-</div>
-</center>
 <p>I was then presented with the following Disqus site configuration menu. I entered <code>https:://www.shamindras.com/</code> for my <strong>Website Name</strong> and manually set my <strong>Disqus shortname</strong> to be <code>shamindras-distill</code> to be easier to remember and specific to this site, in case I make more websites later on. This Disqus shortname is important to note down (🖊) as we’ll see shortly.</p>
-<center>
-<div class="cell" data-hash="index_cache/html/step-01-03-screenshot_8e0768c3e1586aff5324e81eb90fb763">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://www.shamindras.com/Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_03.png" class="external img-fluid figure-img" width="668"></p>
+<div id="step-01-03-screenshot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_03.png" class="img-fluid figure-img" alt="Screenshot of setting up Disqus shortname"></p>
 <p></p><p></p>
 </figure>
 </div>
-</div>
-</div>
-</center>
 <p>After clicking <strong>Create Site</strong> in the previous menu I proceeded to select the <em>free</em> plan option by subscribing to the <em>Basic, Free, Ads Supported</em> comments option as seen below:</p>
-<aside>
-As a student got to always know when to get a freebie <code>r emo::ji("smile")</code>
-</aside><center>
-<div class="cell" data-hash="index_cache/html/step-01-04-screenshot_946d4e57962cfff8f43b7996ec16b5f9">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://www.shamindras.com/Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_04.png" class="external img-fluid figure-img" width="776"></p>
+<aside><p>As a student got to always know when to get a freebie 😄</p>
+</aside><div id="step-01-04-screenshot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_04.png" class="img-fluid figure-img" alt="Screenshot of select basic (Free, Ads supported) mode"></p>
 <p></p><p></p>
 </figure>
 </div>
-</div>
-</div>
-</center>
 <p>In terms of implementing <code>Disqus</code> on my site, I clicked on the following button to install Disqus on my site manually:</p>
-<center>
-<div class="cell" data-hash="index_cache/html/step-01-05-screenshot_ceeaa6562af3548c532fa4d841e39e22">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://www.shamindras.com/Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_05.png" class="external img-fluid figure-img" width="507"></p>
+<div id="step-01-05-screenshot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_05.png" class="img-fluid figure-img" alt="Screenshot of manual installation of Disqus"></p>
 <p></p><p></p>
 </figure>
 </div>
-</div>
-</div>
-</center>
 <p>Before finishing the manual installation of <code>Disqus</code> I ensured that I set the following configuration options. I particularly like setting an opiononated comments policy and selected the <a href="https://grist.org/grist-comment-policy/" target="_blank">Grist Comment Policy</a>:</p>
-<center>
-<div class="cell" data-hash="index_cache/html/step-01-06-screenshot_cbd2f1838e8932e8ef966a4090092cce">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://www.shamindras.com/Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_06.png" class="external img-fluid figure-img" width="822"></p>
+<div id="step-01-06-screenshot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_06.png" class="img-fluid figure-img" alt="Screenshot of Disqus configuration settings"></p>
 <p></p><p></p>
 </figure>
 </div>
-</div>
-</div>
-</center>
 <p>Finally to ensure that the implementation is completed I added the following line to the <code>_site.yml</code> post using the <strong>Disqus shortname</strong> set earlier i.e. <code>shamindras-distill</code> and ensuring <code>hidden: true</code> so that the comments are not expanded by default:</p>
-<aside><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
+<aside><p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
 </aside><div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;">collections:</span></span>
 <span id="cb1-2">  <span class="ex" style="color: null;">posts:</span></span>
@@ -724,52 +692,34 @@ As a student got to always know when to get a freebie <code>r emo::ji("smile")</
 <span id="cb1-5">      <span class="ex" style="color: null;">hidden:</span> true</span></code></pre></div>
 </div>
 <p>We now see the following comments option at the bottom of every post:</p>
-<center>
-<div class="cell" data-hash="index_cache/html/step-01-07-screenshot_95823c8754870d63ee07fb1c087e7f83">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://www.shamindras.com/Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_07.png" class="external img-fluid figure-img" width="230"></p>
+<div id="step-01-07-screenshot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_07.png" class="img-fluid figure-img" alt="Screenshot of Distill Disqus comments selection"></p>
 <p></p><p></p>
 </figure>
 </div>
-</div>
-</div>
-</center>
 <p>You can read more about setting up comments from the official <code>distill</code> blog <a href="https://rstudio.github.io/distill/blog.html#comments-and-sharing">here</a></p>
 </section><section id="step-2-setup-google-analytics-tracking" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-2-setup-google-analytics-tracking">Step 2: Setup Google Analytics tracking</h2>
 <p>I also wanted to setup basic user viewing tracking for my site. Fortunately <code>distill</code> can be easily configured to work with <a href="https://analytics.google.com/analytics/web" target="_blank">Google Analytics</a>. In order to set this up I simply created an account for <code>Google Analytics</code> (using my personal gmail account). I then logged in and selected the option to track my website as follows:</p>
-<center>
-<div class="cell" data-hash="index_cache/html/step-02-01-screenshot_a5c412cf4387943fac80c562b66314c2">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://www.shamindras.com/Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_02_ga_01.png" class="external img-fluid figure-img" width="417"></p>
+<div id="step-02-01-screenshot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_02_ga_01.png" class="img-fluid figure-img" alt="Screenshot of Google Analytics settings"></p>
 <p></p><p></p>
 </figure>
 </div>
-</div>
-</div>
-</center>
 <p>Note that I specified the <strong>Website Name</strong> field to be <code>shamindras-distill</code>. This is indeed the same as the Disqus shortname from earlier but did not have to be. I just did it for consistency and easy reference. I was then given a <strong>Google Analytics token</strong> and concluded this setup by adding the token to the <code>_site.yml</code> file as follows:</p>
-<aside><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
+<aside><p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
 </aside><div class="cell">
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;">google_analytics:</span> <span class="st" style="color: #20794D;">"UA-145015693-1"</span></span></code></pre></div>
 </div>
 <p>You can read more about setting up Google Analytics from the official <code>distill</code> blog <a href="https://rstudio.github.io/distill/website.html#google-analytics">here</a></p>
 </section><section id="step-3-add-netlify-status-badge" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-3-add-netlify-status-badge">Step 3: Add Netlify Status Badge</h2>
 <p>Since <a href="https://www.netlify.com" target="_blank">Netlify</a> is the web hosting platform for my site (see setup details <a href="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/#step-8-deploy-your-website" target="_blank">here</a>). I just logged into my Netlify account and went to my <strong>Site Details</strong> and obtained the following code from the <strong>Status Badges</strong> option.</p>
-<center>
-<div class="cell" data-hash="index_cache/html/step-03-01-screenshot_e215eec759022bcb615cc2b536b7d33d">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://www.shamindras.com/Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_03_netlify_01.png" class="external img-fluid figure-img" width="1234"></p>
+<div id="step-03-01-screenshot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_03_netlify_01.png" class="img-fluid figure-img" alt="Screenshot of Netlify badge code"></p>
 <p></p><p></p>
 </figure>
 </div>
-</div>
-</div>
-</center>
 <p>I copy-pasted the above code in at the top of my site <code>README.md</code> file. This let’s me quickly know whether my website is up and running as expected by simply checking out my <a href="https://github.com/shamindras/ss_personal_distill_blog" target="_blank">github page</a>.</p>
-<aside><strong>Note:</strong> You can see my <code>README.md</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md">here</a>
+<aside><p><strong>Note:</strong> You can see my <code>README.md</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md">here</a></p>
 </aside></section><section id="step-4-add-blog-post-sharing-options" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-4-add-blog-post-sharing-options">Step 4: Add blog post sharing options</h2>
 <p>It is easy to configure distill to allow for easy sharing of posts using a variety of social media platforms. I allow for <strong>twitter, linkedin, pinterest, and facebook.</strong> I did this by simply adding the following line in the <code>_site.yml</code> file:</p>
 <div class="cell">
@@ -778,19 +728,13 @@ As a student got to always know when to get a freebie <code>r emo::ji("smile")</
 <span id="cb3-3">    <span class="ex" style="color: null;">share:</span> [twitter, linkedin, pinterest, facebook]</span></code></pre></div>
 </div>
 <p>Now the following sharing options appear at the bottom of every post:</p>
-<center>
-<div class="cell" data-hash="index_cache/html/step-04-01-screenshot_b4bd9d3eb344ac8c296ccd2159a3c8b1">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://www.shamindras.com/Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_04_sharing_01.png" class="external img-fluid figure-img" width="191"></p>
+<div id="step-04-01-screenshot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_04_sharing_01.png" class="img-fluid figure-img" alt="Screenshot of Distill sharing options"></p>
 <p></p><p></p>
 </figure>
 </div>
-</div>
-</div>
-</center>
 <p>I also added in the following lines to <code>_site.yml</code> to ensure that <a href="https://rstudio.github.io/distill/metadata.html#twitter-card" target="_blank">twitter cards</a> are correctly generated when posts are shared on twitter:</p>
-<aside><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
+<aside><p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
 </aside><div class="cell">
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;">twitter:</span></span>
 <span id="cb4-2">  <span class="ex" style="color: null;">site:</span> <span class="st" style="color: #20794D;">"@shamindraas"</span></span>
@@ -802,17 +746,11 @@ As a student got to always know when to get a freebie <code>r emo::ji("smile")</
 <div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="ex" style="color: null;">repository_url:</span> https://github.com/shamindras/ss_personal_distill_blog</span></code></pre></div>
 </div>
 <p>Now the following appears at the bottom of all blogposts:</p>
-<center>
-<div class="cell" data-hash="index_cache/html/step-05-01-screenshot_d0a0c3a55aabefdae52f0b6a62141c4c">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://www.shamindras.com/Users/shamindras/DROPBOX/REPOS/ss_personal_quarto_blog/posts/2019-07-31-shrotriya2019distillpt2/images/step_05_trackcorr_01.png" class="external img-fluid figure-img" width="489"></p>
+<div id="step-05-01-screenshot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_05_trackcorr_01.png" class="img-fluid figure-img" alt="Screenshot of changes and corrections tracking"></p>
 <p></p><p></p>
 </figure>
 </div>
-</div>
-</div>
-</center>
 <p>So users can easily track changes or file any concerns as issues, though hopefully the <code>Disqus</code> comment feature makes this easier for everyone.</p>
 <p>Finally it is easy to add an <strong>RSS feed</strong> for the blog by simply adding the following to <code>_site.yml</code>:</p>
 <div class="cell">
@@ -822,7 +760,7 @@ As a student got to always know when to get a freebie <code>r emo::ji("smile")</
 <span id="cb6-4">    <span class="ex" style="color: null;">-</span> icon: fa fa-rss</span>
 <span id="cb6-5">      <span class="ex" style="color: null;">href:</span> index.xml</span></code></pre></div>
 </div>
-<aside><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
+<aside><p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
 </aside><p>The critical elements are adding in the <code>base_url</code> fields and adding in <code>fa fa-rss</code> which is derived from the <code>index.xml</code> file. The <code>index.xml</code> file is automatically generated from the <code>index.Rmd</code> when you render the <code>distill</code> blog using the usual command:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="ex" style="color: null;">rmarkdown::render_site</span><span class="er" style="color: #AD0000;">(</span><span class="fu" style="color: #4758AB;">here::here()</span><span class="kw" style="color: #003B4F;">)</span></span></code></pre></div>
