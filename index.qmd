@@ -3,7 +3,7 @@ title: "Welcome"
 image: data/images/about-profile-circular-scaled-75.png
 about:
   template: jolla
-  image-width: 14em
+  image-width: 12em
   links:
     - icon: github
       text: Github
