@@ -20,7 +20,7 @@ editor_options:
     wrap: 80
 ---
 
-```{r setup_01_01, include=FALSE, echo=FALSE, results='asis'}
+```{r setup_01_01, echo=FALSE, results='asis'}
 wikipediapreview::wp_init(use_unpkg = TRUE, use_alt_style = TRUE)
 ```
 
@@ -243,4 +243,4 @@ Stay tuned for more blogposts solving more such tasks.
 
 I'd like to thank Salil Shrotriya for creating the preview image for this post.
 The hex sticker `png` files were sourced from
-[here](https://github.com/rstudio/hex-stickers)
+[here](https://github.com/rstudio/hex-stickers).

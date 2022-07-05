@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.433">
+<meta name="generator" content="quarto-0.9.640">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
 <meta name="author" content="Shamindra Shrotriya">
 <meta name="dcterms.date" content="2019-07-15">
 <meta name="description" content="First part in a series of doing useful tasks with the tidyverse. This time, we generate Oxford Comma triples, and sequentially numbered BibTeX entries">
+
 <title>Shamindra Shrotriya - Tidyverse Fun - Part 1</title>
 <style>
 code{white-space: pre-wrap;}
@@ -79,10 +82,23 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script><script src="../../site_libs/quarto-nav/headroom.min.js"></script><script src="../../site_libs/clipboard/clipboard.min.js"></script><meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../../site_libs/quarto-search/fuse.min.js"></script><script src="../../site_libs/quarto-search/quarto-search.js"></script><script src="../../site_libs/quarto-html/quarto.js"></script><script src="../../site_libs/quarto-html/popper.min.js"></script><script src="../../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../../site_libs/quarto-html/anchor.min.js"></script><link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script><link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -102,7 +118,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script><script type="text/javascript">
+}</script>
+
+<script type="text/javascript">
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -114,29 +132,28 @@ ga('send', {
   hitType: 'pageview',
   'anonymizeIp': true,
 });
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="../../styles.css">
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Shamindra Shrotriya - Tidyverse Fun - Part 1">
-<meta property="og:description" content="First part in a series of doing useful tasks with
-the `tidyverse`. This time, we generate Oxford Comma
-triples, and sequentially numbered BibTeX
-entries
-">
+<meta property="og:description" content="First part in a series of doing useful tasks with the tidyverse. This time, we generate Oxford Comma triples, and sequentially numbered BibTeX entries">
 <meta property="og:image" content="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg">
 <meta property="og:site-name" content="Shamindra Shrotriya">
 <meta name="twitter:title" content="Shamindra Shrotriya - Tidyverse Fun - Part 1">
-<meta name="twitter:description" content="First part in a series of doing useful tasks with
-the `tidyverse`. This time, we generate Oxford Comma
-triples, and sequentially numbered BibTeX
-entries
-">
+<meta name="twitter:description" content="First part in a series of doing useful tasks with the tidyverse. This time, we generate Oxford Comma triples, and sequentially numbered BibTeX entries">
 <meta name="twitter:image" content="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg">
 <meta name="twitter:creator" content="@shamindraas">
 <meta name="twitter:card" content="summary_large_image">
 </head>
+
 <body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Shamindra Shrotriya</span>
   </a>
@@ -145,7 +162,7 @@ entries
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item">
+  <li class="nav-item">
     <a class="nav-link" href="../../posts.html">blog</a>
   </li>  
   <li class="nav-item">
@@ -165,15 +182,19 @@ entries
  </a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../posts.xml"><i class="bi bi-rss" role="img">
 </i> 
  </a>
   </li>  
 </ul>
-<div id="quarto-search" class="" title="Search"></div>
+              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Tidyverse Fun - Part 1</h1>
                   <div>
@@ -210,32 +231,66 @@ entries
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc"><h2 id="toc-title">Table of contents</h2>
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li>
-<a href="#task-1-generating-oxford-comma-triples" id="toc-task-1-generating-oxford-comma-triples" class="nav-link active" data-scroll-target="#task-1-generating-oxford-comma-triples">Task 1: Generating Oxford Comma Triples</a>
+  <li><a href="#task-1-generating-oxford-comma-triples" id="toc-task-1-generating-oxford-comma-triples" class="nav-link active" data-scroll-target="#task-1-generating-oxford-comma-triples">Task 1: Generating Oxford Comma Triples</a>
   <ul class="collapse">
-<li><a href="#the-central-problem" id="toc-the-central-problem" class="nav-link" data-scroll-target="#the-central-problem">The central problem</a></li>
+  <li><a href="#the-central-problem" id="toc-the-central-problem" class="nav-link" data-scroll-target="#the-central-problem">The central problem</a></li>
   <li><a href="#generating-all-word-triple-permutations-the-tidy-way" id="toc-generating-all-word-triple-permutations-the-tidy-way" class="nav-link" data-scroll-target="#generating-all-word-triple-permutations-the-tidy-way">Generating all word-triple permutations the <code>tidy</code> way</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#task-2-generating-sequentially-numbered-bibtex-entries" id="toc-task-2-generating-sequentially-numbered-bibtex-entries" class="nav-link" data-scroll-target="#task-2-generating-sequentially-numbered-bibtex-entries">Task 2: Generating Sequentially Numbered BibTeX Entries</a>
+  </ul></li>
+  <li><a href="#task-2-generating-sequentially-numbered-bibtex-entries" id="toc-task-2-generating-sequentially-numbered-bibtex-entries" class="nav-link" data-scroll-target="#task-2-generating-sequentially-numbered-bibtex-entries">Task 2: Generating Sequentially Numbered BibTeX Entries</a>
   <ul class="collapse">
-<li><a href="#the-central-problem-1" id="toc-the-central-problem-1" class="nav-link" data-scroll-target="#the-central-problem-1">The central problem</a></li>
+  <li><a href="#the-central-problem-1" id="toc-the-central-problem-1" class="nav-link" data-scroll-target="#the-central-problem-1">The central problem</a></li>
   <li><a href="#the-tidy-approach" id="toc-the-tidy-approach" class="nav-link" data-scroll-target="#the-tidy-approach">The <code>tidy</code> approach</a></li>
   <li><a href="#apply-to-all-lectures-using-purrr" id="toc-apply-to-all-lectures-using-purrr" class="nav-link" data-scroll-target="#apply-to-all-lectures-using-purrr">Apply to all lectures using <code>purrr</code></a></li>
-  </ul>
-</li>
+  </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
-  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shamindras/ss_personal_quarto_blog/edit/main/posts/2019-07-15-shrotriya2019tidyfunpt1/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shamindras/ss_personal_quarto_blog/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
-</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shamindras/ss_personal_quarto_blog/edit/main/posts/2019-07-15-shrotriya2019tidyfunpt1/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shamindras/ss_personal_quarto_blog/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content"><section id="task-1-generating-oxford-comma-triples" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="task-1-generating-oxford-comma-triples">Task 1: Generating Oxford Comma Triples</h2>
-<section id="the-central-problem" class="level3"><h3 class="anchored" data-anchor-id="the-central-problem">The central problem</h3>
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+<div class="cell-output-display">
+<style type="text/css">/**
+  * Author: Mikhail Popov
+  * License: MIT
+  */
+a.wiki {
+    /* color: #0645ad; */
+    text-decoration: none;
+    border-bottom: 1px dotted #0645ad;
+}
+.wiki::after {
+    font-family: serif;
+    content: " W";
+    vertical-align: super;
+    font-size: 6pt;
+}</style>
+<script src="https://unpkg.com/wikipedia-preview@latest/dist/wikipedia-preview.production.js" type="text/javascript"></script>
+<script type="text/javascript">
+    window.onload = function() {
+      wikipediaPreview.init({
+        lang: 'en',
+        selector: '.wiki',
+        detectLinks: true
+      });
+    };</script>
+</div>
+<section id="task-1-generating-oxford-comma-triples" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="task-1-generating-oxford-comma-triples">Task 1: Generating Oxford Comma Triples</h2>
+<section id="the-central-problem" class="level3">
+<h3 class="anchored" data-anchor-id="the-central-problem">The central problem</h3>
 <p>Based on a fun conversation with my statistics cohort over dinner we got to discussing the famous <a href="https://en.wikipedia.org/wiki/Serial_comma" class="wiki"><em>Oxford Comma</em></a> (or <em>Serial Comma</em> depending on your persuasion). I’ve never really adopted the use but my friends made a compelling argument on it’s apparent general lack of ambiguity when applied appropriately.</p>
 <p>We will use the Oxford comma on the famously <em>ambiguous</em> phrase (here used without the Oxford Comma before <em>leaves</em>):</p>
 <blockquote class="blockquote">
@@ -246,51 +301,57 @@ entries
 <p>Eats, shoots, and leaves</p>
 </blockquote>
 <p><strong>Goal:</strong> A fun experiment would be to generate <em>all permutations</em> of this phrase with and without the Oxford Comma using <code>R</code> and specifically the <code>tidyverse</code> packages.</p>
-</section><section id="generating-all-word-triple-permutations-the-tidy-way" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="generating-all-word-triple-permutations-the-tidy-way">Generating all word-triple permutations the <code>tidy</code> way</h3>
+</section>
+<section id="generating-all-word-triple-permutations-the-tidy-way" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="generating-all-word-triple-permutations-the-tidy-way">Generating all word-triple permutations the <code>tidy</code> way</h3>
 <p>First, let’s load our required packages.</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org">magrittr</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/tidyverse/glue">glue</a></span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s also define our unique global word values used to construct the required phrases:</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">WORD_VALS</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"eats"</span>, <span class="st">"shoots"</span>, <span class="st">"leaves"</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>WORD_VALS <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"eats"</span>, <span class="st">"shoots"</span>, <span class="st">"leaves"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Generate all unique 3-word permutations <em>without replacement</em> from the three unique words. We’ll create a helper function to check that a vector of words is unique.</p>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">is_unq_perm</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">word1</span>, <span class="va">word2</span>, <span class="va">word3</span><span class="op">)</span><span class="op">{</span>
-    <span class="va">words_vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">word1</span>, <span class="va">word2</span>, <span class="va">word3</span><span class="op">)</span>
-    <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">words_vec</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">words_vec</span><span class="op">)</span><span class="op">)</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span>
-<span class="op">}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>is_unq_perm <span class="ot">&lt;-</span> <span class="cf">function</span>(word1, word2, word3){</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    words_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(word1, word2, word3)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">length</span>(words_vec) <span class="sc">-</span> <span class="fu">length</span>(<span class="fu">unique</span>(words_vec)) <span class="sc">==</span> <span class="dv">0</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We can now simply generate every possible triple <em>with replacement</em> using the <code><a href="https://tidyr.tidyverse.org/reference/expand.html">tidyr::crossing</a></code> function. We proceed to <em>filter</em> these <span class="math inline">\(3^3 = 27\)</span> triples for unique triples using our <code>is_unq_perm</code> helper function applied <em>row-by-row</em> using <code><a href="https://purrr.tidyverse.org/reference/map2.html">purrr::pmap_lgl</a></code>. The <code>_lgl</code> simply returns a <code>TRUE/FALSE</code> logical value as intended by the applied function.</p>
-<aside><strong>Note:</strong> The <code><a href="https://tidyr.tidyverse.org/reference/expand.html">tidyr::crossing</a></code> generates a <em>Cartesian product</em> of all the 3 word triples, very handy
-</aside><div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="co"># Generate the unique word-triples</span>
-<span class="va">all_perms</span> <span class="op">&lt;-</span> <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/expand.html">crossing</a></span><span class="op">(</span>word1 <span class="op">=</span> <span class="va">WORD_VALS</span>,
-                             word2 <span class="op">=</span> <span class="va">WORD_VALS</span>,
-                             word3 <span class="op">=</span> <span class="va">WORD_VALS</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-                <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>.data <span class="op">=</span> <span class="va">.</span>,
-                       is_unq_perm <span class="op">=</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map2.html">pmap_lgl</a></span><span class="op">(</span>.l <span class="op">=</span> <span class="va">.</span>,
-                                                     <span class="va">is_unq_perm</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-                <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span>.data <span class="op">=</span> <span class="va">.</span>, <span class="va">is_unq_perm</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-                <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">is_unq_perm</span><span class="op">)</span>
-
-<span class="co"># Display output in a nice centered table</span>
-<span class="va">all_perms</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">.</span>, align <span class="op">=</span> <span class="st">'c'</span>,
-        col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Word 1"</span>,
-                      <span class="st">"Word 2"</span>,
-                      <span class="st">"Word 3"</span><span class="op">)</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can now simply generate every possible triple <em>with replacement</em> using the <code>tidyr::crossing</code> function. We proceed to <em>filter</em> these <span class="math inline">\(3^3 = 27\)</span> triples for unique triples using our <code>is_unq_perm</code> helper function applied <em>row-by-row</em> using <code>purrr::pmap_lgl</code>. The <code>_lgl</code> simply returns a <code>TRUE/FALSE</code> logical value as intended by the applied function.</p>
+<aside>
+<strong>Note:</strong> The <code>tidyr::crossing</code> generates a <em>Cartesian product</em> of all the 3 word triples, very handy
+</aside>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate the unique word-triples</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>all_perms <span class="ot">&lt;-</span> tidyr<span class="sc">::</span><span class="fu">crossing</span>(<span class="at">word1 =</span> WORD_VALS,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                             <span class="at">word2 =</span> WORD_VALS,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                             <span class="at">word3 =</span> WORD_VALS) <span class="sc">%&gt;%</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                <span class="fu">mutate</span>(<span class="at">.data =</span> .,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                       <span class="at">is_unq_perm =</span> purrr<span class="sc">::</span><span class="fu">pmap_lgl</span>(<span class="at">.l =</span> .,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                                                     is_unq_perm)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>                <span class="fu">filter</span>(<span class="at">.data =</span> ., is_unq_perm) <span class="sc">%&gt;%</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                <span class="fu">select</span>(<span class="sc">-</span>is_unq_perm)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Display output in a nice centered table</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>all_perms <span class="sc">%&gt;%</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">x =</span> ., <span class="at">align =</span> <span class="st">'c'</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Word 1"</span>,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Word 2"</span>,</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Word 3"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: center;">Word 1</th>
 <th style="text-align: center;">Word 2</th>
 <th style="text-align: center;">Word 3</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">eats</td>
@@ -328,29 +389,31 @@ entries
 </div>
 <p>Great - that part is done! Now we just need to generate for each triple of words an oxford comma and non-oxford comma version. This is done easily using the amazing <code>glue</code> package as seen below:</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">exprs</span> <span class="op">&lt;-</span> <span class="va">all_perms</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-          <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>non_oxford_comma <span class="op">=</span>
-                   <span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue_data</a></span><span class="op">(</span>.x <span class="op">=</span> <span class="va">.</span>,
-                             <span class="st">"{word1}, {word2} and {word3}"</span><span class="op">)</span>,
-                 oxford_comma <span class="op">=</span>
-                   <span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue_data</a></span><span class="op">(</span>.x <span class="op">=</span> <span class="va">.</span>,
-                             <span class="st">"{word1}, {word2}, and {word3}"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-          <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">non_oxford_comma</span>, <span class="va">oxford_comma</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>exprs <span class="ot">&lt;-</span> all_perms <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>          <span class="fu">mutate</span>(<span class="at">non_oxford_comma =</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">glue_data</span>(<span class="at">.x =</span> .,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"{word1}, {word2} and {word3}"</span>),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">oxford_comma =</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">glue_data</span>(<span class="at">.x =</span> .,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"{word1}, {word2}, and {word3}"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>          <span class="fu">select</span>(non_oxford_comma, oxford_comma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can display the side-by-side output of the Non-Oxford Comma vs.&nbsp;Oxford comma for the <span class="math inline">\(6\)</span> generated triples as follows:</p>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="co"># Display output in a nice centered table</span>
-<span class="va">exprs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">.</span>,
-        align <span class="op">=</span> <span class="st">'c'</span>,
-        col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Non-Oxford Comma"</span>,
-                      <span class="st">"Oxford Comma"</span><span class="op">)</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Display output in a nice centered table</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>exprs <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">x =</span> .,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">align =</span> <span class="st">'c'</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Non-Oxford Comma"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Oxford Comma"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: center;">Non-Oxford Comma</th>
 <th style="text-align: center;">Oxford Comma</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">eats, leaves and shoots</td>
@@ -381,8 +444,12 @@ entries
 </div>
 </div>
 <p>So there you have it. Have fun generating your own version of Oxford Comma triples to engage in civil discussions with your fellow grammar focused friends 😄.</p>
-</section></section><section id="task-2-generating-sequentially-numbered-bibtex-entries" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="task-2-generating-sequentially-numbered-bibtex-entries">Task 2: Generating Sequentially Numbered BibTeX Entries</h2>
-<section id="the-central-problem-1" class="level3"><h3 class="anchored" data-anchor-id="the-central-problem-1">The central problem</h3>
+</section>
+</section>
+<section id="task-2-generating-sequentially-numbered-bibtex-entries" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="task-2-generating-sequentially-numbered-bibtex-entries">Task 2: Generating Sequentially Numbered BibTeX Entries</h2>
+<section id="the-central-problem-1" class="level3">
+<h3 class="anchored" data-anchor-id="the-central-problem-1">The central problem</h3>
 <p>In this case I needed to generate several BibTeX entries of the form:</p>
 <pre class="markup"><code>@misc{doe2019_lec1,
 author        = {Doe, John},
@@ -394,35 +461,39 @@ url           = {https://statschool/~doe/stats10A/Lectures/Lecture01.pdf},
 <p>As it can be seen the lectures are numbered sequentially and change in the main BibTeX <code>id</code>, the <code>title</code>, and the <code>url</code> field.</p>
 <p>Specifically I needed to construct 30 such sequential entries for lectures <code>1-30</code>. Rather than do this manually, I realized that this would be fun scripting exercise with using the <code>tidyverse</code> packages <code>glue</code>, <code>purrr</code>, and <code>stringr</code>.</p>
 <p><strong>Goal:</strong> Create 30 such BibTeX entries and print to the console to directly-copy paste to my BibTeX file.</p>
-</section><section id="the-tidy-approach" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="the-tidy-approach">The <code>tidy</code> approach</h3>
+</section>
+<section id="the-tidy-approach" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="the-tidy-approach">The <code>tidy</code> approach</h3>
 <p>First step is to write a function that takes a lecture number (integer) as an input and then outputs a single BibTeX entry for that lecture.</p>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="co"># Generate BibTeX entry for a single lecture number</span>
-<span class="va">get_lec_bibtex</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">lec_num</span><span class="op">)</span><span class="op">{</span>
-  <span class="co"># Get the 2 character padded lecture number i.e. 1 -&gt; "01"</span>
-  <span class="va">lec_num_pad</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_pad.html">str_pad</a></span><span class="op">(</span>string <span class="op">=</span> <span class="va">lec_num</span>, width <span class="op">=</span> <span class="fl">2</span>,
-                         side <span class="op">=</span> <span class="st">"left"</span>, pad <span class="op">=</span> <span class="st">"0"</span><span class="op">)</span>
-
-  <span class="co"># Construct the BibTeX entry</span>
-  <span class="va">out_bbtex_str</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span>
-    <span class="st">"@misc{doe2019_lec&lt;lec_num&gt;,
-    author = {Doe, John},
-    title  = {Lecture Note &lt;lec_num&gt; - STAT10A},
-    month  = {March},
-    year   = {2018},
-    url    = {https://www.hpg/~doe/st10A/lecs/lec&lt;lec_num_pad&gt;.pdf}}"</span>,
-    .open <span class="op">=</span> <span class="st">"&lt;"</span>,
-    .close <span class="op">=</span> <span class="st">"&gt;"</span><span class="op">)</span>
-
-  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">out_bbtex_str</span><span class="op">)</span>
-<span class="op">}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate BibTeX entry for a single lecture number</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>get_lec_bibtex <span class="ot">&lt;-</span> <span class="cf">function</span>(lec_num){</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Get the 2 character padded lecture number i.e. 1 -&gt; "01"</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  lec_num_pad <span class="ot">&lt;-</span> <span class="fu">str_pad</span>(<span class="at">string =</span> lec_num, <span class="at">width =</span> <span class="dv">2</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>                         <span class="at">side =</span> <span class="st">"left"</span>, <span class="at">pad =</span> <span class="st">"0"</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Construct the BibTeX entry</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  out_bbtex_str <span class="ot">&lt;-</span> <span class="fu">glue</span>(</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"@misc{doe2019_lec&lt;lec_num&gt;,</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="st">    author = {Doe, John},</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="st">    title  = {Lecture Note &lt;lec_num&gt; - STAT10A},</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="st">    month  = {March},</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="st">    year   = {2018},</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="st">    url    = {https://www.hpg/~doe/st10A/lecs/lec&lt;lec_num_pad&gt;.pdf}}"</span>,</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">.open =</span> <span class="st">"&lt;"</span>,</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">.close =</span> <span class="st">"&gt;"</span>)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(out_bbtex_str)</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Note that by default <code>glue</code> allows you to substitute input text in between <code>{</code> and <code>}</code> markers. However BibTeX entries <em>already have</em> literal default <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code> tags that we need to include in our function output. Rather than escaping them the <code>glue</code> package conveniently allows us to change the default opening and closing markers 💯! We simply set these to be angle brackets <code>&lt; &gt;</code> using the <code>.open</code> and <code>.close</code> options above.</p>
-<aside><strong>Note:</strong> Luckily we don’t have <em>literal</em> angle brackets in our BibTeX output to deal with here
-</aside><p>Let’s just test this out quickly:</p>
+<p>Note that by default <code>glue</code> allows you to substitute input text in between <code>{</code> and <code>}</code> markers. However BibTeX entries <em>already have</em> literal default <code>{}</code> tags that we need to include in our function output. Rather than escaping them the <code>glue</code> package conveniently allows us to change the default opening and closing markers 💯! We simply set these to be angle brackets <code>&lt; &gt;</code> using the <code>.open</code> and <code>.close</code> options above.</p>
+<aside>
+<strong>Note:</strong> Luckily we don’t have <em>literal</em> angle brackets in our BibTeX output to deal with here
+</aside>
+<p>Let’s just test this out quickly:</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">lec_no</span> <span class="op">&lt;-</span> <span class="fl">1</span>
-<span class="fu">get_lec_bibtex</span><span class="op">(</span>lec_num <span class="op">=</span> <span class="va">lec_no</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>lec_no <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">get_lec_bibtex</span>(<span class="at">lec_num =</span> lec_no)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>@misc{doe2019_lec1,
 author = {Doe, John},
@@ -433,15 +504,18 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec01.pdf}}</code></pre>
 </div>
 </div>
 <p>Great - looks like it is working as required with the correct string padding in the lecture number in the pdf filename!</p>
-<aside><strong>Note:</strong> We used the <code>stringr</code> <code>str_pad</code> to convert <code>1</code> to <code>"01"</code>
-</aside></section><section id="apply-to-all-lectures-using-purrr" class="level3"><h3 class="anchored" data-anchor-id="apply-to-all-lectures-using-purrr">Apply to all lectures using <code>purrr</code>
-</h3>
+<aside>
+<strong>Note:</strong> We used the <code>stringr</code> <code>str_pad</code> to convert <code>1</code> to <code>"01"</code>
+</aside>
+</section>
+<section id="apply-to-all-lectures-using-purrr" class="level3">
+<h3 class="anchored" data-anchor-id="apply-to-all-lectures-using-purrr">Apply to all lectures using <code>purrr</code></h3>
 <p>Let’s finish this by creating all the entries using <code>purrr</code>:</p>
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va">lec_nums</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">30</span><span class="op">)</span>
-<span class="va">lec_nums</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-  <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_chr</a></span><span class="op">(</span>.x <span class="op">=</span> <span class="va">.</span>, .f <span class="op">=</span> <span class="op">~</span><span class="fu">get_lec_bibtex</span><span class="op">(</span>lec_num <span class="op">=</span> <span class="va">.x</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-  <span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="va">.</span>, sep <span class="op">=</span> <span class="st">"\n\n"</span><span class="op">)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>lec_nums <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">30</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>lec_nums <span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map_chr</span>(<span class="at">.x =</span> ., <span class="at">.f =</span> <span class="sc">~</span><span class="fu">get_lec_bibtex</span>(<span class="at">lec_num =</span> .x)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(., <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>@misc{doe2019_lec1,
 author = {Doe, John},
@@ -460,11 +534,18 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec30.pdf}}</code></pre>
 </div>
 <p>Yay - this works as expected! We can now paste into BibTeX as required.</p>
 <p>Note that we only created it for lectures 1 and 30 for easy scrolling. But for all lectures we can just replace <code>c(1, 30)</code> with <code>1:30</code> in the above code.</p>
-</section></section><section id="conclusion" class="level2"><h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>This post was for me to document and serve as a guide to automating a couple of fun text-based tasks that I came across in my work (and social life!). Using the <code>tidy</code> framework can be a fun way to solve these tasks (but certainly not the only way in <code>R</code>). Have fun playing around with the above and please post in the comments any questions/feedback you may have 👍.</p>
 <p>Stay tuned for more blogposts solving more such tasks.</p>
-</section><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
-<p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a></p>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
+
+<p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a>.</p>
 
 
 </div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
@@ -477,7 +558,8 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec30.pdf}}</code></pre>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2019" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
 Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 1.”</span> July
 15, 2019. <a href="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1">https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1</a>.
-</div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";
   const anchorJS = new window.AnchorJS();
@@ -556,17 +638,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://giscus.app/client.js" data-repo="shamindras/ss_personal_quarto_blog" data-repo-id="R_kgDOHYjZLw" data-category="General" data-category-id="DIC_kwDOHYjZL84CPT7q" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-<li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="https://github.com/shamindras/ss_personal_quarto_blog">blog source</a>
   </li>  
 </ul>
-</div>
+    </div>
   </div>
 </footer>
+
 
 
 </body></html>

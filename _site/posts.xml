@@ -9,13 +9,115 @@
 <link>https://www.shamindras.com/posts.html</link>
 <atom:link href="https://www.shamindras.com/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-0.9.462</generator>
-<lastBuildDate>Sat, 12 Feb 2022 05:00:00 GMT</lastBuildDate>
+<generator>quarto-0.9.640</generator>
+<lastBuildDate>Thu, 12 May 2022 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Sharp constants for finite dimensional norms</title>
+  <dc:creator>Shamindra Shrotriya</dc:creator>
+  <link>https://www.shamindras.com/posts/2022-05-12-shrotriya2022sharplpnormconsts/index.html</link>
+  <description><![CDATA[ <div class="cell-output-display">
+<style type="text/css">/**
+  * Author: Mikhail Popov
+  * License: MIT
+  */
+a.wiki {
+    /* color: #0645ad; */
+    text-decoration: none;
+    border-bottom: 1px dotted #0645ad;
+}
+.wiki::after {
+    font-family: serif;
+    content: " W";
+    vertical-align: super;
+    font-size: 6pt;
+}</style>
+<script src="https://unpkg.com/wikipedia-preview@latest/dist/wikipedia-preview.production.js" type="text/javascript"></script><script type="text/javascript">
+    window.onload = function() {
+      wikipediaPreview.init({
+        lang: 'en',
+        selector: '.wiki',
+        detectLinks: true
+      });
+    };</script>
+</div>
+<section id="tldr" class="level1 page-columns page-full"><h1>TL;DR</h1>
+<p>I walk through a cool and possibly less known result for sharp bounds on <img src="https://latex.codecogs.com/png.latex?%5Cell_%7Bp%7D"> norms in finite dimensional vector spaces. This result enables working with <img src="https://latex.codecogs.com/png.latex?%5Cell_%7Bp%7D">-norms directly rather than approximating them with with more widely used <img src="https://latex.codecogs.com/png.latex?%5Cell_%7B1%7D,%20%5Cell_%7B2%7D">, and <img src="https://latex.codecogs.com/png.latex?%5Cell_%7B%5Cinfty%7D">-norms, for example. This exposition is based on <span class="citation" data-cites="holger2018numericallinalg">(Chapter 2, Wendland 2018)</span> <sup>1</sup>.</p>
+<aside><span class="citation" data-cites="holger2018numericallinalg">(Wendland 2018)</span> is a wonderful (numerical) linear algebra book, highly recommend it 💯!
+</aside><section id="ell_p-norm-on-mathbbrd" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="ell_p-norm-on-mathbbrd">
+<img src="https://latex.codecogs.com/png.latex?%5Cell_%7Bp%7D">-norm on <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D%5E%7Bd%7D">
+</h2>
+<p>Throughout this presentation we will work in the finite dimensional Euclidean space <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D%5E%7Bd%7D">, for some <strong>fixed</strong> <img src="https://latex.codecogs.com/png.latex?d%20%5Cin%20%5Cmathbb%7BN%7D">. Moreover we will we will use the <img src="https://latex.codecogs.com/png.latex?%5Cell_%7Bp%7D">-norm on this space, which is defined as follows:</p>
+<div id="def-lp-norm" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (<img src="https://latex.codecogs.com/png.latex?%5Cell_%7Bp%7D">-norm on <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D%5E%7Bd%7D">) </strong></span>For a fixed <img src="https://latex.codecogs.com/png.latex?p%20%5Cin%20%5B1,%20%5Cinfty%5D">, the <img src="https://latex.codecogs.com/png.latex?%5Cell_%7Bp%7D">-norm as denoted by <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Ccdot%20%5CrVert_%7B%5Cell_%7Bp%7D%7D:%20%5Cmathbb%7BR%7D%5E%7Bd%7D%20%5Cto%20%5Cmathbb%7BR%7D_%7B%5Cgeq%200%7D">, is defined as follows:</p>
+<p><span id="eq-lp-norm-01"><img src="https://latex.codecogs.com/png.latex?%0A%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert_%7B%5Cell_%7Bp%7D%7D%20:=%20%5Cleft(%5Csum_%7Bi%20=%201%7D%5E%7Bd%7D%20%7Cx_%7Bi%7D%20%7C%5E%7Bp%7D%5Cright)%5E%7B%5Cfrac%7B1%7D%7Bp%7D%7D,%20%5C;%20%5Ctext%7Bfor%20each%20$%5Cmathbf%7Bx%7D%20%5Cin%20%5Cmathbb%7BR%7D%5E%7Bd%7D$%7D%0A%5Ctag%7B1%7D"></span></p>
+</div>
+<aside><p><strong>Note:</strong> Sometimes Definition&nbsp;1 is also just called the <img src="https://latex.codecogs.com/png.latex?p">-norm in many textbooks, and has the abbreviated notation <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert_%7Bp%7D">. We will use this notation going forward.</p>
+</aside><p>We note (without proof) that Definition&nbsp;1 does indeed define a valid norm on <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D%5E%7Bd%7D">. A previous post showed more of these details. A more detailed proof of this can be found in TODO.</p>
+</section><section id="warm-up-relationships-between-ell_1-ell_2-and-ell_infty-norms" class="level2"><h2 class="anchored" data-anchor-id="warm-up-relationships-between-ell_1-ell_2-and-ell_infty-norms">Warm up: Relationships between <img src="https://latex.codecogs.com/png.latex?%5Cell_%7B1%7D,%20%5Cell_%7B2%7D">, and <img src="https://latex.codecogs.com/png.latex?%5Cell_%7B%5Cinfty%7D">-norms</h2>
+<p>Our goal will be to prove bounds for <strong><em>any</em></strong> <img src="https://latex.codecogs.com/png.latex?p%20%5Cin%20%5B1,%20%5Cinfty%5D">. However, we we get our bearings by first shifting focus on the three most commonly used <img src="https://latex.codecogs.com/png.latex?%5Cell_%7Bp%7D">-norms on <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D%5E%7Bd%7D">. These are the <img src="https://latex.codecogs.com/png.latex?%5Cell_%7B1%7D,%20%5Cell_%7B2%7D">, and <img src="https://latex.codecogs.com/png.latex?%5Cell_%7B%5Cinfty%7D">-norms. The main proposition is as follows:</p>
+<div id="prp-common-lp-norms" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposition 1 (<img src="https://latex.codecogs.com/png.latex?%5Cell_%7Bp%7D">-norm on <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D%5E%7Bd%7D">) </strong></span>For a fixed <img src="https://latex.codecogs.com/png.latex?p%20%5Cin%20%5B1,%20%5Cinfty%5D">, the <img src="https://latex.codecogs.com/png.latex?%5Cell_%7Bp%7D">-norm as denoted by <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Ccdot%20%5CrVert_%7B%5Cell_%7Bp%7D%7D:%20%5Cmathbb%7BR%7D%5E%7Bd%7D%20%5Cto%20%5Cmathbb%7BR%7D_%7B%5Cgeq%200%7D">, is defined as follows:</p>
+<p><span id="eq-lp-norm-02"><img src="https://latex.codecogs.com/png.latex?%0A%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert_%7B%5Cell_%7Bp%7D%7D%20:=%20%5Cleft(%5Csum_%7Bi%20=%201%7D%5E%7Bd%7D%20%7Cx_%7Bi%7D%20%7C%5E%7Bp%7D%5Cright)%5E%7B%5Cfrac%7B1%7D%7Bp%7D%7D,%20%5C;%20%5Ctext%7Bfor%20each%20$%5Cmathbf%7Bx%7D%20%5Cin%20%5Cmathbb%7BR%7D%5E%7Bd%7D$%7D%0A%5Ctag%7B2%7D"></span></p>
+</div>
+
+
+
+</section></section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-holger2018numericallinalg" class="csl-entry">
+Wendland, Holger. 2018. <em>Numerical Linear Algebra</em>. Cambridge Texts in Applied Mathematics. Cambridge University Press, Cambridge.
+</div>
+</div></section><section class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1"><p><strong>Note:</strong> The presentation in this post is <strong><em>intentionally</em></strong> verbose. The goal is to give lots of intuition of the key result and its usefulness, and ensure that the proofs are rigorous. It is written with an empathetic mindset to newcomers, and to myself for future reference.↩︎</p></li>
+</ol></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2022,
+  author = {Shamindra Shrotriya},
+  title = {Sharp Constants for Finite Dimensional Norms},
+  date = {2022-05-12},
+  url = {https://www.shamindras.com/posts/2022-05-12-shrotriya2022sharplpnormconsts},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2022" class="csl-entry quarto-appendix-citeas">
+Shamindra Shrotriya. 2022. <span>“Sharp Constants for Finite Dimensional
+Norms.”</span> May 12, 2022. <a href="https://www.shamindras.com/posts/2022-05-12-shrotriya2022sharplpnormconsts">https://www.shamindras.com/posts/2022-05-12-shrotriya2022sharplpnormconsts</a>.
+</div></div></section></div> ]]></description>
+  <category>linear algebra</category>
+  <category>math</category>
+  <category>norms</category>
+  <guid>https://www.shamindras.com/posts/2022-05-12-shrotriya2022sharplpnormconsts/index.html</guid>
+  <pubDate>Thu, 12 May 2022 04:00:00 GMT</pubDate>
+  <media:content url="https://www.shamindras.com/posts/2022-05-12-shrotriya2022sharplpnormconsts/images/preview-shrotriya2021normtriconvexity.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
 <item>
   <title>Characterizing norm triangle inequalites via convexity</title>
+  <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/index.html</link>
-  <description><![CDATA[ <section id="tldr" class="level1 page-columns page-full"><h1>TL;DR</h1>
-<p>I walkthrough a cool and possibly less known result connecting convexity and the triangle inequalities for norms. Using this result, typical proofs of the triangle inequality for a proposed norm function are significantly simplified. This exposition is based on <span class="citation" data-cites="robinson2020introfuncanalysis_book">(Chapter 3, Robinson 2020)</span> <sup>1</sup>.</p>
+  <description><![CDATA[ <div class="cell-output-display">
+<style type="text/css">/**
+  * Author: Mikhail Popov
+  * License: MIT
+  */
+a.wiki {
+    /* color: #0645ad; */
+    text-decoration: none;
+    border-bottom: 1px dotted #0645ad;
+}
+.wiki::after {
+    font-family: serif;
+    content: " W";
+    vertical-align: super;
+    font-size: 6pt;
+}</style>
+<script src="https://unpkg.com/wikipedia-preview@latest/dist/wikipedia-preview.production.js" type="text/javascript"></script><script type="text/javascript">
+    window.onload = function() {
+      wikipediaPreview.init({
+        lang: 'en',
+        selector: '.wiki',
+        detectLinks: true
+      });
+    };</script>
+</div>
+<section id="tldr" class="level1 page-columns page-full"><h1>TL;DR</h1>
+<p>I walk through a cool and possibly less known result connecting convexity and the triangle inequalities for norms. Using this result, typical proofs of the triangle inequality for a proposed norm function are significantly simplified. This exposition is based on <span class="citation" data-cites="robinson2020introfuncanalysis_book">(Chapter 3, Robinson 2020)</span> <sup>1</sup>.</p>
 <aside><p><span class="citation" data-cites="robinson2020introfuncanalysis_book">(Robinson 2020)</span> is a wonderful functional analysis book, highly recommend it 💯!</p>
 </aside></section><section id="background---norms" class="level1 page-columns page-full"><h1>Background - Norms</h1>
 <aside><p><br><br> Experienced readers can freely skip this Background section.</p>
@@ -24,11 +126,11 @@
 <p><span class="theorem-title"><strong>Definition 1 (Norms in vector spaces) </strong></span>For a given vector space <img src="https://latex.codecogs.com/png.latex?V">, a norm <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Ccdot%20%5CrVert_%7BV%7D:%20V%20%5Cto%20%5Cmathbb%7BR%7D">, is a function satisfying the following three properties.</p>
 <ol type="1">
 <li>
-<strong>Positive definiteness:</strong> For all <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20%5Cin%20V">, if <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20=%200"> then <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20=%20%5Cmathbf%7B0%7D_%7BV%7D">.</li>
+<strong>Positive definiteness:</strong> For a <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20%5Cin%20V">, if <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20=%200"> then <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20=%20%5Cmathbf%7B0%7D_%7BV%7D">.</li>
 <li>
-<strong>Absolute homogeneity:</strong> <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Clambda%20%5Cmathbf%7Bx%7D%20%5CrVert%20=%20%7C%20%5Clambda%20%7C%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert">, for all <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20%5Cin%20V,%20%5Clambda%20%5Cin%20%5Cmathbb%7BR%7D">.</li>
+<strong>Absolute homogeneity:</strong> <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Clambda%20%5Cmathbf%7Bx%7D%20%5CrVert%20=%20%7C%20%5Clambda%20%7C%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert">, for a <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20%5Cin%20V,%20%5Clambda%20%5Cin%20%5Cmathbb%7BR%7D">.</li>
 <li>
-<strong>Triangle inequality:</strong> <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Cmathbf%7Bx%7D%20+%20%5Cmathbf%7By%7D%20%5CrVert%20%5Cleq%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20+%20%5ClVert%20%5Cmathbf%7By%7D%20%5CrVert">, for all <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D,%20%5Cmathbf%7By%7D%20%5Cin%20V">.</li>
+<strong>Triangle inequality:</strong> <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Cmathbf%7Bx%7D%20+%20%5Cmathbf%7By%7D%20%5CrVert%20%5Cleq%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20+%20%5ClVert%20%5Cmathbf%7By%7D%20%5CrVert">, for a <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D,%20%5Cmathbf%7By%7D%20%5Cin%20V">.</li>
 </ol>
 </div>
 <aside><p>We often use many norms on a given vector space, depending on which seems “meaningful” for the given purpose. See <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)#Examples" class="wiki">here</a> for common examples.</p>
@@ -36,8 +138,8 @@
 </summary><div class="remark proof">
 <p><span class="proof-title"><em>Remark</em> (Derived properties from Definition&nbsp;1). </span>We note that a norm, per Definition&nbsp;1, in fact, <strong>implies</strong> the following properties:</p>
 <ol type="1">
-<li><p>In Definition&nbsp;1, we can always replace <strong>positive definiteness</strong> with the stronger claim, namely that <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%5Ctext%7BFor%20all%20$%5Cmathbf%7Bx%7D%20%5Cin%20V$,%20if%20$%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20=%200%20%5Ciff%20%5Cmathbf%7Bx%7D%20=%20%5Cmathbf%7B0%7D_%7BV%7D$.%7D%0A%5Cend%7Bequation%7D"> In short, we want to show that the reverse implication to <strong>positive definiteness</strong> always holds, i.e., <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20=%20%5Cmathbf%7B0%7D_%7BV%7D%20%5Cimplies%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20=%200">. To prove this observe that using <strong>absolute homogeneity</strong> in Definition @def-norm, we have: <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%0A=%20%5ClVert%20%5Cmathbf%7B0%7D_%7BV%7D%20%5CrVert%0A=%20%5ClVert%200%20(%5Cmathbf%7B0%7D_%7BV%7D)%20%5CrVert%0A=%20%7C0%7C%20%5ClVert%20%5Cmathbf%7B0%7D_%7BV%7D%20%5CrVert%20=%200%0A%5Cend%7Bequation%7D"> As required.</p></li>
-<li><p>We also have that <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20%5Cgeq%200">, for all <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20%5Cin%20V">. To see this, observe that for all <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20%5Cin%20V"> <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%5Cbegin%7Bsplit%7D%0A0%0A&amp;%20=%20%5ClVert%20%5Cmathbf%7B0%7D_%7BV%7D%20%5CrVert%0A%5Cquad%5Ctext%7B(by%20previous%20part%20of%20this%20remark)%7D%5C%5C%0A&amp;%20=%20%5ClVert%20%5Cmathbf%7Bx%7D%20+%20(-%5Cmathbf%7Bx%7D)%20%5CrVert%20%5C%5C%0A&amp;%5Cleq%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20+%20%5ClVert%20-%5Cmathbf%7Bx%7D%20%5CrVert%0A%5Cquad%5Ctext%7B(by%20the%20triangle%20inequality)%7D%20%5C%5C%0A&amp;=%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20+%0A%20%20%20%20%5Clvert%20-1%20%5Crvert%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%0A%20%20%20%20%5Cquad%5Ctext%7B(by%20absolute%20homogeneity)%7D%20%5C%5C%0A&amp;=%202%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20%5C%5C%0A%5Cimplies%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%0A&amp;%20%5Cgeq%200%0A%5Cend%7Bsplit%7D%0A%5Cend%7Bequation%7D"> In effect this means the co-domain can <em>always</em> be changed from <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Ccdot%20%5CrVert_%7BV%7D:%20V%20%5Cto%20%5Cmathbb%7BR%7D"> to <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Ccdot%20%5CrVert_%7BV%7D:%20V%20%5Cto%20%5Cmathbb%7BR%7D_%7B%5Cgeq%200%7D">.</p></li>
+<li><p>In Definition&nbsp;1, we can always replace <strong>positive definiteness</strong> with the stronger claim, namely that <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%5Ctext%7BFor%20a%20$%5Cmathbf%7Bx%7D%20%5Cin%20V$,%20if%20$%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20=%200%20%5Ciff%20%5Cmathbf%7Bx%7D%20=%20%5Cmathbf%7B0%7D_%7BV%7D$.%7D%0A%5Cend%7Bequation%7D"> In short, we want to show that the reverse implication to <strong>positive definiteness</strong> always holds, i.e., <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20=%20%5Cmathbf%7B0%7D_%7BV%7D%20%5Cimplies%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20=%200">. To prove this observe that using <strong>absolute homogeneity</strong> in Definition&nbsp;1, we have: <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%0A=%20%5ClVert%20%5Cmathbf%7B0%7D_%7BV%7D%20%5CrVert%0A=%20%5ClVert%200%20(%5Cmathbf%7B0%7D_%7BV%7D)%20%5CrVert%0A=%20%7C0%7C%20%5ClVert%20%5Cmathbf%7B0%7D_%7BV%7D%20%5CrVert%20=%200%0A%5Cend%7Bequation%7D"> As required.</p></li>
+<li><p>We also have that <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20%5Cgeq%200">, for a <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20%5Cin%20V">. To see this, observe that for a <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20%5Cin%20V"> <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%5Cbegin%7Bsplit%7D%0A0%0A&amp;%20=%20%5ClVert%20%5Cmathbf%7B0%7D_%7BV%7D%20%5CrVert%0A%5Cquad%5Ctext%7B(by%20previous%20part%20of%20this%20remark)%7D%5C%5C%0A&amp;%20=%20%5ClVert%20%5Cmathbf%7Bx%7D%20+%20(-%5Cmathbf%7Bx%7D)%20%5CrVert%20%5C%5C%0A&amp;%5Cleq%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20+%20%5ClVert%20-%5Cmathbf%7Bx%7D%20%5CrVert%0A%5Cquad%5Ctext%7B(by%20the%20triangle%20inequality)%7D%20%5C%5C%0A&amp;=%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20+%0A%20%20%20%20%5Clvert%20-1%20%5Crvert%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%0A%20%20%20%20%5Cquad%5Ctext%7B(by%20absolute%20homogeneity)%7D%20%5C%5C%0A&amp;=%202%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%20%5C%5C%0A%5Cimplies%20%5ClVert%20%5Cmathbf%7Bx%7D%20%5CrVert%0A&amp;%20%5Cgeq%200%0A%5Cend%7Bsplit%7D%0A%5Cend%7Bequation%7D"> In effect this means the co-domain can <em>always</em> be changed from <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Ccdot%20%5CrVert_%7BV%7D:%20V%20%5Cto%20%5Cmathbb%7BR%7D"> to <img src="https://latex.codecogs.com/png.latex?%5ClVert%20%5Ccdot%20%5CrVert_%7BV%7D:%20V%20%5Cto%20%5Cmathbb%7BR%7D_%7B%5Cgeq%200%7D">.</p></li>
 <li><p>Since these can always be derived directly from Definition&nbsp;1, as shown, we can keep Definition&nbsp;1 in its minimal form as noted here.</p></li>
 <li><p>These ideas work for <em>seminorms</em> as well, see <a href="https://en.wikipedia.org/wiki/Seminorm#Definition" class="wiki">here</a> for more details.</p></li>
 </ol>
@@ -48,23 +150,23 @@
 <p><span class="theorem-title"><strong>Theorem 1 (Characterization of norm triangle inequality) </strong></span>Let <img src="https://latex.codecogs.com/png.latex?N:%20V%20%5Cto%20%5Cmathbb%7BR_%7B%5Cgeq%200%7D%7D">, be a function satisfying the following two properties<sup>2</sup>.</p>
 <ol type="1">
 <li>
-<strong>Positive definiteness:</strong> For all <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20%5Cin%20V">, if <img src="https://latex.codecogs.com/png.latex?N(%5Cmathbf%7Bx%7D)%20=%200"> then <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20=%20%5Cmathbf%7B0%7D_%7BV%7D">.</li>
+<strong>Positive definiteness:</strong> For a <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20%5Cin%20V">, if <img src="https://latex.codecogs.com/png.latex?N(%5Cmathbf%7Bx%7D)%20=%200"> then <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20=%20%5Cmathbf%7B0%7D_%7BV%7D">.</li>
 <li>
-<strong>Absolute homogeneity:</strong> <img src="https://latex.codecogs.com/png.latex?N(%5Clambda%20%5Cmathbf%7Bx%7D)%20=%20%7C%20%5Clambda%20%7C%20N(%5Cmathbf%7Bx%7D)">, for all <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20%5Cin%20V,%20%5Clambda%20%5Cin%20%5Cmathbb%7BR%7D">.</li>
+<strong>Absolute homogeneity:</strong> <img src="https://latex.codecogs.com/png.latex?N(%5Clambda%20%5Cmathbf%7Bx%7D)%20=%20%7C%20%5Clambda%20%7C%20N(%5Cmathbf%7Bx%7D)">, for a <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%20%5Cin%20V,%20%5Clambda%20%5Cin%20%5Cmathbb%7BR%7D">.</li>
 </ol>
 <p>We then have that:</p>
-<p><span id="eq-normtrichar-01"><img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20N(%5Cmathbf%7Bx%7D%20+%20%5Cmathbf%7By%7D)%20%5Cleq%20N(%5Cmathbf%7Bx%7D)%20+%20N(%5Cmathbf%7By%7D)%0A%20%20%20%20%5Ctext%7B,%20for%20each%20%7D%20%5Cmathbf%7Bx%7D,%20%5Cmathbf%7By%7D%20%5Cin%20V%0A%20%20%20%20%5Ciff%20%5Cmathbb%7BB%7D%20:=%20%5C%7B%5Cmathbf%7Bz%7D%20%5Cin%20V%20%5C:%7C%5C:%20N(%5Cmathbf%7Bz%7D)%20%5Cleq%201%20%5C%7D%0A%20%20%20%20%5Ctext%7B%20is%20convex%7D%0A%5Cqquad(1)"></span></p>
+<p><span id="eq-normtrichar-01"><img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20N(%5Cmathbf%7Bx%7D%20+%20%5Cmathbf%7By%7D)%20%5Cleq%20N(%5Cmathbf%7Bx%7D)%20+%20N(%5Cmathbf%7By%7D)%0A%20%20%20%20%5Ctext%7B,%20for%20each%20%7D%20%5Cmathbf%7Bx%7D,%20%5Cmathbf%7By%7D%20%5Cin%20V%0A%20%20%20%20%5Ciff%20%5Cmathbb%7BB%7D%20:=%20%5C%7B%5Cmathbf%7Bz%7D%20%5Cin%20V%20%5C:%7C%5C:%20N(%5Cmathbf%7Bz%7D)%20%5Cleq%201%20%5C%7D%0A%20%20%20%20%5Ctext%7B%20is%20convex%7D%0A%5Ctag%7B1%7D"></span></p>
 </div>
 <p>In simple terms, the importance of Theorem&nbsp;1 (as captured by Equation&nbsp;1) can be summarized as follows:</p>
 <blockquote class="blockquote">
-<p>Let <img src="https://latex.codecogs.com/png.latex?N%20:%20V%20%5Cto%20%5B0,%20%5Cinfty)"> be a function satisfying positive definiteness and absolute homogeneity. Then <img src="https://latex.codecogs.com/png.latex?N"> satisfies the triangle inequality if and only if the unit ball induced by <img src="https://latex.codecogs.com/png.latex?N">, i.e., <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BB%7D%20:=%20%5C%7B%5Cmathbf%7Bz%7D%20%5Cin%20V%20%5C:%7C%5C:%20N(%5Cmathbf%7Bz%7D)%20%5Cleq%201%20%5C%7D">, is a convex set.</p>
+<p>Let <img src="https://latex.codecogs.com/png.latex?N%20:%20V%20%5Cto%20%5B0,%20%5Cinfty)"> be a function satisfying positive definiteness and absolute homogeneity. Then <img src="https://latex.codecogs.com/png.latex?N"> satisfies the triangle inequality if and only if the unit ba induced by <img src="https://latex.codecogs.com/png.latex?N">, i.e., <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BB%7D%20:=%20%5C%7B%5Cmathbf%7Bz%7D%20%5Cin%20V%20%5C:%7C%5C:%20N(%5Cmathbf%7Bz%7D)%20%5Cleq%201%20%5C%7D">, is a convex set.</p>
 </blockquote>
 <details><summary><p>Remarks</p>
 </summary><div class="remark proof">
 <p><span class="proof-title"><em>Remark</em>. </span>In Theorem&nbsp;1, we note the following:</p>
 <ol type="1">
 <li>The function <img src="https://latex.codecogs.com/png.latex?N%20:%20V%20%5Cto%20%5Cmathbb%7BR%7D_%7B%5Cgeq%200%7D">, is a <em>norm-like</em> function, and only becomes a valid norm per Definition&nbsp;1 <strong><em>once</em></strong> we establish the triangle inequality, i.e., <img src="https://latex.codecogs.com/png.latex?N(%5Cmathbf%7Bx%7D%20+%20%5Cmathbf%7By%7D)%20%5Cleq%20N(%5Cmathbf%7Bx%7D)%20+%20N(%5Cmathbf%7By%7D)">.</li>
-<li>To prove the triangle inequality for <img src="https://latex.codecogs.com/png.latex?N%20:%20V%20%5Cto%20%5Cmathbb%7BR%7D_%7B%5Cgeq%200%7D">, the necessary condition of Theorem&nbsp;1 to establish is: <span id="eq-normtrichar-02"><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbb%7BB%7D%20:=%20%5C%7B%5Cmathbf%7Bz%7D%20%5Cin%20V%20%5C:%7C%5C:%20N(%5Cmathbf%7Bz%7D)%20%5Cleq%201%20%5C%7D%0A%5Ctext%7B%20is%20convex%7D%0A%5Cqquad(2)"></span> which will imply the triangle inequality for <img src="https://latex.codecogs.com/png.latex?N"> - huzzah!</li>
+<li>To prove the triangle inequality for <img src="https://latex.codecogs.com/png.latex?N%20:%20V%20%5Cto%20%5Cmathbb%7BR%7D_%7B%5Cgeq%200%7D">, the necessary condition of Theorem&nbsp;1 to establish is: <span id="eq-normtrichar-02"><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbb%7BB%7D%20:=%20%5C%7B%5Cmathbf%7Bz%7D%20%5Cin%20V%20%5C:%7C%5C:%20N(%5Cmathbf%7Bz%7D)%20%5Cleq%201%20%5C%7D%0A%5Ctext%7B%20is%20convex%7D%0A%5Ctag%7B2%7D"></span> which will imply the triangle inequality for <img src="https://latex.codecogs.com/png.latex?N"> - huzzah!</li>
 <li>The nice thing is, proving the convexity of <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BB%7D"> can be <em>much easier</em> to show than trying to prove the triangle inequality property of <img src="https://latex.codecogs.com/png.latex?N"> directly, as we will soon see.</li>
 <li>
 <strong>Subtle point:</strong> note that here we had to <em>assume</em> that the co-domain of <img src="https://latex.codecogs.com/png.latex?N"> is non-negative (not <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D">), i.e., <img src="https://latex.codecogs.com/png.latex?N%20:%20V%20%5Cto%20%5Cmathbb%7BR%7D_%7B%5Cgeq%200%7D">. This is because in a typical norm, which satisfies the triangle inequality, is always shown to be non-negative (see remark below Definition&nbsp;1 for more details). Here we <em>impose</em> non-negativity of <img src="https://latex.codecogs.com/png.latex?N"> as an additional constraint to <em>establish</em> the triangle inequality property for <img src="https://latex.codecogs.com/png.latex?N">. This is not an issue, since one would always first check the non-negativity of a candidate <em>norm-like</em> function <img src="https://latex.codecogs.com/png.latex?N">.</li>
@@ -76,7 +178,7 @@
 </h3>
 <div id="exm-normtrilpsum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Minkowski inequality in finite dimensions) </strong></span>Let us consider <img src="https://latex.codecogs.com/png.latex?(%5Cmathbb%7BF%7D%5E%7Bn%7D,%20%5Cmathbb%7BF%7D)">, where <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D%20=%20%5Cmathbb%7BR%7D%20%5Ctext%7B%20or%20%7D%20%5Cmathbb%7BC%7D">. We then define the <em>norm-like</em> function <img src="https://latex.codecogs.com/png.latex?N_%7B%5Cell%5E%7Bp%7D%7D:%20%5Cmathbb%7BF%7D%5E%7Bn%7D%20%5Cto%20%5Cmathbb%7BR%7D_%7B%5Cgeq%200%7D">:</p>
-<p><span id="eq-normtrilpsum-01"><img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20N_%7B%5Cell%5E%7Bp%7D%7D(%5Cmathbf%7Bx%7D)%0A%20%20%20%20:=%5Cleft(%5Csum_%7Bj=1%7D%5E%7Bn%7D%5Cleft%7Cx_%7Bj%7D%5Cright%7C%5E%7Bp%7D%5Cright)%5E%7B1%20/%20p%7D%0A%20%20%20%20,%20%5Cquad%201%20%5Cleq%20p%3C%5Cinfty%0A%5Cqquad(3)"></span></p>
+<p><span id="eq-normtrilpsum-01"><img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20N_%7B%5Cell%5E%7Bp%7D%7D(%5Cmathbf%7Bx%7D)%0A%20%20%20%20:=%5Cleft(%5Csum_%7Bj=1%7D%5E%7Bn%7D%5Cleft%7Cx_%7Bj%7D%5Cright%7C%5E%7Bp%7D%5Cright)%5E%7B1%20/%20p%7D%0A%20%20%20%20,%20%5Cquad%201%20%5Cleq%20p%3C%5Cinfty%0A%5Ctag%7B3%7D"></span></p>
 </div>
 <p>One can show that <img src="https://latex.codecogs.com/png.latex?N_%7B%5Cell%5E%7Bp%7D%7D"> satisfies positive definiteness and absolute homogeneity. To show that <img src="https://latex.codecogs.com/png.latex?N_%7B%5Cell%5E%7Bp%7D%7D"> is a norm function we need to prove the triangle inequality. We will use Theorem&nbsp;1. Let us define <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BB%7D%20:=%20%5C%7B%5Cmathbf%7Bz%7D%20%5Cin%20%5Cmathbb%7BF%7D%5E%7Bn%7D%20%5C:%7C%5C:%20N_%7B%5Cell%5E%7Bp%7D%7D(%5Cmathbf%7Bz%7D)%20%5Cleq%201%20%5C%7D%20=%20%5C%7B%5Cmathbf%7Bz%7D%20%5Cin%20%5Cmathbb%7BF%7D%5E%7Bn%7D%20%5C:%7C%5C:%20N_%7B%5Cell%5E%7Bp%7D%7D%5E%7Bp%7D(%5Cmathbf%7Bz%7D)%20%5Cleq%201%20%5C%7D">. We now need to show that <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BB%7D"> is convex. We will need to use the fact that for each <img src="https://latex.codecogs.com/png.latex?t%20%5Cin%20%5Cmathbb%7BR%7D,%20t%20%5Cmapsto%20%7Ct%7C%5E%7Bp%7D"> is convex. Let <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D,%20%5Cmathbf%7By%7D%20%5Cin%20%5Cmathbb%7BB%7D">, we then have that for <img src="https://latex.codecogs.com/png.latex?%5Clambda%20%5Cin%20%5B0,%201%5D">:</p>
 <aside><p><strong>Note:</strong> <img src="https://latex.codecogs.com/png.latex?t%20%5Cmapsto%20%7Ct%7C%5E%7Bp%7D">, is convex, for each <img src="https://latex.codecogs.com/png.latex?t%20%5Cin%20%5Cmathbb%7BR%7D"> and <img src="https://latex.codecogs.com/png.latex?p%20%5Cin%20%5B1,%20%5Cinfty)">. <strong>Sketch:</strong> We have, <img src="https://latex.codecogs.com/png.latex?%7Ct%7C%5E%7Bp%7D%20=:%20h(t)%20:=%20(g%20%5Ccirc%20f)%20(t)">. Here, for each <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20%5Cmathbb%7BR%7D">, we observe <img src="https://latex.codecogs.com/png.latex?g%20:%20x%20%5Cmapsto%20x%5E%7Bp%7D"> is increasing and convex, and <img src="https://latex.codecogs.com/png.latex?f%20:%20x%20%5Cmapsto%20%7Cx%7C"> is convex. Thus, <img src="https://latex.codecogs.com/png.latex?h(t)%20:=%20%7Ct%7C%5E%7Bp%7D"> is convex. <img src="https://latex.codecogs.com/png.latex?%5Cblacksquare"></p>
@@ -89,7 +191,7 @@
 <aside><p>Here <img src="https://latex.codecogs.com/png.latex?C(%5B0,%201%5D)"> is the space of continuous functions on the interval <img src="https://latex.codecogs.com/png.latex?%5B0,%201%5D">.</p>
 </aside><div id="normtrilpint" class="example" name="Minkowski inequality in integral form">
 <p>Let us consider <img src="https://latex.codecogs.com/png.latex?(C(%5B0,%201%5D),%20%5Cmathbb%7BR%7D)">. We then define the <em>norm-like</em> function <img src="https://latex.codecogs.com/png.latex?N_%7BL%5E%7Bp%7D%7D:%20C(%5B0,%201%5D)%20%5Cto%20%5Cmathbb%7BR%7D_%7B%5Cgeq%200%7D">:</p>
-<p><span id="eq-normtrilpint-01"><img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20N_%7BL%5E%7Bp%7D%7D(%5Cmathbf%7Bx%7D)%0A%20%20%20%20:=%5Cleft(%5Cint_%7B0%7D%5E%7B1%7D%5Cleft%7Cf(x)%5Cright%7C%5E%7Bp%7D%5Cright)%5E%7B1%20/%20p%7D%0A%20%20%20%20,%20%5Cquad%201%20%5Cleq%20p%3C%5Cinfty%0A%5Cqquad(4)"></span></p>
+<p><span id="eq-normtrilpint-01"><img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20N_%7BL%5E%7Bp%7D%7D(%5Cmathbf%7Bx%7D)%0A%20%20%20%20:=%5Cleft(%5Cint_%7B0%7D%5E%7B1%7D%5Cleft%7Cf(x)%5Cright%7C%5E%7Bp%7D%5Cright)%5E%7B1%20/%20p%7D%0A%20%20%20%20,%20%5Cquad%201%20%5Cleq%20p%3C%5Cinfty%0A%5Ctag%7B4%7D"></span></p>
 </div>
 <p>Let us define <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BB%7D%20:=%20%5C%7Bh%20%5Cin%20C(%5B0,%201%5D)%20%5C:%7C%5C:%20N_%7BL%5E%7Bp%7D%7D(h)%20%5Cleq%201%20%5C%7D%20=%20%5C%7Bh%20%5Cin%20C(%5B0,%201%5D)%20%5C:%7C%5C:%20N_%7BL%5E%7Bp%7D%7D%5E%7Bp%7D(h)%20%5Cleq%201%20%5C%7D">. We now need to show that <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BB%7D"> is convex. Let <img src="https://latex.codecogs.com/png.latex?f,%20g%20%5Cin%20%5Cmathbb%7BB%7D">, we then have that for <img src="https://latex.codecogs.com/png.latex?%5Clambda%20%5Cin%20%5B0,%201%5D">:</p>
 <aside><p>Once again, one can show that <img src="https://latex.codecogs.com/png.latex?N_%7B%5Cell%5E%7Bp%7D%7D"> satisfies positive definiteness and absolute homogeneity.</p>
@@ -98,7 +200,7 @@
 <p>Again, we can now denote <img src="https://latex.codecogs.com/png.latex?N_%7BL%5E%7Bp%7D%7D"> using the conventional <img src="https://latex.codecogs.com/png.latex?L_%7Bp%7D">-norm form, i.e., <img src="https://latex.codecogs.com/png.latex?%5C%7C%20f%20%5C%7C_%7BL%5E%7Bp%7D%7D%20:=%20N_%7BL%5E%7Bp%7D%7D(f)">.</p>
 </section></section><section id="punchline-what-did-theorem-1-buy-us" class="level1 page-columns page-full"><h1>Punchline: what did Theorem 1 buy us?</h1>
 <p>We just saw that applying Theorem&nbsp;1 enabled us to write <strong>very short proofs</strong> of <a href="https://en.wikipedia.org/wiki/Minkowski_inequality" class="wiki"><strong>Minkowski’s inequality</strong></a> in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D%5E%7Bn%7D"> and <img src="https://latex.codecogs.com/png.latex?C(%5B0,%201%5D)">.</p>
-<p>To appreciate this approach, note that proving Minkowski’s inequality typically requires one to first prove <a href="https://en.wikipedia.org/wiki/Young%27s_inequality_for_products" class="wiki"><strong>Young’s inequality</strong></a> and then <a href="https://en.wikipedia.org/wiki/H%C3%B6lder%27s_inequality" class="wiki"><strong>Hölder’s inequality</strong></a>. Moreover these need to be done separately in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D%5E%7Bn%7D"> and <img src="https://latex.codecogs.com/png.latex?C(%5B0,%201%5D)">. Using Theorem&nbsp;1 allowed us to achieve both of these goals using near identical style of proofs 🎉!</p>
+<p>To appreciate this approach, note that proving Minkowski’s inequality typicay requires one to first prove <a href="https://en.wikipedia.org/wiki/Young%27s_inequality_for_products" class="wiki"><strong>Young’s inequality</strong></a> and then <a href="https://en.wikipedia.org/wiki/H%C3%B6lder%27s_inequality" class="wiki"><strong>Hölder’s inequality</strong></a>. Moreover these need to be done separately in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D%5E%7Bn%7D"> and <img src="https://latex.codecogs.com/png.latex?C(%5B0,%201%5D)">. Using Theorem&nbsp;1 aowed us to achieve both of these goals using near identical style of proofs 🎉!</p>
 <aside><p><strong>Note:</strong> The proofs of Young’s and Hölder’s inequality are beautiful and studying them is also insightful.</p>
 </aside></section><section id="proof-of-theorem-1" class="level1 page-columns page-full"><h1>Proof of Theorem 1</h1>
 <p>Assuming <img src="https://latex.codecogs.com/png.latex?N:%20V%20%5Cto%20%5Cmathbb%7BR_%7B%5Cgeq%200%7D%7D"> satisfies the two properties in Theorem Theorem&nbsp;1, we need to prove both implications in Equation Equation&nbsp;1.</p>
@@ -131,13 +233,13 @@
 <p>In this article we learned the following about Theorem&nbsp;1:</p>
 <ul>
 <li>It gives an alternative way to <strong>characterize</strong> the triangle inequality for <em>norm-like</em> functions.</li>
-<li>Using this characterization <strong>we can prove the triangle inequality</strong> for such norm-like functions using the convexity of the unit ball induced by such functions.</li>
-<li>This is usually easier since we have lots of <strong>tools from convex analysis</strong> to help us prove the convexity of <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BB%7D">.</li>
+<li>Using this characterization <strong>we can prove the triangle inequality</strong> for such norm-like functions using the convexity of the unit ba induced by such functions.</li>
+<li>This is usuay easier since we have lots of <strong>tools from convex analysis</strong> to help us prove the convexity of <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BB%7D">.</li>
 <li>We saw this in action since Theorem&nbsp;1 enabled us to write <strong>very short proofs</strong> of <strong>Minkowski’s inequality</strong> in <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BF%7D%5E%7Bn%7D"> and <img src="https://latex.codecogs.com/png.latex?C(%5B0,%201%5D)">.</li>
 </ul>
 <p>In summary, if you have a norm-like function for which you are trying to establish the triangle inequality, try out Theorem&nbsp;1 💯!</p>
 </section><div id="quarto-appendix" class="default"><section id="acknowledgements" class="level1 appendix"><h2 class="quarto-appendix-heading">Acknowledgements</h2><div class="quarto-appendix-contents">
-<p>I thank <a href="https://warwick.ac.uk/fac/sci/maths/people/staff/james_robinson">Prof.&nbsp;James Robinson</a> for providing several technical clarifications on Theorem&nbsp;1. I thank <a href="https://mpopov.com/about/">Mikhail Popov</a> for creating the <a href="https://bearloga.github.io/wikipediapreview-r/"><code>wikipediapreview</code> R package</a>, which enable an easy interface for Wikipedia <a href="https://chimeces.com/context-cards/">Context Cards</a> in <code>Rmd</code> files. These Context Cards enable the hover over preview for Wikipedia articles. I thank <a href="https://jeweljohnsonj.github.io/jewel_resume/">Jewel Johnson</a> for providing <a href="https://jeweljohnsonj.github.io/jeweljohnson.github.io/posts/2021-12-18-quality-of-life-modifications-for-your-distill-webistes/#making-the-table-of-contents-more-useful">this helpful guide</a> to enable fixed TOC for this article. I thank <a href="https://www.joelnitta.com/">Dr.&nbsp;Joel Nitta</a> for providing <a href="https://www.joelnitta.com/posts/2021-11-24_using-giscus/">these instructions</a> to enable us to switch to the <a href="https://giscus.app/">giscus</a> comments system. Much of these distill site improvements were brought to our attention due to the excellent <a href="https://distillery.rbind.io/tips_and_tricks.html">distillery</a> site run by <a href="https://www.jhelvy.com/">Prof.&nbsp;John Paul Helveston</a>.</p>
+<p>I thank <a href="https://warwick.ac.uk/fac/sci/maths/people/staff/james_robinson">Prof.&nbsp;James Robinson</a> for providing several technical clarifications on Theorem&nbsp;1. I thank <a href="https://mpopov.com/about/">Mikhail Popov</a> for creating the <a href="https://bearloga.github.io/wikipediapreview-r/"><code>wikipediapreview</code> R package</a>, which enable an easy interface for Wikipedia <a href="https://chimeces.com/context-cards/">Context Cards</a> in <code>Rmd</code> files. These Context Cards enable the hover over preview for Wikipedia articles. I thank <a href="https://jeweljohnsonj.github.io/jewel_resume/">Jewel Johnson</a> for providing <a href="https://jeweljohnsonj.github.io/jeweljohnson.github.io/posts/2021-12-18-quality-of-life-modifications-for-your-distill-webistes/#making-the-table-of-contents-more-useful">this helpful guide</a> to enable fixed TOC for this article. I thank <a href="https://www.joelnitta.com/">Dr.&nbsp;Joel Nitta</a> for providing <a href="https://www.joelnitta.com/posts/2021-11-24_using-giscus/">these instructions</a> to enable me to switch to the <a href="https://giscus.app/">giscus</a> comments system. Much of these distill site improvements were brought to our attention due to the excellent <a href="https://distillery.rbind.io/tips_and_tricks.html">distillery</a> site run by <a href="https://www.jhelvy.com/">Prof.&nbsp;John Paul Helveston</a>.</p>
 
 
 
@@ -147,7 +249,7 @@ Robinson, James C. 2020. <em><span class="nocase">An Introduction to Functional 
 </div>
 </div></section><section class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 <ol>
-<li id="fn1"><p><strong>Note:</strong> The presentation in this post is <strong><em>intentionally</em></strong> verbose. The goal is to give lots of intuition of the key result and its usefulness, and ensure that the proofs are rigorous. It is written with an empathetic mindset to newcomers, and to myself for future reference.↩︎</p></li>
+<li id="fn1"><p><strong>Note:</strong> The presentation in this post is <strong><em>intentionay</em></strong> verbose. The goal is to give lots of intuition of the key result and its usefulness, and ensure that the proofs are rigorous. It is written with an empathetic mindset to newcomers, and to myself for future reference.↩︎</p></li>
 <li id="fn2"><p>We refer to such an <img src="https://latex.codecogs.com/png.latex?N:%20V%20%5Cto%20%5Cmathbb%7BR_%7B%5Cgeq%200%7D%7D"> satisfying these properties, as a <em>norm-like</em> function.↩︎</p></li>
 </ol></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2022,
   author = {Shamindra Shrotriya},
@@ -169,6 +271,7 @@ Inequalites via Convexity.”</span> February 12, 2022. <a href="https://www.sha
 </item>
 <item>
   <title>Shamindra’s January 2020 Roundup</title>
+  <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/index.html</link>
   <description><![CDATA[ <section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Welcome to the January 2020 roundup! Similar to <a href="https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/" target="_blank">last time</a> I’m going to experiment with documenting anything interesting I come across (articles, lectures, books, papers etc.) and any activities I get up to. This is more for my personal benefit but may also help others.</p>
@@ -256,6 +359,7 @@ Roundup.”</span> January 27, 2020. <a href="https://www.shamindras.com/posts/2
 </item>
 <item>
   <title>Shamindra’s September 2019 Roundup</title>
+  <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/index.html</link>
   <description><![CDATA[ <section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Welcome to the September 2019 roundup! Similar to <a href="https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/" target="_blank">last time</a> I’m going to experiment with, namely documenting anything interesting I come across (articles, lectures, books, papers etc.) and any activities I get up to. This is more for my personal benefit but may also help others.</p>
@@ -373,6 +477,7 @@ Roundup.”</span> September 30, 2019. <a href="https://www.shamindras.com/posts
 </item>
 <item>
   <title>Shamindra’s August 2019 Roundup</title>
+  <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/index.html</link>
   <description><![CDATA[ <section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Welcome to the August 2019 roundup! Similar to <a href="https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/" target="_blank">last time</a> I’m going to experiment with, namely documenting anything interesting I come across (articles, lectures, books, papers etc.) and any activities I get up to. This is more for my personal benefit but may also help others.</p>
@@ -507,43 +612,52 @@ Roundup.”</span> August 31, 2019. <a href="https://www.shamindras.com/posts/20
 </item>
 <item>
   <title>Tidyverse Fun - Part 2</title>
+  <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/index.html</link>
-  <description><![CDATA[ <section id="task-generating-latex-newcommand-macros" class="level2"><h2 class="anchored" data-anchor-id="task-generating-latex-newcommand-macros">Task: Generating LaTeX newcommand macros</h2>
-<section id="the-central-problem" class="level3"><h3 class="anchored" data-anchor-id="the-central-problem">The central problem</h3>
+  <description><![CDATA[ 
+
+
+
+
+<section id="task-generating-latex-newcommand-macros" class="level2">
+<h2 class="anchored" data-anchor-id="task-generating-latex-newcommand-macros">Task: Generating LaTeX newcommand macros</h2>
+<section id="the-central-problem" class="level3">
+<h3 class="anchored" data-anchor-id="the-central-problem">The central problem</h3>
 <p>In a custom <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> macro file I needed to generate several sequential <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> <code>newcommand</code> entries of the form:</p>
 <pre class="markup"><code>\newcommand{\bfa}{\mathbf{a}}
 \newcommand{\bfA}{\mathbf{A}}</code></pre>
 <p>Where using <code>$\bfa$</code> produces <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Ba%7D"> and using <code>$\bfA$</code> produces <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BA%7D"> i.e the lowecase/uppercase <code>mathbf</code> commands respectively.</p>
 <p>Specifically I needed to construct 52 such combined sequential entries for both lowercase/uppercase letter versions of these <code>newcommand</code> <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> macros. Rather than do this manually, I realized that this would be another fun scripting exercise with using the <code>tidyverse</code> packages <code>glue</code>, <code>purrr</code>, and <code>stringr</code> similar to this similar <a href="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/">previous post here</a>.</p>
 <p><strong>Goal:</strong> Create 52 such lowercase/uppercase <code>newcommand</code> entries and print to the console to directly-copy paste to my <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> macros file.</p>
-</section><section id="the-tidy-approach" class="level3"><h3 class="anchored" data-anchor-id="the-tidy-approach">The <code>tidy</code> approach</h3>
+</section>
+<section id="the-tidy-approach" class="level3">
+<h3 class="anchored" data-anchor-id="the-tidy-approach">The <code>tidy</code> approach</h3>
 <p>First step is to write a function that takes as an input the following:</p>
 <ul>
-<li>a single letter (case-sensitive) e.g.&nbsp;<code>"a"</code>
-</li>
+<li>a single letter (case-sensitive) e.g.&nbsp;<code>"a"</code></li>
 <li>the macro shortcut command prefix you prefer e.g <code>"bf"</code> (for <strong>b</strong>old <strong>f</strong>ont in case you were wondering!)</li>
 <li>the specific <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> command that we are creating a macro shortcut for i.e.&nbsp;<code>"mathbf"</code> in this case</li>
 </ul>
 <p>The function then outputs a single <code>newcommand</code> entry for that lecture i.e <code>\newcommand{\bfa}{\mathbf{a}}</code> in this case. Let’s do it!</p>
 <div class="cell">
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="co" style="color: #5E5E5E;"># Load required libraries</span>
-<span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op" style="color: #5E5E5E;">)</span>
-<span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://github.com/tidyverse/glue">glue</a></span><span class="op" style="color: #5E5E5E;">)</span>
-
-<span class="co" style="color: #5E5E5E;"># Create LaTeX macro newcommand</span>
-<span class="va" style="color: #111111;">get_lec_newcmd</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="kw" style="color: #003B4F;">function</span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">inp_letr</span>, <span class="va" style="color: #111111;">mac_type</span>, <span class="va" style="color: #111111;">mac_ref</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">{</span>
-    <span class="va" style="color: #111111;">out_str</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;">glue</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">'\\newcommand{\\&lt;mac_type&gt;&lt;inp_letr&gt;}{\\&lt;mac_ref&gt;{&lt;inp_letr&gt;}}'</span>,
-                          .open <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"&lt;"</span>, .close <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"&gt;"</span><span class="op" style="color: #5E5E5E;">)</span>
-    <span class="fu" style="color: #4758AB;">base</span><span class="fu" style="color: #4758AB;">::</span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">out_str</span><span class="op" style="color: #5E5E5E;">)</span>
-<span class="op" style="color: #5E5E5E;">}</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;"># Load required libraries</span></span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;">library</span>(tidyverse)</span>
+<span id="cb2-3"><span class="fu" style="color: #4758AB;">library</span>(glue)</span>
+<span id="cb2-4"></span>
+<span id="cb2-5"><span class="co" style="color: #5E5E5E;"># Create LaTeX macro newcommand</span></span>
+<span id="cb2-6">get_lec_newcmd <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(inp_letr, mac_type, mac_ref){</span>
+<span id="cb2-7">    out_str <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">glue</span>(<span class="st" style="color: #20794D;">'</span><span class="sc" style="color: #5E5E5E;">\\</span><span class="st" style="color: #20794D;">newcommand{</span><span class="sc" style="color: #5E5E5E;">\\</span><span class="st" style="color: #20794D;">&lt;mac_type&gt;&lt;inp_letr&gt;}{</span><span class="sc" style="color: #5E5E5E;">\\</span><span class="st" style="color: #20794D;">&lt;mac_ref&gt;{&lt;inp_letr&gt;}}'</span>,</span>
+<span id="cb2-8">                    <span class="at" style="color: #657422;">.open =</span> <span class="st" style="color: #20794D;">"&lt;"</span>, <span class="at" style="color: #657422;">.close =</span> <span class="st" style="color: #20794D;">"&gt;"</span>)</span>
+<span id="cb2-9">    <span class="fu" style="color: #4758AB;">return</span>(out_str)</span>
+<span id="cb2-10">}</span></code></pre></div>
 </div>
 <p>Let’s just test this out quickly:</p>
 <div class="cell">
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"a"</span>, <span class="st" style="color: #20794D;">"A"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-    <span class="fu" style="color: #4758AB;">purrr</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://purrr.tidyverse.org/reference/map.html">map_chr</a></span><span class="op" style="color: #5E5E5E;">(</span>.x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>, .f <span class="op" style="color: #5E5E5E;">=</span> <span class="op" style="color: #5E5E5E;">~</span><span class="fu" style="color: #4758AB;">get_lec_newcmd</span><span class="op" style="color: #5E5E5E;">(</span>inp_letr <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.x</span>,
-                                                mac_type <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"bf"</span>,
-                                                mac_ref <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"mathbf"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-    <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">.</span>, sep <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"\n"</span><span class="op" style="color: #5E5E5E;">)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"a"</span>, <span class="st" style="color: #20794D;">"A"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb3-2">  <span class="fu" style="color: #4758AB;">map_chr</span>(<span class="at" style="color: #657422;">.x =</span> ., <span class="at" style="color: #657422;">.f =</span> <span class="sc" style="color: #5E5E5E;">~</span><span class="fu" style="color: #4758AB;">get_lec_newcmd</span>(<span class="at" style="color: #657422;">inp_letr =</span> .x,</span>
+<span id="cb3-3">                                       <span class="at" style="color: #657422;">mac_type =</span> <span class="st" style="color: #20794D;">"bf"</span>,</span>
+<span id="cb3-4">                                       <span class="at" style="color: #657422;">mac_ref =</span> <span class="st" style="color: #20794D;">"mathbf"</span>)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb3-5">  <span class="fu" style="color: #4758AB;">cat</span>(., <span class="at" style="color: #657422;">sep =</span> <span class="st" style="color: #20794D;">"</span><span class="sc" style="color: #5E5E5E;">\n</span><span class="st" style="color: #20794D;">"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>\newcommand{\bfa}{\mathbf{a}}
 \newcommand{\bfA}{\mathbf{A}}</code></pre>
@@ -552,11 +666,11 @@ Roundup.”</span> August 31, 2019. <a href="https://www.shamindras.com/posts/20
 <p>Great - looks like it is working as required!</p>
 <p>Note that we can easily generate other <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> macros like follows</p>
 <div class="cell">
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"a"</span>, <span class="st" style="color: #20794D;">"A"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-    <span class="fu" style="color: #4758AB;">purrr</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://purrr.tidyverse.org/reference/map.html">map_chr</a></span><span class="op" style="color: #5E5E5E;">(</span>.x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>, .f <span class="op" style="color: #5E5E5E;">=</span> <span class="op" style="color: #5E5E5E;">~</span><span class="fu" style="color: #4758AB;">get_lec_newcmd</span><span class="op" style="color: #5E5E5E;">(</span>inp_letr <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.x</span>,
-                                                mac_type <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"mc"</span>,
-                                                mac_ref <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"mathcal"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-    <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">.</span>, sep <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"\n"</span><span class="op" style="color: #5E5E5E;">)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"a"</span>, <span class="st" style="color: #20794D;">"A"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb5-2">  <span class="fu" style="color: #4758AB;">map_chr</span>(<span class="at" style="color: #657422;">.x =</span> ., <span class="at" style="color: #657422;">.f =</span> <span class="sc" style="color: #5E5E5E;">~</span><span class="fu" style="color: #4758AB;">get_lec_newcmd</span>(<span class="at" style="color: #657422;">inp_letr =</span> .x,</span>
+<span id="cb5-3">                                       <span class="at" style="color: #657422;">mac_type =</span> <span class="st" style="color: #20794D;">"mc"</span>,</span>
+<span id="cb5-4">                                       <span class="at" style="color: #657422;">mac_ref =</span> <span class="st" style="color: #20794D;">"mathcal"</span>)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb5-5">  <span class="fu" style="color: #4758AB;">cat</span>(., <span class="at" style="color: #657422;">sep =</span> <span class="st" style="color: #20794D;">"</span><span class="sc" style="color: #5E5E5E;">\n</span><span class="st" style="color: #20794D;">"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>\newcommand{\mca}{\mathcal{a}}
 \newcommand{\mcA}{\mathcal{A}}</code></pre>
@@ -565,8 +679,11 @@ Roundup.”</span> August 31, 2019. <a href="https://www.shamindras.com/posts/20
 <p>Which generates the corresponding <code>mathcal</code> macros for <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7Ba%7D"> and <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BA%7D"> respectively.</p>
 <p>So finally we can generate all 52 letter macros at time by simply replacing <code>c("a", "A")</code> with <code>c(letters, LETTERS)</code> which uses the input lowercase/uppercase <code>letters</code>/<code>LETTERS</code> vectors in base <code>R</code>:</p>
 <div class="cell-output-display">
-<details closed=""><summary><span title="Click to Expand"> Full newcommand Demo Output </span>
-</summary><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"></span>
+<details closed="">
+<summary>
+<span title="Click to Expand"> Full newcommand Demo Output </span>
+</summary>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"></span>
 <span id="cb7-2">\newcommand{\bfa}{\mathbf{a}}</span>
 <span id="cb7-3">\newcommand{\bfb}{\mathbf{b}}</span>
 <span id="cb7-4">\newcommand{\bfc}{\mathbf{c}}</span>
@@ -619,12 +736,20 @@ Roundup.”</span> August 31, 2019. <a href="https://www.shamindras.com/posts/20
 <span id="cb7-51">\newcommand{\bfX}{\mathbf{X}}</span>
 <span id="cb7-52">\newcommand{\bfY}{\mathbf{Y}}</span>
 <span id="cb7-53">\newcommand{\bfZ}{\mathbf{Z}}</span></code></pre></div>
-</details><p><br></p>
+</details>
+<p><br></p>
 </div>
 <p>Hope you have fun using this to quickly generate your <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> <code>newcommand</code> macros ✌️.</p>
+</section>
+</section>
 
 
-</section></section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
+<div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
+
+<p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a></p>
+
+
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
   author = {Shamindra Shrotriya},
   title = {Tidyverse {Fun} - {Part} 2},
   date = {2019-08-24},
@@ -643,48 +768,68 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 2.”</span> August
 </item>
 <item>
   <title>Upgrading Distill Blog Settings</title>
+  <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/index.html</link>
-  <description><![CDATA[ <section id="step-0-introduction" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-0-introduction">Step 0: Introduction</h2>
+  <description><![CDATA[ 
+
+
+
+
+<section id="step-0-introduction" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="step-0-introduction">Step 0: Introduction</h2>
 <p>This is a meta blogpost and a second-part in a series to describe how I setup this personal academic blog using the amazing <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="h//www.rstudio.com/" target="_blank">RStudio</a> team.</p>
 <p>The first part of this meta blogpost series can be <a href="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/" target="_blank">found here</a>, where I detailed the steps to setup this blog using Netlify and Google Domains. If you haven’t setup a <code>distill</code> themed blog then you are encouraged to check it out before reading this post.</p>
 <p>Fortunately <code>distill</code> comes with easy to configure settings as well see below. I’ve only implemented some of the options available. I should note that the RStudio <code>distill</code> team has already created an <a href="https://rstudio.github.io/distill/blog.html" target="_blank">excellent distill blog creation tutorial</a> which I thoroughly used and highly recommend to new users to check out.</p>
-<aside><p>Admittedly this blogpost is verbose, but hopefully the details help <strong>new users</strong> of the <code>distill</code> blogging package.</p>
-</aside><p>With that said, here are some key upgrades I made to this blog.</p>
-</section><section id="step-1-setup-disqus-comments" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-1-setup-disqus-comments">Step 1: Setup Disqus comments</h2>
+<aside>
+<p>Admittedly this blogpost is verbose, but hopefully the details help <strong>new users</strong> of the <code>distill</code> blogging package.</p>
+</aside>
+<p>With that said, here are some key upgrades I made to this blog.</p>
+</section>
+<section id="step-1-setup-disqus-comments" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="step-1-setup-disqus-comments">Step 1: Setup Disqus comments</h2>
 <p>I really wanted to setup some comments system for each blogpost. This way I can learn new tips from readers and find out how to improve posts going forward. I will go with the recommended <a href="https://disqus.com" target="_blank">Disqus comments option</a> from the <a href="https://rstudio.github.io/distill/blog.html#comments-and-sharing" target="_blank">distill blog</a>. I simply created a <a href="https://disqus.com" target="_blank">Disqus</a> account and selected <strong>Get Started</strong>. I then clicked the following button to <em>Install Disqus on my site</em>.</p>
 <div id="step-01-02-screenshot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png" class="img-fluid figure-img" alt="Screenshot of getting started with Disqus"></p>
+<figure class="figure">
+<p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png" class="img-fluid figure-img" alt="Screenshot of getting started with Disqus"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p>I was then presented with the following Disqus site configuration menu. I entered <code>https:://www.shamindras.com/</code> for my <strong>Website Name</strong> and manually set my <strong>Disqus shortname</strong> to be <code>shamindras-distill</code> to be easier to remember and specific to this site, in case I make more websites later on. This Disqus shortname is important to note down (🖊) as we’ll see shortly.</p>
 <div id="step-01-03-screenshot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_03.png" class="img-fluid figure-img" alt="Screenshot of setting up Disqus shortname"></p>
+<figure class="figure">
+<p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_03.png" class="img-fluid figure-img" alt="Screenshot of setting up Disqus shortname"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p>After clicking <strong>Create Site</strong> in the previous menu I proceeded to select the <em>free</em> plan option by subscribing to the <em>Basic, Free, Ads Supported</em> comments option as seen below:</p>
-<aside><p>As a student got to always know when to get a freebie 😄</p>
-</aside><div id="step-01-04-screenshot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_04.png" class="img-fluid figure-img" alt="Screenshot of select basic (Free, Ads supported) mode"></p>
+<aside>
+<p>As a student got to always know when to get a freebie 😄</p>
+</aside>
+<div id="step-01-04-screenshot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_04.png" class="img-fluid figure-img" alt="Screenshot of select basic (Free, Ads supported) mode"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p>In terms of implementing <code>Disqus</code> on my site, I clicked on the following button to install Disqus on my site manually:</p>
 <div id="step-01-05-screenshot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_05.png" class="img-fluid figure-img" alt="Screenshot of manual installation of Disqus"></p>
+<figure class="figure">
+<p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_05.png" class="img-fluid figure-img" alt="Screenshot of manual installation of Disqus"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p>Before finishing the manual installation of <code>Disqus</code> I ensured that I set the following configuration options. I particularly like setting an opiononated comments policy and selected the <a href="https://grist.org/grist-comment-policy/" target="_blank">Grist Comment Policy</a>:</p>
 <div id="step-01-06-screenshot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_06.png" class="img-fluid figure-img" alt="Screenshot of Disqus configuration settings"></p>
+<figure class="figure">
+<p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_06.png" class="img-fluid figure-img" alt="Screenshot of Disqus configuration settings"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p>Finally to ensure that the implementation is completed I added the following line to the <code>_site.yml</code> post using the <strong>Disqus shortname</strong> set earlier i.e. <code>shamindras-distill</code> and ensuring <code>hidden: true</code> so that the comments are not expanded by default:</p>
-<aside><p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
-</aside><div class="cell">
+<aside>
+<p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
+</aside>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;">collections:</span></span>
 <span id="cb1-2">  <span class="ex" style="color: null;">posts:</span></span>
 <span id="cb1-3">    <span class="ex" style="color: null;">disqus:</span></span>
@@ -693,34 +838,47 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 2.”</span> August
 </div>
 <p>We now see the following comments option at the bottom of every post:</p>
 <div id="step-01-07-screenshot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_07.png" class="img-fluid figure-img" alt="Screenshot of Distill Disqus comments selection"></p>
+<figure class="figure">
+<p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_07.png" class="img-fluid figure-img" alt="Screenshot of Distill Disqus comments selection"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p>You can read more about setting up comments from the official <code>distill</code> blog <a href="https://rstudio.github.io/distill/blog.html#comments-and-sharing">here</a></p>
-</section><section id="step-2-setup-google-analytics-tracking" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-2-setup-google-analytics-tracking">Step 2: Setup Google Analytics tracking</h2>
+</section>
+<section id="step-2-setup-google-analytics-tracking" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="step-2-setup-google-analytics-tracking">Step 2: Setup Google Analytics tracking</h2>
 <p>I also wanted to setup basic user viewing tracking for my site. Fortunately <code>distill</code> can be easily configured to work with <a href="https://analytics.google.com/analytics/web" target="_blank">Google Analytics</a>. In order to set this up I simply created an account for <code>Google Analytics</code> (using my personal gmail account). I then logged in and selected the option to track my website as follows:</p>
 <div id="step-02-01-screenshot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_02_ga_01.png" class="img-fluid figure-img" alt="Screenshot of Google Analytics settings"></p>
+<figure class="figure">
+<p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_02_ga_01.png" class="img-fluid figure-img" alt="Screenshot of Google Analytics settings"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p>Note that I specified the <strong>Website Name</strong> field to be <code>shamindras-distill</code>. This is indeed the same as the Disqus shortname from earlier but did not have to be. I just did it for consistency and easy reference. I was then given a <strong>Google Analytics token</strong> and concluded this setup by adding the token to the <code>_site.yml</code> file as follows:</p>
-<aside><p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
-</aside><div class="cell">
+<aside>
+<p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
+</aside>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;">google_analytics:</span> <span class="st" style="color: #20794D;">"UA-145015693-1"</span></span></code></pre></div>
 </div>
 <p>You can read more about setting up Google Analytics from the official <code>distill</code> blog <a href="https://rstudio.github.io/distill/website.html#google-analytics">here</a></p>
-</section><section id="step-3-add-netlify-status-badge" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-3-add-netlify-status-badge">Step 3: Add Netlify Status Badge</h2>
+</section>
+<section id="step-3-add-netlify-status-badge" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="step-3-add-netlify-status-badge">Step 3: Add Netlify Status Badge</h2>
 <p>Since <a href="https://www.netlify.com" target="_blank">Netlify</a> is the web hosting platform for my site (see setup details <a href="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/#step-8-deploy-your-website" target="_blank">here</a>). I just logged into my Netlify account and went to my <strong>Site Details</strong> and obtained the following code from the <strong>Status Badges</strong> option.</p>
 <div id="step-03-01-screenshot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_03_netlify_01.png" class="img-fluid figure-img" alt="Screenshot of Netlify badge code"></p>
+<figure class="figure">
+<p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_03_netlify_01.png" class="img-fluid figure-img" alt="Screenshot of Netlify badge code"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p>I copy-pasted the above code in at the top of my site <code>README.md</code> file. This let’s me quickly know whether my website is up and running as expected by simply checking out my <a href="https://github.com/shamindras/ss_personal_distill_blog" target="_blank">github page</a>.</p>
-<aside><p><strong>Note:</strong> You can see my <code>README.md</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md">here</a></p>
-</aside></section><section id="step-4-add-blog-post-sharing-options" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-4-add-blog-post-sharing-options">Step 4: Add blog post sharing options</h2>
+<aside>
+<p><strong>Note:</strong> You can see my <code>README.md</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md">here</a></p>
+</aside>
+</section>
+<section id="step-4-add-blog-post-sharing-options" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="step-4-add-blog-post-sharing-options">Step 4: Add blog post sharing options</h2>
 <p>It is easy to configure distill to allow for easy sharing of posts using a variety of social media platforms. I allow for <strong>twitter, linkedin, pinterest, and facebook.</strong> I did this by simply adding the following line in the <code>_site.yml</code> file:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;">collections:</span></span>
@@ -729,25 +887,31 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 2.”</span> August
 </div>
 <p>Now the following sharing options appear at the bottom of every post:</p>
 <div id="step-04-01-screenshot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_04_sharing_01.png" class="img-fluid figure-img" alt="Screenshot of Distill sharing options"></p>
+<figure class="figure">
+<p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_04_sharing_01.png" class="img-fluid figure-img" alt="Screenshot of Distill sharing options"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p>I also added in the following lines to <code>_site.yml</code> to ensure that <a href="https://rstudio.github.io/distill/metadata.html#twitter-card" target="_blank">twitter cards</a> are correctly generated when posts are shared on twitter:</p>
-<aside><p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
-</aside><div class="cell">
+<aside>
+<p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
+</aside>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;">twitter:</span></span>
 <span id="cb4-2">  <span class="ex" style="color: null;">site:</span> <span class="st" style="color: #20794D;">"@shamindraas"</span></span>
 <span id="cb4-3">  <span class="ex" style="color: null;">creator:</span> <span class="st" style="color: #20794D;">"@shamindraas"</span></span></code></pre></div>
 </div>
-</section><section id="step-5-add-correctionschange-tracking-and-rss-feed" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-5-add-correctionschange-tracking-and-rss-feed">Step 5: Add Corrections/Change Tracking and RSS feed</h2>
+</section>
+<section id="step-5-add-correctionschange-tracking-and-rss-feed" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="step-5-add-correctionschange-tracking-and-rss-feed">Step 5: Add Corrections/Change Tracking and RSS feed</h2>
 <p>I frequently make edits to blogposts and intend to do so going forward. Fortunately <code>distill</code> makes it easy <strong>track changes/corrections</strong> made to blogposts. I did this by simply adding the site repo url to the <code>_site.yml</code> as follows:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="ex" style="color: null;">repository_url:</span> https://github.com/shamindras/ss_personal_distill_blog</span></code></pre></div>
 </div>
 <p>Now the following appears at the bottom of all blogposts:</p>
 <div id="step-05-01-screenshot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_05_trackcorr_01.png" class="img-fluid figure-img" alt="Screenshot of changes and corrections tracking"></p>
+<figure class="figure">
+<p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_05_trackcorr_01.png" class="img-fluid figure-img" alt="Screenshot of changes and corrections tracking"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -760,26 +924,32 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 2.”</span> August
 <span id="cb6-4">    <span class="ex" style="color: null;">-</span> icon: fa fa-rss</span>
 <span id="cb6-5">      <span class="ex" style="color: null;">href:</span> index.xml</span></code></pre></div>
 </div>
-<aside><p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
-</aside><p>The critical elements are adding in the <code>base_url</code> fields and adding in <code>fa fa-rss</code> which is derived from the <code>index.xml</code> file. The <code>index.xml</code> file is automatically generated from the <code>index.Rmd</code> when you render the <code>distill</code> blog using the usual command:</p>
+<aside>
+<p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
+</aside>
+<p>The critical elements are adding in the <code>base_url</code> fields and adding in <code>fa fa-rss</code> which is derived from the <code>index.xml</code> file. The <code>index.xml</code> file is automatically generated from the <code>index.Rmd</code> when you render the <code>distill</code> blog using the usual command:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="ex" style="color: null;">rmarkdown::render_site</span><span class="er" style="color: #AD0000;">(</span><span class="fu" style="color: #4758AB;">here::here()</span><span class="kw" style="color: #003B4F;">)</span></span></code></pre></div>
 </div>
-</section><section id="next-steps" class="level2"><h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
 <p>In terms of core <code>distill</code> blog settings, these are the main options that I’m happy to implement for now. For me the next steps are more about <strong>customizing my own blog workflow</strong>. This will involve setting up utilities to automatically:</p>
 <ul>
-<li>
-<strong>Wrap Rmd files</strong> to 80 characters for consistency</li>
+<li><strong>Wrap Rmd files</strong> to 80 characters for consistency</li>
 <li>Quickly <strong>delete unused files</strong> e.g.&nbsp;<code>DS_Store</code> files on mac</li>
-<li>
-<strong>Clear knitr cache</strong> for all posts and thoroughly re-render the site</li>
+<li><strong>Clear knitr cache</strong> for all posts and thoroughly re-render the site</li>
 </ul>
 <p>I expect to do this using a combination of <code>R</code> functions/<code>Makefile</code> workflow, but do stay tuned!</p>
-</section><section id="concluding-thoughts" class="level2"><h2 class="anchored" data-anchor-id="concluding-thoughts">Concluding Thoughts</h2>
+</section>
+<section id="concluding-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="concluding-thoughts">Concluding Thoughts</h2>
 <p>As it can be seen it is quite easy to customize <code>distill</code> for commonly required features. Really great work by the RStudio team in making such customizations so user-friendly 👍.</p>
 
 
-</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
   author = {Shamindra Shrotriya},
   title = {Upgrading {Distill} {Blog} {Settings}},
   date = {2019-07-31},
@@ -797,6 +967,7 @@ Settings.”</span> July 31, 2019. <a href="https://www.shamindras.com/posts/201
 </item>
 <item>
   <title>Shamindra’s July 2019 Roundup</title>
+  <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/index.html</link>
   <description><![CDATA[ <section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>This is a new feature I’m going to experiment with, namely documenting anything interesting I come across (articles, lectures, books, papers etc.) and any activities I get up to. This is more for my personal benefit but may also help others. Let’s see how this experiment goes!</p>
@@ -865,6 +1036,7 @@ July 30, 2019. <a href="https://www.shamindras.com/posts/2019-07-30-shrotriya201
 </item>
 <item>
   <title>Reproducibility Challenge: Titanic Survivors Plot</title>
+  <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/index.html</link>
   <description><![CDATA[ <section id="background" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>In the February 2019 issue of <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">Significance Magazine</a> notably featured a story of the titanic disaster <span class="citation" data-cites="friendly2019titanicviz">(Friendly, Symanzik, and Onder 2019)</span> and visualization of key survival statistics. As a fan of <code>R</code> and data visualization I enjoyed this article and recommended it to anyone with similar interests. Although the subject is rather tragic, by reading the article I did get a better appreciation of how the information of the crash survivorship was conveyed to the general public through data visualization.</p>
@@ -1112,9 +1284,43 @@ Survivors Plot.”</span> July 21, 2019. <a href="https://www.shamindras.com/pos
 </item>
 <item>
   <title>Tidyverse Fun - Part 1</title>
+  <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/index.html</link>
-  <description><![CDATA[ <section id="task-1-generating-oxford-comma-triples" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="task-1-generating-oxford-comma-triples">Task 1: Generating Oxford Comma Triples</h2>
-<section id="the-central-problem" class="level3"><h3 class="anchored" data-anchor-id="the-central-problem">The central problem</h3>
+  <description><![CDATA[ 
+
+
+
+
+<div class="cell-output-display">
+<style type="text/css">/**
+  * Author: Mikhail Popov
+  * License: MIT
+  */
+a.wiki {
+    /* color: #0645ad; */
+    text-decoration: none;
+    border-bottom: 1px dotted #0645ad;
+}
+.wiki::after {
+    font-family: serif;
+    content: " W";
+    vertical-align: super;
+    font-size: 6pt;
+}</style>
+<script src="https://unpkg.com/wikipedia-preview@latest/dist/wikipedia-preview.production.js" type="text/javascript"></script>
+<script type="text/javascript">
+    window.onload = function() {
+      wikipediaPreview.init({
+        lang: 'en',
+        selector: '.wiki',
+        detectLinks: true
+      });
+    };</script>
+</div>
+<section id="task-1-generating-oxford-comma-triples" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="task-1-generating-oxford-comma-triples">Task 1: Generating Oxford Comma Triples</h2>
+<section id="the-central-problem" class="level3">
+<h3 class="anchored" data-anchor-id="the-central-problem">The central problem</h3>
 <p>Based on a fun conversation with my statistics cohort over dinner we got to discussing the famous <a href="https://en.wikipedia.org/wiki/Serial_comma" class="wiki"><em>Oxford Comma</em></a> (or <em>Serial Comma</em> depending on your persuasion). I’ve never really adopted the use but my friends made a compelling argument on it’s apparent general lack of ambiguity when applied appropriately.</p>
 <p>We will use the Oxford comma on the famously <em>ambiguous</em> phrase (here used without the Oxford Comma before <em>leaves</em>):</p>
 <blockquote class="blockquote">
@@ -1125,51 +1331,57 @@ Survivors Plot.”</span> July 21, 2019. <a href="https://www.shamindras.com/pos
 <p>Eats, shoots, and leaves</p>
 </blockquote>
 <p><strong>Goal:</strong> A fun experiment would be to generate <em>all permutations</em> of this phrase with and without the Oxford Comma using <code>R</code> and specifically the <code>tidyverse</code> packages.</p>
-</section><section id="generating-all-word-triple-permutations-the-tidy-way" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="generating-all-word-triple-permutations-the-tidy-way">Generating all word-triple permutations the <code>tidy</code> way</h3>
+</section>
+<section id="generating-all-word-triple-permutations-the-tidy-way" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="generating-all-word-triple-permutations-the-tidy-way">Generating all word-triple permutations the <code>tidy</code> way</h3>
 <p>First, let’s load our required packages.</p>
 <div class="cell">
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op" style="color: #5E5E5E;">)</span>
-<span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://magrittr.tidyverse.org">magrittr</a></span><span class="op" style="color: #5E5E5E;">)</span>
-<span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op" style="color: #5E5E5E;">)</span>
-<span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://github.com/tidyverse/glue">glue</a></span><span class="op" style="color: #5E5E5E;">)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">library</span>(knitr)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;">library</span>(magrittr)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;">library</span>(tidyverse)</span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;">library</span>(glue)</span></code></pre></div>
 </div>
 <p>Let’s also define our unique global word values used to construct the required phrases:</p>
 <div class="cell">
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va" style="color: #111111;">WORD_VALS</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"eats"</span>, <span class="st" style="color: #20794D;">"shoots"</span>, <span class="st" style="color: #20794D;">"leaves"</span><span class="op" style="color: #5E5E5E;">)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">WORD_VALS <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"eats"</span>, <span class="st" style="color: #20794D;">"shoots"</span>, <span class="st" style="color: #20794D;">"leaves"</span>)</span></code></pre></div>
 </div>
 <p>Generate all unique 3-word permutations <em>without replacement</em> from the three unique words. We’ll create a helper function to check that a vector of words is unique.</p>
 <div class="cell">
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va" style="color: #111111;">is_unq_perm</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="kw" style="color: #003B4F;">function</span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">word1</span>, <span class="va" style="color: #111111;">word2</span>, <span class="va" style="color: #111111;">word3</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">{</span>
-    <span class="va" style="color: #111111;">words_vec</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">word1</span>, <span class="va" style="color: #111111;">word2</span>, <span class="va" style="color: #111111;">word3</span><span class="op" style="color: #5E5E5E;">)</span>
-    <span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">words_vec</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">words_vec</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="fl" style="color: #AD0000;">0</span><span class="op" style="color: #5E5E5E;">)</span>
-<span class="op" style="color: #5E5E5E;">}</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">is_unq_perm <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(word1, word2, word3){</span>
+<span id="cb3-2">    words_vec <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">c</span>(word1, word2, word3)</span>
+<span id="cb3-3">    <span class="fu" style="color: #4758AB;">return</span>(<span class="fu" style="color: #4758AB;">length</span>(words_vec) <span class="sc" style="color: #5E5E5E;">-</span> <span class="fu" style="color: #4758AB;">length</span>(<span class="fu" style="color: #4758AB;">unique</span>(words_vec)) <span class="sc" style="color: #5E5E5E;">==</span> <span class="dv" style="color: #AD0000;">0</span>)</span>
+<span id="cb3-4">}</span></code></pre></div>
 </div>
-<p>We can now simply generate every possible triple <em>with replacement</em> using the <code><a href="https://tidyr.tidyverse.org/reference/expand.html">tidyr::crossing</a></code> function. We proceed to <em>filter</em> these <img src="https://latex.codecogs.com/png.latex?3%5E3%20=%2027"> triples for unique triples using our <code>is_unq_perm</code> helper function applied <em>row-by-row</em> using <code><a href="https://purrr.tidyverse.org/reference/map2.html">purrr::pmap_lgl</a></code>. The <code>_lgl</code> simply returns a <code>TRUE/FALSE</code> logical value as intended by the applied function.</p>
-<aside><strong>Note:</strong> The <code><a href="https://tidyr.tidyverse.org/reference/expand.html">tidyr::crossing</a></code> generates a <em>Cartesian product</em> of all the 3 word triples, very handy
-</aside><div class="cell">
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="co" style="color: #5E5E5E;"># Generate the unique word-triples</span>
-<span class="va" style="color: #111111;">all_perms</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;">tidyr</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://tidyr.tidyverse.org/reference/expand.html">crossing</a></span><span class="op" style="color: #5E5E5E;">(</span>word1 <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">WORD_VALS</span>,
-                             word2 <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">WORD_VALS</span>,
-                             word3 <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">WORD_VALS</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-                <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op" style="color: #5E5E5E;">(</span>.data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>,
-                       is_unq_perm <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">purrr</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://purrr.tidyverse.org/reference/map2.html">pmap_lgl</a></span><span class="op" style="color: #5E5E5E;">(</span>.l <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>,
-                                                     <span class="va" style="color: #111111;">is_unq_perm</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-                <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span>.data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>, <span class="va" style="color: #111111;">is_unq_perm</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-                <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">-</span><span class="va" style="color: #111111;">is_unq_perm</span><span class="op" style="color: #5E5E5E;">)</span>
-
-<span class="co" style="color: #5E5E5E;"># Display output in a nice centered table</span>
-<span class="va" style="color: #111111;">all_perms</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-  <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>, align <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'c'</span>,
-        col.names <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Word 1"</span>,
-                      <span class="st" style="color: #20794D;">"Word 2"</span>,
-                      <span class="st" style="color: #20794D;">"Word 3"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></code></pre></div>
+<p>We can now simply generate every possible triple <em>with replacement</em> using the <code>tidyr::crossing</code> function. We proceed to <em>filter</em> these <img src="https://latex.codecogs.com/png.latex?3%5E3%20=%2027"> triples for unique triples using our <code>is_unq_perm</code> helper function applied <em>row-by-row</em> using <code>purrr::pmap_lgl</code>. The <code>_lgl</code> simply returns a <code>TRUE/FALSE</code> logical value as intended by the applied function.</p>
+<aside>
+<strong>Note:</strong> The <code>tidyr::crossing</code> generates a <em>Cartesian product</em> of all the 3 word triples, very handy
+</aside>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;"># Generate the unique word-triples</span></span>
+<span id="cb4-2">all_perms <span class="ot" style="color: #003B4F;">&lt;-</span> tidyr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">crossing</span>(<span class="at" style="color: #657422;">word1 =</span> WORD_VALS,</span>
+<span id="cb4-3">                             <span class="at" style="color: #657422;">word2 =</span> WORD_VALS,</span>
+<span id="cb4-4">                             <span class="at" style="color: #657422;">word3 =</span> WORD_VALS) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb4-5">                <span class="fu" style="color: #4758AB;">mutate</span>(<span class="at" style="color: #657422;">.data =</span> .,</span>
+<span id="cb4-6">                       <span class="at" style="color: #657422;">is_unq_perm =</span> purrr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">pmap_lgl</span>(<span class="at" style="color: #657422;">.l =</span> .,</span>
+<span id="cb4-7">                                                     is_unq_perm)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb4-8">                <span class="fu" style="color: #4758AB;">filter</span>(<span class="at" style="color: #657422;">.data =</span> ., is_unq_perm) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb4-9">                <span class="fu" style="color: #4758AB;">select</span>(<span class="sc" style="color: #5E5E5E;">-</span>is_unq_perm)</span>
+<span id="cb4-10"></span>
+<span id="cb4-11"><span class="co" style="color: #5E5E5E;"># Display output in a nice centered table</span></span>
+<span id="cb4-12">all_perms <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb4-13">  <span class="fu" style="color: #4758AB;">kable</span>(<span class="at" style="color: #657422;">x =</span> ., <span class="at" style="color: #657422;">align =</span> <span class="st" style="color: #20794D;">'c'</span>,</span>
+<span id="cb4-14">        <span class="at" style="color: #657422;">col.names =</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"Word 1"</span>,</span>
+<span id="cb4-15">                      <span class="st" style="color: #20794D;">"Word 2"</span>,</span>
+<span id="cb4-16">                      <span class="st" style="color: #20794D;">"Word 3"</span>))</span></code></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: center;">Word 1</th>
 <th style="text-align: center;">Word 2</th>
 <th style="text-align: center;">Word 3</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">eats</td>
@@ -1207,29 +1419,31 @@ Survivors Plot.”</span> July 21, 2019. <a href="https://www.shamindras.com/pos
 </div>
 <p>Great - that part is done! Now we just need to generate for each triple of words an oxford comma and non-oxford comma version. This is done easily using the amazing <code>glue</code> package as seen below:</p>
 <div class="cell">
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va" style="color: #111111;">exprs</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">all_perms</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-          <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op" style="color: #5E5E5E;">(</span>non_oxford_comma <span class="op" style="color: #5E5E5E;">=</span>
-                   <span class="fu" style="color: #4758AB;"><a href="https://glue.tidyverse.org/reference/glue.html">glue_data</a></span><span class="op" style="color: #5E5E5E;">(</span>.x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>,
-                             <span class="st" style="color: #20794D;">"{word1}, {word2} and {word3}"</span><span class="op" style="color: #5E5E5E;">)</span>,
-                 oxford_comma <span class="op" style="color: #5E5E5E;">=</span>
-                   <span class="fu" style="color: #4758AB;"><a href="https://glue.tidyverse.org/reference/glue.html">glue_data</a></span><span class="op" style="color: #5E5E5E;">(</span>.x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>,
-                             <span class="st" style="color: #20794D;">"{word1}, {word2}, and {word3}"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-          <span class="fu" style="color: #4758AB;"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">non_oxford_comma</span>, <span class="va" style="color: #111111;">oxford_comma</span><span class="op" style="color: #5E5E5E;">)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">exprs <span class="ot" style="color: #003B4F;">&lt;-</span> all_perms <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb5-2">          <span class="fu" style="color: #4758AB;">mutate</span>(<span class="at" style="color: #657422;">non_oxford_comma =</span></span>
+<span id="cb5-3">                   <span class="fu" style="color: #4758AB;">glue_data</span>(<span class="at" style="color: #657422;">.x =</span> .,</span>
+<span id="cb5-4">                             <span class="st" style="color: #20794D;">"{word1}, {word2} and {word3}"</span>),</span>
+<span id="cb5-5">                 <span class="at" style="color: #657422;">oxford_comma =</span></span>
+<span id="cb5-6">                   <span class="fu" style="color: #4758AB;">glue_data</span>(<span class="at" style="color: #657422;">.x =</span> .,</span>
+<span id="cb5-7">                             <span class="st" style="color: #20794D;">"{word1}, {word2}, and {word3}"</span>)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb5-8">          <span class="fu" style="color: #4758AB;">select</span>(non_oxford_comma, oxford_comma)</span></code></pre></div>
 </div>
 <p>We can display the side-by-side output of the Non-Oxford Comma vs.&nbsp;Oxford comma for the <img src="https://latex.codecogs.com/png.latex?6"> generated triples as follows:</p>
 <div class="cell">
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="co" style="color: #5E5E5E;"># Display output in a nice centered table</span>
-<span class="va" style="color: #111111;">exprs</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-  <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>,
-        align <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'c'</span>,
-        col.names <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Non-Oxford Comma"</span>,
-                      <span class="st" style="color: #20794D;">"Oxford Comma"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;"># Display output in a nice centered table</span></span>
+<span id="cb6-2">exprs <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb6-3">  <span class="fu" style="color: #4758AB;">kable</span>(<span class="at" style="color: #657422;">x =</span> .,</span>
+<span id="cb6-4">        <span class="at" style="color: #657422;">align =</span> <span class="st" style="color: #20794D;">'c'</span>,</span>
+<span id="cb6-5">        <span class="at" style="color: #657422;">col.names =</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"Non-Oxford Comma"</span>,</span>
+<span id="cb6-6">                      <span class="st" style="color: #20794D;">"Oxford Comma"</span>))</span></code></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: center;">Non-Oxford Comma</th>
 <th style="text-align: center;">Oxford Comma</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">eats, leaves and shoots</td>
@@ -1260,8 +1474,12 @@ Survivors Plot.”</span> July 21, 2019. <a href="https://www.shamindras.com/pos
 </div>
 </div>
 <p>So there you have it. Have fun generating your own version of Oxford Comma triples to engage in civil discussions with your fellow grammar focused friends 😄.</p>
-</section></section><section id="task-2-generating-sequentially-numbered-bibtex-entries" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="task-2-generating-sequentially-numbered-bibtex-entries">Task 2: Generating Sequentially Numbered BibTeX Entries</h2>
-<section id="the-central-problem-1" class="level3"><h3 class="anchored" data-anchor-id="the-central-problem-1">The central problem</h3>
+</section>
+</section>
+<section id="task-2-generating-sequentially-numbered-bibtex-entries" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="task-2-generating-sequentially-numbered-bibtex-entries">Task 2: Generating Sequentially Numbered BibTeX Entries</h2>
+<section id="the-central-problem-1" class="level3">
+<h3 class="anchored" data-anchor-id="the-central-problem-1">The central problem</h3>
 <p>In this case I needed to generate several BibTeX entries of the form:</p>
 <pre class="markup"><code>@misc{doe2019_lec1,
 author        = {Doe, John},
@@ -1273,35 +1491,39 @@ url           = {https://statschool/~doe/stats10A/Lectures/Lecture01.pdf},
 <p>As it can be seen the lectures are numbered sequentially and change in the main BibTeX <code>id</code>, the <code>title</code>, and the <code>url</code> field.</p>
 <p>Specifically I needed to construct 30 such sequential entries for lectures <code>1-30</code>. Rather than do this manually, I realized that this would be fun scripting exercise with using the <code>tidyverse</code> packages <code>glue</code>, <code>purrr</code>, and <code>stringr</code>.</p>
 <p><strong>Goal:</strong> Create 30 such BibTeX entries and print to the console to directly-copy paste to my BibTeX file.</p>
-</section><section id="the-tidy-approach" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="the-tidy-approach">The <code>tidy</code> approach</h3>
+</section>
+<section id="the-tidy-approach" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="the-tidy-approach">The <code>tidy</code> approach</h3>
 <p>First step is to write a function that takes a lecture number (integer) as an input and then outputs a single BibTeX entry for that lecture.</p>
 <div class="cell">
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="co" style="color: #5E5E5E;"># Generate BibTeX entry for a single lecture number</span>
-<span class="va" style="color: #111111;">get_lec_bibtex</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="kw" style="color: #003B4F;">function</span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">lec_num</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">{</span>
-  <span class="co" style="color: #5E5E5E;"># Get the 2 character padded lecture number i.e. 1 -&gt; "01"</span>
-  <span class="va" style="color: #111111;">lec_num_pad</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://stringr.tidyverse.org/reference/str_pad.html">str_pad</a></span><span class="op" style="color: #5E5E5E;">(</span>string <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">lec_num</span>, width <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">2</span>,
-                         side <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"left"</span>, pad <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"0"</span><span class="op" style="color: #5E5E5E;">)</span>
-
-  <span class="co" style="color: #5E5E5E;"># Construct the BibTeX entry</span>
-  <span class="va" style="color: #111111;">out_bbtex_str</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op" style="color: #5E5E5E;">(</span>
-    <span class="st" style="color: #20794D;">"@misc{doe2019_lec&lt;lec_num&gt;,
-    author = {Doe, John},
-    title  = {Lecture Note &lt;lec_num&gt; - STAT10A},
-    month  = {March},
-    year   = {2018},
-    url    = {https://www.hpg/~doe/st10A/lecs/lec&lt;lec_num_pad&gt;.pdf}}"</span>,
-    .open <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"&lt;"</span>,
-    .close <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"&gt;"</span><span class="op" style="color: #5E5E5E;">)</span>
-
-  <span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">out_bbtex_str</span><span class="op" style="color: #5E5E5E;">)</span>
-<span class="op" style="color: #5E5E5E;">}</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="co" style="color: #5E5E5E;"># Generate BibTeX entry for a single lecture number</span></span>
+<span id="cb8-2">get_lec_bibtex <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(lec_num){</span>
+<span id="cb8-3">  <span class="co" style="color: #5E5E5E;"># Get the 2 character padded lecture number i.e. 1 -&gt; "01"</span></span>
+<span id="cb8-4">  lec_num_pad <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">str_pad</span>(<span class="at" style="color: #657422;">string =</span> lec_num, <span class="at" style="color: #657422;">width =</span> <span class="dv" style="color: #AD0000;">2</span>,</span>
+<span id="cb8-5">                         <span class="at" style="color: #657422;">side =</span> <span class="st" style="color: #20794D;">"left"</span>, <span class="at" style="color: #657422;">pad =</span> <span class="st" style="color: #20794D;">"0"</span>)</span>
+<span id="cb8-6"></span>
+<span id="cb8-7">  <span class="co" style="color: #5E5E5E;"># Construct the BibTeX entry</span></span>
+<span id="cb8-8">  out_bbtex_str <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">glue</span>(</span>
+<span id="cb8-9">    <span class="st" style="color: #20794D;">"@misc{doe2019_lec&lt;lec_num&gt;,</span></span>
+<span id="cb8-10"><span class="st" style="color: #20794D;">    author = {Doe, John},</span></span>
+<span id="cb8-11"><span class="st" style="color: #20794D;">    title  = {Lecture Note &lt;lec_num&gt; - STAT10A},</span></span>
+<span id="cb8-12"><span class="st" style="color: #20794D;">    month  = {March},</span></span>
+<span id="cb8-13"><span class="st" style="color: #20794D;">    year   = {2018},</span></span>
+<span id="cb8-14"><span class="st" style="color: #20794D;">    url    = {https://www.hpg/~doe/st10A/lecs/lec&lt;lec_num_pad&gt;.pdf}}"</span>,</span>
+<span id="cb8-15">    <span class="at" style="color: #657422;">.open =</span> <span class="st" style="color: #20794D;">"&lt;"</span>,</span>
+<span id="cb8-16">    <span class="at" style="color: #657422;">.close =</span> <span class="st" style="color: #20794D;">"&gt;"</span>)</span>
+<span id="cb8-17"></span>
+<span id="cb8-18">  <span class="fu" style="color: #4758AB;">return</span>(out_bbtex_str)</span>
+<span id="cb8-19">}</span></code></pre></div>
 </div>
-<p>Note that by default <code>glue</code> allows you to substitute input text in between <code>{</code> and <code>}</code> markers. However BibTeX entries <em>already have</em> literal default <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code> tags that we need to include in our function output. Rather than escaping them the <code>glue</code> package conveniently allows us to change the default opening and closing markers 💯! We simply set these to be angle brackets <code>&lt; &gt;</code> using the <code>.open</code> and <code>.close</code> options above.</p>
-<aside><strong>Note:</strong> Luckily we don’t have <em>literal</em> angle brackets in our BibTeX output to deal with here
-</aside><p>Let’s just test this out quickly:</p>
+<p>Note that by default <code>glue</code> allows you to substitute input text in between <code>{</code> and <code>}</code> markers. However BibTeX entries <em>already have</em> literal default <code>{}</code> tags that we need to include in our function output. Rather than escaping them the <code>glue</code> package conveniently allows us to change the default opening and closing markers 💯! We simply set these to be angle brackets <code>&lt; &gt;</code> using the <code>.open</code> and <code>.close</code> options above.</p>
+<aside>
+<strong>Note:</strong> Luckily we don’t have <em>literal</em> angle brackets in our BibTeX output to deal with here
+</aside>
+<p>Let’s just test this out quickly:</p>
 <div class="cell">
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va" style="color: #111111;">lec_no</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fl" style="color: #AD0000;">1</span>
-<span class="fu" style="color: #4758AB;">get_lec_bibtex</span><span class="op" style="color: #5E5E5E;">(</span>lec_num <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">lec_no</span><span class="op" style="color: #5E5E5E;">)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">lec_no <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="dv" style="color: #AD0000;">1</span></span>
+<span id="cb9-2"><span class="fu" style="color: #4758AB;">get_lec_bibtex</span>(<span class="at" style="color: #657422;">lec_num =</span> lec_no)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>@misc{doe2019_lec1,
 author = {Doe, John},
@@ -1312,15 +1534,18 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec01.pdf}}</code></pre>
 </div>
 </div>
 <p>Great - looks like it is working as required with the correct string padding in the lecture number in the pdf filename!</p>
-<aside><strong>Note:</strong> We used the <code>stringr</code> <code>str_pad</code> to convert <code>1</code> to <code>"01"</code>
-</aside></section><section id="apply-to-all-lectures-using-purrr" class="level3"><h3 class="anchored" data-anchor-id="apply-to-all-lectures-using-purrr">Apply to all lectures using <code>purrr</code>
-</h3>
+<aside>
+<strong>Note:</strong> We used the <code>stringr</code> <code>str_pad</code> to convert <code>1</code> to <code>"01"</code>
+</aside>
+</section>
+<section id="apply-to-all-lectures-using-purrr" class="level3">
+<h3 class="anchored" data-anchor-id="apply-to-all-lectures-using-purrr">Apply to all lectures using <code>purrr</code></h3>
 <p>Let’s finish this by creating all the entries using <code>purrr</code>:</p>
 <div class="cell">
-<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span class="va" style="color: #111111;">lec_nums</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="fl" style="color: #AD0000;">1</span>, <span class="fl" style="color: #AD0000;">30</span><span class="op" style="color: #5E5E5E;">)</span>
-<span class="va" style="color: #111111;">lec_nums</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-  <span class="fu" style="color: #4758AB;"><a href="https://purrr.tidyverse.org/reference/map.html">map_chr</a></span><span class="op" style="color: #5E5E5E;">(</span>.x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>, .f <span class="op" style="color: #5E5E5E;">=</span> <span class="op" style="color: #5E5E5E;">~</span><span class="fu" style="color: #4758AB;">get_lec_bibtex</span><span class="op" style="color: #5E5E5E;">(</span>lec_num <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.x</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>
-  <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">.</span>, sep <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"\n\n"</span><span class="op" style="color: #5E5E5E;">)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">lec_nums <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="dv" style="color: #AD0000;">1</span>, <span class="dv" style="color: #AD0000;">30</span>)</span>
+<span id="cb11-2">lec_nums <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb11-3">  <span class="fu" style="color: #4758AB;">map_chr</span>(<span class="at" style="color: #657422;">.x =</span> ., <span class="at" style="color: #657422;">.f =</span> <span class="sc" style="color: #5E5E5E;">~</span><span class="fu" style="color: #4758AB;">get_lec_bibtex</span>(<span class="at" style="color: #657422;">lec_num =</span> .x)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb11-4">  <span class="fu" style="color: #4758AB;">cat</span>(., <span class="at" style="color: #657422;">sep =</span> <span class="st" style="color: #20794D;">"</span><span class="sc" style="color: #5E5E5E;">\n\n</span><span class="st" style="color: #20794D;">"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>@misc{doe2019_lec1,
 author = {Doe, John},
@@ -1339,11 +1564,18 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec30.pdf}}</code></pre>
 </div>
 <p>Yay - this works as expected! We can now paste into BibTeX as required.</p>
 <p>Note that we only created it for lectures 1 and 30 for easy scrolling. But for all lectures we can just replace <code>c(1, 30)</code> with <code>1:30</code> in the above code.</p>
-</section></section><section id="conclusion" class="level2"><h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>This post was for me to document and serve as a guide to automating a couple of fun text-based tasks that I came across in my work (and social life!). Using the <code>tidy</code> framework can be a fun way to solve these tasks (but certainly not the only way in <code>R</code>). Have fun playing around with the above and please post in the comments any questions/feedback you may have 👍.</p>
 <p>Stay tuned for more blogposts solving more such tasks.</p>
-</section><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
-<p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a></p>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
+
+<p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a>.</p>
 
 
 </div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
@@ -1365,6 +1597,7 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 1.”</span> July
 </item>
 <item>
   <title>Setting up a Distill Blog with Netlify</title>
+  <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/index.html</link>
   <description><![CDATA[ <section id="step-0-introduction" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-0-introduction">Step 0: Introduction</h2>
 <p>This is a meta blogpost to describe how I setup this personal academic blog. It is based on the relatively new <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="https://www.rstudio.com/" target="_blank">RStudio</a> team. The main tools used I used to create this blog are:</p>
@@ -1614,6 +1847,7 @@ Netlify.”</span> July 11, 2019. <a href="https://www.shamindras.com/posts/2019
 </item>
 <item>
   <title>Welcome to Shamindra’s Site</title>
+  <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome/index.html</link>
   <description><![CDATA[ <section id="welcome---lets-get-statistical" class="level2"><h2 class="anchored" data-anchor-id="welcome---lets-get-statistical">Welcome - Let’s Get Statistical!</h2>
 <p>Hi there! I’m <strong>Shamindra Shrotriya</strong>, a graduate student in the <a href="http://www.stat.cmu.edu/">Department of Statistics and Data Science</a> at the wonderful <a href="https://www.cmu.edu/">Carnegie Mellon University</a>. I’ve decided to start blogging to document my learning and development in statistics as a graduate student.</p>

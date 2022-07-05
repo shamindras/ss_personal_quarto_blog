@@ -17,7 +17,7 @@ editor_options:
     wrap: 80
 ---
 
-```{r setup_01_01, include=FALSE, echo=FALSE, results='asis'}
+```{r setup_01_01, echo=FALSE, results='asis'}
 wikipediapreview::wp_init(use_unpkg = TRUE, use_alt_style = TRUE)
 ```
 
@@ -28,13 +28,13 @@ library(emo)
 
 # TL;DR
 
-I walkthrough a cool and possibly less known result connecting convexity and
+I walk through a cool and possibly less known result connecting convexity and
 the triangle inequalities for norms. Using this result, typical proofs of the
 triangle inequality for a proposed norm function are significantly simplified.
 This exposition is based on [Chapter 3, @robinson2020introfuncanalysis_book]
 [^1].
 
-[^1]: **Note:** The presentation in this post is ***intentionally*** verbose.
+[^1]: **Note:** The presentation in this post is ***intentionay*** verbose.
     The goal is to give lots of intuition of the key result and its usefulness,
     and ensure that the proofs are rigorous. It is written with an empathetic
     mindset to newcomers, and to myself for future reference.
@@ -68,14 +68,14 @@ For a given vector space $V$, a norm
 $\lVert \cdot \rVert_{V}: V \to \mathbb{R}$, is a function satisfying the
 following three properties.
 
-1.  **Positive definiteness:** For all $\mathbf{x} \in V$, if
+1.  **Positive definiteness:** For a $\mathbf{x} \in V$, if
     $\lVert \mathbf{x} \rVert = 0$ then $\mathbf{x} = \mathbf{0}_{V}$.
 2.  **Absolute homogeneity:**
     $\lVert \lambda \mathbf{x} \rVert = | \lambda | \lVert  \mathbf{x} \rVert$,
-    for all $\mathbf{x} \in V, \lambda \in \mathbb{R}$.
+    for a $\mathbf{x} \in V, \lambda \in \mathbb{R}$.
 3.  **Triangle inequality:**
     $\lVert \mathbf{x} + \mathbf{y} \rVert \leq \lVert \mathbf{x} \rVert +  \lVert \mathbf{y} \rVert$,
-    for all $\mathbf{x}, \mathbf{y} \in V$.
+    for a $\mathbf{x}, \mathbf{y} \in V$.
 :::
 
 <aside>
@@ -100,20 +100,21 @@ following properties:
 
 1.  In @def-norm, we can always replace **positive
     definiteness** with the stronger claim, namely that \begin{equation}
-     \text{For all $\mathbf{x} \in V$, if $\lVert \mathbf{x} \rVert = 0 \iff \mathbf{x} = \mathbf{0}_{V}$.}
+     \text{For a $\mathbf{x} \in V$, if $\lVert \mathbf{x} \rVert = 0 \iff \mathbf{x} = \mathbf{0}_{V}$.}
     \end{equation} In short, we want to show that the reverse implication to
     **positive definiteness** always holds, i.e.,
     $\mathbf{x} = \mathbf{0}_{V} \implies \lVert \mathbf{x} \rVert = 0$. To
-    prove this observe that using **absolute homogeneity** in Definition
-    \@def-norm, we have: \begin{equation}
+    prove this observe that using **absolute homogeneity** in @def-norm, 
+    we have: 
+    \begin{equation}
      \lVert \mathbf{x} \rVert
      = \lVert \mathbf{0}_{V} \rVert
      = \lVert 0 (\mathbf{0}_{V}) \rVert
      = |0| \lVert \mathbf{0}_{V} \rVert = 0
     \end{equation} As required.
 
-2.  We also have that $\lVert \mathbf{x} \rVert \geq 0$, for all
-    $\mathbf{x} \in V$. To see this, observe that for all $\mathbf{x} \in V$
+2.  We also have that $\lVert \mathbf{x} \rVert \geq 0$, for a
+    $\mathbf{x} \in V$. To see this, observe that for a $\mathbf{x} \in V$
     \begin{equation}
     \begin{split}
      0
@@ -159,10 +160,10 @@ following properties:
 Let $N: V \to \mathbb{R_{\geq 0}}$, be a function satisfying the following two
 properties[^2].
 
-1.  **Positive definiteness:** For all $\mathbf{x} \in V$, if
+1.  **Positive definiteness:** For a $\mathbf{x} \in V$, if
     $N(\mathbf{x}) = 0$ then $\mathbf{x} = \mathbf{0}_{V}$.
 2.  **Absolute homogeneity:**
-    $N(\lambda \mathbf{x}) = | \lambda | N(\mathbf{x})$, for all
+    $N(\lambda \mathbf{x}) = | \lambda | N(\mathbf{x})$, for a
     $\mathbf{x} \in V, \lambda \in \mathbb{R}$.
 
 We then have that: 
@@ -182,7 +183,7 @@ by @eq-normtrichar-01) can be summarized as follows:
 
 > Let $N : V \to [0, \infty)$ be a function satisfying positive definiteness and
 > absolute homogeneity. Then $N$ satisfies the triangle inequality if and only
-> if the unit ball induced by $N$, i.e.,
+> if the unit ba induced by $N$, i.e.,
 > $\mathbb{B} := \{\mathbf{z} \in V \:|\: N(\mathbf{z}) \leq 1 \}$, is a convex
 > set.
 
@@ -356,12 +357,12 @@ proofs** of [**Minkowski's
 inequality**](https://en.wikipedia.org/wiki/Minkowski_inequality){.wiki} in
 $\mathbb{F}^{n}$ and $C([0, 1])$.
 
-To appreciate this approach, note that proving Minkowski's inequality typically
+To appreciate this approach, note that proving Minkowski's inequality typicay
 requires one to first prove [**Young's
 inequality**](https://en.wikipedia.org/wiki/Young%27s_inequality_for_products){.wiki} and then
 [**Hölder's
 inequality**](https://en.wikipedia.org/wiki/H%C3%B6lder%27s_inequality){.wiki}. Moreover these need to be done separately in
-$\mathbb{F}^{n}$ and $C([0, 1])$. Using @thm-normtrichar allowed
+$\mathbb{F}^{n}$ and $C([0, 1])$. Using @thm-normtrichar aowed
 us to achieve both of these goals using near identical style of proofs
 `r emo::ji("tada")`!
 
@@ -544,9 +545,9 @@ In this article we learned the following about @thm-normtrichar:
 -   It gives an alternative way to **characterize** the triangle inequality for
     *norm-like* functions.
 -   Using this characterization **we can prove the triangle inequality** for
-    such norm-like functions using the convexity of the unit ball induced by
+    such norm-like functions using the convexity of the unit ba induced by
     such functions.
--   This is usually easier since we have lots of **tools from convex analysis**
+-   This is usuay easier since we have lots of **tools from convex analysis**
     to help us prove the convexity of $\mathbb{B}$.
 -   We saw this in action since @thm-normtrichar enabled us to
     write **very short proofs** of **Minkowski's inequality** in
@@ -571,7 +572,7 @@ guide](https://jeweljohnsonj.github.io/jeweljohnson.github.io/posts/2021-12-18-q
 to enable fixed TOC for this article. I thank [Dr. Joel
 Nitta](https://www.joelnitta.com/) for providing [these
 instructions](https://www.joelnitta.com/posts/2021-11-24_using-giscus/) to
-enable us to switch to the [giscus](https://giscus.app/) comments system. Much
+enable me to switch to the [giscus](https://giscus.app/) comments system. Much
 of these distill site improvements were brought to our attention due to the
 excellent [distillery](https://distillery.rbind.io/tips_and_tricks.html) site
 run by [Prof. John Paul Helveston](https://www.jhelvy.com/).

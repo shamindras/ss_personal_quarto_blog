@@ -1,0 +1,87 @@
+---
+title: "Sharp constants for finite dimensional norms"
+description: |
+  A general result about deriving sharp constants for finite dimensional $\ell_{p}$-norms
+categories: [linear algebra, math, norms]
+slug: shrotriya2022normconvexity
+date: "2022-05-12"
+image: images/preview-shrotriya2021normtriconvexity.png
+bibliography: ../../refs.bib
+format: 
+  html:
+    code-link: true
+execute:
+  echo: true
+editor_options: 
+  markdown: 
+    wrap: 80
+---
+
+```{r setup_01_01, echo=FALSE, results='asis'}
+wikipediapreview::wp_init(use_unpkg = TRUE, use_alt_style = TRUE)
+```
+
+# TL;DR
+
+I walk through a cool and possibly less known result for sharp bounds on $\ell_{p}$ 
+norms in finite dimensional vector spaces. This result enables working with 
+$\ell_{p}$-norms directly rather than approximating them with with more widely 
+used $\ell_{1}, \ell_{2}$, and $\ell_{\infty}$-norms, for example.
+This exposition is based on [Chapter 2, @holger2018numericallinalg]
+^[__Note:__ The presentation in this post is ___intentionally___ verbose. The goal
+is to give lots of intuition of the key result and its usefulness, and ensure
+that the proofs are rigorous. It is written with an empathetic mindset to
+newcomers, and to myself for future reference.].
+
+<aside>
+[@holger2018numericallinalg] is a wonderful (numerical) linear algebra book,
+highly recommend it `r emo::ji("100")`!
+</aside>
+
+## $\ell_{p}$-norm on $\mathbb{R}^{d}$
+
+Throughout this presentation we will work in the finite dimensional Euclidean 
+space $\mathbb{R}^{d}$, for some __fixed__ $d \in \mathbb{N}$. Moreover we will
+we will use the $\ell_{p}$-norm on this space, which is defined as follows:
+
+::: {#def-lp-norm}
+
+## $\ell_{p}$-norm on $\mathbb{R}^{d}$
+
+For a fixed $p \in [1, \infty]$, the $\ell_{p}$-norm as
+denoted by $\lVert \cdot \rVert_{\ell_{p}}: \mathbb{R}^{d} \to \mathbb{R}_{\geq 0}$, is defined as follows:
+$$
+\lVert \mathbf{x} \rVert_{\ell_{p}} := \left(\sum_{i = 1}^{d} |x_{i} |^{p}\right)^{\frac{1}{p}}, \; \text{for each $\mathbf{x} \in \mathbb{R}^{d}$}
+$$ {#eq-lp-norm-01}
+
+:::
+
+<aside>
+
+__Note:__ Sometimes @def-lp-norm is also just called the $p$-norm in many 
+textbooks, and has the abbreviated notation $\lVert \mathbf{x} \rVert_{p}$.
+We will use this notation going forward.
+
+</aside>
+
+We note (without proof) that @def-lp-norm does indeed define a valid norm on 
+$\mathbb{R}^{d}$. A previous post showed more of these details. A more detailed 
+proof of this can be found in TODO.
+
+## Warm up: Relationships between $\ell_{1}, \ell_{2}$, and $\ell_{\infty}$-norms
+
+Our goal will be to prove bounds for ___any___ $p \in [1, \infty]$. However, we 
+we get our bearings by first shifting focus on the three most commonly used $\ell_{p}$-norms on $\mathbb{R}^{d}$. These are the $\ell_{1}, \ell_{2}$, and $\ell_{\infty}$-norms.
+The main proposition is as follows:
+
+::: {#prp-common-lp-norms}
+
+## $\ell_{p}$-norm on $\mathbb{R}^{d}$
+
+For a fixed $p \in [1, \infty]$, the $\ell_{p}$-norm as
+denoted by $\lVert \cdot \rVert_{\ell_{p}}: \mathbb{R}^{d} \to \mathbb{R}_{\geq 0}$, is defined as follows:
+$$
+\lVert \mathbf{x} \rVert_{\ell_{p}} := \left(\sum_{i = 1}^{d} |x_{i} |^{p}\right)^{\frac{1}{p}}, \; \text{for each $\mathbf{x} \in \mathbb{R}^{d}$}
+$$ {#eq-lp-norm-02}
+
+:::
