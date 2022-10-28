@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.640">
+<meta name="generator" content="quarto-1.1.251">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Shamindra Shrotriya">
 <meta name="dcterms.date" content="2022-05-12">
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
@@ -51,7 +56,7 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -100,9 +105,11 @@ ga('send', {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../../index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Shamindra Shrotriya</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -174,7 +181,7 @@ ga('send', {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc"><h2 id="toc-title">Table of contents</h2>
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
 <li>
@@ -221,8 +228,7 @@ a.wiki {
 </h2>
 <p>Throughout this presentation we will work in the finite dimensional Euclidean space <span class="math inline">\(\mathbb{R}^{d}\)</span>, for some <strong>fixed</strong> <span class="math inline">\(d \in \mathbb{N}\)</span>. Moreover we will we will use the <span class="math inline">\(\ell_{p}\)</span>-norm on this space, which is defined as follows:</p>
 <div id="def-lp-norm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (<span class="math inline">\(\ell_{p}\)</span>-norm on <span class="math inline">\(\mathbb{R}^{d}\)</span>) </strong></span>For a fixed <span class="math inline">\(p \in [1, \infty]\)</span>, the <span class="math inline">\(\ell_{p}\)</span>-norm as denoted by <span class="math inline">\(\lVert \cdot \rVert_{\ell_{p}}: \mathbb{R}^{d} \to \mathbb{R}_{\geq 0}\)</span>, is defined as follows:</p>
-<p><span id="eq-lp-norm-01"><span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 1 (<span class="math inline">\(\ell_{p}\)</span>-norm on <span class="math inline">\(\mathbb{R}^{d}\)</span>) </strong></span>For a fixed <span class="math inline">\(p \in [1, \infty]\)</span>, the <span class="math inline">\(\ell_{p}\)</span>-norm as denoted by <span class="math inline">\(\lVert \cdot \rVert_{\ell_{p}}: \mathbb{R}^{d} \to \mathbb{R}_{\geq 0}\)</span>, is defined as follows: <span id="eq-lp-norm-01"><span class="math display">\[
 \lVert \mathbf{x} \rVert_{\ell_{p}} := \left(\sum_{i = 1}^{d} |x_{i} |^{p}\right)^{\frac{1}{p}}, \; \text{for each $\mathbf{x} \in \mathbb{R}^{d}$}
 \tag{1}\]</span></span></p>
 </div>
@@ -231,8 +237,7 @@ a.wiki {
 </section><section id="warm-up-relationships-between-ell_1-ell_2-and-ell_infty-norms" class="level2"><h2 class="anchored" data-anchor-id="warm-up-relationships-between-ell_1-ell_2-and-ell_infty-norms">Warm up: Relationships between <span class="math inline">\(\ell_{1}, \ell_{2}\)</span>, and <span class="math inline">\(\ell_{\infty}\)</span>-norms</h2>
 <p>Our goal will be to prove bounds for <strong><em>any</em></strong> <span class="math inline">\(p \in [1, \infty]\)</span>. However, we we get our bearings by first shifting focus on the three most commonly used <span class="math inline">\(\ell_{p}\)</span>-norms on <span class="math inline">\(\mathbb{R}^{d}\)</span>. These are the <span class="math inline">\(\ell_{1}, \ell_{2}\)</span>, and <span class="math inline">\(\ell_{\infty}\)</span>-norms. The main proposition is as follows:</p>
 <div id="prp-common-lp-norms" class="theorem proposition">
-<p><span class="theorem-title"><strong>Proposition 1 (<span class="math inline">\(\ell_{p}\)</span>-norm on <span class="math inline">\(\mathbb{R}^{d}\)</span>) </strong></span>For a fixed <span class="math inline">\(p \in [1, \infty]\)</span>, the <span class="math inline">\(\ell_{p}\)</span>-norm as denoted by <span class="math inline">\(\lVert \cdot \rVert_{\ell_{p}}: \mathbb{R}^{d} \to \mathbb{R}_{\geq 0}\)</span>, is defined as follows:</p>
-<p><span id="eq-lp-norm-02"><span class="math display">\[
+<p><span class="theorem-title"><strong>Proposition 1 (<span class="math inline">\(\ell_{p}\)</span>-norm on <span class="math inline">\(\mathbb{R}^{d}\)</span>) </strong></span>For a fixed <span class="math inline">\(p \in [1, \infty]\)</span>, the <span class="math inline">\(\ell_{p}\)</span>-norm as denoted by <span class="math inline">\(\lVert \cdot \rVert_{\ell_{p}}: \mathbb{R}^{d} \to \mathbb{R}_{\geq 0}\)</span>, is defined as follows: <span id="eq-lp-norm-02"><span class="math display">\[
 \lVert \mathbf{x} \rVert_{\ell_{p}} := \left(\sum_{i = 1}^{d} |x_{i} |^{p}\right)^{\frac{1}{p}}, \; \text{for each $\mathbf{x} \in \mathbb{R}^{d}$}
 \tag{2}\]</span></span></p>
 </div>
@@ -243,11 +248,12 @@ a.wiki {
 <div id="ref-holger2018numericallinalg" class="csl-entry" role="doc-biblioentry">
 Wendland, Holger. 2018. <em>Numerical Linear Algebra</em>. Cambridge Texts in Applied Mathematics. Cambridge University Press, Cambridge.
 </div>
-</div></section><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 <ol>
-<li id="fn1" role="doc-endnote"><p><strong>Note:</strong> The presentation in this post is <strong><em>intentionally</em></strong> verbose. The goal is to give lots of intuition of the key result and its usefulness, and ensure that the proofs are rigorous. It is written with an empathetic mindset to newcomers, and to myself for future reference.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p><strong>Note:</strong> The presentation in this post is <strong><em>intentionally</em></strong> verbose. The goal is to give lots of intuition of the key result and its usefulness, and ensure that the proofs are rigorous. It is written with an empathetic mindset to newcomers, and to myself for future reference.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2022,
   author = {Shamindra Shrotriya},
+  editor = {},
   title = {Sharp Constants for Finite Dimensional Norms},
   date = {2022-05-12},
   url = {https://www.shamindras.com/posts/2022-05-12-shrotriya2022sharplpnormconsts},
@@ -258,6 +264,24 @@ Shamindra Shrotriya. 2022. <span>“Sharp Constants for Finite Dimensional
 Norms.”</span> May 12, 2022. <a href="https://www.shamindras.com/posts/2022-05-12-shrotriya2022sharplpnormconsts">https://www.shamindras.com/posts/2022-05-12-shrotriya2022sharplpnormconsts</a>.
 </div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -307,7 +331,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

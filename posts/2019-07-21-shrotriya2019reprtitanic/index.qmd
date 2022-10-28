@@ -41,7 +41,7 @@ fig-alt="cover alt-text" fig-align="center" width="24cm"}
 Of particular note in the article was the following data visualization poster
 printed shortly after the tragedy:
 
-![a](images/main-titanic-poster.png){#main-src-poster alt="a" fig-alt="a"
+![G.Bron's chart of "The Loss of the 'Titanic'", from _The Sphere_, 4 May 1912](images/main-titanic-poster.png){#main-src-poster alt="G.Bron's chart of The Loss of the Titanic, from The Sphere, 4 May 1912" fig-alt="G.Bron's chart of The Loss of the Titanic, from The Sphere, 4 May 1912"
 fig-align="center" width="12cm"}
 
 I found this to be a very cool data visualization of the survivorship by class,
@@ -65,7 +65,7 @@ looking chart using `R` and specifically the `tidyverse` set of tools?
 First let's begin by loading our required data cleaning and plotting packages.
 First we will load the required libraries needed for the analysis.
 
-```{r setup_ttnic_01_00, echo=TRUE}
+```{r setup_ttnic_01_00, echo=FALSE, warning=FALSE, message=FALSE}
 library(knitr)
 library(tidyverse)
 library(janitor)
