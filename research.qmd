@@ -1,5 +1,10 @@
 ---
 title: "Research"
+description: |
+  An overview of my research interests and publications
+format:
+  html:
+    toc: true
 execute:
   echo: true
 editor_options: 
@@ -81,6 +86,8 @@ findings through various examples and simulations.
 <a href="https://arxiv.org/abs/2110.10825" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2110.10825.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
 
+<hr>
+
 ___Nonparametric Estimation in the Dynamic Bradley-Terry Model___
 <br>
 <u>Heejong Bong</u>, <u>Wanshan Li</u>, <u>Shamindra Shrotriya</u>, Alessandro Rinaldo
@@ -108,6 +115,8 @@ data-driven approach for bandwidth tuning.
 <a href="http://proceedings.mlr.press/v108/bong20a.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
 <a href="https://arxiv.org/abs/2003.00083" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2003.00083.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+
+<hr>
 
 ___Predictive Inference of a Wildfire Risk Pipeline in the United States___
 <br>
@@ -171,7 +180,8 @@ densities. relevant trigger.
 <a href="https://arxiv.org/abs/2210.11436" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2210.11436.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
 
-<br>
+<hr>
+
 ___Adversarial Sign-Corrupted Isotonic Regression___
 <br>
 <u>Shamindra Shrotriya</u>, Matey Neykov (2022).
@@ -204,7 +214,8 @@ simulations.
 <a href="https://arxiv.org/abs/2207.07075" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2207.07075.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
 
-<br>
+<hr>
+
 ___maars: Tidy Inference under the 'Models as Approximations' Framework in R___
 <br>
 <u>Riccardo Fogliato</u>, <u>Shamindra Shrotriya</u>, Arun Kumar Kuchibhotla (2021).
@@ -278,10 +289,14 @@ minimal time-varying pairwise comparison results for modeling.
 <a href="https://www.stat.cmu.edu/cmsac/conference/2019/assets/pdf/BTTV.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
 <a href="https://twitter.com/CMU_Stats/status/1191119690929754118" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-success" role="button"> media</a>
 
+<hr>
+
 ___Integrated Data Analysis for Early Warning of Lung Failure___
 <br>
-<u>Rebecca Barter</u>, <u>Shamindra Shrotriya</u> (2016).
-
+<u>Rebecca Barter</u>, <u>Shamindra Shrotriya</u>.
+<br>
+_Operational Database Management Systems (ODBMS)_, (2016).
+<br>
 `r emo::ji("contest")` __Winner:__ Geisinger Health Collider Project (2016)
 
 ::: {.callout-tip collapse="true" icon=false}
