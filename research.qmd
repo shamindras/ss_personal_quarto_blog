@@ -23,7 +23,7 @@ Broadly speaking my primary research interests focus on
 generalizations of models and estimators in classical statistics, and analyzing their theoretical properties.
 
 More specifically, the classical topics I study include **density estimation, isotonic
-regression,** and **location-scale estimation**. I'm also actively interested in application-based methodology via
+regression,** and **location-scale estimation**. I'm also actively interested in application-driven methodology via
 **statistical ranking** (in particular the *Bradley-Terry-Luce model*), and
 **spatiotemporal modeling** (*wildfire prediction*).
 
@@ -46,11 +46,15 @@ If you'd like to work on a problem together, feel free to reach out. I'm always
 open to discussing new research directions, and applying statistics to solve
 problems in new and interesting domains!
 
-## Publications
+# Papers
+
+Note that for published works, papers under review, and competition submissions, the $^{*}$ symbol next to a persons name indicates equal authorship for the work.
+
+## Published
 
 ___$\ell_{\infty}$-Bounds of the MLE in the BTL Model under General Comparison Graphs___
 <br>
-<u>Wanshan Li</u>, <u>Shamindra Shrotriya</u>, Alessandro Rinaldo
+Wanshan Li&#42;, <u>Shamindra Shrotriya&#42;</u>, Alessandro Rinaldo
 <br>
 _Proceedings of the Thirty-Eighth Conference on Uncertainty in Artificial Intelligence (UAI)_, (2022).
 
@@ -85,12 +89,42 @@ findings through various examples and simulations.
 <a href="https://proceedings.mlr.press/v180/li22g.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
 <a href="https://arxiv.org/abs/2110.10825" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2110.10825.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<!-- BibTeX -->
+<button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#li2022ellinfboundsbtl" aria-expanded="false" aria-controls="li2022ellinfboundsbtl">
+  BibTeX
+</button>
+<div class="collapse" id="li2022ellinfboundsbtl">
+  <br>
+  <div class="card card-body">
+```{r, eval=FALSE}
+@inproceedings{li2022ellinfboundsbtl,
+	title        = {
+		{\(\mathscr{l}\)}\({}_{\mbox{{\(\infty\)}}}\)-Bounds of the {MLE} in the
+		{BTL} Model under General Comparison Graphs
+	},
+	author       = {Wanshan Li and Shamindra Shrotriya and Alessandro Rinaldo},
+	year         = 2022,
+	booktitle    = {
+		Uncertainty in Artificial Intelligence, Proceedings of the Thirty-Eighth
+		Conference on Uncertainty in Artificial Intelligence, {UAI} 2022, 1-5 August
+		2022, Eindhoven, The Netherlands
+	},
+	publisher    = {{PMLR}},
+	series       = {Proceedings of Machine Learning Research},
+	volume       = 180,
+	pages        = {1178--1187},
+	url          = {https://proceedings.mlr.press/v180/li22g.html},
+	editor       = {James Cussens and Kun Zhang}
+}
+```
+  </div>
+</div>
 
 <hr>
 
 ___Nonparametric Estimation in the Dynamic Bradley-Terry Model___
 <br>
-<u>Heejong Bong</u>, <u>Wanshan Li</u>, <u>Shamindra Shrotriya</u>, Alessandro Rinaldo
+Heejong Bong&#42;, Wanshan Li&#42;, <u>Shamindra Shrotriya&#42;</u>, Alessandro Rinaldo
 <br>
 _Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics (AISTATS)_, (2020).
 
@@ -115,12 +149,38 @@ data-driven approach for bandwidth tuning.
 <a href="http://proceedings.mlr.press/v108/bong20a.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
 <a href="https://arxiv.org/abs/2003.00083" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2003.00083.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<!-- BibTeX -->
+<button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#bong2020nonparamestdynbtl" aria-expanded="false" aria-controls="bong2020nonparamestdynbtl">
+  BibTeX
+</button>
+<div class="collapse" id="bong2020nonparamestdynbtl">
+  <br>
+  <div class="card card-body">
+```{r, eval=FALSE}
+@inproceedings{bong2020nonparamestdynbtl,
+	title        = {Nonparametric Estimation in the Dynamic Bradley-Terry Model},
+	author       = {Heejong Bong and Wanshan Li and Shamindra Shrotriya and Alessandro Rinaldo},
+	year         = 2020,
+	booktitle    = {
+		The 23rd International Conference on Artificial Intelligence and Statistics,
+		{AISTATS} 2020, 26-28 August 2020, Online [Palermo, Sicily, Italy]
+	},
+	publisher    = {{PMLR}},
+	series       = {Proceedings of Machine Learning Research},
+	volume       = 108,
+	pages        = {3317--3326},
+	url          = {http://proceedings.mlr.press/v108/bong20a.html},
+	editor       = {Silvia Chiappa and Roberto Calandra},
+}
+```
+  </div>
+</div>
 
 <hr>
 
 ___Predictive Inference of a Wildfire Risk Pipeline in the United States___
 <br>
-<u>Niccolo Dalmasso</u>, <u>Alex Reinhart</u>, <u>Shamindra Shrotriya</u>
+Niccolo Dalmasso&#42;, Alex Reinhart&#42;, <u>Shamindra Shrotriya&#42;</u>
 <br>
 _NeurIPS 2019 Workshop on Tackling Climate Change with Machine Learning (Proposal Track)_, (2019).
 
@@ -149,12 +209,30 @@ research on wildfire models at a national scale.
 <a href="https://www.climatechange.ai/papers/neurips2019/42" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
 <a href="https://s3.us-east-1.amazonaws.com/climate-change-ai/papers/neurips2019/42/paper.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
 <a href="https://slideslive.com/38922369/predictive-inference-of-a-wildfire-risk-pipeline-in-the-united-states" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> spotlight</a>
+<!-- BibTeX -->
+<button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#dalmasso2019firepred" aria-expanded="false" aria-controls="dalmasso2019firepred">
+  BibTeX
+</button>
+<div class="collapse" id="dalmasso2019firepred">
+  <br>
+  <div class="card card-body">
+```{r, eval=FALSE}
+@inproceedings{dalmasso2019firepred,
+	title        = {Predictive Inference of a Wildfire Risk Pipeline in the United States},
+	author       = {Dalmasso, Niccolo and Shrotriya, Shamindra and Reinhart, Alex},
+	year         = 2019,
+	booktitle    = {NeurIPS 2019 Workshop on Tackling Climate Change with Machine Learning},
+	url          = {https://www.climatechange.ai/papers/neurips2019/42}
+}
+```
+  </div>
+</div>
 
 ## Under Review
 
 ___Revisiting Le Cam's Equation: Exact Minimax Rates over Convex Density Classes___
 <br>
-<u>Shamindra Shrotriya</u>, Matey Neykov (2022).
+<u>Shamindra Shrotriya&#42;</u>, Matey Neykov (2022).
 
 ::: {.callout-tip collapse="true" icon=false}
 
@@ -179,12 +257,32 @@ densities. relevant trigger.
 
 <a href="https://arxiv.org/abs/2210.11436" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2210.11436.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<!-- BibTeX -->
+<button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#shrotriya2022lecamminimax" aria-expanded="false" aria-controls="shrotriya2022lecamminimax">
+  BibTeX
+</button>
+<div class="collapse" id="shrotriya2022lecamminimax">
+  <br>
+  <div class="card card-body">
+```{r, eval=FALSE}
+@misc{shrotriya2022lecamminimax,
+    title        = {
+        Revisiting Le Cam\'s Equation: Exact Minimax Rates over Convex Density
+        Classes
+    },
+    author       = {Shamindra Shrotriya and Matey Neykov},
+    year         = 2022,
+    eprint       = {arXiv:2210.11436}
+}
+```
+  </div>
+</div>
 
 <hr>
 
 ___Adversarial Sign-Corrupted Isotonic Regression___
 <br>
-<u>Shamindra Shrotriya</u>, Matey Neykov (2022).
+<u>Shamindra Shrotriya&#42;</u>, Matey Neykov (2022).
 
 ::: {.callout-tip collapse="true" icon=false}
 
@@ -213,12 +311,29 @@ simulations.
 
 <a href="https://arxiv.org/abs/2207.07075" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2207.07075.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<!-- BibTeX -->
+<button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#shrotriya2022ascireg" aria-expanded="false" aria-controls="shrotriya2022ascireg">
+  BibTeX
+</button>
+<div class="collapse" id="shrotriya2022ascireg">
+  <br>
+  <div class="card card-body">
+```{r, eval=FALSE}
+@misc{shrotriya2022ascireg,
+Author = {Shamindra Shrotriya and Matey Neykov},
+Title = {Adversarial Sign-Corrupted Isotonic Regression},
+Year = {2022},
+Eprint = {arXiv:2207.07075},
+}
+```
+  </div>
+</div>
 
 <hr>
 
 ___maars: Tidy Inference under the 'Models as Approximations' Framework in R___
 <br>
-<u>Riccardo Fogliato</u>, <u>Shamindra Shrotriya</u>, Arun Kumar Kuchibhotla (2021).
+<u>Riccardo Fogliato&#42;</u>, <u>Shamindra Shrotriya&#42;</u>, Arun Kumar Kuchibhotla (2021).
 
 ::: {.callout-tip collapse="true" icon=false}
 
@@ -251,12 +366,31 @@ statistical modeling in `R`.
 <a href="https://arxiv.org/abs/2106.11188" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2106.11188.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
 <a href="https://youtu.be/CaV522U1Ju0?t=67" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> spotlight</a>
+<!-- BibTeX -->
+<button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#fogliato2021maars" aria-expanded="false" aria-controls="fogliato2021maars">
+  BibTeX
+</button>
+<div class="collapse" id="fogliato2021maars">
+  <br>
+  <div class="card card-body">
+```{r, eval=FALSE}
+@misc{fogliato2021maars,
+    title        = {
+        maars: Tidy Inference under the 'Models as Approximations' Framework in R
+    },
+    author       = {Riccardo Fogliato and Shamindra Shrotriya and Arun Kumar Kuchibhotla},
+    year         = 2021,
+    eprint       = {arXiv:2106.11188}
+}
+```
+  </div>
+</div>
 
 ## Competitions
 
 ___Efficient Estimation of Distribution-free dynamics in the Bradley-Terry Model___
 <br>
-<u>Heejong Bong</u>, <u>Wanshan Li</u>, <u>Shamindra Shrotriya</u> (2019).
+Heejong Bong&#42;, Wanshan Li&#42;, <u>Shamindra Shrotriya&#42;</u> (2019).
 
 `r emo::ji("contest")` **Winner:** CMSAC Reproducible Research Competition
 (2019)
@@ -293,9 +427,10 @@ minimal time-varying pairwise comparison results for modeling.
 
 ___Integrated Data Analysis for Early Warning of Lung Failure___
 <br>
-<u>Rebecca Barter</u>, <u>Shamindra Shrotriya</u>.
+Rebecca Barter&#42;, <u>Shamindra Shrotriya&#42;</u>.
 <br>
 _Operational Database Management Systems (ODBMS)_, (2016).
+<br>
 <br>
 `r emo::ji("contest")` __Winner:__ Geisinger Health Collider Project (2016)
 
