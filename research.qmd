@@ -12,12 +12,13 @@ Science](http://www.stat.cmu.edu/) at [Carnegie Mellon
 University](https://www.cmu.edu/). I'm extremely fortunate to be advised by
 [Prof. Matey Neykov](http://mateyneykov.com/).
 
-Broadly speaking my primary research interests lie in studying various
-generalizations in classical statistics, and their theoretical properties,
-through a modern lens.
+Broadly speaking my primary research interests focus on 
 
-My thesis covers topics including **density estimation, isotonic
-regression,** and **location-scale estimation**. I'm also actively interested in
+> Developing various
+generalizations of models and estimators in classical statistics, and analyzing their theoretical properties.
+
+More specifically, the classical topics I study include **density estimation, isotonic
+regression,** and **location-scale estimation**. I'm also actively interested in application-based methodology via
 **statistical ranking** (in particular the *Bradley-Terry-Luce model*), and
 **spatiotemporal modeling** (*wildfire prediction*).
 
@@ -26,16 +27,41 @@ work with the following brilliant people^[Listed alphabetically by surname. Go
 check out their inspiring statistical research.]:
 [Heejong Bong](https://heejongbong.github.io/), 
 [Niccolò (Nic) Dalmasso](https://www.niccolodalmasso.com/), 
-[Riccardo Fogliato](https://heejongbong.github.io/),
+[Riccardo Fogliato](https://www.stat.cmu.edu/~rfogliat/),
 [Arun Kumar Kuchibhotla](https://arun-kuchibhotla.github.io/),
-[Wanshan Li](https://www.cmu.edu/dietrich/statistics-datascience/people/phd/wanshan-li.html),
+[Wanshan Li](https://www.linkedin.com/in/wanshan-li-b2186512b),
 [Matey Neykov](http://mateyneykov.com/),
 [Alessandro (Ale) Rinaldo](https://www.stat.cmu.edu/~arinaldo/).
 
 I recommend just perusing some of my papers below to get a better idea of the
 type of problems I like to work on, and the style of papers I enjoy writing with
 my co-authors.
-If you'd like to work on a problem together, feel free to reach out.
+
+If you'd like to work on a problem together, feel free to reach out. I'm always
+open to discussing new research directions, and applying statistics to solve
+problems in new and interesting domains!
+
+## Published
+
+___$\ell_{\infty}$-Bounds of the MLE in the BTL Model under General Comparison Graphs___
+<br>
+<u>Wanshan Li</u>, <u>Shamindra Shrotriya</u>, Alessandro Rinaldo
+<br>
+_Proceedings of the Thirty-Eighth Conference on Uncertainty in Artificial Intelligence (UAI)_, (2022).
+
+<a href="https://proceedings.mlr.press/v180/li22g.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
+<a href="https://arxiv.org/abs/2110.10825" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-dark" role="button"> arxiv</a>
+<a href="https://arxiv.org/pdf/2110.10825.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-warning" role="button"> pdf</a>
+
+___Nonparametric Estimation in the Dynamic Bradley-Terry Model___
+<br>
+<u>Heejong Bong</u>, <u>Wanshan Li</u>, <u>Shamindra Shrotriya</u>, Alessandro Rinaldo
+<br>
+_Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics (AISTATS)_, (2020).
+
+<a href="http://proceedings.mlr.press/v108/bong20a.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
+<a href="https://arxiv.org/abs/2003.00083" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-dark" role="button"> arxiv</a>
+<a href="https://arxiv.org/pdf/2003.00083.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-warning" role="button"> pdf</a>
 
 ## Under Review
 
@@ -46,7 +72,7 @@ ___Revisiting Le Cam's Equation: Exact Minimax Rates over Convex Density Classes
 <a href="https://arxiv.org/abs/2210.11436" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-dark" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2210.11436.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-warning" role="button"> pdf</a>
 <!-- Abstract -->
-<button type="button" class="btn btn-outline-success" data-toggle="collapse" data-target="#demo"><i class="bi-calendar3-week-fill"></i> abstract</button>
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"><i class="bi-calendar3-week-fill"></i> abstract</button>
 <div id="demo" class="collapse">
 We study the classical problem of deriving minimax rates for density estimation
 over convex density classes. Building on the pioneering work of Le Cam (1973),
@@ -63,3 +89,20 @@ and Holder density classes. We further illustrate the utility of the result by
 deriving upper bounds for less studied classes, e.g., convex mixture of
 densities.
 </div>
+
+<br>
+___Adversarial Sign-Corrupted Isotonic Regression___
+<br>
+<u>Shamindra Shrotriya</u>, Matey Neykov (2022).
+
+<a href="https://arxiv.org/abs/2207.07075" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-dark" role="button"> arxiv</a>
+<a href="https://arxiv.org/pdf/2207.07075.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-warning" role="button"> pdf</a>
+
+<br>
+___maars: Tidy Inference under the 'Models as Approximations' Framework in R___
+<br>
+<u>Riccardo Fogliato</u>, <u>Shamindra Shrotriya</u>, Arun Kumar Kuchibhotla (2021).
+
+<a href="https://arxiv.org/abs/2106.11188" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-dark" role="button"> arxiv</a>
+<a href="https://arxiv.org/pdf/2106.11188.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-warning" role="button"> pdf</a>
+<a href="https://youtu.be/CaV522U1Ju0?t=67" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-success" role="button"> talk</a>

@@ -246,12 +246,13 @@ a.wiki {
 <div id="ref-robinson2020introfuncanalysis_book" class="csl-entry">
 Robinson, James C. 2020. <em><span class="nocase">An Introduction to Functional Analysis</span></em>. Cambridge University Press.
 </div>
-</div></section><section class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 <ol>
 <li id="fn1"><p><strong>Note:</strong> The presentation in this post is <strong><em>intentionay</em></strong> verbose. The goal is to give lots of intuition of the key result and its usefulness, and ensure that the proofs are rigorous. It is written with an empathetic mindset to newcomers, and to myself for future reference.↩︎</p></li>
 <li id="fn2"><p>We refer to such an <img src="https://latex.codecogs.com/png.latex?N:%20V%20%5Cto%20%5Cmathbb%7BR_%7B%5Cgeq%200%7D%7D"> satisfying these properties, as a <em>norm-like</em> function.↩︎</p></li>
 </ol></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2022,
   author = {Shamindra Shrotriya},
+  editor = {},
   title = {Characterizing Norm Triangle Inequalites via Convexity},
   date = {2022-02-12},
   url = {https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity},
