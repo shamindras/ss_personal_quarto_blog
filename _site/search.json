@@ -530,5 +530,40 @@
     "title": "Tidyverse Fun - Part 1",
     "section": "Task 1: Generating Oxford Comma Triples",
     "text": "Task 1: Generating Oxford Comma Triples\n\nThe central problem\nBased on a fun conversation with my statistics cohort over dinner we got to discussing the famous Oxford Comma (or Serial Comma depending on your persuasion). I’ve never really adopted the use but my friends made a compelling argument on it’s apparent general lack of ambiguity when applied appropriately.\nWe will use the Oxford comma on the famously ambiguous phrase (here used without the Oxford Comma before leaves):\n\nEats, shoots and leaves\n\nAfter adding in the Oxford Comma this would become:\n\nEats, shoots, and leaves\n\nGoal: A fun experiment would be to generate all permutations of this phrase with and without the Oxford Comma using R and specifically the tidyverse packages.\n\n\nGenerating all word-triple permutations the tidy way\nFirst, let’s load our required packages.\n\nlibrary(knitr)\nlibrary(magrittr)\nlibrary(tidyverse)\nlibrary(glue)\n\nLet’s also define our unique global word values used to construct the required phrases:\n\nWORD_VALS <- c(\"eats\", \"shoots\", \"leaves\")\n\nGenerate all unique 3-word permutations without replacement from the three unique words. We’ll create a helper function to check that a vector of words is unique.\n\nis_unq_perm <- function(word1, word2, word3){\n    words_vec <- c(word1, word2, word3)\n    return(length(words_vec) - length(unique(words_vec)) == 0)\n}\n\nWe can now simply generate every possible triple with replacement using the tidyr::crossing function. We proceed to filter these \\(3^3 = 27\\) triples for unique triples using our is_unq_perm helper function applied row-by-row using purrr::pmap_lgl. The _lgl simply returns a TRUE/FALSE logical value as intended by the applied function.\n\nNote: The tidyr::crossing generates a Cartesian product of all the 3 word triples, very handy\n\n\n# Generate the unique word-triples\nall_perms <- tidyr::crossing(word1 = WORD_VALS,\n                             word2 = WORD_VALS,\n                             word3 = WORD_VALS) %>%\n                mutate(.data = .,\n                       is_unq_perm = purrr::pmap_lgl(.l = .,\n                                                     is_unq_perm)) %>%\n                filter(.data = ., is_unq_perm) %>%\n                select(-is_unq_perm)\n\n# Display output in a nice centered table\nall_perms %>%\n  kable(x = ., align = 'c',\n        col.names = c(\"Word 1\",\n                      \"Word 2\",\n                      \"Word 3\"))\n\n\n\n\nWord 1\nWord 2\nWord 3\n\n\n\n\neats\nleaves\nshoots\n\n\neats\nshoots\nleaves\n\n\nleaves\neats\nshoots\n\n\nleaves\nshoots\neats\n\n\nshoots\neats\nleaves\n\n\nshoots\nleaves\neats\n\n\n\n\n\nGreat - that part is done! Now we just need to generate for each triple of words an oxford comma and non-oxford comma version. This is done easily using the amazing glue package as seen below:\n\nexprs <- all_perms %>%\n          mutate(non_oxford_comma =\n                   glue_data(.x = .,\n                             \"{word1}, {word2} and {word3}\"),\n                 oxford_comma =\n                   glue_data(.x = .,\n                             \"{word1}, {word2}, and {word3}\")) %>%\n          select(non_oxford_comma, oxford_comma)\n\nWe can display the side-by-side output of the Non-Oxford Comma vs. Oxford comma for the \\(6\\) generated triples as follows:\n\n# Display output in a nice centered table\nexprs %>%\n  kable(x = .,\n        align = 'c',\n        col.names = c(\"Non-Oxford Comma\",\n                      \"Oxford Comma\"))\n\n\n\n\nNon-Oxford Comma\nOxford Comma\n\n\n\n\neats, leaves and shoots\neats, leaves, and shoots\n\n\neats, shoots and leaves\neats, shoots, and leaves\n\n\nleaves, eats and shoots\nleaves, eats, and shoots\n\n\nleaves, shoots and eats\nleaves, shoots, and eats\n\n\nshoots, eats and leaves\nshoots, eats, and leaves\n\n\nshoots, leaves and eats\nshoots, leaves, and eats\n\n\n\n\n\nSo there you have it. Have fun generating your own version of Oxford Comma triples to engage in civil discussions with your fellow grammar focused friends 😄."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "I’m a final year PhD candidate in the Department of Statistics and Data Science at Carnegie Mellon University. I’m extremely fortunate to be advised by Prof. Matey Neykov.\nBroadly speaking my primary research interests lie in studying various generalizations in classical statistics, and their theoretical properties, through a modern lens.\nMy thesis covers topics including density estimation, isotonic regression, and location-scale estimation. I’m also actively interested in statistical ranking (in particular the Bradley-Terry-Luce model), and spatiotemporal modeling (wildfire prediction).\nI particularly enjoy the collaborative aspect of research, and I’m privileged to work with the following brilliant people1: Heejong Bong, Niccolò (Nic) Dalmasso, Riccardo Fogliato, Arun Kumar Kuchibhotla, Wanshan Li, Matey Neykov, Alessandro (Ale) Rinaldo.\nI recommend just perusing some of my papers below to get a better idea of the type of problems I like to work on, and the style of papers I enjoy writing with my co-authors. If you’d like to work on a problem together, feel free to reach out."
+  },
+  {
+    "objectID": "research.html#publications",
+    "href": "research.html#publications",
+    "title": "Research",
+    "section": "Publications",
+    "text": "Publications\n\nPublished\n\n\nUnder Review\n\n\nWorkshops and Competitions"
+  },
+  {
+    "objectID": "research.html#published",
+    "href": "research.html#published",
+    "title": "Research",
+    "section": "Published",
+    "text": "Published"
+  },
+  {
+    "objectID": "research.html#under-review",
+    "href": "research.html#under-review",
+    "title": "Research",
+    "section": "Under Review",
+    "text": "Under Review\nRevisiting Le Cam’s Equation: Exact Minimax Rates over Convex Density Classes  Shamindra Shrotriya, Matey Neykov (2022).\n arxiv  pdf   abstract\n\nWe study the classical problem of deriving minimax rates for density estimation over convex density classes. Building on the pioneering work of Le Cam (1973), Birge (1983, 1986), Wong and Shen (1995), Yang and Barron (1999), we determine the exact (up to constants) minimax rate over any convex density class. This work thus extends these known results by demonstrating that the local metric entropy of the density class always captures the minimax optimal rates under such settings. Our bounds provide a unifying perspective across both parametric and nonparametric convex density classes, under weaker assumptions on the richness of the density class than previously considered. Our proposed ‘multistage sieve’ MLE applies to any such convex density class. We apply our risk bounds to rederive known minimax rates including bounded total variation, and Holder density classes. We further illustrate the utility of the result by deriving upper bounds for less studied classes, e.g., convex mixture of densities."
+  },
+  {
+    "objectID": "research.html#workshops-and-competitions",
+    "href": "research.html#workshops-and-competitions",
+    "title": "Research",
+    "section": "Workshops and Competitions",
+    "text": "Workshops and Competitions"
   }
 ]
