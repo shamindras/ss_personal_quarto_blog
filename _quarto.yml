@@ -12,10 +12,10 @@ website:
     card-style: summary_large_image
   navbar:
     right:
-      - text: blog
-        file: posts.qmd
       - text: research
         file: research.qmd
+      - text: blog
+        file: posts.qmd
       - text: "cv"
         href: data/pdfs/CV.pdf
       - text: "resume"
