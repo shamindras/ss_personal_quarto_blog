@@ -24,7 +24,7 @@ regression,** and **location-scale estimation**. I'm also actively interested in
 
 I particularly enjoy the collaborative aspect of research, and I'm privileged to
 work with the following brilliant people^[Listed alphabetically by surname. Go 
-check out their inspiring statistical research.]:
+check out their cool statistical research!]:
 [Heejong Bong](https://heejongbong.github.io/), 
 [Niccolò (Nic) Dalmasso](https://www.niccolodalmasso.com/), 
 [Riccardo Fogliato](https://www.stat.cmu.edu/~rfogliat/),
@@ -240,3 +240,70 @@ statistical modeling in `R`.
 <a href="https://arxiv.org/abs/2106.11188" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2106.11188.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
 <a href="https://youtu.be/CaV522U1Ju0?t=67" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> spotlight</a>
+
+## Competitions
+
+___Efficient Estimation of Distribution-free dynamics in the Bradley-Terry Model___
+<br>
+<u>Heejong Bong</u>, <u>Wanshan Li</u>, <u>Shamindra Shrotriya</u> (2019).
+
+`r emo::ji("contest")` **Winner:** CMSAC Reproducible Research Competition
+(2019)
+
+::: {.callout-tip collapse="true" icon=false}
+
+## Abstract
+
+We propose a time-varying generalization of the original Bradley-Terry model.
+Our model directly captures the temporal dependence structure of the pairwise
+comparison data to model time-varying global rankings of N distinct objects. The
+convex formulation enables efficient analysis on sparse time-varying pairwise
+comparison data. Furthermore, depending on the choice of penalization norm, our
+model effectively provides a control on the degree of smoothing in the
+time-varying global rankings. We also prove that a relatively weak condition is
+necessary and sufficient to guarantee the existence and uniqueness of the
+solution of our model. Our condition is the weakest in literature till now. We
+implement various optimization algorithms to solve the model efficiently. We
+test the practical effectiveness of our model by separately ranking 5 seasons of
+publicly available National Football League (NFL) team data from 2011-2015, and
+NASCAR 2002 racing data. In particular, our ranking results on the NFL data
+compare favourably to the well-accepted and feature-rich NFL ELO ratings system.
+We thus view our time-varying Bradley-Terry model as a useful benchmarking tool
+for other feature-rich time-varying ranking models since it simply relies on the
+minimal time-varying pairwise comparison results for modeling.
+
+:::
+
+<a href="https://www.stat.cmu.edu/cmsac/conference/2019/" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
+<a href="https://www.stat.cmu.edu/cmsac/conference/2019/assets/pdf/BTTV.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<a href="https://twitter.com/CMU_Stats/status/1191119690929754118" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-success" role="button"> media</a>
+
+___Integrated Data Analysis for Early Warning of Lung Failure___
+<br>
+<u>Rebecca Barter</u>, <u>Shamindra Shrotriya</u> (2016).
+
+`r emo::ji("contest")` __Winner:__ Geisinger Health Collider Project (2016)
+
+::: {.callout-tip collapse="true" icon=false}
+
+## Abstract
+
+Chronic obstructive pulmonary disease (COPD) is a major cause of mortality
+worldwide, with approximately 12 million adults in the U.S. having been
+diagnosed with COPD. Our aim is to develop methods capable of effectively
+predicting cases of undiagnosed COPD among those whose primary reason for
+hospitalization was pneumonia. Most existing algorithmic approaches to similar
+prediction problems focus only on utilizing clinical information. Our approach,
+however, aims to incorporate external environmental data sources that are not
+captured by the clinical records using a process called “data blending”. We also
+investigate several leading supervised machine learning algorithms including
+Random Forest, Gradient Boosting Machines (GBM) and eXtreme Gradient Boosting
+(XGBoost) to improve COPD classification accuracy. We find that smoking and
+weather information significantly improve the predictive power of these
+algorithms in terms of predicting COPD among pneumonia pa-tients.
+
+:::
+
+<a href="http://www.odbms.org/2016/06/integrated-data-analysis-for-early-warning-of-lung-failure/" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
+<a href="http://www.odbms.org/wp-content/uploads/2016/06/report_ODBMS.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<a href="https://scet.berkeley.edu/berkeley-team-wins-geisinger-health-collider/" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-success" role="button"> media</a>
