@@ -43,8 +43,8 @@ ___Revisiting Le Cam's Equation: Exact Minimax Rates over Convex Density Classes
 <br>
 <u>Shamindra Shrotriya</u>, Matey Neykov (2022).
 
-<a href="https://arxiv.org/pdf/2210.11436.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
-<a href="https://arxiv.org/pdf/2210.11436.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<a href="https://arxiv.org/abs/2210.11436" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-dark" role="button"> arxiv</a>
+<a href="https://arxiv.org/pdf/2210.11436.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-warning" role="button"> pdf</a>
 <!-- Abstract -->
 <button type="button" class="btn btn-outline-success" data-toggle="collapse" data-target="#demo"><i class="bi-calendar3-week-fill"></i> abstract</button>
 <div id="demo" class="collapse">
