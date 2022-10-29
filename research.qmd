@@ -53,20 +53,27 @@ _Proceedings of the Thirty-Eighth Conference on Uncertainty in Artificial Intell
 
 ## Abstract
 
-We study the classical problem of deriving minimax rates for density estimation
-over convex density classes. Building on the pioneering work of Le Cam (1973),
-Birge (1983, 1986), Wong and Shen (1995), Yang and Barron (1999), we determine
-the exact (up to constants) minimax rate over any convex density class. This
-work thus extends these known results by demonstrating that the local metric
-entropy of the density class always captures the minimax optimal rates under
-such settings. Our bounds provide a unifying perspective across both parametric
-and nonparametric convex density classes, under weaker assumptions on the
-richness of the density class than previously considered. Our proposed
-'multistage sieve' MLE applies to any such convex density class. We apply our
-risk bounds to rederive known minimax rates including bounded total variation,
-and Holder density classes. We further illustrate the utility of the result by
-deriving upper bounds for less studied classes, e.g., convex mixture of
-densities. relevant trigger.
+The Bradley-Terry-Luce (BTL) model is a popular statistical approach for
+estimating the global ranking of a collection of items using pairwise
+comparisons. To ensure accurate ranking, it is essential to obtain precise
+estimates of the model parameters in the $\ell_{\infty}$-loss. The difficulty
+of this task depends crucially on the topology of the pairwise comparison graph
+over the given items. However, beyond very few well-studied cases, such as the
+complete and Erdös-Rényi comparison graphs, little is known about the
+performance of the maximum likelihood estimator (MLE) of the BTL model
+parameters in the $\ell_{\infty}$-loss under more general graph topologies.
+In this paper, we derive novel, general upper bounds on the ℓ∞ estimation error
+of the BTL MLE that depend explicitly on the algebraic connectivity of the
+comparison graph, the maximal performance gap across items and the sample
+complexity. We demonstrate that the derived bounds perform well and in some
+cases are sharper compared to known results obtained using different loss
+functions and more restricted assumptions and graph topologies. We carefully
+compare our results to `Yan et al. (2012)`, which is closest in spirit to our
+work. We further provide minimax lower bounds under $\ell_{\infty}$-error that 
+nearly match the upper bounds over a class of sufficiently regular graph
+topologies. Finally, we study the implications of our $\ell_{\infty}$-bounds 
+for efficient (offline) tournament design. We illustrate and discuss our 
+findings through various examples and simulations.
 
 :::
 
@@ -84,20 +91,17 @@ _Proceedings of the Twenty Third International Conference on Artificial Intellig
 
 ## Abstract
 
-We study the classical problem of deriving minimax rates for density estimation
-over convex density classes. Building on the pioneering work of Le Cam (1973),
-Birge (1983, 1986), Wong and Shen (1995), Yang and Barron (1999), we determine
-the exact (up to constants) minimax rate over any convex density class. This
-work thus extends these known results by demonstrating that the local metric
-entropy of the density class always captures the minimax optimal rates under
-such settings. Our bounds provide a unifying perspective across both parametric
-and nonparametric convex density classes, under weaker assumptions on the
-richness of the density class than previously considered. Our proposed
-'multistage sieve' MLE applies to any such convex density class. We apply our
-risk bounds to rederive known minimax rates including bounded total variation,
-and Holder density classes. We further illustrate the utility of the result by
-deriving upper bounds for less studied classes, e.g., convex mixture of
-densities. relevant trigger.
+We propose a time-varying generalization of the Bradley-Terry model that allows
+for nonparametric modeling of dynamic global rankings of distinct teams. We
+develop a novel estimator that relies on kernel smoothing to pre-process the
+pairwise comparisons over time and is applicable in sparse settings where the
+Bradley-Terry may not be fit. We obtain necessary and sufficient conditions for
+the existence and uniqueness of our estimator. We also derive time-varying
+oracle bounds for both the estimation error and the excess risk in the
+model-agnostic setting where the Bradley-Terry model is not necessarily the true
+data generating process. We thoroughly test the practical effectiveness of our
+model using both simulated and real world data and suggest an efficient
+data-driven approach for bandwidth tuning.
 
 :::
 
@@ -115,20 +119,21 @@ _NeurIPS 2019 Workshop on Tackling Climate Change with Machine Learning (Proposa
 
 ## Abstract
 
-We study the classical problem of deriving minimax rates for density estimation
-over convex density classes. Building on the pioneering work of Le Cam (1973),
-Birge (1983, 1986), Wong and Shen (1995), Yang and Barron (1999), we determine
-the exact (up to constants) minimax rate over any convex density class. This
-work thus extends these known results by demonstrating that the local metric
-entropy of the density class always captures the minimax optimal rates under
-such settings. Our bounds provide a unifying perspective across both parametric
-and nonparametric convex density classes, under weaker assumptions on the
-richness of the density class than previously considered. Our proposed
-'multistage sieve' MLE applies to any such convex density class. We apply our
-risk bounds to rederive known minimax rates including bounded total variation,
-and Holder density classes. We further illustrate the utility of the result by
-deriving upper bounds for less studied classes, e.g., convex mixture of
-densities. relevant trigger.
+Wildfires are rare events that present severe threats to life and property.
+Understanding their propagation is of key importance to mitigate and contain
+their impact, especially since climate change is increasing their occurrence. We
+propose an end-to-end sequential model of wildfire risk components, including
+wildfire location, size, duration, and risk exposure. We do so through a
+combination of marked spatio-temporal point processes and conditional density
+estimation techniques. Unlike other approaches that use regression-based
+methods, this approach allows both predictive accuracy and an associated
+uncertainty measure for each risk estimate, accounting for the uncertainty in
+prior model components. This is particularly beneficial for timely
+decision-making by different wildfire risk management stakeholders. To allow us
+to build our models without limiting them to a specific state or county, we have
+collected open wildfire and climate data for the entire continental United
+States. We are releasing this aggregated dataset to enable further open
+research on wildfire models at a national scale.
 
 :::
 
@@ -147,14 +152,14 @@ ___Revisiting Le Cam's Equation: Exact Minimax Rates over Convex Density Classes
 ## Abstract
 
 We study the classical problem of deriving minimax rates for density estimation
-over convex density classes. Building on the pioneering work of Le Cam (1973),
-Birge (1983, 1986), Wong and Shen (1995), Yang and Barron (1999), we determine
-the exact (up to constants) minimax rate over any convex density class. This
-work thus extends these known results by demonstrating that the local metric
-entropy of the density class always captures the minimax optimal rates under
-such settings. Our bounds provide a unifying perspective across both parametric
-and nonparametric convex density classes, under weaker assumptions on the
-richness of the density class than previously considered. Our proposed
+over convex density classes. Building on the pioneering work of `Le Cam (1973)`,
+`Birge (1983, 1986)`, `Wong and Shen (1995)`, `Yang and Barron (1999)`, we
+determine the exact (up to constants) minimax rate over any convex density
+class. This work thus extends these known results by demonstrating that the
+local metric entropy of the density class always captures the minimax optimal
+rates under such settings. Our bounds provide a unifying perspective across both
+parametric and nonparametric convex density classes, under weaker assumptions on
+the richness of the density class than previously considered. Our proposed
 'multistage sieve' MLE applies to any such convex density class. We apply our
 risk bounds to rederive known minimax rates including bounded total variation,
 and Holder density classes. We further illustrate the utility of the result by
@@ -175,20 +180,24 @@ ___Adversarial Sign-Corrupted Isotonic Regression___
 
 ## Abstract
 
-We study the classical problem of deriving minimax rates for density estimation
-over convex density classes. Building on the pioneering work of Le Cam (1973),
-Birge (1983, 1986), Wong and Shen (1995), Yang and Barron (1999), we determine
-the exact (up to constants) minimax rate over any convex density class. This
-work thus extends these known results by demonstrating that the local metric
-entropy of the density class always captures the minimax optimal rates under
-such settings. Our bounds provide a unifying perspective across both parametric
-and nonparametric convex density classes, under weaker assumptions on the
-richness of the density class than previously considered. Our proposed
-'multistage sieve' MLE applies to any such convex density class. We apply our
-risk bounds to rederive known minimax rates including bounded total variation,
-and Holder density classes. We further illustrate the utility of the result by
-deriving upper bounds for less studied classes, e.g., convex mixture of
-densities. relevant trigger.
+Classical univariate isotonic regression involves nonparametric estimation under
+a monotonicity constraint of the true signal. We consider a variation of this
+generating process, which we term adversarial sign-corrupted isotonic (`ASCI`)
+regression. Under this `ASCI` setting, the adversary has full access to the true
+isotonic responses, and is free to sign-corrupt them. Estimating the true
+monotonic signal given these sign-corrupted responses is a highly challenging
+task. Notably, the sign-corruptions are designed to violate monotonicity, and
+possibly induce heavy dependence between the corrupted response terms. In this
+sense, `ASCI` regression may be viewed as an adversarial stress test for
+isotonic regression. Our motivation is driven by understanding whether efficient
+robust estimation of the monotone signal is feasible under this adversarial
+setting. We develop `ASCIFIT`, a three-step estimation procedure under the
+`ASCI` setting. The `ASCIFIT` procedure is conceptually simple, easy to
+implement with existing software, and consists of applying the `PAVA` with
+crucial pre- and post-processing corrections. We formalize this procedure, and
+demonstrate its theoretical guarantees in the form of sharp high probability
+upper bounds and minimax lower bounds. We illustrate our findings with detailed
+simulations.
 
 :::
 
@@ -204,20 +213,27 @@ ___maars: Tidy Inference under the 'Models as Approximations' Framework in R___
 
 ## Abstract
 
-We study the classical problem of deriving minimax rates for density estimation
-over convex density classes. Building on the pioneering work of Le Cam (1973),
-Birge (1983, 1986), Wong and Shen (1995), Yang and Barron (1999), we determine
-the exact (up to constants) minimax rate over any convex density class. This
-work thus extends these known results by demonstrating that the local metric
-entropy of the density class always captures the minimax optimal rates under
-such settings. Our bounds provide a unifying perspective across both parametric
-and nonparametric convex density classes, under weaker assumptions on the
-richness of the density class than previously considered. Our proposed
-'multistage sieve' MLE applies to any such convex density class. We apply our
-risk bounds to rederive known minimax rates including bounded total variation,
-and Holder density classes. We further illustrate the utility of the result by
-deriving upper bounds for less studied classes, e.g., convex mixture of
-densities. relevant trigger.
+Linear regression using ordinary least squares (OLS) is a critical part of every
+statistician's toolkit. In `R`, this is elegantly implemented via `lm()` and its
+related functions. However, the statistical inference output from this suite of
+functions is based on the assumption that the model is well specified. This
+assumption is often unrealistic and at best satisfied approximately. In the
+statistics and econometrics literature, this has long been recognized and a
+large body of work provides inference for OLS under more practical assumptions.
+This can be seen as model-free inference. In this paper, we introduce our
+package `maars` ("models as approximations") that aims at bringing research on
+model-free inference to `R` via a comprehensive workflow. The `maars` package
+differs from other packages that also implement variance estimationin three key
+ways. First, all functions in `maars` follow a consistent grammar and return
+output in tidy format, with minimal deviation from the typical `lm()` workflow.
+Second, `maars` contains several tools for inference including empirical,
+multiplier, residual bootstrap, and subsampling, for easy comparison. Third,
+`maars` is developed with pedagogy in mind. For this, most of its functions
+explicitly return the assumptions under which the output is valid. This key
+innovation makes `maars` useful in teaching inference under misspecification and
+also a powerful tool for applied researchers. We hope our default feature of
+explicitly presenting assumptions will become a de facto standard for most
+statistical modeling in `R`.
 
 :::
 
