@@ -49,6 +49,27 @@ ___$\ell_{\infty}$-Bounds of the MLE in the BTL Model under General Comparison G
 <br>
 _Proceedings of the Thirty-Eighth Conference on Uncertainty in Artificial Intelligence (UAI)_, (2022).
 
+::: {.callout-tip collapse="true" icon=false}
+
+## Abstract
+
+We study the classical problem of deriving minimax rates for density estimation
+over convex density classes. Building on the pioneering work of Le Cam (1973),
+Birge (1983, 1986), Wong and Shen (1995), Yang and Barron (1999), we determine
+the exact (up to constants) minimax rate over any convex density class. This
+work thus extends these known results by demonstrating that the local metric
+entropy of the density class always captures the minimax optimal rates under
+such settings. Our bounds provide a unifying perspective across both parametric
+and nonparametric convex density classes, under weaker assumptions on the
+richness of the density class than previously considered. Our proposed
+'multistage sieve' MLE applies to any such convex density class. We apply our
+risk bounds to rederive known minimax rates including bounded total variation,
+and Holder density classes. We further illustrate the utility of the result by
+deriving upper bounds for less studied classes, e.g., convex mixture of
+densities. relevant trigger.
+
+:::
+
 <a href="https://proceedings.mlr.press/v180/li22g.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
 <a href="https://arxiv.org/abs/2110.10825" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2110.10825.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
@@ -58,6 +79,27 @@ ___Nonparametric Estimation in the Dynamic Bradley-Terry Model___
 <u>Heejong Bong</u>, <u>Wanshan Li</u>, <u>Shamindra Shrotriya</u>, Alessandro Rinaldo
 <br>
 _Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics (AISTATS)_, (2020).
+
+::: {.callout-tip collapse="true" icon=false}
+
+## Abstract
+
+We study the classical problem of deriving minimax rates for density estimation
+over convex density classes. Building on the pioneering work of Le Cam (1973),
+Birge (1983, 1986), Wong and Shen (1995), Yang and Barron (1999), we determine
+the exact (up to constants) minimax rate over any convex density class. This
+work thus extends these known results by demonstrating that the local metric
+entropy of the density class always captures the minimax optimal rates under
+such settings. Our bounds provide a unifying perspective across both parametric
+and nonparametric convex density classes, under weaker assumptions on the
+richness of the density class than previously considered. Our proposed
+'multistage sieve' MLE applies to any such convex density class. We apply our
+risk bounds to rederive known minimax rates including bounded total variation,
+and Holder density classes. We further illustrate the utility of the result by
+deriving upper bounds for less studied classes, e.g., convex mixture of
+densities. relevant trigger.
+
+:::
 
 <a href="http://proceedings.mlr.press/v108/bong20a.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
 <a href="https://arxiv.org/abs/2003.00083" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
@@ -69,9 +111,30 @@ ___Predictive Inference of a Wildfire Risk Pipeline in the United States___
 <br>
 _NeurIPS 2019 Workshop on Tackling Climate Change with Machine Learning (Proposal Track)_, (2019).
 
+::: {.callout-tip collapse="true" icon=false}
+
+## Abstract
+
+We study the classical problem of deriving minimax rates for density estimation
+over convex density classes. Building on the pioneering work of Le Cam (1973),
+Birge (1983, 1986), Wong and Shen (1995), Yang and Barron (1999), we determine
+the exact (up to constants) minimax rate over any convex density class. This
+work thus extends these known results by demonstrating that the local metric
+entropy of the density class always captures the minimax optimal rates under
+such settings. Our bounds provide a unifying perspective across both parametric
+and nonparametric convex density classes, under weaker assumptions on the
+richness of the density class than previously considered. Our proposed
+'multistage sieve' MLE applies to any such convex density class. We apply our
+risk bounds to rederive known minimax rates including bounded total variation,
+and Holder density classes. We further illustrate the utility of the result by
+deriving upper bounds for less studied classes, e.g., convex mixture of
+densities. relevant trigger.
+
+:::
+
 <a href="https://www.climatechange.ai/papers/neurips2019/42" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
 <a href="https://s3.us-east-1.amazonaws.com/climate-change-ai/papers/neurips2019/42/paper.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
-<a href="https://slideslive.com/38922369/predictive-inference-of-a-wildfire-risk-pipeline-in-the-united-states" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> talk</a>
+<a href="https://slideslive.com/38922369/predictive-inference-of-a-wildfire-risk-pipeline-in-the-united-states" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> spotlight</a>
 
 ## Under Review
 
@@ -79,7 +142,7 @@ ___Revisiting Le Cam's Equation: Exact Minimax Rates over Convex Density Classes
 <br>
 <u>Shamindra Shrotriya</u>, Matey Neykov (2022).
 
-::: {.callout-note collapse="true" icon=false}
+::: {.callout-tip collapse="true" icon=false}
 
 ## Abstract
 
@@ -102,33 +165,32 @@ densities. relevant trigger.
 
 <a href="https://arxiv.org/abs/2210.11436" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2210.11436.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
-<!-- Abstract -->
-<!-- <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> -->
-<!--   abstract -->
-<!-- </button> -->
-<!-- <div class="collapse" id="collapseExample"> -->
-<!--   <div class="card card-body"> -->
-<!-- We study the classical problem of deriving minimax rates for density estimation -->
-<!-- over convex density classes. Building on the pioneering work of Le Cam (1973), -->
-<!-- Birge (1983, 1986), Wong and Shen (1995), Yang and Barron (1999), we determine -->
-<!-- the exact (up to constants) minimax rate over any convex density class. This -->
-<!-- work thus extends these known results by demonstrating that the local metric -->
-<!-- entropy of the density class always captures the minimax optimal rates under -->
-<!-- such settings. Our bounds provide a unifying perspective across both parametric -->
-<!-- and nonparametric convex density classes, under weaker assumptions on the -->
-<!-- richness of the density class than previously considered. Our proposed -->
-<!-- 'multistage sieve' MLE applies to any such convex density class. We apply our -->
-<!-- risk bounds to rederive known minimax rates including bounded total variation, -->
-<!-- and Holder density classes. We further illustrate the utility of the result by -->
-<!-- deriving upper bounds for less studied classes, e.g., convex mixture of -->
-<!-- densities. relevant trigger. -->
-<!--   </div> -->
-<!-- </div> -->
 
 <br>
 ___Adversarial Sign-Corrupted Isotonic Regression___
 <br>
 <u>Shamindra Shrotriya</u>, Matey Neykov (2022).
+
+::: {.callout-tip collapse="true" icon=false}
+
+## Abstract
+
+We study the classical problem of deriving minimax rates for density estimation
+over convex density classes. Building on the pioneering work of Le Cam (1973),
+Birge (1983, 1986), Wong and Shen (1995), Yang and Barron (1999), we determine
+the exact (up to constants) minimax rate over any convex density class. This
+work thus extends these known results by demonstrating that the local metric
+entropy of the density class always captures the minimax optimal rates under
+such settings. Our bounds provide a unifying perspective across both parametric
+and nonparametric convex density classes, under weaker assumptions on the
+richness of the density class than previously considered. Our proposed
+'multistage sieve' MLE applies to any such convex density class. We apply our
+risk bounds to rederive known minimax rates including bounded total variation,
+and Holder density classes. We further illustrate the utility of the result by
+deriving upper bounds for less studied classes, e.g., convex mixture of
+densities. relevant trigger.
+
+:::
 
 <a href="https://arxiv.org/abs/2207.07075" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2207.07075.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
@@ -138,6 +200,27 @@ ___maars: Tidy Inference under the 'Models as Approximations' Framework in R___
 <br>
 <u>Riccardo Fogliato</u>, <u>Shamindra Shrotriya</u>, Arun Kumar Kuchibhotla (2021).
 
+::: {.callout-tip collapse="true" icon=false}
+
+## Abstract
+
+We study the classical problem of deriving minimax rates for density estimation
+over convex density classes. Building on the pioneering work of Le Cam (1973),
+Birge (1983, 1986), Wong and Shen (1995), Yang and Barron (1999), we determine
+the exact (up to constants) minimax rate over any convex density class. This
+work thus extends these known results by demonstrating that the local metric
+entropy of the density class always captures the minimax optimal rates under
+such settings. Our bounds provide a unifying perspective across both parametric
+and nonparametric convex density classes, under weaker assumptions on the
+richness of the density class than previously considered. Our proposed
+'multistage sieve' MLE applies to any such convex density class. We apply our
+risk bounds to rederive known minimax rates including bounded total variation,
+and Holder density classes. We further illustrate the utility of the result by
+deriving upper bounds for less studied classes, e.g., convex mixture of
+densities. relevant trigger.
+
+:::
+
 <a href="https://arxiv.org/abs/2106.11188" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2106.11188.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
-<a href="https://youtu.be/CaV522U1Ju0?t=67" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> talk</a>
+<a href="https://youtu.be/CaV522U1Ju0?t=67" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> spotlight</a>
