@@ -50,8 +50,8 @@ ___$\ell_{\infty}$-Bounds of the MLE in the BTL Model under General Comparison G
 _Proceedings of the Thirty-Eighth Conference on Uncertainty in Artificial Intelligence (UAI)_, (2022).
 
 <a href="https://proceedings.mlr.press/v180/li22g.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
-<a href="https://arxiv.org/abs/2110.10825" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-dark" role="button"> arxiv</a>
-<a href="https://arxiv.org/pdf/2110.10825.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-warning" role="button"> pdf</a>
+<a href="https://arxiv.org/abs/2110.10825" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
+<a href="https://arxiv.org/pdf/2110.10825.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
 
 ___Nonparametric Estimation in the Dynamic Bradley-Terry Model___
 <br>
@@ -60,8 +60,8 @@ ___Nonparametric Estimation in the Dynamic Bradley-Terry Model___
 _Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics (AISTATS)_, (2020).
 
 <a href="http://proceedings.mlr.press/v108/bong20a.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
-<a href="https://arxiv.org/abs/2003.00083" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-dark" role="button"> arxiv</a>
-<a href="https://arxiv.org/pdf/2003.00083.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-warning" role="button"> pdf</a>
+<a href="https://arxiv.org/abs/2003.00083" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
+<a href="https://arxiv.org/pdf/2003.00083.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
 
 ## Under Review
 
@@ -69,10 +69,10 @@ ___Revisiting Le Cam's Equation: Exact Minimax Rates over Convex Density Classes
 <br>
 <u>Shamindra Shrotriya</u>, Matey Neykov (2022).
 
-<a href="https://arxiv.org/abs/2210.11436" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-dark" role="button"> arxiv</a>
-<a href="https://arxiv.org/pdf/2210.11436.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-warning" role="button"> pdf</a>
+<a href="https://arxiv.org/abs/2210.11436" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
+<a href="https://arxiv.org/pdf/2210.11436.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
 <!-- Abstract -->
-<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"><i class="bi-calendar3-week-fill"></i> abstract</button>
+<button type="button" class="btn btn-success" data-toggle="collapse" data-target="#demo"><i class="bi-calendar3-week-fill"></i> abstract</button>
 <div id="demo" class="collapse">
 We study the classical problem of deriving minimax rates for density estimation
 over convex density classes. Building on the pioneering work of Le Cam (1973),
@@ -95,14 +95,14 @@ ___Adversarial Sign-Corrupted Isotonic Regression___
 <br>
 <u>Shamindra Shrotriya</u>, Matey Neykov (2022).
 
-<a href="https://arxiv.org/abs/2207.07075" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-dark" role="button"> arxiv</a>
-<a href="https://arxiv.org/pdf/2207.07075.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-warning" role="button"> pdf</a>
+<a href="https://arxiv.org/abs/2207.07075" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
+<a href="https://arxiv.org/pdf/2207.07075.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
 
 <br>
 ___maars: Tidy Inference under the 'Models as Approximations' Framework in R___
 <br>
 <u>Riccardo Fogliato</u>, <u>Shamindra Shrotriya</u>, Arun Kumar Kuchibhotla (2021).
 
-<a href="https://arxiv.org/abs/2106.11188" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-dark" role="button"> arxiv</a>
-<a href="https://arxiv.org/pdf/2106.11188.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-warning" role="button"> pdf</a>
-<a href="https://youtu.be/CaV522U1Ju0?t=67" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-success" role="button"> talk</a>
+<a href="https://arxiv.org/abs/2106.11188" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
+<a href="https://arxiv.org/pdf/2106.11188.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<a href="https://youtu.be/CaV522U1Ju0?t=67" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> talk</a>
