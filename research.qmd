@@ -13,9 +13,8 @@ editor_options:
 ---
 
 I'm a final year PhD candidate in the [Department of Statistics and Data
-Science](http://www.stat.cmu.edu/) at [Carnegie Mellon
-University](https://www.cmu.edu/). I'm extremely fortunate to be advised by
-[Prof. Matey Neykov](http://mateyneykov.com/).
+Science](http://www.stat.cmu.edu/) at Carnegie Mellon
+University. I'm extremely fortunate to be advised by [Matey Neykov](http://mateyneykov.com/).
 
 Broadly speaking my primary research interests focus on 
 
@@ -27,28 +26,33 @@ regression,** and **location-scale estimation**. I'm also actively interested in
 **statistical ranking** (in particular the *Bradley-Terry-Luce model*), and
 **spatiotemporal modeling** (*wildfire prediction*).
 
-I particularly enjoy the collaborative aspect of research, and I'm privileged to
-work with the following brilliant people^[Listed alphabetically by surname. Go 
-check out their cool statistical research!]:
-[Heejong Bong](https://heejongbong.github.io/), 
-[Niccolò (Nic) Dalmasso](https://www.niccolodalmasso.com/), 
-[Riccardo Fogliato](https://www.stat.cmu.edu/~rfogliat/),
-[Arun Kumar Kuchibhotla](https://arun-kuchibhotla.github.io/),
-[Wanshan Li](https://www.linkedin.com/in/wanshan-li-b2186512b),
-[Matey Neykov](http://mateyneykov.com/),
-[Alessandro (Ale) Rinaldo](https://www.stat.cmu.edu/~arinaldo/).
+I particularly enjoy the collaborative aspect of research. I've been privileged to
+work with the following amazing co-authors^[Listed alphabetically by surname. Check out their cool statistical research.]:
+[Rebecca Barter](https://www.rebeccabarter.com/){target="_blank"}, 
+[Heejong Bong](https://heejongbong.github.io/){target="_blank"}, 
+[Niccolò (Nic) Dalmasso](https://www.niccolodalmasso.com/){target="_blank"}, 
+[Riccardo Fogliato](https://www.stat.cmu.edu/~rfogliat/){target="_blank"},
+[Arun Kumar Kuchibhotla](https://arun-kuchibhotla.github.io/){target="_blank"},
+[Wanshan Li](https://www.linkedin.com/in/wanshan-li-b2186512b){target="_blank"},
+[Matey Neykov](http://mateyneykov.com/){target="_blank"},
+[Alessandro (Ale) Rinaldo](https://www.stat.cmu.edu/~arinaldo/){target="_blank"}.
 
-I recommend just perusing some of my papers below to get a better idea of the
+I recommend perusing some of my papers below to get a better idea of the
 type of problems I like to work on, and the style of papers I enjoy writing with
 my co-authors.
 
-If you'd like to work on a problem together, feel free to reach out. I'm always
+Feel free to reach out if you'd like to work on a problem together. I'm always
 open to discussing new research directions, and applying statistics to solve
-problems in new and interesting domains!
+problems in new and interesting domains.
 
 # Papers
 
-Note that for published works, papers under review, and competition submissions, the $^{*}$ symbol next to a persons name indicates equal authorship for the work.
+Below is a list^[Most of my papers are also easily accessed via ArXiv
+[here](https://arxiv.org/a/shrotriya_s_1.html){target="\_blank"}, or per the
+links below.] of published works, papers under review, and competition
+submissions^[the `*` symbol next to a persons name indicates equal authorship
+for the work.]. Reproducible code for my research is also publicly available
+via GitHub.
 
 ## Published
 
@@ -89,6 +93,8 @@ findings through various examples and simulations.
 <a href="https://proceedings.mlr.press/v180/li22g.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
 <a href="https://arxiv.org/abs/2110.10825" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2110.10825.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<!-- Code -->
+<a href="https://github.com/MountLee/btl_mle_l_inf" target="_blank" rel="noopener noreferrer" class="bi-github btn btn-secondary" role="button"> code</a>
 <!-- BibTeX -->
 <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#li2022ellinfboundsbtl" aria-expanded="false" aria-controls="li2022ellinfboundsbtl">
   BibTeX
@@ -148,6 +154,8 @@ data-driven approach for bandwidth tuning.
 
 <a href="http://proceedings.mlr.press/v108/bong20a.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
 <a href="https://arxiv.org/abs/2003.00083" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
+<!-- Code -->
+<a href="https://github.com/shamindras/bttv-aistats2020" target="_blank" rel="noopener noreferrer" class="bi-github btn btn-secondary" role="button"> code</a>
 <a href="https://arxiv.org/pdf/2003.00083.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
 <!-- BibTeX -->
 <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#bong2020nonparamestdynbtl" aria-expanded="false" aria-controls="bong2020nonparamestdynbtl">
@@ -208,6 +216,8 @@ research on wildfire models at a national scale.
 
 <a href="https://www.climatechange.ai/papers/neurips2019/42" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
 <a href="https://s3.us-east-1.amazonaws.com/climate-change-ai/papers/neurips2019/42/paper.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<!-- Code -->
+<a href="https://github.com/shamindras/backburner" target="_blank" rel="noopener noreferrer" class="bi-github btn btn-secondary" role="button"> code</a>
 <a href="https://slideslive.com/38922369/predictive-inference-of-a-wildfire-risk-pipeline-in-the-united-states" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> spotlight</a>
 <!-- BibTeX -->
 <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#dalmasso2019firepred" aria-expanded="false" aria-controls="dalmasso2019firepred">
@@ -311,6 +321,9 @@ simulations.
 
 <a href="https://arxiv.org/abs/2207.07075" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2207.07075.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<!-- Code -->
+<a href="https://github.com/shamindras/sce" target="_blank" rel="noopener noreferrer" class="bi-github btn btn-secondary" role="button"> code</a>
+<a href="https://youtu.be/CaV522U1Ju0?t=67" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> spotlight</a>
 <!-- BibTeX -->
 <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#shrotriya2022ascireg" aria-expanded="false" aria-controls="shrotriya2022ascireg">
   BibTeX
@@ -333,7 +346,7 @@ Eprint = {arXiv:2207.07075},
 
 ___maars: Tidy Inference under the 'Models as Approximations' Framework in R___
 <br>
-<u>Riccardo Fogliato&#42;</u>, <u>Shamindra Shrotriya&#42;</u>, Arun Kumar Kuchibhotla (2021).
+Riccardo Fogliato&#42;, <u>Shamindra Shrotriya&#42;</u>, Arun Kumar Kuchibhotla (2021).
 
 ::: {.callout-tip collapse="true" icon=false}
 
@@ -365,6 +378,8 @@ statistical modeling in `R`.
 
 <a href="https://arxiv.org/abs/2106.11188" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2106.11188.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<!-- Code -->
+<a href="https://shamindras.github.io/maars/" target="_blank" rel="noopener noreferrer" class="bi-github btn btn-secondary" role="button"> code</a>
 <a href="https://youtu.be/CaV522U1Ju0?t=67" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> spotlight</a>
 <!-- BibTeX -->
 <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#fogliato2021maars" aria-expanded="false" aria-controls="fogliato2021maars">
@@ -375,12 +390,13 @@ statistical modeling in `R`.
   <div class="card card-body">
 ```{r, eval=FALSE}
 @misc{fogliato2021maars,
-    title        = {
-        maars: Tidy Inference under the 'Models as Approximations' Framework in R
-    },
-    author       = {Riccardo Fogliato and Shamindra Shrotriya and Arun Kumar Kuchibhotla},
-    year         = 2021,
-    eprint       = {arXiv:2106.11188}
+	title        = {maars: Tidy Inference under the 'Models as Approximations' Framework in R},
+	author       = {Riccardo Fogliato and Shamindra Shrotriya and Arun Kumar Kuchibhotla},
+	year         = 2021,
+	journal      = {ArXiv e-prints},
+	url          = {https://shamindras.github.io/maars/},
+	note         = {R package version 1.2.0},
+	eprint       = {arXiv:2106.11188}
 }
 ```
   </div>
