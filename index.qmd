@@ -25,4 +25,3 @@ This is my personal website which contains info about my research and where I
 in statistics and machine learning.
 
 Please browse around, and feel free to leave a comment.
-
