@@ -22,8 +22,6 @@ website:
         href: data/pdfs/resume.pdf
       - icon: github
         href: https://github.com/shamindras
-      - icon: twitter
-        href: https://twitter.com/shamindraas
       - icon: rss
         href: posts.xml
   google-analytics: "UA-145015693-1"
