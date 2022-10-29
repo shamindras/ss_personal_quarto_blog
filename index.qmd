@@ -21,8 +21,8 @@ Science](http://www.stat.cmu.edu/){target="_blank"} at Carnegie Mellon
 University.
 
 This is my personal website which contains information about my
-[research](https://www.shamindras.com/research.html){target="\_blank"}, and also
-where I [blog](https://www.shamindras.com/posts.html){target="\_blank"} about
+[research](https://www.shamindras.com/research.html){target="_blank"}, and also
+where I [blog](https://www.shamindras.com/posts.html){target="_blank"} about
 various topics of interest in statistics and machine learning. I'd recommend
 starting there to get an idea of the type of problems that I really enjoy
 working on.
