@@ -21,6 +21,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -112,7 +175,7 @@ ga('send', {
     <a class="nav-link" href="./data/pdfs/CV.pdf">cv</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data/pdfs/resume.pdf">resume</a>
+    <a class="nav-link" href="./data/pdfs/resume.pdf">resumè</a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/shamindras"><i class="bi bi-github" role="img">
@@ -139,9 +202,12 @@ ga('send', {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#publications" id="toc-publications" class="nav-link active" data-scroll-target="#publications">Publications</a></li>
+  <li><a href="#papers" id="toc-papers" class="nav-link active" data-scroll-target="#papers">Papers</a>
+  <ul class="collapse">
+  <li><a href="#published" id="toc-published" class="nav-link" data-scroll-target="#published">Published</a></li>
   <li><a href="#under-review" id="toc-under-review" class="nav-link" data-scroll-target="#under-review">Under Review</a></li>
   <li><a href="#competitions" id="toc-competitions" class="nav-link" data-scroll-target="#competitions">Competitions</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shamindras/ss_personal_quarto_blog/edit/main/research.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shamindras/ss_personal_quarto_blog/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -174,13 +240,16 @@ ga('send', {
 <blockquote class="blockquote">
 <p>Developing various generalizations of models and estimators in classical statistics, and analyzing their theoretical properties.</p>
 </blockquote>
-<p>More specifically, the classical topics I study include <strong>density estimation, isotonic regression,</strong> and <strong>location-scale estimation</strong>. I’m also actively interested in application-based methodology via <strong>statistical ranking</strong> (in particular the <em>Bradley-Terry-Luce model</em>), and <strong>spatiotemporal modeling</strong> (<em>wildfire prediction</em>).</p>
+<p>More specifically, the classical topics I study include <strong>density estimation, isotonic regression,</strong> and <strong>location-scale estimation</strong>. I’m also actively interested in application-driven methodology via <strong>statistical ranking</strong> (in particular the <em>Bradley-Terry-Luce model</em>), and <strong>spatiotemporal modeling</strong> (<em>wildfire prediction</em>).</p>
 <p>I particularly enjoy the collaborative aspect of research, and I’m privileged to work with the following brilliant people<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>: <a href="https://heejongbong.github.io/">Heejong Bong</a>, <a href="https://www.niccolodalmasso.com/">Niccolò (Nic) Dalmasso</a>, <a href="https://www.stat.cmu.edu/~rfogliat/">Riccardo Fogliato</a>, <a href="https://arun-kuchibhotla.github.io/">Arun Kumar Kuchibhotla</a>, <a href="https://www.linkedin.com/in/wanshan-li-b2186512b">Wanshan Li</a>, <a href="http://mateyneykov.com/">Matey Neykov</a>, <a href="https://www.stat.cmu.edu/~arinaldo/">Alessandro (Ale) Rinaldo</a>.</p>
 <p>I recommend just perusing some of my papers below to get a better idea of the type of problems I like to work on, and the style of papers I enjoy writing with my co-authors.</p>
 <p>If you’d like to work on a problem together, feel free to reach out. I’m always open to discussing new research directions, and applying statistics to solve problems in new and interesting domains!</p>
-<section id="publications" class="level2">
-<h2 class="anchored" data-anchor-id="publications">Publications</h2>
-<p><strong><em><span class="math inline">\(\ell_{\infty}\)</span>-Bounds of the MLE in the BTL Model under General Comparison Graphs</em></strong> <br> <u>Wanshan Li</u>, <u>Shamindra Shrotriya</u>, Alessandro Rinaldo <br> <em>Proceedings of the Thirty-Eighth Conference on Uncertainty in Artificial Intelligence (UAI)</em>, (2022).</p>
+<section id="papers" class="level1">
+<h1>Papers</h1>
+<p>Note that for published works, papers under review, and competition submissions, the <span class="math inline">\(^{*}\)</span> symbol next to a persons name indicates equal authorship for the work.</p>
+<section id="published" class="level2">
+<h2 class="anchored" data-anchor-id="published">Published</h2>
+<p><strong><em><span class="math inline">\(\ell_{\infty}\)</span>-Bounds of the MLE in the BTL Model under General Comparison Graphs</em></strong> <br> Wanshan Li*, <u>Shamindra Shrotriya*</u>, Alessandro Rinaldo <br> <em>Proceedings of the Thirty-Eighth Conference on Uncertainty in Artificial Intelligence (UAI)</em>, (2022).</p>
 <div class="callout-tip callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -197,9 +266,35 @@ Abstract
 </div>
 </div>
 </div>
-<p><a href="https://proceedings.mlr.press/v180/li22g.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a> <a href="https://arxiv.org/abs/2110.10825" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a> <a href="https://arxiv.org/pdf/2110.10825.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a></p>
+<a href="https://proceedings.mlr.press/v180/li22g.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a> <a href="https://arxiv.org/abs/2110.10825" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a> <a href="https://arxiv.org/pdf/2110.10825.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a> <!-- BibTeX --> <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#li2022ellinfboundsbtl" aria-expanded="false" aria-controls="li2022ellinfboundsbtl"> BibTeX </button>
+<div id="li2022ellinfboundsbtl" class="collapse">
+<br>
+<div class="card card-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">@</span>inproceedings{li2022ellinfboundsbtl,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    title        <span class="ot">=</span> {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        {\(\mathscr{l}\)}\({}_{\mbox{{\(\infty\)}}}\)<span class="sc">-</span>Bounds of the {MLE} <span class="cf">in</span> the</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        {BTL} Model under General Comparison Graphs</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    author       <span class="ot">=</span> {Wanshan Li and Shamindra Shrotriya and Alessandro Rinaldo},</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    year         <span class="ot">=</span> <span class="dv">2022</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    booktitle    <span class="ot">=</span> {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        Uncertainty <span class="cf">in</span> Artificial Intelligence, Proceedings of the Thirty<span class="sc">-</span>Eighth</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        Conference on Uncertainty <span class="cf">in</span> Artificial Intelligence, {UAI} <span class="dv">2022</span>, <span class="dv">1-5</span> August</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="dv">2022</span>, Eindhoven, The Netherlands</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    publisher    <span class="ot">=</span> {{PMLR}},</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    series       <span class="ot">=</span> {Proceedings of Machine Learning Research},</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    volume       <span class="ot">=</span> <span class="dv">180</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    pages        <span class="ot">=</span> {<span class="dv">1178</span><span class="sc">--</span><span class="dv">1187</span>},</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    url          <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>proceedings.mlr.press<span class="sc">/</span>v180<span class="sc">/</span>li22g.html},</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    editor       <span class="ot">=</span> {James Cussens and Kun Zhang}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 <hr>
-<p><strong><em>Nonparametric Estimation in the Dynamic Bradley-Terry Model</em></strong> <br> <u>Heejong Bong</u>, <u>Wanshan Li</u>, <u>Shamindra Shrotriya</u>, Alessandro Rinaldo <br> <em>Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics (AISTATS)</em>, (2020).</p>
+<p><strong><em>Nonparametric Estimation in the Dynamic Bradley-Terry Model</em></strong> <br> Heejong Bong*, Wanshan Li*, <u>Shamindra Shrotriya*</u>, Alessandro Rinaldo <br> <em>Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics (AISTATS)</em>, (2020).</p>
 <div class="callout-tip callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -216,9 +311,31 @@ Abstract
 </div>
 </div>
 </div>
-<p><a href="http://proceedings.mlr.press/v108/bong20a.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a> <a href="https://arxiv.org/abs/2003.00083" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a> <a href="https://arxiv.org/pdf/2003.00083.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a></p>
+<a href="http://proceedings.mlr.press/v108/bong20a.html" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a> <a href="https://arxiv.org/abs/2003.00083" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a> <a href="https://arxiv.org/pdf/2003.00083.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a> <!-- BibTeX --> <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#bong2020nonparamestdynbtl" aria-expanded="false" aria-controls="bong2020nonparamestdynbtl"> BibTeX </button>
+<div id="bong2020nonparamestdynbtl" class="collapse">
+<br>
+<div class="card card-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">@</span>inproceedings{bong2020nonparamestdynbtl,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    title        <span class="ot">=</span> {Nonparametric Estimation <span class="cf">in</span> the Dynamic Bradley<span class="sc">-</span>Terry Model},</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    author       <span class="ot">=</span> {Heejong Bong and Wanshan Li and Shamindra Shrotriya and Alessandro Rinaldo},</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    year         <span class="ot">=</span> <span class="dv">2020</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    booktitle    <span class="ot">=</span> {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        The 23rd International Conference on Artificial Intelligence and Statistics,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        {AISTATS} <span class="dv">2020</span>, <span class="dv">26-28</span> August <span class="dv">2020</span>, Online [Palermo, Sicily, Italy]</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    publisher    <span class="ot">=</span> {{PMLR}},</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    series       <span class="ot">=</span> {Proceedings of Machine Learning Research},</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    volume       <span class="ot">=</span> <span class="dv">108</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    pages        <span class="ot">=</span> {<span class="dv">3317</span><span class="sc">--</span><span class="dv">3326</span>},</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    url          <span class="ot">=</span> {http<span class="sc">:</span><span class="er">//</span>proceedings.mlr.press<span class="sc">/</span>v108<span class="sc">/</span>bong20a.html},</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    editor       <span class="ot">=</span> {Silvia Chiappa and Roberto Calandra},</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 <hr>
-<p><strong><em>Predictive Inference of a Wildfire Risk Pipeline in the United States</em></strong> <br> <u>Niccolo Dalmasso</u>, <u>Alex Reinhart</u>, <u>Shamindra Shrotriya</u> <br> <em>NeurIPS 2019 Workshop on Tackling Climate Change with Machine Learning (Proposal Track)</em>, (2019).</p>
+<p><strong><em>Predictive Inference of a Wildfire Risk Pipeline in the United States</em></strong> <br> Niccolo Dalmasso*, Alex Reinhart*, <u>Shamindra Shrotriya*</u> <br> <em>NeurIPS 2019 Workshop on Tackling Climate Change with Machine Learning (Proposal Track)</em>, (2019).</p>
 <div class="callout-tip callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -235,11 +352,25 @@ Abstract
 </div>
 </div>
 </div>
-<p><a href="https://www.climatechange.ai/papers/neurips2019/42" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a> <a href="https://s3.us-east-1.amazonaws.com/climate-change-ai/papers/neurips2019/42/paper.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a> <a href="https://slideslive.com/38922369/predictive-inference-of-a-wildfire-risk-pipeline-in-the-united-states" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> spotlight</a></p>
+<a href="https://www.climatechange.ai/papers/neurips2019/42" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a> <a href="https://s3.us-east-1.amazonaws.com/climate-change-ai/papers/neurips2019/42/paper.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a> <a href="https://slideslive.com/38922369/predictive-inference-of-a-wildfire-risk-pipeline-in-the-united-states" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> spotlight</a> <!-- BibTeX --> <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#dalmasso2019firepred" aria-expanded="false" aria-controls="dalmasso2019firepred"> BibTeX </button>
+<div id="dalmasso2019firepred" class="collapse">
+<br>
+<div class="card card-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">@</span>inproceedings{dalmasso2019firepred,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    title        <span class="ot">=</span> {Predictive Inference of a Wildfire Risk Pipeline <span class="cf">in</span> the United States},</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    author       <span class="ot">=</span> {Dalmasso, Niccolo and Shrotriya, Shamindra and Reinhart, Alex},</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    year         <span class="ot">=</span> <span class="dv">2019</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    booktitle    <span class="ot">=</span> {NeurIPS <span class="dv">2019</span> Workshop on Tackling Climate Change with Machine Learning},</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    url          <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>www.climatechange.ai<span class="sc">/</span>papers<span class="sc">/</span>neurips2019<span class="sc">/</span><span class="dv">42</span>}</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="under-review" class="level2">
 <h2 class="anchored" data-anchor-id="under-review">Under Review</h2>
-<p><strong><em>Revisiting Le Cam’s Equation: Exact Minimax Rates over Convex Density Classes</em></strong> <br> <u>Shamindra Shrotriya</u>, Matey Neykov (2022).</p>
+<p><strong><em>Revisiting Le Cam’s Equation: Exact Minimax Rates over Convex Density Classes</em></strong> <br> <u>Shamindra Shrotriya*</u>, Matey Neykov (2022).</p>
 <div class="callout-tip callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -256,9 +387,25 @@ Abstract
 </div>
 </div>
 </div>
-<p><a href="https://arxiv.org/abs/2210.11436" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a> <a href="https://arxiv.org/pdf/2210.11436.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a></p>
+<a href="https://arxiv.org/abs/2210.11436" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a> <a href="https://arxiv.org/pdf/2210.11436.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a> <!-- BibTeX --> <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#shrotriya2022lecamminimax" aria-expanded="false" aria-controls="shrotriya2022lecamminimax"> BibTeX </button>
+<div id="shrotriya2022lecamminimax" class="collapse">
+<br>
+<div class="card card-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="sc">@</span>misc{shrotriya2022lecamminimax,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    title        <span class="ot">=</span> {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        Revisiting Le Cam\<span class="st">'s Equation: Exact Minimax Rates over Convex Density</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="st">        Classes</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="st">    },</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="st">    author       = {Shamindra Shrotriya and Matey Neykov},</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="st">    year         = 2022,</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="st">    eprint       = {arXiv:2210.11436}</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="st">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 <hr>
-<p><strong><em>Adversarial Sign-Corrupted Isotonic Regression</em></strong> <br> <u>Shamindra Shrotriya</u>, Matey Neykov (2022).</p>
+<p><strong><em>Adversarial Sign-Corrupted Isotonic Regression</em></strong> <br> <u>Shamindra Shrotriya*</u>, Matey Neykov (2022).</p>
 <div class="callout-tip callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -275,9 +422,22 @@ Abstract
 </div>
 </div>
 </div>
-<p><a href="https://arxiv.org/abs/2207.07075" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a> <a href="https://arxiv.org/pdf/2207.07075.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a></p>
+<a href="https://arxiv.org/abs/2207.07075" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a> <a href="https://arxiv.org/pdf/2207.07075.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a> <!-- BibTeX --> <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#shrotriya2022ascireg" aria-expanded="false" aria-controls="shrotriya2022ascireg"> BibTeX </button>
+<div id="shrotriya2022ascireg" class="collapse">
+<br>
+<div class="card card-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">@</span>misc{shrotriya2022ascireg,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Author <span class="ot">=</span> {Shamindra Shrotriya and Matey Neykov},</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Title <span class="ot">=</span> {Adversarial Sign<span class="sc">-</span>Corrupted Isotonic Regression},</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>Year <span class="ot">=</span> {<span class="dv">2022</span>},</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Eprint <span class="ot">=</span> {arXiv<span class="sc">:</span><span class="fl">2207.07075</span>},</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 <hr>
-<p><strong><em>maars: Tidy Inference under the ‘Models as Approximations’ Framework in R</em></strong> <br> <u>Riccardo Fogliato</u>, <u>Shamindra Shrotriya</u>, Arun Kumar Kuchibhotla (2021).</p>
+<p><strong><em>maars: Tidy Inference under the ‘Models as Approximations’ Framework in R</em></strong> <br> <u>Riccardo Fogliato*</u>, <u>Shamindra Shrotriya*</u>, Arun Kumar Kuchibhotla (2021).</p>
 <div class="callout-tip callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -294,11 +454,26 @@ Abstract
 </div>
 </div>
 </div>
-<p><a href="https://arxiv.org/abs/2106.11188" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a> <a href="https://arxiv.org/pdf/2106.11188.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a> <a href="https://youtu.be/CaV522U1Ju0?t=67" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> spotlight</a></p>
+<a href="https://arxiv.org/abs/2106.11188" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a> <a href="https://arxiv.org/pdf/2106.11188.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a> <a href="https://youtu.be/CaV522U1Ju0?t=67" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> spotlight</a> <!-- BibTeX --> <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#fogliato2021maars" aria-expanded="false" aria-controls="fogliato2021maars"> BibTeX </button>
+<div id="fogliato2021maars" class="collapse">
+<br>
+<div class="card card-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="sc">@</span>misc{fogliato2021maars,</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    title        <span class="ot">=</span> {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        maars<span class="sc">:</span> Tidy Inference under the <span class="st">'Models as Approximations'</span> Framework <span class="cf">in</span> R</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    author       <span class="ot">=</span> {Riccardo Fogliato and Shamindra Shrotriya and Arun Kumar Kuchibhotla},</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    year         <span class="ot">=</span> <span class="dv">2021</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    eprint       <span class="ot">=</span> {arXiv<span class="sc">:</span><span class="fl">2106.11188</span>}</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="competitions" class="level2">
 <h2 class="anchored" data-anchor-id="competitions">Competitions</h2>
-<p><strong><em>Efficient Estimation of Distribution-free dynamics in the Bradley-Terry Model</em></strong> <br> <u>Heejong Bong</u>, <u>Wanshan Li</u>, <u>Shamindra Shrotriya</u> (2019).</p>
+<p><strong><em>Efficient Estimation of Distribution-free dynamics in the Bradley-Terry Model</em></strong> <br> Heejong Bong*, Wanshan Li*, <u>Shamindra Shrotriya*</u> (2019).</p>
 <p>🏆 <strong>Winner:</strong> CMSAC Reproducible Research Competition (2019)</p>
 <div class="callout-tip callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -318,7 +493,7 @@ Abstract
 </div>
 <p><a href="https://www.stat.cmu.edu/cmsac/conference/2019/" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a> <a href="https://www.stat.cmu.edu/cmsac/conference/2019/assets/pdf/BTTV.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a> <a href="https://twitter.com/CMU_Stats/status/1191119690929754118" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-success" role="button"> media</a></p>
 <hr>
-<p><strong><em>Integrated Data Analysis for Early Warning of Lung Failure</em></strong> <br> <u>Rebecca Barter</u>, <u>Shamindra Shrotriya</u>. <br> <em>Operational Database Management Systems (ODBMS)</em>, (2016). <br> 🏆 <strong>Winner:</strong> Geisinger Health Collider Project (2016)</p>
+<p><strong><em>Integrated Data Analysis for Early Warning of Lung Failure</em></strong> <br> Rebecca Barter*, <u>Shamindra Shrotriya*</u>. <br> <em>Operational Database Management Systems (ODBMS)</em>, (2016). <br> <br> 🏆 <strong>Winner:</strong> Geisinger Health Collider Project (2016)</p>
 <div class="callout-tip callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -338,6 +513,7 @@ Abstract
 <p><a href="http://www.odbms.org/2016/06/integrated-data-analysis-for-early-warning-of-lung-failure/" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a> <a href="http://www.odbms.org/wp-content/uploads/2016/06/report_ODBMS.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a> <a href="https://scet.berkeley.edu/berkeley-team-wins-geisinger-health-collider/" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-success" role="button"> media</a></p>
 
 
+</section>
 </section>
 
 

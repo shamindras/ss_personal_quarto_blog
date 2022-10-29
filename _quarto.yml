@@ -18,7 +18,7 @@ website:
         file: posts.qmd
       - text: "cv"
         href: data/pdfs/CV.pdf
-      - text: "resume"
+      - text: "resumè"
         href: data/pdfs/resume.pdf
       - icon: github
         href: https://github.com/shamindras
