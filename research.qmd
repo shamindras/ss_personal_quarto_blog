@@ -2,6 +2,7 @@
 title: "Research"
 description: |
   An overview of my research interests and publications
+bibliography: refs.bib
 format:
   html:
     toc: true
