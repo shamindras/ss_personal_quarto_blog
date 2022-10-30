@@ -16,6 +16,8 @@ website:
         file: research.qmd
       - text: blog
         file: posts.qmd
+      - text: software
+        file: software.qmd  
       - text: "cv"
         href: data/pdfs/CV.pdf
       - text: "resumè"
