@@ -6,6 +6,7 @@ bibliography: refs.bib
 format:
   html:
     toc: true
+    code-link: true
 execute:
   echo: true
 editor_options: 
@@ -15,9 +16,9 @@ editor_options:
 
 I enjoy using and contributing to open-source scientific software. I've co-developed the following software packages in `R` and `python`.
 
-### Open-source development
+### __`maars`__
 
-__`maars`:__ An `R` implementation of the series of papers [@buja2019maapt1] and [@buja2019maapt2] based on a tidy grammar.
+An `R` implementation of the series of papers [@buja2019maapt1] and [@buja2019maapt2] based on a tidy grammar.
 
 <!-- Code -->
 <a href="https://shamindras.github.io/maars/" target="_blank" rel="noopener noreferrer" class="bi-github btn btn-secondary" role="button"> code</a>
@@ -27,7 +28,9 @@ __`maars`:__ An `R` implementation of the series of papers [@buja2019maapt1] and
 
 <hr>
 
-**`iRF`:** A `python` package to implement the iterative Random Forest (`iRF`)
+### __`iRF`__
+
+A `python` package to implement the iterative Random Forest (`iRF`)
 family of algorithms from [@basu2018irfstableinteractions]. This is implementation 
 is a joint effort of several people in UC Berkeley. See [here](https://github.com/Yu-Group/iterative-Random-Forest/blob/master/Authors.md) for the complete 
 list of developers.

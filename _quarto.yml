@@ -20,7 +20,7 @@ website:
         file: software.qmd  
       - text: "cv"
         href: data/pdfs/CV.pdf
-      - text: "resumè"
+      - text: "résumé"
         href: data/pdfs/resume.pdf
       - icon: github
         href: https://github.com/shamindras

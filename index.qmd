@@ -29,7 +29,8 @@ working on.
 
 You can also learn more about me from
 [CV](https://www.shamindras.com/data/pdfs/CV.pdf){target="_blank"},
-[resumè](https://www.shamindras.com/data/pdfs/resume.pdf){target="_blank"}, and 
-my [github page](https://github.com/shamindras){target="_blank"}.
+[résumé](https://www.shamindras.com/data/pdfs/resume.pdf){target="_blank"}, and 
+my [open-source software](https://github.com/shamindras){target="_blank"} 
+contributions.
 
 Please browse around, and feel free to get in touch for any collaborations.
