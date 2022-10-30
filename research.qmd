@@ -12,6 +12,7 @@ execute:
 editor_options: 
   markdown: 
     wrap: 80
+engine: knitr    
 ---
 
 I'm a final year PhD candidate in the [Department of Statistics and Data
@@ -106,25 +107,25 @@ findings through various examples and simulations.
 <div class="collapse" id="li2022ellinfboundsbtl">
   <br>
   <div class="card card-body">
-```{r, eval=FALSE}
+```{bibtex}
 @inproceedings{li2022ellinfboundsbtl,
-	title        = {
-		{\(\mathscr{l}\)}\({}_{\mbox{{\(\infty\)}}}\)-Bounds of the {MLE} in the
-		{BTL} Model under General Comparison Graphs
-	},
-	author       = {Wanshan Li and Shamindra Shrotriya and Alessandro Rinaldo},
-	year         = 2022,
-	booktitle    = {
-		Uncertainty in Artificial Intelligence, Proceedings of the Thirty-Eighth
-		Conference on Uncertainty in Artificial Intelligence, {UAI} 2022, 1-5 August
-		2022, Eindhoven, The Netherlands
-	},
-	publisher    = {{PMLR}},
-	series       = {Proceedings of Machine Learning Research},
-	volume       = 180,
-	pages        = {1178--1187},
-	url          = {https://proceedings.mlr.press/v180/li22g.html},
-	editor       = {James Cussens and Kun Zhang}
+  title   = {
+    {\(\mathscr{l}\)}\({}_{\mbox{{\(\infty\)}}}\)-Bounds of the {MLE} in the
+    {BTL} Model under General Comparison Graphs
+  },
+  author  = {Wanshan Li and Shamindra Shrotriya and Alessandro Rinaldo},
+  year    = 2022,
+  booktitle = {
+    Uncertainty in Artificial Intelligence, Proceedings of the Thirty-Eighth
+    Conference on Uncertainty in Artificial Intelligence, {UAI} 2022, 1-5
+    August 2022, Eindhoven, The Netherlands
+  },
+  publisher = {{PMLR}},
+  series  = {Proceedings of Machine Learning Research},
+  volume  = 180,
+  pages   = {1178--1187},
+  url     = {https://proceedings.mlr.press/v180/li22g.html},
+  editor  = {James Cussens and Kun Zhang}
 }
 ```
   </div>
@@ -168,21 +169,22 @@ data-driven approach for bandwidth tuning.
 <div class="collapse" id="bong2020nonparamestdynbtl">
   <br>
   <div class="card card-body">
-```{r, eval=FALSE}
+```{bibtex}
 @inproceedings{bong2020nonparamestdynbtl,
-	title        = {Nonparametric Estimation in the Dynamic Bradley-Terry Model},
-	author       = {Heejong Bong and Wanshan Li and Shamindra Shrotriya and Alessandro Rinaldo},
-	year         = 2020,
-	booktitle    = {
-		The 23rd International Conference on Artificial Intelligence and Statistics,
-		{AISTATS} 2020, 26-28 August 2020, Online [Palermo, Sicily, Italy]
-	},
-	publisher    = {{PMLR}},
-	series       = {Proceedings of Machine Learning Research},
-	volume       = 108,
-	pages        = {3317--3326},
-	url          = {http://proceedings.mlr.press/v108/bong20a.html},
-	editor       = {Silvia Chiappa and Roberto Calandra},
+  title   = {Nonparametric Estimation in the Dynamic Bradley-Terry Model},
+  author  = {Heejong Bong and Wanshan Li and Shamindra Shrotriya and Alessandro Rinaldo},
+  year    = 2020,
+  booktitle = {
+    The 23rd International Conference on Artificial Intelligence and
+    Statistics, {AISTATS} 2020, 26-28 August 2020, Online [Palermo, Sicily,
+    Italy]
+  },
+  publisher = {{PMLR}},
+  series  = {Proceedings of Machine Learning Research},
+  volume  = 108,
+  pages   = {3317--3326},
+  url     = {http://proceedings.mlr.press/v108/bong20a.html},
+  editor  = {Silvia Chiappa and Roberto Calandra}
 }
 ```
   </div>
@@ -230,13 +232,13 @@ research on wildfire models at a national scale.
 <div class="collapse" id="dalmasso2019firepred">
   <br>
   <div class="card card-body">
-```{r, eval=FALSE}
+```{bibtex}
 @inproceedings{dalmasso2019firepred,
-	title        = {Predictive Inference of a Wildfire Risk Pipeline in the United States},
-	author       = {Dalmasso, Niccolo and Shrotriya, Shamindra and Reinhart, Alex},
-	year         = 2019,
-	booktitle    = {NeurIPS 2019 Workshop on Tackling Climate Change with Machine Learning},
-	url          = {https://www.climatechange.ai/papers/neurips2019/42}
+  title   = {Predictive Inference of a Wildfire Risk Pipeline in the United States},
+  author  = {Dalmasso, Niccolo and Shrotriya, Shamindra and Reinhart, Alex},
+  year    = 2019,
+  booktitle = {NeurIPS 2019 Workshop on Tackling Climate Change with Machine Learning},
+  url     = {https://www.climatechange.ai/papers/neurips2019/42}
 }
 ```
   </div>
@@ -278,15 +280,15 @@ densities. relevant trigger.
 <div class="collapse" id="shrotriya2022lecamminimax">
   <br>
   <div class="card card-body">
-```{r, eval=FALSE}
+```{bibtex}
 @misc{shrotriya2022lecamminimax,
-    title        = {
-        Revisiting Le Cam\'s Equation: Exact Minimax Rates over Convex Density
-        Classes
-    },
-    author       = {Shamindra Shrotriya and Matey Neykov},
-    year         = 2022,
-    eprint       = {arXiv:2210.11436}
+  title   = {
+    Revisiting Le Cam's Equation: Exact Minimax Rates over Convex Density
+    Classes
+  },
+  author  = {Shamindra Shrotriya and Matey Neykov},
+  year    = 2022,
+  eprint  = {arXiv:2210.11436}
 }
 ```
   </div>
@@ -335,12 +337,12 @@ simulations.
 <div class="collapse" id="shrotriya2022ascireg">
   <br>
   <div class="card card-body">
-```{r, eval=FALSE}
+```{bibtex}
 @misc{shrotriya2022ascireg,
-Author = {Shamindra Shrotriya and Matey Neykov},
-Title = {Adversarial Sign-Corrupted Isotonic Regression},
-Year = {2022},
-Eprint = {arXiv:2207.07075},
+  title   = {Adversarial Sign-Corrupted Isotonic Regression},
+  author  = {Shamindra Shrotriya and Matey Neykov},
+  year    = 2022,
+  eprint  = {arXiv:2207.07075}
 }
 ```
   </div>
@@ -392,15 +394,15 @@ statistical modeling in `R`.
 <div class="collapse" id="fogliato2021maars">
   <br>
   <div class="card card-body">
-```{r, eval=FALSE}
+```{bibtex}
 @misc{fogliato2021maars,
-	title        = {maars: Tidy Inference under the 'Models as Approximations' Framework in R},
-	author       = {Riccardo Fogliato and Shamindra Shrotriya and Arun Kumar Kuchibhotla},
-	year         = 2021,
-	journal      = {ArXiv e-prints},
-	url          = {https://shamindras.github.io/maars/},
-	note         = {R package version 1.2.0},
-	eprint       = {arXiv:2106.11188}
+  title   = {maars: Tidy Inference under the 'Models as Approximations' Framework in R},
+  author  = {Riccardo Fogliato and Shamindra Shrotriya and Arun Kumar Kuchibhotla},
+  year    = 2021,
+  journal = {ArXiv e-prints},
+  url     = {https://shamindras.github.io/maars/},
+  note    = {R package version 1.2.0},
+  eprint  = {arXiv:2106.11188}
 }
 ```
   </div>
