@@ -5,6 +5,7 @@ description: |
 bibliography: refs.bib
 format:
   html:
+    code-link: true
     toc: true
 execute:
   echo: true
@@ -22,13 +23,15 @@ Broadly speaking my primary research interests focus on
 > Developing various
 generalizations of models and estimators in classical statistics, and analyzing their theoretical properties.
 
-More specifically, the classical topics I study include **density estimation, isotonic
-regression,** and **location-scale estimation**. I'm also actively interested in application-driven methodology via
-**statistical ranking** (in particular the *Bradley-Terry-Luce model*), and
-**spatiotemporal modeling** (*wildfire prediction*).
+More specifically, the classical topics I study include **density estimation,
+isotonic regression,** and **location-scale estimation**. I'm also actively
+interested in application-driven methodology via **statistical ranking** (in
+particular the *Bradley-Terry-Luce model*), and **spatiotemporal modeling**
+(*wildfire prediction*).
 
-I particularly enjoy the collaborative aspect of research. I've been privileged to
-work with the following amazing co-authors^[Listed alphabetically by surname. Check out their cool statistical research.]:
+I particularly enjoy the collaborative aspect of research. I've been privileged
+to work with the following amazing co-authors^[Listed alphabetically by
+surname. Check out their cool statistical research.]:
 [Rebecca Barter](https://www.rebeccabarter.com/){target="_blank"}, 
 [Heejong Bong](https://heejongbong.github.io/){target="_blank"}, 
 [Niccolò (Nic) Dalmasso](https://www.niccolodalmasso.com/){target="_blank"}, 
@@ -44,7 +47,7 @@ my co-authors.
 
 Feel free to reach out if you'd like to work on a problem together. I'm always
 open to discussing new research directions, and applying statistics to solve
-problems in new and interesting domains.
+problems in interesting domains.
 
 # Papers
 
