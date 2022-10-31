@@ -1809,22 +1809,22 @@ Netlify.”</span> July 11, 2019. <a href="https://www.shamindras.com/posts/2019
 <p>Hi there! I’m <strong>Shamindra Shrotriya</strong>, a graduate student in the <a href="http://www.stat.cmu.edu/">Department of Statistics and Data Science</a> at the wonderful <a href="https://www.cmu.edu/">Carnegie Mellon University</a>. I’ve decided to start blogging to document my learning and development in statistics as a graduate student.</p>
 <p>I’d like it to be a fun place to document interesting things I like to read about in the statistics and machine learning space (<strong>statistical theory/methodology</strong>, <strong>research</strong>, <strong>rstats</strong>, <strong>python</strong> …) as well as anything else I am generally into e.g.&nbsp;<strong>books</strong>, <strong>sports</strong> etc.</p>
 <p>Feel free to pull up a chair, leave a comment, and join me so that we can explore together.</p>
-<p>My CV can be found <a href="pdfs/CV.pdf" target="_blank">here</a>.</p>
+<p>You can also learn more about me from <a href="https://www.shamindras.com/data/pdfs/CV.pdf" target="_blank">CV</a>, <a href="https://www.shamindras.com/data/pdfs/resume.pdf" target="_blank">résumé</a>, and my <a href="https://www.shamindras.com/software.html" target="_blank">open-source software</a> contributions.</p>
 </section><section id="credits" class="level2"><h2 class="anchored" data-anchor-id="credits">Credits</h2>
 <p>The credit to starting this blog goes to the following people. I hope to not disappoint and create some useful content here 🖖.</p>
 <ul>
-<li>
-<a href="https://yihui.name/" target="_blank">Yihui Xie</a>, <a href="https://github.com/jjallaire" target="_blank">JJ Allaire</a> and <a href="https://twitter.com/riannone" target="_blank">Rich Iannone</a> - for co-developing the fantastic <code>distill</code> package which upon which this blog/ site is based</li>
+<li>The <a href="https://www.rstudio.com/" target="_blank">Rstudio team</a> - for co-developing the fantastic <a href="https://quarto.org/" target="_blank"><code>quarto</code></a> package upon which this site is based.</li>
 <li>
 <a href="http://www.fast.ai/">Rachel Thomas</a> for posting this <a href="http://www.fast.ai/2017/04/06/alternatives/" target="_blank">fantastic blog post</a> encouraging people like me to (finally!) create a blog</li>
 <li>
-<strong>My parents</strong> for encouraging to communicate my passion for statistics. I secretly think that this is their way of minimizing my passionate rants about the bootstrap in our regular Skype chats (the rants will still continue though…).</li>
+<strong>My parents</strong> for encouraging to communicate my passion for statistics. I secretly think that this is their way of minimizing my passionate rants about the bootstrap in our regular Skype chats (the rants will still continue though…😄).</li>
 </ul></section><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
 <p>I’d like to thank Salil Shrotriya for taking my profile pic which is the preview image for this post.</p>
 
 
 </div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
   author = {Shamindra Shrotriya},
+  editor = {},
   title = {Welcome to {Shamindra’s} {Site}},
   date = {2019-07-10},
   url = {https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome},
