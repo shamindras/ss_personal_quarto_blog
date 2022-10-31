@@ -248,7 +248,7 @@ research on wildfire models at a national scale.
 
 ___Revisiting Le Cam's Equation: Exact Minimax Rates over Convex Density Classes___
 <br>
-<u>Shamindra Shrotriya&#42;</u>, Matey Neykov (2022).
+<u>Shamindra Shrotriya</u>, Matey Neykov (2022).
 
 ::: {.callout-tip collapse="true" icon=false}
 
@@ -298,7 +298,7 @@ densities. relevant trigger.
 
 ___Adversarial Sign-Corrupted Isotonic Regression___
 <br>
-<u>Shamindra Shrotriya&#42;</u>, Matey Neykov (2022).
+<u>Shamindra Shrotriya</u>, Matey Neykov (2022).
 
 ::: {.callout-tip collapse="true" icon=false}
 
