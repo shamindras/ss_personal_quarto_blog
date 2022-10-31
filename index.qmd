@@ -27,10 +27,10 @@ various topics of interest in statistics and machine learning. I'd recommend
 starting there to get an idea of the type of problems that I really enjoy
 working on.
 
-You can also learn more about me from
+You can also learn more about me from my
 [CV](https://www.shamindras.com/data/pdfs/CV.pdf){target="_blank"},
 [résumé](https://www.shamindras.com/data/pdfs/resume.pdf){target="_blank"},
-and my [open-source
+and [open-source
 software](https://www.shamindras.com/software.html){target="_blank"}
 contributions.
 
