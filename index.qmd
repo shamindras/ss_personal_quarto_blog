@@ -13,7 +13,7 @@ about:
       href: https://www.linkedin.com/in/shamindras
 ---
 
-Hi - I’m **Shamindra** (he/him)! 
+Hi - I’m **Shamindra** (he/him). 
 
 I am fortunate to be a graduate student in the
 [Department of Statistics and Data
@@ -28,10 +28,10 @@ starting there to get an idea of the type of problems that I really enjoy
 working on.
 
 You can also learn more about me from
-[CV](https://www.shamindras.com/data/pdfs/CV.pdf){target="\_blank"},
-[résumé](https://www.shamindras.com/data/pdfs/resume.pdf){target="\_blank"},
+[CV](https://www.shamindras.com/data/pdfs/CV.pdf){target="_blank"},
+[résumé](https://www.shamindras.com/data/pdfs/resume.pdf){target="_blank"},
 and my [open-source
-software](https://www.shamindras.com/software.html){target="\_blank"}
+software](https://www.shamindras.com/software.html){target="_blank"}
 contributions.
 
 Please browse around, and feel free to get in touch for any collaborations.

@@ -18,7 +18,8 @@ I enjoy using and contributing to open-source scientific software. I've co-devel
 
 ### __`maars`__
 
-An `R` implementation of the series of papers [@buja2019maapt1] and [@buja2019maapt2] based on a tidy grammar.
+An `R` implementation of the series of papers [@buja2019maapt1] and [@buja2019maapt2] based on a tidy grammar. This is joint work with 
+Riccardo Fogliato and Arun Kumar Kuchibhotla.
 
 <!-- Code -->
 <a href="https://shamindras.github.io/maars/" target="_blank" rel="noopener noreferrer" class="bi-github btn btn-secondary" role="button"> code</a>
@@ -30,10 +31,13 @@ An `R` implementation of the series of papers [@buja2019maapt1] and [@buja2019ma
 
 ### __`iRF`__
 
-A `python` package to implement the iterative Random Forest (`iRF`)
-family of algorithms from [@basu2018irfstableinteractions]. This is implementation 
-is a joint effort of several people in UC Berkeley. See [here](https://github.com/Yu-Group/iterative-Random-Forest/blob/master/Authors.md) for the complete 
-list of developers.
+A `python` package to implement the iterative Random Forest (`iRF`) family of
+algorithms from [@basu2018irfstableinteractions]. This is implementation is a
+joint effort of several people from the [Yu
+Group](https://www.stat.berkeley.edu/~yugroup/){target="_blank"} at UC
+Berkeley. See
+[here](https://github.com/Yu-Group/iterative-Random-Forest/blob/master/Authors.md){target="_blank"} 
+for the complete list of developers.
 
 <!-- Code -->
 <a href="https://github.com/Yu-Group/iterative-Random-Forest" target="_blank" rel="noopener noreferrer" class="bi-github btn btn-secondary" role="button"> code</a>
