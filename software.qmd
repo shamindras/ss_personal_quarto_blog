@@ -32,7 +32,7 @@ Riccardo Fogliato and Arun Kumar Kuchibhotla.
 ### __`iRF`__
 
 A `python` package to implement the iterative Random Forest (`iRF`) family of
-algorithms from [@basu2018irfstableinteractions]. This is implementation is a
+algorithms from [@basu2018irfstableinteractions]. This implementation is a
 joint effort of several people from the [Yu
 Group](https://www.stat.berkeley.edu/~yugroup/){target="_blank"} at UC
 Berkeley. See

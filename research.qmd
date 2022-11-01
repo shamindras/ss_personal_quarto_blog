@@ -443,6 +443,8 @@ minimal time-varying pairwise comparison results for modeling.
 
 <a href="https://www.stat.cmu.edu/cmsac/conference/2019/" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
 <a href="https://www.stat.cmu.edu/cmsac/conference/2019/assets/pdf/BTTV.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<!-- Code -->
+<a href="https://github.com/shamindras/bradley-terry-convexopt" target="_blank" rel="noopener noreferrer" class="bi-github btn btn-secondary" role="button"> code</a>
 <a href="https://twitter.com/CMU_Stats/status/1191119690929754118" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-success" role="button"> media</a>
 
 <hr>
