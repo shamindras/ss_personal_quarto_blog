@@ -20,11 +20,13 @@ Science](http://www.stat.cmu.edu/) at Carnegie Mellon
 University. I'm extremely fortunate to be advised by [Matey Neykov](http://mateyneykov.com/).
 
 This is my personal website which contains information about my
-[research](https://www.shamindras.com/research.html){target="_blank"}, and also
-where I [blog](https://www.shamindras.com/posts.html){target="_blank"} about
-various topics of interest in statistics and machine learning. I'd recommend
+[research](https://www.shamindras.com/research.html){target="_blank"}. I'd recommend
 starting there to get an idea of the type of problems that I really enjoy
 working on.
+
+I also have fun writing a 
+[blog](https://www.shamindras.com/posts.html){target="_blank"} 
+about various topics of interest in statistics and machine learning.
 
 You can also learn more about me from my
 [CV](https://www.shamindras.com/data/pdfs/CV.pdf){target="_blank"},

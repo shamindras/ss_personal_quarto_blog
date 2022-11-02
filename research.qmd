@@ -110,7 +110,7 @@ findings through various examples and simulations.
 ```{bibtex}
 @inproceedings{li2022ellinfboundsbtl,
   title   = {
-    {\(\mathscr{l}\)}\({}_{\mbox{{\(\infty\)}}}\)-Bounds of the {MLE} in the
+    {$\ell_{\infty}$}-Bounds of the {MLE} in the
     {BTL} Model under General Comparison Graphs
   },
   author  = {Wanshan Li and Shamindra Shrotriya and Alessandro Rinaldo},
