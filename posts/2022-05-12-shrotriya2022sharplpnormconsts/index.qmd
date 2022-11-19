@@ -15,6 +15,7 @@ execute:
 editor_options: 
   markdown: 
     wrap: 80
+draft: true
 ---
 
 ```{r setup_01_01, echo=FALSE, results='asis'}
