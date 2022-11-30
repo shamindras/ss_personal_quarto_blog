@@ -328,7 +328,7 @@ simulations.
 <a href="https://arxiv.org/abs/2207.07075" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-text-fill btn btn-warning" role="button"> arxiv</a>
 <a href="https://arxiv.org/pdf/2207.07075.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
 <!-- Code -->
-<a href="https://github.com/shamindras/sce" target="_blank" rel="noopener noreferrer" class="bi-github btn btn-secondary" role="button"> code</a>
+<a href="https://github.com/shamindras/ascifit" target="_blank" rel="noopener noreferrer" class="bi-github btn btn-secondary" role="button"> code</a>
 <a href="https://youtu.be/CaV522U1Ju0?t=67" target="_blank" rel="noopener noreferrer" class="bi-film btn btn-danger" role="button"> spotlight</a>
 <!-- BibTeX -->
 <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#shrotriya2022ascireg" aria-expanded="false" aria-controls="shrotriya2022ascireg">
