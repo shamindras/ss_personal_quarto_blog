@@ -15,9 +15,10 @@ editor_options:
 engine: knitr    
 ---
 
-I'm a final year PhD candidate in the [Department of Statistics and Data
-Science](http://www.stat.cmu.edu/) at Carnegie Mellon
-University. I'm extremely fortunate to be advised by [Matey Neykov](http://mateyneykov.com/).
+I received my PhD from in the [Department of Statistics and Data
+Science](http://www.stat.cmu.edu/) at Carnegie Mellon University in Fall 2022. I
+was extremely fortunate to be advised by [Matey
+Neykov](http://mateyneykov.com/).
 
 Broadly speaking my primary research interests focus on 
 
@@ -29,6 +30,12 @@ isotonic regression,** and **location-scale estimation**. I'm also actively
 interested in application-driven methodology via **statistical ranking** (in
 particular the *Bradley-Terry-Luce model*), and **spatiotemporal modeling**
 (*wildfire prediction*).
+
+Feel free to reach out if you'd like to work on a problem together. I'm always
+open to discussing new research directions, and applying statistics to solve
+problems in interesting domains.
+
+## Collaborators
 
 I particularly enjoy the collaborative aspect of research. I've been privileged
 to work with the following amazing co-authors^[Listed alphabetically by
@@ -45,10 +52,6 @@ surname. Check out their cool statistical research.]:
 I recommend perusing some of my papers below to get a better idea of the
 type of problems I like to work on, and the style of papers I enjoy writing with
 my co-authors.
-
-Feel free to reach out if you'd like to work on a problem together. I'm always
-open to discussing new research directions, and applying statistics to solve
-problems in interesting domains.
 
 # Papers
 

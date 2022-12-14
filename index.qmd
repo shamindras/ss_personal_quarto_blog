@@ -15,9 +15,10 @@ about:
 
 Hi - I’m **Shamindra** (he/him). 
 
-I'm a final year PhD candidate in the [Department of Statistics and Data
-Science](http://www.stat.cmu.edu/) at Carnegie Mellon
-University. I'm extremely fortunate to be advised by [Matey Neykov](http://mateyneykov.com/).
+I received my PhD from in the [Department of Statistics and Data
+Science](http://www.stat.cmu.edu/) at Carnegie Mellon University in Fall 2022. I
+was extremely fortunate to be advised by [Matey
+Neykov](http://mateyneykov.com/).
 
 This is my personal website which contains information about my
 [research](https://www.shamindras.com/research.html){target="_blank"}. I'd recommend
