@@ -415,7 +415,7 @@ statistical modeling in `R`.
 
 ___On Some Problems in Nonparametric and Location-Scale Estimation___
 <br>
-<u>Shamindra Shrotriya&#42;</u>
+<u>Shamindra Shrotriya&#42;</u> (2022).
 
 ::: {.callout-tip collapse="true" icon=false}
 
