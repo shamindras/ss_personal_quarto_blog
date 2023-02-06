@@ -411,6 +411,73 @@ statistical modeling in `R`.
   </div>
 </div>
 
+## PhD Thesis
+
+___On Some Problems in Nonparametric and Location-Scale Estimation___
+<br>
+<u>Shamindra Shrotriya&#42;</u>
+
+::: {.callout-tip collapse="true" icon=false}
+
+## Abstract
+
+We study three generalizations of classical nonparametric, and location scale
+estimation problems.
+
+First, we study the classical problem of deriving minimax rates for density
+estimation over convex density classes. Our work extends known results by
+demonstrating that the local metric entropy of the density class always captures
+the exact (up to constants) minimax optimal rates under such settings. Our
+bounds provide a unifying perspective across both parametric and nonparametric
+convex density classes, under weaker assumptions on the richness of the density
+class than previously considered.
+
+Second, we consider a variation of classical isotonic regression, which we term
+adversarial sign-corrupted isotonic (ASCI) regression. Here, the adversary can
+corrupt the sign of the responses having full access to the true response terms.
+We formalize ASCIFIT, a three-step estimation procedure under this regime, and
+demonstrate its theoretical guarantees in the form of sharp high probability
+upper bounds and minimax lower bounds.
+
+Finally, we extend classical univariate uniform location-scale estimation over
+an interval, to multivariate uniform location-scale estimation over general
+convex bodies. Unlike the univariate setting, the observations are no longer
+totally ordered, and previous estimation techniques prove insufficient to
+account for the more refined geometry of the generating process. Under fixed
+dimension, our proposed location estimators converge at an n-1 rate. Our minimax
+lower bounds justify the optimality of our estimators in terms of the sample
+complexity. We also provide practical algorithms with provable convergence rates
+for our estimators, over a wide class of convex bodies.
+
+:::
+
+<a href="https://kilthub.cmu.edu/articles/thesis/On_Some_Problems_in_Nonparametric_and_Location-Scale_Estimation/21764069" target="_blank" rel="noopener noreferrer" class="bi-bank btn btn-primary" role="button"> pub</a>
+<a href="./data/pdfs/sshrotri_phd_statds_2022_signed-by-dean.pdf" target="_blank" rel="noopener noreferrer" class="bi-file-earmark-pdf-fill btn btn-dark" role="button"> pdf</a>
+<!-- BibTeX -->
+<button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#shrotriya2022phdthesis" aria-expanded="false" aria-controls="shrotriya2022phdthesis">
+  BibTeX
+</button>
+<div class="collapse" id="shrotriya2022phdthesis">
+  <br>
+  <div class="card card-body">
+```{bibtex}
+@article{shrotriya2022phdthesis,
+    title        = {{On Some Problems in Nonparametric and Location-Scale Estimation}},
+    author       = {Shamindra Shrotriya},
+    year         = 2022,
+    month        = 12,
+    doi          = {10.1184/R1/21764069.v1},
+    url          = {
+        https://kilthub.cmu.edu/articles/thesis/On\%5FSome\%5FProblems\%5Fin\%5FNonparametric\%5Fand\%5FLocation-Scale\%5FEstimation/21764069
+    }
+}
+```
+  </div>
+</div>
+
+<hr>
+
+
 ## Competitions
 
 ___Efficient Estimation of Distribution-free dynamics in the Bradley-Terry Model___
