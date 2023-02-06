@@ -468,7 +468,7 @@ for our estimators, over a wide class of convex bodies.
     month        = 12,
     doi          = {10.1184/R1/21764069.v1},
     url          = {
-        https://kilthub.cmu.edu/articles/thesis/On\%5FSome\%5FProblems\%5Fin\%5FNonparametric\%5Fand\%5FLocation-Scale\%5FEstimation/21764069
+        https://kilthub.cmu.edu/articles/thesis/On_Some_Problems_in_Nonparametric_and_Location-Scale_Estimation/21764069
     }
 }
 ```
