@@ -18,12 +18,12 @@ Hi - I’m **Shamindra Shrotriya** (he/him).
 I'm currently a **Principal Data Scientist** in the Walmart Retail Intelligence
 Team.
 
-Prior to that I was the (faculty) co-director of the [CMU Summer Undergraduate
-Research Program](https://cmu-sure-2023.netlify.app) (SURE 2023). I co-led
-a [fantastic team](https://cmu-sure-2023.netlify.app/people) and taught
-[advanced data science concepts](https://cmu-sure-2023.netlify.app/schedule) to
-talented and diverse scholars selected nationally. I enjoyed developing a [new
-data engineering
+Prior to that I was a teaching faculty for the [CMU Summer Undergraduate
+Research Program](https://cmu-sure-2023.netlify.app) (SURE 2023). I co-led a
+[fantastic team](https://cmu-sure-2023.netlify.app/people) and taught [advanced
+data science concepts](https://cmu-sure-2023.netlify.app/schedule) to talented
+and [diverse scholars](https://www.stat.cmu.edu/summerbridge/) selected
+nationally. I enjoyed developing a [new data engineering
 course](https://cmu-sure-2023.netlify.app/schedule#data-engineering) in the
 process.
 
