@@ -9,8 +9,8 @@
 <link>https://www.shamindras.com/posts.html</link>
 <atom:link href="https://www.shamindras.com/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.1.251</generator>
-<lastBuildDate>Sat, 12 Feb 2022 05:00:00 GMT</lastBuildDate>
+<generator>quarto-1.3.361</generator>
+<lastBuildDate>Sat, 12 Feb 2022 06:00:00 GMT</lastBuildDate>
 <item>
   <title>Characterizing norm triangle inequalites via convexity</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
@@ -191,7 +191,7 @@ Inequalites via Convexity.”</span> February 12, 2022. <a href="https://www.sha
   <category>math</category>
   <category>norms</category>
   <guid>https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/index.html</guid>
-  <pubDate>Sat, 12 Feb 2022 05:00:00 GMT</pubDate>
+  <pubDate>Sat, 12 Feb 2022 06:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/images/preview-shrotriya2021normtriconvexity.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
@@ -279,7 +279,7 @@ Roundup.”</span> January 27, 2020. <a href="https://www.shamindras.com/posts/2
   <category>rstats</category>
   <category>math</category>
   <guid>https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/index.html</guid>
-  <pubDate>Mon, 27 Jan 2020 05:00:00 GMT</pubDate>
+  <pubDate>Mon, 27 Jan 2020 06:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/images/preview-january-2020-01.png" medium="image" type="image/png" height="85" width="144"/>
 </item>
 <item>
@@ -397,7 +397,7 @@ Roundup.”</span> September 30, 2019. <a href="https://www.shamindras.com/posts
   <category>rstats</category>
   <category>math</category>
   <guid>https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/index.html</guid>
-  <pubDate>Mon, 30 Sep 2019 04:00:00 GMT</pubDate>
+  <pubDate>Mon, 30 Sep 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/images/preview-september-2019-01.png" medium="image" type="image/png" height="85" width="144"/>
 </item>
 <item>
@@ -532,7 +532,7 @@ Roundup.”</span> August 31, 2019. <a href="https://www.shamindras.com/posts/20
   <category>rstats</category>
   <category>math</category>
   <guid>https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/index.html</guid>
-  <pubDate>Sat, 31 Aug 2019 04:00:00 GMT</pubDate>
+  <pubDate>Sat, 31 Aug 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/images/preview-august-2019-01.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
@@ -565,24 +565,104 @@ Roundup.”</span> August 31, 2019. <a href="https://www.shamindras.com/posts/20
 </ul>
 <p>The function then outputs a single <code>newcommand</code> entry for that lecture i.e <code>\newcommand{\bfa}{\mathbf{a}}</code> in this case. Let’s do it!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;"># Load required libraries</span></span>
-<span id="cb2-2"><span class="fu" style="color: #4758AB;">library</span>(tidyverse)</span>
-<span id="cb2-3"><span class="fu" style="color: #4758AB;">library</span>(glue)</span>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Load required libraries</span></span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidyverse)</span>
+<span id="cb2-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(glue)</span>
 <span id="cb2-4"></span>
-<span id="cb2-5"><span class="co" style="color: #5E5E5E;"># Create LaTeX macro newcommand</span></span>
-<span id="cb2-6">get_lec_newcmd <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(inp_letr, mac_type, mac_ref){</span>
-<span id="cb2-7">    out_str <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">glue</span>(<span class="st" style="color: #20794D;">'</span><span class="sc" style="color: #5E5E5E;">\\</span><span class="st" style="color: #20794D;">newcommand{</span><span class="sc" style="color: #5E5E5E;">\\</span><span class="st" style="color: #20794D;">&lt;mac_type&gt;&lt;inp_letr&gt;}{</span><span class="sc" style="color: #5E5E5E;">\\</span><span class="st" style="color: #20794D;">&lt;mac_ref&gt;{&lt;inp_letr&gt;}}'</span>,</span>
-<span id="cb2-8">                    <span class="at" style="color: #657422;">.open =</span> <span class="st" style="color: #20794D;">"&lt;"</span>, <span class="at" style="color: #657422;">.close =</span> <span class="st" style="color: #20794D;">"&gt;"</span>)</span>
-<span id="cb2-9">    <span class="fu" style="color: #4758AB;">return</span>(out_str)</span>
+<span id="cb2-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Create LaTeX macro newcommand</span></span>
+<span id="cb2-6">get_lec_newcmd <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(inp_letr, mac_type, mac_ref){</span>
+<span id="cb2-7">    out_str <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glue</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">newcommand{</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;mac_type&gt;&lt;inp_letr&gt;}{</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">&lt;mac_ref&gt;{&lt;inp_letr&gt;}}'</span>,</span>
+<span id="cb2-8">                    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.open =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"&lt;"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.close =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"&gt;"</span>)</span>
+<span id="cb2-9">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">return</span>(out_str)</span>
 <span id="cb2-10">}</span></code></pre></div>
 </div>
 <p>Let’s just test this out quickly:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"a"</span>, <span class="st" style="color: #20794D;">"A"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb3-2">  <span class="fu" style="color: #4758AB;">map_chr</span>(<span class="at" style="color: #657422;">.x =</span> ., <span class="at" style="color: #657422;">.f =</span> <span class="sc" style="color: #5E5E5E;">~</span><span class="fu" style="color: #4758AB;">get_lec_newcmd</span>(<span class="at" style="color: #657422;">inp_letr =</span> .x,</span>
-<span id="cb3-3">                                       <span class="at" style="color: #657422;">mac_type =</span> <span class="st" style="color: #20794D;">"bf"</span>,</span>
-<span id="cb3-4">                                       <span class="at" style="color: #657422;">mac_ref =</span> <span class="st" style="color: #20794D;">"mathbf"</span>)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb3-5">  <span class="fu" style="color: #4758AB;">cat</span>(., <span class="at" style="color: #657422;">sep =</span> <span class="st" style="color: #20794D;">"</span><span class="sc" style="color: #5E5E5E;">\n</span><span class="st" style="color: #20794D;">"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"a"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb3-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map_chr</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.x =</span> ., <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.f =</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_lec_newcmd</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">inp_letr =</span> .x,</span>
+<span id="cb3-3">                                       <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mac_type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bf"</span>,</span>
+<span id="cb3-4">                                       <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mac_ref =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"mathbf"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb3-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(., <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sep =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>\newcommand{\bfa}{\mathbf{a}}
 \newcommand{\bfA}{\mathbf{A}}</code></pre>
@@ -591,11 +671,51 @@ Roundup.”</span> August 31, 2019. <a href="https://www.shamindras.com/posts/20
 <p>Great - looks like it is working as required!</p>
 <p>Note that we can easily generate other <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> macros like follows</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"a"</span>, <span class="st" style="color: #20794D;">"A"</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb5-2">  <span class="fu" style="color: #4758AB;">map_chr</span>(<span class="at" style="color: #657422;">.x =</span> ., <span class="at" style="color: #657422;">.f =</span> <span class="sc" style="color: #5E5E5E;">~</span><span class="fu" style="color: #4758AB;">get_lec_newcmd</span>(<span class="at" style="color: #657422;">inp_letr =</span> .x,</span>
-<span id="cb5-3">                                       <span class="at" style="color: #657422;">mac_type =</span> <span class="st" style="color: #20794D;">"mc"</span>,</span>
-<span id="cb5-4">                                       <span class="at" style="color: #657422;">mac_ref =</span> <span class="st" style="color: #20794D;">"mathcal"</span>)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb5-5">  <span class="fu" style="color: #4758AB;">cat</span>(., <span class="at" style="color: #657422;">sep =</span> <span class="st" style="color: #20794D;">"</span><span class="sc" style="color: #5E5E5E;">\n</span><span class="st" style="color: #20794D;">"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"a"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb5-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map_chr</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.x =</span> ., <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.f =</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_lec_newcmd</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">inp_letr =</span> .x,</span>
+<span id="cb5-3">                                       <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mac_type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"mc"</span>,</span>
+<span id="cb5-4">                                       <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mac_ref =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"mathcal"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb5-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(., <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sep =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>\newcommand{\mca}{\mathcal{a}}
 \newcommand{\mcA}{\mathcal{A}}</code></pre>
@@ -688,7 +808,7 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 2.”</span> August
   <category>tidyverse</category>
   <category>rstats</category>
   <guid>https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/index.html</guid>
-  <pubDate>Sat, 24 Aug 2019 04:00:00 GMT</pubDate>
+  <pubDate>Sat, 24 Aug 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -755,11 +875,21 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 2.”</span> August
 <p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
 </aside>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;">collections:</span></span>
-<span id="cb1-2">  <span class="ex" style="color: null;">posts:</span></span>
-<span id="cb1-3">    <span class="ex" style="color: null;">disqus:</span></span>
-<span id="cb1-4">      <span class="ex" style="color: null;">shortname:</span> shamindras-distill</span>
-<span id="cb1-5">      <span class="ex" style="color: null;">hidden:</span> true</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">collections:</span></span>
+<span id="cb1-2">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">posts:</span></span>
+<span id="cb1-3">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">disqus:</span></span>
+<span id="cb1-4">      <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">shortname:</span> shamindras-distill</span>
+<span id="cb1-5">      <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">hidden:</span> true</span></code></pre></div>
 </div>
 <p>We now see the following comments option at the bottom of every post:</p>
 <div id="step-01-07-screenshot" class="quarto-figure quarto-figure-center anchored">
@@ -784,7 +914,11 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 2.”</span> August
 <p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
 </aside>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;">google_analytics:</span> <span class="st" style="color: #20794D;">"UA-145015693-1"</span></span></code></pre></div>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">google_analytics:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"UA-145015693-1"</span></span></code></pre></div>
 </div>
 <p>You can read more about setting up Google Analytics from the official <code>distill</code> blog <a href="https://rstudio.github.io/distill/website.html#google-analytics">here</a></p>
 </section>
@@ -806,9 +940,15 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 2.”</span> August
 <h2 class="anchored" data-anchor-id="step-4-add-blog-post-sharing-options">Step 4: Add blog post sharing options</h2>
 <p>It is easy to configure distill to allow for easy sharing of posts using a variety of social media platforms. I allow for <strong>twitter, linkedin, pinterest, and facebook.</strong> I did this by simply adding the following line in the <code>_site.yml</code> file:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;">collections:</span></span>
-<span id="cb3-2">  <span class="ex" style="color: null;">posts:</span></span>
-<span id="cb3-3">    <span class="ex" style="color: null;">share:</span> [twitter, linkedin, pinterest, facebook]</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">collections:</span></span>
+<span id="cb3-2">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">posts:</span></span>
+<span id="cb3-3">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">share:</span> [twitter, linkedin, pinterest, facebook]</span></code></pre></div>
 </div>
 <p>Now the following sharing options appear at the bottom of every post:</p>
 <div id="step-04-01-screenshot" class="quarto-figure quarto-figure-center anchored">
@@ -822,16 +962,28 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 2.”</span> August
 <p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
 </aside>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;">twitter:</span></span>
-<span id="cb4-2">  <span class="ex" style="color: null;">site:</span> <span class="st" style="color: #20794D;">"@shamindraas"</span></span>
-<span id="cb4-3">  <span class="ex" style="color: null;">creator:</span> <span class="st" style="color: #20794D;">"@shamindraas"</span></span></code></pre></div>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">twitter:</span></span>
+<span id="cb4-2">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">site:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"@shamindraas"</span></span>
+<span id="cb4-3">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">creator:</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"@shamindraas"</span></span></code></pre></div>
 </div>
 </section>
 <section id="step-5-add-correctionschange-tracking-and-rss-feed" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="step-5-add-correctionschange-tracking-and-rss-feed">Step 5: Add Corrections/Change Tracking and RSS feed</h2>
 <p>I frequently make edits to blogposts and intend to do so going forward. Fortunately <code>distill</code> makes it easy <strong>track changes/corrections</strong> made to blogposts. I did this by simply adding the site repo url to the <code>_site.yml</code> as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="ex" style="color: null;">repository_url:</span> https://github.com/shamindras/ss_personal_distill_blog</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">repository_url:</span> https://github.com/shamindras/ss_personal_distill_blog</span></code></pre></div>
 </div>
 <p>Now the following appears at the bottom of all blogposts:</p>
 <div id="step-05-01-screenshot" class="quarto-figure quarto-figure-center anchored">
@@ -843,18 +995,36 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 2.”</span> August
 <p>So users can easily track changes or file any concerns as issues, though hopefully the <code>Disqus</code> comment feature makes this easier for everyone.</p>
 <p>Finally it is easy to add an <strong>RSS feed</strong> for the blog by simply adding the following to <code>_site.yml</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="ex" style="color: null;">base_url:</span> https://www.shamindras.com/</span>
-<span id="cb6-2"><span class="ex" style="color: null;">navbar:</span></span>
-<span id="cb6-3">  <span class="ex" style="color: null;">left:</span></span>
-<span id="cb6-4">    <span class="ex" style="color: null;">-</span> icon: fa fa-rss</span>
-<span id="cb6-5">      <span class="ex" style="color: null;">href:</span> index.xml</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">base_url:</span> https://www.shamindras.com/</span>
+<span id="cb6-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">navbar:</span></span>
+<span id="cb6-3">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">left:</span></span>
+<span id="cb6-4">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">-</span> icon: fa fa-rss</span>
+<span id="cb6-5">      <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">href:</span> index.xml</span></code></pre></div>
 </div>
 <aside>
 <p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
 </aside>
 <p>The critical elements are adding in the <code>base_url</code> fields and adding in <code>fa fa-rss</code> which is derived from the <code>index.xml</code> file. The <code>index.xml</code> file is automatically generated from the <code>index.Rmd</code> when you render the <code>distill</code> blog using the usual command:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="ex" style="color: null;">rmarkdown::render_site</span><span class="er" style="color: #AD0000;">(</span><span class="fu" style="color: #4758AB;">here::here()</span><span class="kw" style="color: #003B4F;">)</span></span></code></pre></div>
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">rmarkdown::render_site</span><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">(</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">here::here()</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
 </div>
 </section>
 <section id="next-steps" class="level2">
@@ -887,7 +1057,7 @@ Settings.”</span> July 31, 2019. <a href="https://www.shamindras.com/posts/201
 </div></div></section></div> ]]></description>
   <category>distill</category>
   <guid>https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/index.html</guid>
-  <pubDate>Wed, 31 Jul 2019 04:00:00 GMT</pubDate>
+  <pubDate>Wed, 31 Jul 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png" medium="image" type="image/png" height="116" width="144"/>
 </item>
 <item>
@@ -956,7 +1126,7 @@ July 30, 2019. <a href="https://www.shamindras.com/posts/2019-07-30-shrotriya201
   <category>rstats</category>
   <category>math</category>
   <guid>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/index.html</guid>
-  <pubDate>Tue, 30 Jul 2019 04:00:00 GMT</pubDate>
+  <pubDate>Tue, 30 Jul 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png" medium="image" type="image/png" height="74" width="144"/>
 </item>
 <item>
@@ -988,48 +1158,394 @@ July 30, 2019. <a href="https://www.shamindras.com/posts/2019-07-30-shrotriya201
 <p>In the article the authors cite several resources for collecting the data for this task. Per the article we note that the data is already <em>pre-baked</em> into <code>R</code> and located in <code><a href="https://rdrr.io/r/datasets/Titanic.html">datasets::Titanic</a></code> when <code>R</code> loads, which is convenient 😎.</p>
 <p>We can source the data and start cleaning it for our exploration, using the handy <code>clean_names</code> function for column name cleaning and converting various categorical variables (<em>age, sex, survivorship, and passenger class</em>) to factors for easy plotting later.</p>
 <div class="cell">
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># Basic cleaning of names and filtering out non-zero counts</span></span>
-<span><span class="va" style="color: #111111;">t1</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;">datasets</span><span class="fu" style="color: #4758AB;">::</span><span class="va" style="color: #111111;"><a href="https://rdrr.io/r/datasets/Titanic.html">Titanic</a></span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>        <span class="fu" style="color: #4758AB;">as_tibble</span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>        <span class="fu" style="color: #4758AB;">clean_names</span><span class="op" style="color: #5E5E5E;">(</span>dat <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>        <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span>.data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>, <span class="va" style="color: #111111;">n</span> <span class="op" style="color: #5E5E5E;">!=</span> <span class="fl" style="color: #AD0000;">0</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>        <span class="fu" style="color: #4758AB;">mutate</span><span class="op" style="color: #5E5E5E;">(</span>.data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>,</span>
-<span>                      new_sex <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">age</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Child"</span>, <span class="va" style="color: #111111;">age</span>, <span class="va" style="color: #111111;">sex</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
-<span>                      n_sgnd <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">survived</span> <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"No"</span>, <span class="op" style="color: #5E5E5E;">-</span><span class="fl" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">*</span><span class="va" style="color: #111111;">n</span>, <span class="va" style="color: #111111;">n</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>        <span class="fu" style="color: #4758AB;">select</span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">class</span>, <span class="va" style="color: #111111;">new_sex</span>, <span class="va" style="color: #111111;">survived</span>, <span class="va" style="color: #111111;">n_sgnd</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Basic cleaning of names and filtering out non-zero counts</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">t1</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">datasets</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">::</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/datasets/Titanic.html">Titanic</a></span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as_tibble</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">clean_names</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>dat <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">.</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>.data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">.</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>.data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">.</span>,</span>
+<span>                      new_sex <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Child"</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">sex</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>,</span>
+<span>                      n_sgnd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">survived</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"No"</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">class</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">new_sex</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">survived</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n_sgnd</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
 <span></span>
-<span><span class="co" style="color: #5E5E5E;"># Passenger (non-crew) level aggregation</span></span>
-<span><span class="va" style="color: #111111;">t2</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">t1</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>        <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">class</span> <span class="op" style="color: #5E5E5E;">!=</span> <span class="st" style="color: #20794D;">"Crew"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>        <span class="fu" style="color: #4758AB;">mutate</span><span class="op" style="color: #5E5E5E;">(</span>class <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Pass."</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>        <span class="fu" style="color: #4758AB;">group_by</span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">class</span>, <span class="va" style="color: #111111;">new_sex</span>, <span class="va" style="color: #111111;">survived</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>        <span class="fu" style="color: #4758AB;">summarize</span><span class="op" style="color: #5E5E5E;">(</span>n_sgnd <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">n_sgnd</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Passenger (non-crew) level aggregation</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">t2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">t1</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">class</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Crew"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>class <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Pass."</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">class</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">new_sex</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">survived</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>n_sgnd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n_sgnd</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`summarise()` has grouped output by 'class', 'new_sex'. You can override using
 the `.groups` argument.</code></pre>
 </div>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># Crew (non-passenger) level aggregation</span></span>
-<span><span class="va" style="color: #111111;">t3</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">t1</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>        <span class="fu" style="color: #4758AB;">mutate</span><span class="op" style="color: #5E5E5E;">(</span>class <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Pass.\nCrew"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>        <span class="fu" style="color: #4758AB;">group_by</span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">class</span>, <span class="va" style="color: #111111;">new_sex</span>, <span class="va" style="color: #111111;">survived</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>        <span class="fu" style="color: #4758AB;">summarize</span><span class="op" style="color: #5E5E5E;">(</span>n_sgnd <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">n_sgnd</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Crew (non-passenger) level aggregation</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">t3</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">t1</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>class <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Pass.\nCrew"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">class</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">new_sex</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">survived</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarize</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>n_sgnd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n_sgnd</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`summarise()` has grouped output by 'class', 'new_sex'. You can override using
 the `.groups` argument.</code></pre>
 </div>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;"># Combined cleaned plotting dataset</span></span>
-<span><span class="va" style="color: #111111;">ttnc_cln</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">t1</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>              <span class="fu" style="color: #4758AB;">bind_rows</span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">t2</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>              <span class="fu" style="color: #4758AB;">bind_rows</span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">t3</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>              <span class="fu" style="color: #4758AB;">mutate</span><span class="op" style="color: #5E5E5E;">(</span>.data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>,</span>
-<span>                            class <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">class</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
-<span>                            new_sex <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">new_sex</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
-<span>                            survived <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;">survived</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Combined cleaned plotting dataset</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">ttnc_cln</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">t1</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bind_rows</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">t2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bind_rows</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">t3</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>.data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">.</span>,</span>
+<span>                            class <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">class</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>,</span>
+<span>                            new_sex <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">new_sex</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>,</span>
+<span>                            survived <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">survived</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
 <span></span>
-<span><span class="co" style="color: #5E5E5E;"># Display first 8 rows in a nice centered table</span></span>
-<span><span class="va" style="color: #111111;">ttnc_cln</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>  <span class="fu" style="color: #4758AB;">slice</span><span class="op" style="color: #5E5E5E;">(</span>.data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>, <span class="fl" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">:</span><span class="fl" style="color: #AD0000;">8</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>  <span class="fu" style="color: #4758AB;">kable</span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>, align <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'c'</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Display first 8 rows in a nice centered table</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">ttnc_cln</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">slice</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>.data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">.</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">.</span>, align <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'c'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead><tr class="header">
@@ -1096,34 +1612,290 @@ the `.groups` argument.</code></pre>
 </section><section id="plotting-the-data" class="level2"><h2 class="anchored" data-anchor-id="plotting-the-data">Plotting the Data</h2>
 <p>The main chart object is a barplot by sex and adult status and faceted by passenger class i.e.&nbsp;first class, second class etc. Great, let’s do it!</p>
 <div class="cell">
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">out_plot</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="va" style="color: #111111;">ttnc_cln</span> <span class="op" style="color: #5E5E5E;">%&gt;%</span></span>
-<span>              <span class="fu" style="color: #4758AB;">ggplot</span><span class="op" style="color: #5E5E5E;">(</span>data <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">.</span>,</span>
-<span>                              <span class="fu" style="color: #4758AB;">aes</span><span class="op" style="color: #5E5E5E;">(</span>x <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">new_sex</span>, y <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">n_sgnd</span>, fill <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">survived</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
-<span>              <span class="fu" style="color: #4758AB;">geom_bar</span><span class="op" style="color: #5E5E5E;">(</span>stat <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"identity"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
-<span>              <span class="fu" style="color: #4758AB;">facet_wrap</span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">~</span> <span class="va" style="color: #111111;">class</span>, ncol <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">1</span>,</span>
-<span>                                  strip.position <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"right"</span>,</span>
-<span>                                  scales <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"free_y"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
-<span>              <span class="fu" style="color: #4758AB;">coord_flip</span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
-<span>              <span class="fu" style="color: #4758AB;">scale_fill_manual</span><span class="op" style="color: #5E5E5E;">(</span>values<span class="op" style="color: #5E5E5E;">=</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"#3C4144"</span>, <span class="st" style="color: #20794D;">"#D2D3D1"</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
-<span>              <span class="fu" style="color: #4758AB;">theme_bw</span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
-<span>              <span class="fu" style="color: #4758AB;">theme</span><span class="op" style="color: #5E5E5E;">(</span>panel.background <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">element_rect</span><span class="op" style="color: #5E5E5E;">(</span>fill <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"#969898"</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
-<span>                             panel.grid.major <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">element_blank</span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
-<span>                             panel.grid.minor <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">element_blank</span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
-<span>                             axis.title.x <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">element_blank</span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
-<span>                             axis.title.y <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">element_blank</span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
-<span>                             strip.text.y <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">element_text</span><span class="op" style="color: #5E5E5E;">(</span>angle <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">360</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
-<span>                             legend.position <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"none"</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
-<span>              <span class="fu" style="color: #4758AB;">scale_y_continuous</span><span class="op" style="color: #5E5E5E;">(</span>breaks<span class="op" style="color: #5E5E5E;">=</span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">-</span><span class="fl" style="color: #AD0000;">1500</span>,<span class="fl" style="color: #AD0000;">600</span>,<span class="fl" style="color: #AD0000;">150</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">+</span></span>
-<span>              <span class="fu" style="color: #4758AB;">labs</span><span class="op" style="color: #5E5E5E;">(</span>title <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'The LOSS of the "TITANIC"'</span>,</span>
-<span>                            subtitle <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">glue</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"The Results Analyzed and Shown"</span>,</span>
-<span>                                                  <span class="st" style="color: #20794D;">'in a special "Sphere" Diagram'</span>,</span>
-<span>                                                  .sep <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">" "</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
-<span>                            caption <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">glue</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"Note: The Black color indicates"</span>,</span>
-<span>                                                 <span class="st" style="color: #20794D;">"Passengers and Crew NOT SAVED."</span>,</span>
-<span>                                                 <span class="st" style="color: #20794D;">"The White color indicates SAVED."</span>,</span>
-<span>                                                  .sep <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">" "</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">out_plot</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">ttnc_cln</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span>              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">.</span>,</span>
+<span>                              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">new_sex</span>, y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n_sgnd</span>, fill <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">survived</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span>              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_bar</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>stat <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"identity"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span>              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">facet_wrap</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">class</span>, ncol <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,</span>
+<span>                                  strip.position <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"right"</span>,</span>
+<span>                                  scales <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"free_y"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span>              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coord_flip</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span>              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_fill_manual</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>values<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#3C4144"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#D2D3D1"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span>              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_bw</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span>              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>panel.background <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_rect</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>fill <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#969898"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>,</span>
+<span>                             panel.grid.major <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>,</span>
+<span>                             panel.grid.minor <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>,</span>
+<span>                             axis.title.x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>,</span>
+<span>                             axis.title.y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>,</span>
+<span>                             strip.text.y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>angle <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">360</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>,</span>
+<span>                             legend.position <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"none"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span>              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_y_continuous</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>breaks<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1500</span>,<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">600</span>,<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">150</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span>              <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>title <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'The LOSS of the "TITANIC"'</span>,</span>
+<span>                            subtitle <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glue</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The Results Analyzed and Shown"</span>,</span>
+<span>                                                  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'in a special "Sphere" Diagram'</span>,</span>
+<span>                                                  .sep <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>,</span>
+<span>                            caption <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glue</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Note: The Black color indicates"</span>,</span>
+<span>                                                 <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Passengers and Crew NOT SAVED."</span>,</span>
+<span>                                                 <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The White color indicates SAVED."</span>,</span>
+<span>                                                  .sep <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
 <span></span>
-<span><span class="va" style="color: #111111;">out_plot</span></span></code></pre></div>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">out_plot</span></span></code></pre></div>
 <div class="cell-output-display">
 <p><img src="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/index_files/figure-html/setup_ttnic_01_02-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -1159,7 +1931,7 @@ Survivors Plot.”</span> July 21, 2019. <a href="https://www.shamindras.com/pos
   <category>rstats</category>
   <category>reproducibility</category>
   <guid>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/index.html</guid>
-  <pubDate>Sun, 21 Jul 2019 04:00:00 GMT</pubDate>
+  <pubDate>Sun, 21 Jul 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -1216,20 +1988,60 @@ a.wiki {
 <h3 class="anchored" data-anchor-id="generating-all-word-triple-permutations-the-tidy-way">Generating all word-triple permutations the <code>tidy</code> way</h3>
 <p>First, let’s load our required packages.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">library</span>(knitr)</span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;">library</span>(magrittr)</span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;">library</span>(tidyverse)</span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;">library</span>(glue)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(knitr)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(magrittr)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidyverse)</span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(glue)</span></code></pre></div>
 </div>
 <p>Let’s also define our unique global word values used to construct the required phrases:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">WORD_VALS <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"eats"</span>, <span class="st" style="color: #20794D;">"shoots"</span>, <span class="st" style="color: #20794D;">"leaves"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">WORD_VALS <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"eats"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"shoots"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"leaves"</span>)</span></code></pre></div>
 </div>
 <p>Generate all unique 3-word permutations <em>without replacement</em> from the three unique words. We’ll create a helper function to check that a vector of words is unique.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">is_unq_perm <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(word1, word2, word3){</span>
-<span id="cb3-2">    words_vec <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">c</span>(word1, word2, word3)</span>
-<span id="cb3-3">    <span class="fu" style="color: #4758AB;">return</span>(<span class="fu" style="color: #4758AB;">length</span>(words_vec) <span class="sc" style="color: #5E5E5E;">-</span> <span class="fu" style="color: #4758AB;">length</span>(<span class="fu" style="color: #4758AB;">unique</span>(words_vec)) <span class="sc" style="color: #5E5E5E;">==</span> <span class="dv" style="color: #AD0000;">0</span>)</span>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">is_unq_perm <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(word1, word2, word3){</span>
+<span id="cb3-2">    words_vec <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(word1, word2, word3)</span>
+<span id="cb3-3">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">return</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">length</span>(words_vec) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">length</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">unique</span>(words_vec)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
 <span id="cb3-4">}</span></code></pre></div>
 </div>
 <p>We can now simply generate every possible triple <em>with replacement</em> using the <code>tidyr::crossing</code> function. We proceed to <em>filter</em> these <img src="https://latex.codecogs.com/png.latex?3%5E3%20=%2027"> triples for unique triples using our <code>is_unq_perm</code> helper function applied <em>row-by-row</em> using <code>purrr::pmap_lgl</code>. The <code>_lgl</code> simply returns a <code>TRUE/FALSE</code> logical value as intended by the applied function.</p>
@@ -1237,22 +2049,84 @@ a.wiki {
 <strong>Note:</strong> The <code>tidyr::crossing</code> generates a <em>Cartesian product</em> of all the 3 word triples, very handy
 </aside>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;"># Generate the unique word-triples</span></span>
-<span id="cb4-2">all_perms <span class="ot" style="color: #003B4F;">&lt;-</span> tidyr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">crossing</span>(<span class="at" style="color: #657422;">word1 =</span> WORD_VALS,</span>
-<span id="cb4-3">                             <span class="at" style="color: #657422;">word2 =</span> WORD_VALS,</span>
-<span id="cb4-4">                             <span class="at" style="color: #657422;">word3 =</span> WORD_VALS) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb4-5">                <span class="fu" style="color: #4758AB;">mutate</span>(<span class="at" style="color: #657422;">.data =</span> .,</span>
-<span id="cb4-6">                       <span class="at" style="color: #657422;">is_unq_perm =</span> purrr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">pmap_lgl</span>(<span class="at" style="color: #657422;">.l =</span> .,</span>
-<span id="cb4-7">                                                     is_unq_perm)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb4-8">                <span class="fu" style="color: #4758AB;">filter</span>(<span class="at" style="color: #657422;">.data =</span> ., is_unq_perm) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb4-9">                <span class="fu" style="color: #4758AB;">select</span>(<span class="sc" style="color: #5E5E5E;">-</span>is_unq_perm)</span>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Generate the unique word-triples</span></span>
+<span id="cb4-2">all_perms <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> tidyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">crossing</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">word1 =</span> WORD_VALS,</span>
+<span id="cb4-3">                             <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">word2 =</span> WORD_VALS,</span>
+<span id="cb4-4">                             <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">word3 =</span> WORD_VALS) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb4-5">                <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.data =</span> .,</span>
+<span id="cb4-6">                       <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">is_unq_perm =</span> purrr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pmap_lgl</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.l =</span> .,</span>
+<span id="cb4-7">                                                     is_unq_perm)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb4-8">                <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.data =</span> ., is_unq_perm) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb4-9">                <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>is_unq_perm)</span>
 <span id="cb4-10"></span>
-<span id="cb4-11"><span class="co" style="color: #5E5E5E;"># Display output in a nice centered table</span></span>
-<span id="cb4-12">all_perms <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb4-13">  <span class="fu" style="color: #4758AB;">kable</span>(<span class="at" style="color: #657422;">x =</span> ., <span class="at" style="color: #657422;">align =</span> <span class="st" style="color: #20794D;">'c'</span>,</span>
-<span id="cb4-14">        <span class="at" style="color: #657422;">col.names =</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"Word 1"</span>,</span>
-<span id="cb4-15">                      <span class="st" style="color: #20794D;">"Word 2"</span>,</span>
-<span id="cb4-16">                      <span class="st" style="color: #20794D;">"Word 3"</span>))</span></code></pre></div>
+<span id="cb4-11"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Display output in a nice centered table</span></span>
+<span id="cb4-12">all_perms <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb4-13">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> ., <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">align =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'c'</span>,</span>
+<span id="cb4-14">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">col.names =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Word 1"</span>,</span>
+<span id="cb4-15">                      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Word 2"</span>,</span>
+<span id="cb4-16">                      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Word 3"</span>))</span></code></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
@@ -1299,23 +2173,69 @@ a.wiki {
 </div>
 <p>Great - that part is done! Now we just need to generate for each triple of words an oxford comma and non-oxford comma version. This is done easily using the amazing <code>glue</code> package as seen below:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">exprs <span class="ot" style="color: #003B4F;">&lt;-</span> all_perms <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb5-2">          <span class="fu" style="color: #4758AB;">mutate</span>(<span class="at" style="color: #657422;">non_oxford_comma =</span></span>
-<span id="cb5-3">                   <span class="fu" style="color: #4758AB;">glue_data</span>(<span class="at" style="color: #657422;">.x =</span> .,</span>
-<span id="cb5-4">                             <span class="st" style="color: #20794D;">"{word1}, {word2} and {word3}"</span>),</span>
-<span id="cb5-5">                 <span class="at" style="color: #657422;">oxford_comma =</span></span>
-<span id="cb5-6">                   <span class="fu" style="color: #4758AB;">glue_data</span>(<span class="at" style="color: #657422;">.x =</span> .,</span>
-<span id="cb5-7">                             <span class="st" style="color: #20794D;">"{word1}, {word2}, and {word3}"</span>)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb5-8">          <span class="fu" style="color: #4758AB;">select</span>(non_oxford_comma, oxford_comma)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">exprs <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> all_perms <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb5-2">          <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">non_oxford_comma =</span></span>
+<span id="cb5-3">                   <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glue_data</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.x =</span> .,</span>
+<span id="cb5-4">                             <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"{word1}, {word2} and {word3}"</span>),</span>
+<span id="cb5-5">                 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">oxford_comma =</span></span>
+<span id="cb5-6">                   <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glue_data</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.x =</span> .,</span>
+<span id="cb5-7">                             <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"{word1}, {word2}, and {word3}"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb5-8">          <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(non_oxford_comma, oxford_comma)</span></code></pre></div>
 </div>
 <p>We can display the side-by-side output of the Non-Oxford Comma vs.&nbsp;Oxford comma for the <img src="https://latex.codecogs.com/png.latex?6"> generated triples as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;"># Display output in a nice centered table</span></span>
-<span id="cb6-2">exprs <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb6-3">  <span class="fu" style="color: #4758AB;">kable</span>(<span class="at" style="color: #657422;">x =</span> .,</span>
-<span id="cb6-4">        <span class="at" style="color: #657422;">align =</span> <span class="st" style="color: #20794D;">'c'</span>,</span>
-<span id="cb6-5">        <span class="at" style="color: #657422;">col.names =</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"Non-Oxford Comma"</span>,</span>
-<span id="cb6-6">                      <span class="st" style="color: #20794D;">"Oxford Comma"</span>))</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Display output in a nice centered table</span></span>
+<span id="cb6-2">exprs <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb6-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">kable</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> .,</span>
+<span id="cb6-4">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">align =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'c'</span>,</span>
+<span id="cb6-5">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">col.names =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Non-Oxford Comma"</span>,</span>
+<span id="cb6-6">                      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Oxford Comma"</span>))</span></code></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
@@ -1376,24 +2296,78 @@ url           = {https://statschool/~doe/stats10A/Lectures/Lecture01.pdf},
 <h3 class="anchored" data-anchor-id="the-tidy-approach">The <code>tidy</code> approach</h3>
 <p>First step is to write a function that takes a lecture number (integer) as an input and then outputs a single BibTeX entry for that lecture.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="co" style="color: #5E5E5E;"># Generate BibTeX entry for a single lecture number</span></span>
-<span id="cb8-2">get_lec_bibtex <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(lec_num){</span>
-<span id="cb8-3">  <span class="co" style="color: #5E5E5E;"># Get the 2 character padded lecture number i.e. 1 -&gt; "01"</span></span>
-<span id="cb8-4">  lec_num_pad <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">str_pad</span>(<span class="at" style="color: #657422;">string =</span> lec_num, <span class="at" style="color: #657422;">width =</span> <span class="dv" style="color: #AD0000;">2</span>,</span>
-<span id="cb8-5">                         <span class="at" style="color: #657422;">side =</span> <span class="st" style="color: #20794D;">"left"</span>, <span class="at" style="color: #657422;">pad =</span> <span class="st" style="color: #20794D;">"0"</span>)</span>
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Generate BibTeX entry for a single lecture number</span></span>
+<span id="cb8-2">get_lec_bibtex <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(lec_num){</span>
+<span id="cb8-3">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Get the 2 character padded lecture number i.e. 1 -&gt; "01"</span></span>
+<span id="cb8-4">  lec_num_pad <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_pad</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">string =</span> lec_num, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>,</span>
+<span id="cb8-5">                         <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">side =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"left"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">pad =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"0"</span>)</span>
 <span id="cb8-6"></span>
-<span id="cb8-7">  <span class="co" style="color: #5E5E5E;"># Construct the BibTeX entry</span></span>
-<span id="cb8-8">  out_bbtex_str <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">glue</span>(</span>
-<span id="cb8-9">    <span class="st" style="color: #20794D;">"@misc{doe2019_lec&lt;lec_num&gt;,</span></span>
-<span id="cb8-10"><span class="st" style="color: #20794D;">    author = {Doe, John},</span></span>
-<span id="cb8-11"><span class="st" style="color: #20794D;">    title  = {Lecture Note &lt;lec_num&gt; - STAT10A},</span></span>
-<span id="cb8-12"><span class="st" style="color: #20794D;">    month  = {March},</span></span>
-<span id="cb8-13"><span class="st" style="color: #20794D;">    year   = {2018},</span></span>
-<span id="cb8-14"><span class="st" style="color: #20794D;">    url    = {https://www.hpg/~doe/st10A/lecs/lec&lt;lec_num_pad&gt;.pdf}}"</span>,</span>
-<span id="cb8-15">    <span class="at" style="color: #657422;">.open =</span> <span class="st" style="color: #20794D;">"&lt;"</span>,</span>
-<span id="cb8-16">    <span class="at" style="color: #657422;">.close =</span> <span class="st" style="color: #20794D;">"&gt;"</span>)</span>
+<span id="cb8-7">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Construct the BibTeX entry</span></span>
+<span id="cb8-8">  out_bbtex_str <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glue</span>(</span>
+<span id="cb8-9">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"@misc{doe2019_lec&lt;lec_num&gt;,</span></span>
+<span id="cb8-10"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    author = {Doe, John},</span></span>
+<span id="cb8-11"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    title  = {Lecture Note &lt;lec_num&gt; - STAT10A},</span></span>
+<span id="cb8-12"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    month  = {March},</span></span>
+<span id="cb8-13"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    year   = {2018},</span></span>
+<span id="cb8-14"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    url    = {https://www.hpg/~doe/st10A/lecs/lec&lt;lec_num_pad&gt;.pdf}}"</span>,</span>
+<span id="cb8-15">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.open =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"&lt;"</span>,</span>
+<span id="cb8-16">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.close =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"&gt;"</span>)</span>
 <span id="cb8-17"></span>
-<span id="cb8-18">  <span class="fu" style="color: #4758AB;">return</span>(out_bbtex_str)</span>
+<span id="cb8-18">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">return</span>(out_bbtex_str)</span>
 <span id="cb8-19">}</span></code></pre></div>
 </div>
 <p>Note that by default <code>glue</code> allows you to substitute input text in between <code>{</code> and <code>}</code> markers. However BibTeX entries <em>already have</em> literal default <code>{}</code> tags that we need to include in our function output. Rather than escaping them the <code>glue</code> package conveniently allows us to change the default opening and closing markers 💯! We simply set these to be angle brackets <code>&lt; &gt;</code> using the <code>.open</code> and <code>.close</code> options above.</p>
@@ -1402,8 +2376,16 @@ url           = {https://statschool/~doe/stats10A/Lectures/Lecture01.pdf},
 </aside>
 <p>Let’s just test this out quickly:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">lec_no <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="dv" style="color: #AD0000;">1</span></span>
-<span id="cb9-2"><span class="fu" style="color: #4758AB;">get_lec_bibtex</span>(<span class="at" style="color: #657422;">lec_num =</span> lec_no)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">lec_no <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb9-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_lec_bibtex</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">lec_num =</span> lec_no)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>@misc{doe2019_lec1,
 author = {Doe, John},
@@ -1422,10 +2404,44 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec01.pdf}}</code></pre>
 <h3 class="anchored" data-anchor-id="apply-to-all-lectures-using-purrr">Apply to all lectures using <code>purrr</code></h3>
 <p>Let’s finish this by creating all the entries using <code>purrr</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">lec_nums <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="dv" style="color: #AD0000;">1</span>, <span class="dv" style="color: #AD0000;">30</span>)</span>
-<span id="cb11-2">lec_nums <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb11-3">  <span class="fu" style="color: #4758AB;">map_chr</span>(<span class="at" style="color: #657422;">.x =</span> ., <span class="at" style="color: #657422;">.f =</span> <span class="sc" style="color: #5E5E5E;">~</span><span class="fu" style="color: #4758AB;">get_lec_bibtex</span>(<span class="at" style="color: #657422;">lec_num =</span> .x)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
-<span id="cb11-4">  <span class="fu" style="color: #4758AB;">cat</span>(., <span class="at" style="color: #657422;">sep =</span> <span class="st" style="color: #20794D;">"</span><span class="sc" style="color: #5E5E5E;">\n\n</span><span class="st" style="color: #20794D;">"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">lec_nums <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">30</span>)</span>
+<span id="cb11-2">lec_nums <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb11-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map_chr</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.x =</span> ., <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">.f =</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_lec_bibtex</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">lec_num =</span> .x)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb11-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(., <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sep =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>@misc{doe2019_lec1,
 author = {Doe, John},
@@ -1472,7 +2488,7 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 1.”</span> July
   <category>tidyverse</category>
   <category>rstats</category>
   <guid>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/index.html</guid>
-  <pubDate>Mon, 15 Jul 2019 04:00:00 GMT</pubDate>
+  <pubDate>Mon, 15 Jul 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -1513,7 +2529,9 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 1.”</span> July
 </aside></section><section id="step-2-clone-the-repo-locally" class="level2"><h2 class="anchored" data-anchor-id="step-2-clone-the-repo-locally">Step 2: Clone the repo locally</h2>
 <p>With the <code>github</code> repo created, I switched locally on my mac to <code>iterm2</code> terminal and cloned the repo locally using the following command:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;">git</span> clone git@github.com:shamindras/ss_personal_distill_blog.git</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> clone git@github.com:shamindras/ss_personal_distill_blog.git</span></code></pre></div>
 </div>
 <p>And the cloning quickly finished with the following output</p>
 <pre class="markup"><code>Cloning into 'ss_personal_distill_blog'...
@@ -1524,11 +2542,15 @@ remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (4/4), done.</code></pre>
 <p>Now I simply changed into the newly cloned blog directory by running the following terminal command:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="bu" style="color: null;">cd</span> ss_personal_distill_blog</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">cd</span> ss_personal_distill_blog</span></code></pre></div>
 </div>
 <p>I then ran the following terminal command:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;">tree</span></span></code></pre></div>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tree</span></span></code></pre></div>
 </div>
 <p>This resulted in the following directory structure so far:</p>
 <pre class="markup"><code>.
@@ -1539,21 +2561,95 @@ Receiving objects: 100% (4/4), done.</code></pre>
 </section><section id="step-3-create-the-distill-blog-files" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-3-create-the-distill-blog-files">Step 3: Create the distill blog files</h2>
 <p>In order to start creating the blog contents I opened up an instance of <code>RStudio</code> from within my new directory on my macbook via the following terminal command:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="ex" style="color: null;">open</span> <span class="at" style="color: #657422;">-a</span> /Applications/RStudio.app .</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">open</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-a</span> /Applications/RStudio.app .</span></code></pre></div>
 </div>
 <aside><p><strong>Note:</strong> The <code>.</code> at the end of the command ensures that <code>RStudio</code> opens in this newly created blog directory</p>
 </aside><p>With <code>RStudio</code> opened we can now run the following <code>R</code> commands in just the <code>console</code> to create the install the required and <code>distill</code> blog setup packages:</p>
 <div class="cell">
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;">req_pckgs</span> <span class="op" style="color: #5E5E5E;">&lt;-</span> <span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"distill"</span>, <span class="st" style="color: #20794D;">"here"</span><span class="op" style="color: #5E5E5E;">)</span></span>
-<span><span class="fu" style="color: #4758AB;"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op" style="color: #5E5E5E;">(</span>pkgs <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">req_pckgs</span><span class="op" style="color: #5E5E5E;">)</span></span>
-<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://here.r-lib.org/">here</a></span><span class="op" style="color: #5E5E5E;">)</span></span>
-<span><span class="kw" style="color: #003B4F;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="va" style="color: #111111;"><a href="https://github.com/rstudio/distill">distill</a></span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">req_pckgs</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"distill"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"here"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>pkgs <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">req_pckgs</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://here.r-lib.org/">here</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://github.com/rstudio/distill">distill</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
 </div>
 <p>Now we can create our blog using the following 2 commands from the freshly installed <code>distill</code> package using the following command run in the <code>console</code></p>
 <div class="cell">
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;">distill</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;">create_blog</span><span class="op" style="color: #5E5E5E;">(</span>dir <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">here</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span>,</span>
-<span>                     title <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Shamindra's Shrotriya's blog"</span>,</span>
-<span>                     gh_pages <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">TRUE</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">distill</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create_blog</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>dir <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">here</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>,</span>
+<span>                     title <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Shamindra's Shrotriya's blog"</span>,</span>
+<span>                     gh_pages <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
 </div>
 <p>Note that we set <code>gh_pages = TRUE</code> to ensure that we can host this blog on <a href="https://pages.github.com/" target="_blank">github pages</a> down the line if needed. You can omit this if you don’t want the option to have <em>github pages</em> as your host in the future. I will be using <code>Netlify</code> to host my blog (see below), but it is good to have an additional host option in the future.</p>
 <p>My local <code>distill</code> blog directory now looked like this (again after running the <code>tree</code> command in the terminal):</p>
@@ -1578,14 +2674,40 @@ Receiving objects: 100% (4/4), done.</code></pre>
 <p>One thing that slightly bothered me is that the default <strong>welcome</strong> blogpost has no <strong>date</strong> prefix in the directory. This would be nice to have in order to sort all future blogposts chronologically. I could’ve modified this default welcome blogpost <code>Rmd</code> and directory to include the date prefix manually. For simplicity I opted to delete the default welcome directory altogether and recreated it with the date prefix as I prefer as detailed below.</p>
 <p>To delete the default welcome directory, I just ran the following code at my terminal:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><span class="fu" style="color: #4758AB;">rm</span> <span class="at" style="color: #657422;">-rf</span> _posts/welcome</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rm</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-rf</span> _posts/welcome</span></code></pre></div>
 </div>
 <aside><p><strong>Note:</strong> ⚠️ Always be careful using <code>rm -rf</code></p>
 </aside><p>With the default welcome blogpost deleted, I created my own custom welcome blogpost as follows:</p>
 <div class="cell">
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;">distill</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;">create_post</span><span class="op" style="color: #5E5E5E;">(</span>title <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Welcome to Shamindra’s Blog"</span>,</span>
-<span>                     author <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"Shamindra Shrotriya"</span>,</span>
-<span>                     date_prefix <span class="op" style="color: #5E5E5E;">=</span> <span class="cn" style="color: #8f5902;">TRUE</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">distill</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create_post</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>title <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Welcome to Shamindra’s Blog"</span>,</span>
+<span>                     author <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Shamindra Shrotriya"</span>,</span>
+<span>                     date_prefix <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
 </div>
 <p>Now the welcome blogpost has this nice <strong>date prefix</strong> structure since we passed this option as <code>TRUE</code>. Let’s see what the <code>_posts</code> directory looks like now</p>
 <pre class="markup"><code>_posts/2019-07-10-welcome-to-shamindras-blog
@@ -1625,7 +2747,29 @@ output: distill::distill_article</code></pre>
 <aside><p>My <code>README.md</code> can be found <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md" target="_blank">here</a> for reference.</p>
 </aside><p>Now in <code>Rstudio</code> I just knit the <code>welcome.Rmd</code> post and also ran the following command in the <code>console</code></p>
 <div class="cell">
-<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;">rmarkdown</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render_site.html">render_site</a></span><span class="op" style="color: #5E5E5E;">(</span>input <span class="op" style="color: #5E5E5E;">=</span> <span class="fu" style="color: #4758AB;">here</span><span class="fu" style="color: #4758AB;">::</span><span class="fu" style="color: #4758AB;"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op" style="color: #5E5E5E;">(</span><span class="op" style="color: #5E5E5E;">)</span><span class="op" style="color: #5E5E5E;">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rmarkdown</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render_site.html">render_site</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>input <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">here</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
 </div>
 <p>The locally created <code>distill</code> blog was now created and rendered and looked like this in the <code>RStudio</code> viewer pane:</p>
 <div id="step-05-02-screenshot" class="quarto-figure quarto-figure-center anchored">
@@ -1637,9 +2781,23 @@ output: distill::distill_article</code></pre>
 </section><section id="step-6-commit-and-push-changes-to-github" class="level2"><h2 class="anchored" data-anchor-id="step-6-commit-and-push-changes-to-github">Step 6: Commit and push changes to github</h2>
 <p>Note that all our changes are so far in our local git repo. We need to get this blog online! A first step is to <code>commit</code> and <code>push</code> them to our <code>github</code> repo. I did this in my local directory in the terminal as follows: in git at my terminal as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><span class="fu" style="color: #4758AB;">git</span> add <span class="at" style="color: #657422;">-A</span> <span class="co" style="color: #5E5E5E;"># Add all new changes</span></span>
-<span id="cb17-2"><span class="fu" style="color: #4758AB;">git</span> commit <span class="at" style="color: #657422;">-m</span> <span class="st" style="color: #20794D;">"ENH: Created welcome post with date prefix, deleted default post"</span></span>
-<span id="cb17-3"><span class="fu" style="color: #4758AB;">git</span> push origin master</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> add <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-A</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Add all new changes</span></span>
+<span id="cb17-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> commit <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-m</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ENH: Created welcome post with date prefix, deleted default post"</span></span>
+<span id="cb17-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> push origin master</span></code></pre></div>
 </div>
 <p>And the changes are now reflected in the <code>github</code> <code>master</code> branch!</p>
 </section><section id="step-7-buy-a-domain-name-optional" class="level2"><h2 class="anchored" data-anchor-id="step-7-buy-a-domain-name-optional">Step 7: Buy a Domain name (optional)</h2>
@@ -1723,45 +2881,55 @@ Netlify.”</span> July 11, 2019. <a href="https://www.shamindras.com/posts/2019
 </div></div></section></div> ]]></description>
   <category>distill</category>
   <guid>https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/index.html</guid>
-  <pubDate>Thu, 11 Jul 2019 04:00:00 GMT</pubDate>
+  <pubDate>Thu, 11 Jul 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png" medium="image" type="image/png" height="79" width="144"/>
 </item>
 <item>
   <title>Welcome to Shamindra’s Site</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome/index.html</link>
-  <description><![CDATA[ <section id="welcome---lets-get-statistical" class="level2"><h2 class="anchored" data-anchor-id="welcome---lets-get-statistical">Welcome - Let’s Get Statistical!</h2>
+  <description><![CDATA[ 
+
+
+
+
+<section id="welcome---lets-get-statistical" class="level2">
+<h2 class="anchored" data-anchor-id="welcome---lets-get-statistical">Welcome - Let’s Get Statistical!</h2>
 <p>Hi there! I’m <strong>Shamindra Shrotriya</strong>, a graduate student in the <a href="http://www.stat.cmu.edu/">Department of Statistics and Data Science</a> at the wonderful <a href="https://www.cmu.edu/">Carnegie Mellon University</a>. I’ve decided to start blogging to document my learning and development in statistics as a graduate student.</p>
 <p>I’d like it to be a fun place to document interesting things I like to read about in the statistics and machine learning space (<strong>statistical theory/methodology</strong>, <strong>research</strong>, <strong>rstats</strong>, <strong>python</strong> …) as well as anything else I am generally into e.g.&nbsp;<strong>books</strong>, <strong>sports</strong> etc.</p>
 <p>Feel free to pull up a chair, leave a comment, and join me so that we can explore together.</p>
 <p>You can also learn more about me from my <a href="https://www.shamindras.com/data/pdfs/CV.pdf" target="_blank">CV</a>, <a href="https://www.shamindras.com/data/pdfs/resume.pdf" target="_blank">résumé</a>, and <a href="https://www.shamindras.com/software.html" target="_blank">open-source software</a> contributions.</p>
-</section><section id="credits" class="level2"><h2 class="anchored" data-anchor-id="credits">Credits</h2>
+</section>
+<section id="credits" class="level2">
+<h2 class="anchored" data-anchor-id="credits">Credits</h2>
 <p>The credit to starting this blog goes to the following people. I hope to not disappoint and create some useful content here 🖖.</p>
 <ul>
 <li>The <a href="https://www.rstudio.com/" target="_blank">Rstudio team</a> - for co-developing the fantastic <a href="https://quarto.org/" target="_blank"><code>quarto</code></a> package upon which this site is based.</li>
-<li>
-<a href="http://www.fast.ai/">Rachel Thomas</a> for posting this <a href="http://www.fast.ai/2017/04/06/alternatives/" target="_blank">fantastic blog post</a> encouraging people like me to (finally!) create a blog</li>
-<li>
-<strong>My parents</strong> for encouraging to communicate my passion for statistics. I secretly think that this is their way of minimizing my passionate rants about the bootstrap in our regular Skype chats (the rants will still continue though…😄).</li>
-</ul></section><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
+<li><a href="http://www.fast.ai/">Rachel Thomas</a> for posting this <a href="http://www.fast.ai/2017/04/06/alternatives/" target="_blank">fantastic blog post</a> encouraging people like me to (finally!) create a blog</li>
+<li><strong>My parents</strong> for encouraging to communicate my passion for statistics. I secretly think that this is their way of minimizing my passionate rants about the bootstrap in our regular Skype chats (the rants will still continue though…😄).</li>
+</ul>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
+
 <p>I’d like to thank Salil Shrotriya for taking my profile pic which is the preview image for this post.</p>
 
 
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
-  author = {Shamindra Shrotriya},
-  editor = {},
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
+  author = {Shrotriya, Shamindra},
   title = {Welcome to {Shamindra’s} {Site}},
   date = {2019-07-10},
   url = {https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2019" class="csl-entry quarto-appendix-citeas">
-Shamindra Shrotriya. 2019. <span>“Welcome to Shamindra’s Site.”</span>
+Shrotriya, Shamindra. 2019. <span>“Welcome to Shamindra’s Site.”</span>
 July 10, 2019. <a href="https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome">https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome</a>.
 </div></div></section></div> ]]></description>
   <category>personal</category>
   <guid>https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome/index.html</guid>
-  <pubDate>Wed, 10 Jul 2019 04:00:00 GMT</pubDate>
+  <pubDate>Wed, 10 Jul 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome/images/about-profile-circular-scaled-hex.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>

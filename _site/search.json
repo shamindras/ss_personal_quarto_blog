@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Welcome",
     "section": "",
-    "text": "Hi - I’m Shamindra (he/him).\nI received my PhD from in the Department of Statistics and Data Science at Carnegie Mellon University in Fall 2022. I was extremely fortunate to be advised by Matey Neykov.\nThis is my personal website which contains information about my research. I’d recommend starting there to get an idea of the type of problems that I really enjoy working on.\nI also have fun writing a blog about various topics of interest in statistics and machine learning.\nYou can also learn more about me from my CV, résumé, and open-source software contributions."
+    "text": "Hi - I’m Shamindra (he/him).\nI’m currently a Principal Data Scientist in the Walmart Retail Intelligence Team.\nPrior to that I was the (faculty) co-director of the CMU Summer Undergraduate Research Program (SURE 2023). I helped lead a fantastic team and taught advanced data science concepts to talented and diverse scholars selected nationally. I enjoyed developing a new data engineering course in the process.\nPrior to that, I received my PhD from in the Department of Statistics and Data Science at Carnegie Mellon University in Fall 2022. I was extremely fortunate to be advised by Matey Neykov.\nThis is my personal website which contains information about my research. I’d recommend starting there to get an idea of the type of problems that I really enjoy working on.\nI also have fun writing a blog about various topics of interest in statistics and machine learning.\nYou can also learn more about me from my CV, résumé, and open-source software contributions.\nPlease browse around, and feel free to get in touch for any collaborations."
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -74,14 +74,14 @@
     "href": "posts/2019-07-10-shrotriya2019welcome/index.html#credits",
     "title": "Welcome to Shamindra’s Site",
     "section": "Credits",
-    "text": "Credits\nThe credit to starting this blog goes to the following people. I hope to not disappoint and create some useful content here 🖖.\n\nThe Rstudio team - for co-developing the fantastic quarto package upon which this site is based.\n\nRachel Thomas for posting this fantastic blog post encouraging people like me to (finally!) create a blog\n\nMy parents for encouraging to communicate my passion for statistics. I secretly think that this is their way of minimizing my passionate rants about the bootstrap in our regular Skype chats (the rants will still continue though…😄)."
+    "text": "Credits\nThe credit to starting this blog goes to the following people. I hope to not disappoint and create some useful content here 🖖.\n\nThe Rstudio team - for co-developing the fantastic quarto package upon which this site is based.\nRachel Thomas for posting this fantastic blog post encouraging people like me to (finally!) create a blog\nMy parents for encouraging to communicate my passion for statistics. I secretly think that this is their way of minimizing my passionate rants about the bootstrap in our regular Skype chats (the rants will still continue though…😄)."
   },
   {
     "objectID": "posts/2019-07-10-shrotriya2019welcome/index.html#acknowledgments",
     "href": "posts/2019-07-10-shrotriya2019welcome/index.html#acknowledgments",
     "title": "Welcome to Shamindra’s Site",
     "section": "Acknowledgments",
-    "text": "Acknowledgments\nI’d like to thank Salil Shrotriya for taking my profile pic which is the preview image for this post."
+    "text": "Acknowledgments\n\nI’d like to thank Salil Shrotriya for taking my profile pic which is the preview image for this post."
   },
   {
     "objectID": "data/qmds/acknowledgment_preview_tidyfun_salil.html",
@@ -600,5 +600,12 @@
     "title": "Research",
     "section": "PhD Thesis",
     "text": "PhD Thesis\nOn Some Problems in Nonparametric and Location-Scale Estimation Shamindra Shrotriya* (2022).\n\n\n\n\n\n\nAbstract\n\n\n\n\n\nWe study three generalizations of classical nonparametric, and location scale estimation problems.\nFirst, we study the classical problem of deriving minimax rates for density estimation over convex density classes. Our work extends known results by demonstrating that the local metric entropy of the density class always captures the exact (up to constants) minimax optimal rates under such settings. Our bounds provide a unifying perspective across both parametric and nonparametric convex density classes, under weaker assumptions on the richness of the density class than previously considered.\nSecond, we consider a variation of classical isotonic regression, which we term adversarial sign-corrupted isotonic (ASCI) regression. Here, the adversary can corrupt the sign of the responses having full access to the true response terms. We formalize ASCIFIT, a three-step estimation procedure under this regime, and demonstrate its theoretical guarantees in the form of sharp high probability upper bounds and minimax lower bounds.\nFinally, we extend classical univariate uniform location-scale estimation over an interval, to multivariate uniform location-scale estimation over general convex bodies. Unlike the univariate setting, the observations are no longer totally ordered, and previous estimation techniques prove insufficient to account for the more refined geometry of the generating process. Under fixed dimension, our proposed location estimators converge at an n-1 rate. Our minimax lower bounds justify the optimality of our estimators in terms of the sample complexity. We also provide practical algorithms with provable convergence rates for our estimators, over a wide class of convex bodies.\n\n\n\n pub  pdf   BibTeX \n\n\n\n@article{shrotriya2022phdthesis,\n    title        = {{On Some Problems in Nonparametric and Location-Scale Estimation}},\n    author       = {Shamindra Shrotriya},\n    year         = 2022,\n    month        = 12,\n    doi          = {10.1184/R1/21764069.v1},\n    url          = {\n        https://kilthub.cmu.edu/articles/thesis/On_Some_Problems_in_Nonparametric_and_Location-Scale_Estimation/21764069\n    }\n}"
+  },
+  {
+    "objectID": "posts/2019-07-10-shrotriya2019welcome/index.html#welcome---lets-get-statistical",
+    "href": "posts/2019-07-10-shrotriya2019welcome/index.html#welcome---lets-get-statistical",
+    "title": "Welcome to Shamindra’s Site",
+    "section": "",
+    "text": "Hi there! I’m Shamindra Shrotriya, a graduate student in the Department of Statistics and Data Science at the wonderful Carnegie Mellon University. I’ve decided to start blogging to document my learning and development in statistics as a graduate student.\nI’d like it to be a fun place to document interesting things I like to read about in the statistics and machine learning space (statistical theory/methodology, research, rstats, python …) as well as anything else I am generally into e.g. books, sports etc.\nFeel free to pull up a chair, leave a comment, and join me so that we can explore together.\nYou can also learn more about me from my CV, résumé, and open-source software contributions."
   }
 ]
