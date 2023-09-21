@@ -24,6 +24,8 @@ website:
         href: data/pdfs/resume.pdf
       - icon: github
         href: https://github.com/shamindras
+      - text: "{{< iconify academicons google-scholar size=xl >}}"
+        href: https://scholar.google.com/citations?user=zFUrGToAAAAJ&hl=en&oi=ao
       - icon: rss
         href: posts.xml
   google-analytics: "UA-145015693-1"

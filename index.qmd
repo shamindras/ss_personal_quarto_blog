@@ -8,14 +8,16 @@ about:
     - icon: github
       text: Github
       href: https://github.com/shamindras
+    - text: "{{< iconify academicons google-scholar size=lg >}} Google Scholar"
+      href: "https://scholar.google.com/citations?user=zFUrGToAAAAJ&hl=en&oi=ao"
     - icon: linkedin
-      text: LinkedIn
+      text: Linkedin
       href: https://www.linkedin.com/in/shamindras
 ---
 
-Hi - I’m **Shamindra Shrotriya** (he/him).
+Hi - I’m **Shamindra Shrotriya** (he/him)!
 
-I'm currently a **Principal Data Scientist** in the Walmart Retail Intelligence
+I'm currently a Principal Data Scientist in the Walmart Retail Intelligence
 Team.
 
 Prior to that I was a teaching faculty for the [CMU Summer Undergraduate
@@ -27,7 +29,7 @@ nationally. I enjoyed developing a [new data engineering
 course](https://cmu-sure-2023.netlify.app/schedule#data-engineering) in the
 process.
 
-Prior to that, I received my PhD from in the [Department of Statistics and Data
+I received my PhD from the [Department of Statistics and Data
 Science](http://www.stat.cmu.edu/) at Carnegie Mellon University in Fall 2022. I
 was extremely fortunate to be advised by [Matey
 Neykov](http://mateyneykov.com/).
