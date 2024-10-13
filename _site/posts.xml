@@ -9,12 +9,12 @@
 <link>https://www.shamindras.com/posts.html</link>
 <atom:link href="https://www.shamindras.com/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.3.361</generator>
+<generator>quarto-1.5.57</generator>
 <lastBuildDate>Sat, 12 Feb 2022 06:00:00 GMT</lastBuildDate>
 <item>
   <title>Characterizing norm triangle inequalites via convexity</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
-  <link>https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/index.html</link>
+  <link>https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/</link>
   <description><![CDATA[ <div class="cell-output-display">
 <style type="text/css">/**
   * Author: Mikhail Popov
@@ -190,14 +190,14 @@ Inequalites via Convexity.”</span> February 12, 2022. <a href="https://www.sha
   <category>linear algebra</category>
   <category>math</category>
   <category>norms</category>
-  <guid>https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/index.html</guid>
+  <guid>https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/</guid>
   <pubDate>Sat, 12 Feb 2022 06:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/images/preview-shrotriya2021normtriconvexity.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>Shamindra’s January 2020 Roundup</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
-  <link>https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/index.html</link>
+  <link>https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/</link>
   <description><![CDATA[ <section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Welcome to the January 2020 roundup! Similar to <a href="https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/" target="_blank">last time</a> I’m going to experiment with documenting anything interesting I come across (articles, lectures, books, papers etc.) and any activities I get up to. This is more for my personal benefit but may also help others.</p>
 </section><section id="interesting-articles" class="level2"><h2 class="anchored" data-anchor-id="interesting-articles">Interesting Articles</h2>
@@ -278,14 +278,14 @@ Roundup.”</span> January 27, 2020. <a href="https://www.shamindras.com/posts/2
   <category>roundup</category>
   <category>rstats</category>
   <category>math</category>
-  <guid>https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/index.html</guid>
+  <guid>https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/</guid>
   <pubDate>Mon, 27 Jan 2020 06:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/images/preview-january-2020-01.png" medium="image" type="image/png" height="85" width="144"/>
 </item>
 <item>
   <title>Shamindra’s September 2019 Roundup</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
-  <link>https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/index.html</link>
+  <link>https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/</link>
   <description><![CDATA[ <section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Welcome to the September 2019 roundup! Similar to <a href="https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/" target="_blank">last time</a> I’m going to experiment with, namely documenting anything interesting I come across (articles, lectures, books, papers etc.) and any activities I get up to. This is more for my personal benefit but may also help others.</p>
 </section><section id="interesting-articles" class="level2"><h2 class="anchored" data-anchor-id="interesting-articles">Interesting Articles</h2>
@@ -396,14 +396,14 @@ Roundup.”</span> September 30, 2019. <a href="https://www.shamindras.com/posts
   <category>roundup</category>
   <category>rstats</category>
   <category>math</category>
-  <guid>https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/index.html</guid>
+  <guid>https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/</guid>
   <pubDate>Mon, 30 Sep 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/images/preview-september-2019-01.png" medium="image" type="image/png" height="85" width="144"/>
 </item>
 <item>
   <title>Shamindra’s August 2019 Roundup</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
-  <link>https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/index.html</link>
+  <link>https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/</link>
   <description><![CDATA[ <section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Welcome to the August 2019 roundup! Similar to <a href="https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/" target="_blank">last time</a> I’m going to experiment with, namely documenting anything interesting I come across (articles, lectures, books, papers etc.) and any activities I get up to. This is more for my personal benefit but may also help others.</p>
 </section><section id="interesting-articles" class="level2"><h2 class="anchored" data-anchor-id="interesting-articles">Interesting Articles</h2>
@@ -531,14 +531,14 @@ Roundup.”</span> August 31, 2019. <a href="https://www.shamindras.com/posts/20
   <category>roundup</category>
   <category>rstats</category>
   <category>math</category>
-  <guid>https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/index.html</guid>
+  <guid>https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/</guid>
   <pubDate>Sat, 31 Aug 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/images/preview-august-2019-01.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
   <title>Tidyverse Fun - Part 2</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
-  <link>https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/index.html</link>
+  <link>https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/</link>
   <description><![CDATA[ 
 
 
@@ -582,6 +582,7 @@ font-style: inherit;"># Create LaTeX macro newcommand</span></span>
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(inp_letr, mac_type, mac_ref){</span>
 <span id="cb2-7">    out_str <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -807,14 +808,14 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 2.”</span> August
 </div></div></section></div> ]]></description>
   <category>tidyverse</category>
   <category>rstats</category>
-  <guid>https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/index.html</guid>
+  <guid>https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/</guid>
   <pubDate>Sat, 24 Aug 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Upgrading Distill Blog Settings</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
-  <link>https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/index.html</link>
+  <link>https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/</link>
   <description><![CDATA[ 
 
 
@@ -1024,6 +1025,7 @@ font-style: inherit;">(</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">here::here()</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span></span></code></pre></div>
 </div>
 </section>
@@ -1056,14 +1058,14 @@ Shamindra Shrotriya. 2019. <span>“Upgrading Distill Blog
 Settings.”</span> July 31, 2019. <a href="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2">https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2</a>.
 </div></div></section></div> ]]></description>
   <category>distill</category>
-  <guid>https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/index.html</guid>
+  <guid>https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/</guid>
   <pubDate>Wed, 31 Jul 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png" medium="image" type="image/png" height="116" width="144"/>
 </item>
 <item>
   <title>Shamindra’s July 2019 Roundup</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
-  <link>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/index.html</link>
+  <link>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/</link>
   <description><![CDATA[ <section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>This is a new feature I’m going to experiment with, namely documenting anything interesting I come across (articles, lectures, books, papers etc.) and any activities I get up to. This is more for my personal benefit but may also help others. Let’s see how this experiment goes!</p>
 </section><section id="interesting-articles" class="level2"><h2 class="anchored" data-anchor-id="interesting-articles">Interesting Articles</h2>
@@ -1125,14 +1127,14 @@ July 30, 2019. <a href="https://www.shamindras.com/posts/2019-07-30-shrotriya201
   <category>roundup</category>
   <category>rstats</category>
   <category>math</category>
-  <guid>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/index.html</guid>
+  <guid>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/</guid>
   <pubDate>Tue, 30 Jul 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png" medium="image" type="image/png" height="74" width="144"/>
 </item>
 <item>
   <title>Reproducibility Challenge: Titanic Survivors Plot</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
-  <link>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/index.html</link>
+  <link>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/</link>
   <description><![CDATA[ <section id="background" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>In the February 2019 issue of <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">Significance Magazine</a> notably featured a story of the titanic disaster <span class="citation" data-cites="friendly2019titanicviz">(Friendly, Symanzik, and Onder 2019)</span> and visualization of key survival statistics. As a fan of <code>R</code> and data visualization I enjoyed this article and recommended it to anyone with similar interests. Although the subject is rather tragic, by reading the article I did get a better appreciation of how the information of the crash survivorship was conveyed to the general public through data visualization.</p>
 <aside><div id="main-src-cover" class="quarto-figure quarto-figure-center anchored">
@@ -1930,14 +1932,14 @@ Survivors Plot.”</span> July 21, 2019. <a href="https://www.shamindras.com/pos
   <category>tidyverse</category>
   <category>rstats</category>
   <category>reproducibility</category>
-  <guid>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/index.html</guid>
+  <guid>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/</guid>
   <pubDate>Sun, 21 Jul 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Tidyverse Fun - Part 1</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
-  <link>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/index.html</link>
+  <link>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/</link>
   <description><![CDATA[ 
 
 
@@ -2021,6 +2023,7 @@ font-style: inherit;">"leaves"</span>)</span></code></pre></div>
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(word1, word2, word3){</span>
 <span id="cb3-2">    words_vec <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -2303,6 +2306,7 @@ font-style: inherit;"># Generate BibTeX entry for a single lecture number</span>
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(lec_num){</span>
 <span id="cb8-3">  <span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -2487,14 +2491,14 @@ Shamindra Shrotriya. 2019. <span>“Tidyverse Fun - Part 1.”</span> July
 </div></div></section></div> ]]></description>
   <category>tidyverse</category>
   <category>rstats</category>
-  <guid>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/index.html</guid>
+  <guid>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/</guid>
   <pubDate>Mon, 15 Jul 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Setting up a Distill Blog with Netlify</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
-  <link>https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/index.html</link>
+  <link>https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/</link>
   <description><![CDATA[ <section id="step-0-introduction" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-0-introduction">Step 0: Introduction</h2>
 <p>This is a meta blogpost to describe how I setup this personal academic blog. It is based on the relatively new <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="https://www.rstudio.com/" target="_blank">RStudio</a> team. The main tools used I used to create this blog are:</p>
 <ul>
@@ -2598,6 +2602,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -2607,6 +2612,7 @@ background-color: null;
 font-style: inherit;">)</span></span>
 <span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -2880,14 +2886,14 @@ Shamindra Shrotriya. 2019. <span>“Setting up a Distill Blog with
 Netlify.”</span> July 11, 2019. <a href="https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1">https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1</a>.
 </div></div></section></div> ]]></description>
   <category>distill</category>
-  <guid>https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/index.html</guid>
+  <guid>https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/</guid>
   <pubDate>Thu, 11 Jul 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png" medium="image" type="image/png" height="79" width="144"/>
 </item>
 <item>
   <title>Welcome to Shamindra’s Site</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
-  <link>https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome/index.html</link>
+  <link>https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome/</link>
   <description><![CDATA[ 
 
 
@@ -2928,7 +2934,7 @@ Shrotriya, Shamindra. 2019. <span>“Welcome to Shamindra’s Site.”</span>
 July 10, 2019. <a href="https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome">https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome</a>.
 </div></div></section></div> ]]></description>
   <category>personal</category>
-  <guid>https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome/index.html</guid>
+  <guid>https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome/</guid>
   <pubDate>Wed, 10 Jul 2019 05:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome/images/about-profile-circular-scaled-hex.jpg" medium="image" type="image/jpeg"/>
 </item>

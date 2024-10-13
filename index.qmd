@@ -27,7 +27,7 @@ data science concepts](https://cmu-sure-2023.netlify.app/schedule) to talented
 and [diverse scholars](https://www.stat.cmu.edu/summerbridge/) selected
 nationally. I enjoyed developing a [new data engineering
 course](https://cmu-sure-2023.netlify.app/schedule#data-engineering) in the
-process.
+process. Here is my inclusive [approach to teaching](https://www.shamindras.com/data/pdfs/shamindra-shrotriya_teaching-statement.pdf){target="\_blank"}.
 
 I received my PhD from the [Department of Statistics and Data
 Science](http://www.stat.cmu.edu/) at Carnegie Mellon University in Fall 2022. I
@@ -44,8 +44,8 @@ I also have fun writing a
 topics of interest in statistics and machine learning.
 
 You can also learn more about me from my
-[CV](https://www.shamindras.com/data/pdfs/CV.pdf){target="\_blank"},
-[résumé](https://www.shamindras.com/data/pdfs/resume.pdf){target="\_blank"},
+[CV](https://www.shamindras.com/data/pdfs/shamindra-shrotriya_CV.pdf){target="\_blank"},
+[résumé](https://www.shamindras.com/data/pdfs/shamindra-shrotriya_resume.pdf){target="\_blank"},
 and [open-source
 software](https://www.shamindras.com/software.html){target="\_blank"}
 contributions.
