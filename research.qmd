@@ -417,6 +417,8 @@ ___On Some Problems in Nonparametric and Location-Scale Estimation___
 <br>
 <u>Shamindra Shrotriya&#42;</u> (2022).
 
+`r emo::ji("contest")` __Nominee:__ Umesh K. Gavaskar Best Thesis Award (2023)
+
 ::: {.callout-tip collapse="true" icon=false}
 
 ## Abstract
