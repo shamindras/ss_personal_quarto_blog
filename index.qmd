@@ -17,8 +17,8 @@ about:
 
 Hi - I’m **Shamindra Shrotriya** (he/him)!
 
-I'm currently a Principal Data Scientist in the Walmart Retail Intelligence
-Team.
+I'm a __Principal AI Solution Architect__ in the __Centroid Retail Intelligence
+Team__ at Walmart.
 
 Prior to that I was a teaching faculty for the [CMU Summer Undergraduate
 Research Program](https://cmu-sure-2023.netlify.app) (SURE 2023). I co-led a
