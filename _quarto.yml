@@ -7,10 +7,9 @@ website:
   repo-url: https://github.com/shamindras/ss_personal_quarto_blog
   repo-actions: [edit, issue]
   open-graph: true
-  twitter-card:
-    creator: "@shamindraas"
-    card-style: summary_large_image
   navbar:
+    background: "#FFFFFF"
+    foreground: "dark"
     right:
       - text: research
         file: research.qmd
@@ -19,9 +18,11 @@ website:
       - text: software
         file: software.qmd  
       - text: "cv"
-        href: data/pdfs/CV.pdf
+        href: data/pdfs/shamindra-shrotriya_CV.pdf
       - text: "résumé"
-        href: data/pdfs/resume.pdf
+        href: data/pdfs/shamindra-shrotriya_resume.pdf
+      - text: "teaching"
+        href: data/pdfs/shamindra-shrotriya_teaching-statement.pdf
       - icon: github
         href: https://github.com/shamindras
       - text: "{{< iconify academicons google-scholar size=xl >}}"
