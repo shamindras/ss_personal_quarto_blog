@@ -44,8 +44,7 @@ I also have fun writing a
 topics of interest in statistics and machine learning.
 
 You can also learn more about me from my
-[CV](https://www.shamindras.com/data/pdfs/shamindra-shrotriya_CV.pdf){target="\_blank"},
-[résumé](https://www.shamindras.com/data/pdfs/shamindra-shrotriya_resume.pdf){target="\_blank"},
+[CV](https://www.shamindras.com/data/pdfs/shamindra-shrotriya_resume.pdf){target="\_blank"},
 and [open-source
 software](https://www.shamindras.com/software.html){target="\_blank"}
 contributions.

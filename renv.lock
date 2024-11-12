@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.4.1",
+    "Version": "4.4.2",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -37,7 +37,7 @@
     },
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.7-0",
+      "Version": "1.7-1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -50,7 +50,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "1920b2f11133b12350024297d8a4ff4a"
+      "Hash": "5122bb14d8736372411f955e1b16bc8a"
     },
     "R6": {
       "Package": "R6",
@@ -477,8 +477,9 @@
     "emo": {
       "Package": "emo",
       "Version": "0.0.0.9000",
-      "Source": "GitHub",
-      "RemoteType": "github",
+      "Source": "git",
+      "RemoteType": "git",
+      "RemoteUrl": "https://github.com/hadley/emo",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "hadley",
       "RemoteRepo": "emo",
@@ -496,7 +497,7 @@
         "stringr",
         "utils"
       ],
-      "Hash": "5ece31a6c0f94811e6bef59482d87164"
+      "Hash": "eb32b8f0bb50621ad498f5d836b546a4"
     },
     "evaluate": {
       "Package": "evaluate",
@@ -1718,11 +1719,11 @@
       "Version": "0.1.1",
       "Source": "GitHub",
       "RemoteType": "github",
+      "RemoteHost": "api.github.com",
       "RemoteUsername": "bearloga",
       "RemoteRepo": "wikipediapreview-r",
       "RemoteRef": "main",
       "RemoteSha": "f43b92af0a679e7c5456189905bcd485e2ab8303",
-      "RemoteHost": "api.github.com",
       "Requirements": [
         "htmltools"
       ],
