@@ -8,14 +8,14 @@ Format: `<type>(<scope>): <emoji> <description>`
 
 | Type       | Emoji | Example                                      |
 |------------|-------|----------------------------------------------|
-| `feat`     | ✨    | `feat(nvim): ✨ add telescope fuzzy finder`   |
-| `fix`      | 🐛    | `fix(tmux): 🐛 correct session handling`      |
-| `refactor` | ♻️     | `refactor(zsh): ♻️ extract helper functions`   |
-| `docs`     | 📝    | `docs(claude): 📝 update skill reference`     |
-| `chore`    | 📦    | `chore(brew): 📦 update brewfile`              |
-| `test`     | ✅    | `test(nvim): ✅ add plugin tests`              |
-| `style`    | 🎨    | `style(lua): 🎨 reformat with stylua`         |
-| `ci`       | 👷    | `ci(github): 👷 add lint workflow`             |
+| `feat`     | ✨    | `feat(posts): ✨ add new blog post on optimization` |
+| `fix`      | 🐛    | `fix(quarto): 🐛 correct navbar link ordering`     |
+| `refactor` | ♻️     | `refactor(theme): ♻️ improve mobile responsiveness` |
+| `docs`     | 📝    | `docs(docs): 📝 update project guidance`            |
+| `chore`    | 📦    | `chore(renv): 📦 update lock file`                  |
+| `test`     | ✅    | `test(posts): ✅ add render validation`              |
+| `style`    | 🎨    | `style(theme): 🎨 reformat scss`                    |
+| `ci`       | 👷    | `ci(netlify): 👷 add build workflow`                 |
 
 ## Rules
 
