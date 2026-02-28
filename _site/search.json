@@ -642,5 +642,61 @@
     "title": "Research",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nListed alphabetically by surname. Check out their cool statistical research.↩︎\nMost of my papers are also easily accessed via ArXiv here, or per the links below.↩︎\nthe * symbol next to a persons name indicates equal authorship for the work.↩︎"
+  },
+  {
+    "objectID": "CLAUDE.html",
+    "href": "CLAUDE.html",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.\n\n\nPersonal academic website and research blog for Shamindra Shrotriya, built with Quarto and hosted on Netlify at https://www.shamindras.com.\n\n\n\nquarto preview           # Local dev server with live reload\nquarto render            # Full site render to _site/\nquarto render &lt;file.qmd&gt; # Render a single page/post\nNo Makefile, justfile, or package.json exists — Quarto CLI is the sole build tool.\n\n\n\n\nR 4.5.1 managed via renv. Run renv::restore() to install dependencies from renv.lock.\n.Rprofile activates renv automatically.\nKey R packages: tidyverse, knitr, plotly, emo, here, janitor, googlesheets4.\n\n\n\n\n\n\n\n\n\n\n\nFile/Dir\nPurpose\n\n\n\n\n_quarto.yml\nMain site config (navbar, theme, analytics, metadata)\n\n\nindex.qmd\nLanding page (about template)\n\n\nposts.qmd\nBlog listing with search/filter/RSS\n\n\nresearch.qmd\nResearch papers and collaborators\n\n\nsoftware.qmd\nOpen-source project descriptions\n\n\nrefs.bib\nShared BibTeX bibliography\n\n\nember.scss\nCustom Bootstrap theme (Atkinson Hyperlegible font)\n\n\nstyles.css\nAdditional CSS overrides\n\n\nposts/_metadata.yml\nShared metadata for all blog posts\n\n\n_extensions/mcanouil/iconify/\nIcon shortcode extension\n\n\ndata/pdfs/\nCV, teaching statement, thesis PDFs\n\n\n_freeze/\nCached computational output (committed to git)\n\n\n\n\n\n\n\nPosts live in posts/YYYY-MM-DD-&lt;slug&gt;/index.qmd\nEach post directory may contain images/ and pdfs/ subdirectories\nposts/_metadata.yml sets shared defaults: freeze: true, giscus comments, CC BY license, Shamindra as author, 80-char line wrap\nFront matter typically includes: title, description, categories, slug, date, image, bibliography\nPosts use freeze: true — computational output is cached in _freeze/ and not re-executed unless explicitly invalidated\n\n\n\n\nUses /commit skill with conventional commits: &lt;type&gt;(&lt;scope&gt;): &lt;description&gt;. Flags: --staged, --all, --draft, --amend, --all-and-push, --no-split, --emoji, --land, --land-main, --help.\nSee .claude/skills/git/workflow.md for scopes and conventions.\n\n\n\nNetlify via Git integration — pushing to main triggers automatic builds. No CI/CD config files in the repo."
+  },
+  {
+    "objectID": "CLAUDE.html#project-overview",
+    "href": "CLAUDE.html#project-overview",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "Personal academic website and research blog for Shamindra Shrotriya, built with Quarto and hosted on Netlify at https://www.shamindras.com."
+  },
+  {
+    "objectID": "CLAUDE.html#build-commands",
+    "href": "CLAUDE.html#build-commands",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "quarto preview           # Local dev server with live reload\nquarto render            # Full site render to _site/\nquarto render &lt;file.qmd&gt; # Render a single page/post\nNo Makefile, justfile, or package.json exists — Quarto CLI is the sole build tool."
+  },
+  {
+    "objectID": "CLAUDE.html#r-environment",
+    "href": "CLAUDE.html#r-environment",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "R 4.5.1 managed via renv. Run renv::restore() to install dependencies from renv.lock.\n.Rprofile activates renv automatically.\nKey R packages: tidyverse, knitr, plotly, emo, here, janitor, googlesheets4."
+  },
+  {
+    "objectID": "CLAUDE.html#site-structure",
+    "href": "CLAUDE.html#site-structure",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "File/Dir\nPurpose\n\n\n\n\n_quarto.yml\nMain site config (navbar, theme, analytics, metadata)\n\n\nindex.qmd\nLanding page (about template)\n\n\nposts.qmd\nBlog listing with search/filter/RSS\n\n\nresearch.qmd\nResearch papers and collaborators\n\n\nsoftware.qmd\nOpen-source project descriptions\n\n\nrefs.bib\nShared BibTeX bibliography\n\n\nember.scss\nCustom Bootstrap theme (Atkinson Hyperlegible font)\n\n\nstyles.css\nAdditional CSS overrides\n\n\nposts/_metadata.yml\nShared metadata for all blog posts\n\n\n_extensions/mcanouil/iconify/\nIcon shortcode extension\n\n\ndata/pdfs/\nCV, teaching statement, thesis PDFs\n\n\n_freeze/\nCached computational output (committed to git)"
+  },
+  {
+    "objectID": "CLAUDE.html#blog-post-conventions",
+    "href": "CLAUDE.html#blog-post-conventions",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "Posts live in posts/YYYY-MM-DD-&lt;slug&gt;/index.qmd\nEach post directory may contain images/ and pdfs/ subdirectories\nposts/_metadata.yml sets shared defaults: freeze: true, giscus comments, CC BY license, Shamindra as author, 80-char line wrap\nFront matter typically includes: title, description, categories, slug, date, image, bibliography\nPosts use freeze: true — computational output is cached in _freeze/ and not re-executed unless explicitly invalidated"
+  },
+  {
+    "objectID": "CLAUDE.html#git-workflow",
+    "href": "CLAUDE.html#git-workflow",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "Uses /commit skill with conventional commits: &lt;type&gt;(&lt;scope&gt;): &lt;description&gt;. Flags: --staged, --all, --draft, --amend, --all-and-push, --no-split, --emoji, --land, --land-main, --help.\nSee .claude/skills/git/workflow.md for scopes and conventions."
+  },
+  {
+    "objectID": "CLAUDE.html#deployment",
+    "href": "CLAUDE.html#deployment",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "Netlify via Git integration — pushing to main triggers automatic builds. No CI/CD config files in the repo."
   }
 ]
