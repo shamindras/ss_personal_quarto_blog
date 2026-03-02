@@ -1,0 +1,1 @@
+../skills/blog/commands/blog.md
