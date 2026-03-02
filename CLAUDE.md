@@ -55,6 +55,13 @@ Flags: `--staged`, `--all`, `--draft`, `--amend`, `--all-and-push`, `--no-split`
 
 See `.claude/skills/git/workflow.md` for scopes and conventions.
 
+## Blog Skill
+
+Uses `/blog` skill for blog post lifecycle. Subcommands: `new`, `preview`,
+`finalize`, `publish`. See `.claude/skills/blog/conventions.md` for naming rules.
+
+Example: `/blog new --template roundup --month february --year 2026`
+
 ## Deployment
 
 Netlify via Git integration — pushing to `main` triggers automatic builds. No CI/CD config files in the repo.
