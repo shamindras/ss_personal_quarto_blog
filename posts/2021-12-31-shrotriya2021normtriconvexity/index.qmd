@@ -396,7 +396,7 @@ Proof
 
 </summary>
 
-::: {#normtrichar-easy .proof}
+::: {.proof}
 ($\implies$) We proceed directly.
 
 Assume that $N(\mathbf{x} + \mathbf{y}) \leq N(\mathbf{x}) + N(\mathbf{y})$, for
@@ -454,7 +454,7 @@ Proof
 
 </summary>
 
-::: {#normtrichar-hard .proof}
+::: {.proof}
 ($\impliedby$) We proceed directly.
 
 Assume $\mathbb{B}$ is a convex set. We need to show that this implies that
