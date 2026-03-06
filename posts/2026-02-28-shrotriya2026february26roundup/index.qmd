@@ -56,7 +56,7 @@ others.
 
 ## Interesting Tutorials
 
-[Large Language Models in Five Formulas](https://www.youtube.com/watch?v=KCXDr-UOb9A&t=2989s){target="_blank"} by Sasha Rush.
+[Large Language Models in Five Formulas](https://www.youtube.com/watch?v=KCXDr-UOb9A&t=2989s){target="_blank"} by Sasha Rush[^src-llm-five-formulas].
 
 ::: {#vid-feb26-llm-five-formulas}
 {{< video https://www.youtube.com/watch?v=KCXDr-UOb9A start="2989" title="Large Language Models in Five Formulas by Sasha Rush" aspect-ratio="4x3" >}}
@@ -72,6 +72,11 @@ Large Language Models in Five Formulas by Sasha Rush.
   into the five features of LLMs that make them 'tick'.
 
 :::
+
+[^src-llm-five-formulas]: There is also a
+    [tutorial format](https://www.youtube.com/watch?v=k9DnQPrfJQs&t=3571s){target="_blank"}
+    of this lecture if you prefer a slightly relaxed pace with
+    interaction from the audience.
 
 ## Interesting Articles
 
