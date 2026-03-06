@@ -1,0 +1,121 @@
+---
+title: "Shamindra's February 2026 Roundup"
+description: |
+  A quick roundup of any interesting February 2026 activities
+categories: [personal, roundup]
+slug: shrotriya2026february26roundup
+date: "2026-02-28"
+image: images/preview-february-2026-01.png
+bibliography: ../../refs.bib
+draft: true
+format:
+  html:
+    code-link: true
+execute:
+  echo: true
+editor_options:
+  markdown:
+    wrap: 80
+---
+
+## Introduction
+
+Welcome to the February 2026 roundup! Similar to
+[last time](../../posts/2020-01-27-shrotriya2020january20roundup/){target="_blank"}
+I'm documenting anything interesting I come across and any activities
+I get up to. This is more for my personal benefit but may also help
+others.
+
+## Summary
+
+<!-- 2-3 line overview of highlights: key skills learned, books read,
+     articles discovered, and anything else notable this month. -->
+
+## Skills Learned
+
+- Learning how to do the roadie wrap. It goes like this. And add one more point here. Try this again. And one more time.
+- Testing live reload with quarto.
+- Hey. Hey Hey.
+- Live reload test edit.
+- One more time.
+
+## Interesting Tutorials
+
+-
+
+    <details> <summary>Key Takeaways</summary>
+
+    -
+
+    </details>
+
+## Interesting Articles
+
+-
+
+    <details> <summary>Key Takeaways</summary>
+
+    -
+
+    </details>
+
+## Interesting Books
+
+### Non-fiction
+
+-
+
+### Fiction
+
+-
+
+### Audiobooks
+
+-
+
+### Ebooks
+
+-
+
+## Interesting Papers
+
+-
+
+## Interesting Podcasts and Interviews
+
+-
+
+    <details> <summary>Key Takeaways</summary>
+
+    -
+
+    </details>
+
+## Interesting Presentations and Talks
+
+-
+
+    <details> <summary>Key Takeaways</summary>
+
+    -
+
+    </details>
+
+## Useful Links
+
+-
+
+## Personal Blogging
+
+-
+
+## Teaching
+
+-
+
+## Professional Updates
+
+-
+
+## Concluding Thoughts
+
