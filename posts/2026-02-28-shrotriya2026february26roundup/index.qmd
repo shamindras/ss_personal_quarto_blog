@@ -38,6 +38,13 @@ editor_options:
 .quarto-float-vid {
   text-align: center;
 }
+.column-margin .quarto-float-vid {
+  width: 350px;
+  max-width: none;
+}
+.column-margin .quarto-video {
+  max-width: 100%;
+}
 </style>
 ```
 
@@ -58,10 +65,12 @@ others.
 
 [Large Language Models in Five Formulas](https://www.youtube.com/watch?v=KCXDr-UOb9A&t=2989s){target="_blank"} by Sasha Rush[^src-llm-five-formulas].
 
+::: {.column-margin}
 ::: {#vid-feb26-llm-five-formulas}
 {{< video https://www.youtube.com/watch?v=KCXDr-UOb9A start="2989" title="Large Language Models in Five Formulas by Sasha Rush" aspect-ratio="4x3" >}}
 
 Large Language Models in Five Formulas by Sasha Rush.
+:::
 :::
 
 ::: {.callout-tip collapse="true" icon=false}
@@ -73,7 +82,7 @@ Large Language Models in Five Formulas by Sasha Rush.
 
 :::
 
-[^src-llm-five-formulas]: There is also a
+[^src-llm-five-formulas]: There is also a recorded
     [tutorial format](https://www.youtube.com/watch?v=k9DnQPrfJQs&t=3571s){target="_blank"}
     of this lecture if you prefer a slightly relaxed pace with
     interaction from the audience.
@@ -94,6 +103,8 @@ Large Language Models in Five Formulas by Sasha Rush.
 
 ### Audiobooks
 
+I came to a reading epiphany this month, that *for me* **self-help books should be listened to as audiobooks** rather than read on paperback. This simple change has made a world of difference. I previously found the act of reading such books quite tedious and dry, given their prescriptive tone. Now I can use my morning and evening walks to actively listen, without taking more time out of my day. Since I have Spotify premium, many books (including those listed below) are included in the membership. In case you feel similarly, this tip might help you sample more of this genre. There is often *some* nugget of truth to take away from each one.
+
 :::::: {layout="[15, -2, 83]" layout-valign="top"}
 ![](images/feb26-life-changing-magic.jpg){fig-alt="Book cover of The Life-Changing Magic of Tidying Up by Marie Kondo"}
 
@@ -104,7 +115,7 @@ Large Language Models in Five Formulas by Sasha Rush.
 
 ## Key Takeaways
 
-- We really are in the era of markdown-driven development.
+This is a genuinely remarkable book and one that I'm more a decade late to. I had heard all of the "spark joy" memes when the Netflix show landed, and simply assumed this was another basic decluttering gimmick and ignored it. How wrong I was. This is a very deep book about life prioritization disguised as a home tidying manifesto. I learned many practical skills, but the main three biggest takeaways were as follows. First, Marie Kondo (or 'KonMari') notes that tidying your home should be *one-off* activity, not a recurring one. Second, the book emphasizes the use of qualitative decision making over quantitative for tidying. And finally, maintaining tidyness can be done via principled methods, e.g. the KonMari folding technique. A bonus lesson from the book, is that tidying is the *first* step towards building a better you, not the final one.
 
 :::
 ::::
@@ -180,20 +191,28 @@ Large Language Models in Five Formulas by Sasha Rush.
 Learning how to do the roadie wrap. It goes like this. And add
 one more point here. Try this again. And one more time.
 
+### The KonMari Fold
+
 [The KonMari Fold](https://www.youtube.com/watch?v=IjkmqbJTLBM&t=7s){target="_blank"} by Marie Kondo (YouTube channel).
 
+::: {.column-margin}
 ::: {#vid-feb26-konmari-fold}
 {{< video https://www.youtube.com/watch?v=IjkmqbJTLBM start="7" title="The KonMari Fold by Marie Kondo" aspect-ratio="4x3" >}}
 
 The KonMari Fold by Marie Kondo.
 :::
+:::
+
+### Over/Under Roadie Wrap
 
 [Over/Under Roadie Wrap](https://www.youtube.com/watch?v=zjpBXx8oNOc&t=2s&pp=ygULcm9hZGllIHdyYXA%3D){target="_blank"} by Rattlesnake Cable Company (YouTube channel).
 
+::: {.column-margin}
 ::: {#vid-feb26-roadie-wrap}
 {{< video https://www.youtube.com/watch?v=zjpBXx8oNOc start="2" title="Over/Under Roadie Wrap by Rattlesnake Cable Company" aspect-ratio="4x3" >}}
 
 Over/Under Roadie Wrap by Rattlesnake Cable Company.
+:::
 :::
 
 ## Concluding Thoughts
