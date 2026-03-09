@@ -4,6 +4,8 @@ description: |
   A quick roundup of any interesting February 2026 activities
 categories: [personal, roundup]
 slug: shrotriya2026february26roundup
+citation:
+  id: shrotriya2026february26roundup
 date: "2026-02-28"
 image: images/preview-february-2026-01.png
 bibliography: ../../refs.bib
@@ -38,6 +40,24 @@ editor_options:
 .quarto-float-vid {
   text-align: center;
 }
+.quarto-layout-panel .quarto-video {
+  max-width: 100%;
+  margin: 0;
+}
+.quarto-layout-panel .quarto-float-vid {
+  text-align: center;
+}
+.quarto-layout-panel .quarto-float-vid figcaption {
+  font-size: 0.85em;
+}
+.quarto-layout-panel .quarto-layout-row {
+  gap: 0;
+}
+.quarto-layout-panel blockquote {
+  border-left: 4px solid #c0392b;
+  padding-left: 1em;
+  margin-left: 0;
+}
 .column-margin .quarto-float-vid {
   width: 350px;
   max-width: none;
@@ -61,32 +81,6 @@ others.
 <!-- 2-3 line overview of highlights: key skills learned, books read,
      articles discovered, and anything else notable this month. -->
 
-## Interesting Tutorials
-
-[Large Language Models in Five Formulas](https://www.youtube.com/watch?v=KCXDr-UOb9A&t=2989s){target="_blank"} by Sasha Rush[^src-llm-five-formulas].
-
-::: {.column-margin}
-::: {#vid-feb26-llm-five-formulas}
-{{< video https://www.youtube.com/watch?v=KCXDr-UOb9A start="2989" title="Large Language Models in Five Formulas by Sasha Rush" aspect-ratio="4x3" >}}
-
-Large Language Models in Five Formulas by Sasha Rush.
-:::
-:::
-
-::: {.callout-tip collapse="true" icon=false}
-
-## Key Takeaways
-
-- A truly remarkable lecture distilling Prof. Rush's deep insights
-  into the five features of LLMs that make them 'tick'.
-
-:::
-
-[^src-llm-five-formulas]: There is also a recorded
-    [tutorial format](https://www.youtube.com/watch?v=k9DnQPrfJQs&t=3571s){target="_blank"}
-    of this lecture if you prefer a slightly relaxed pace with
-    interaction from the audience.
-
 ## Interesting Articles
 
 [How Markdown took over the world](https://www.anildash.com/2026/01/09/how-markdown-took-over-the-world/){target="_blank"} by Anil Dash.
@@ -99,13 +93,43 @@ Large Language Models in Five Formulas by Sasha Rush.
 
 :::
 
+## Interesting Tutorials
+
+### Large Language Models in Five Formulas
+
+:::::: {layout="[40, 60]" layout-valign="top"}
+::: {#vid-feb26-llm-five-formulas}
+{{< video https://www.youtube.com/watch?v=KCXDr-UOb9A start="2989" title="Large Language Models in Five Formulas by Sasha Rush" aspect-ratio="4x3" >}}
+
+[LLMs in Five Formulas](https://www.youtube.com/watch?v=KCXDr-UOb9A&t=2989s){target="_blank"}.
+:::
+
+:::: {}
+[Large Language Models in Five Formulas](https://www.youtube.com/watch?v=KCXDr-UOb9A&t=2989s){target="_blank"} by Sasha Rush[^src-llm-five-formulas].
+
+- A truly remarkable lecture distilling Prof. Rush's deep insights
+  into the five features of LLMs that make them 'tick'.
+::::
+::::::
+
+[^src-llm-five-formulas]: There is also a recorded
+    [tutorial format](https://www.youtube.com/watch?v=k9DnQPrfJQs&t=3571s){target="_blank"}
+    of this lecture if you prefer a slightly relaxed pace with
+    interaction from the audience.
+
 ## Interesting Books
 
 ### Audiobooks
 
-I came to a reading epiphany this month, that *for me* **self-help books should be listened to as audiobooks** rather than read on paperback. This simple change has made a world of difference. I previously found the act of reading such books quite tedious and dry, given their prescriptive tone. Now I can use my morning and evening walks to actively listen, without taking more time out of my day. Since I have Spotify premium, many books (including those listed below) are included in the membership. In case you feel similarly, this tip might help you sample more of this genre. There is often *some* nugget of truth to take away from each one.
+::: {.callout-note collapse="true" icon=false}
 
-:::::: {layout="[15, -2, 83]" layout-valign="top"}
+## Audiobook - Tip
+
+I came to a reading epiphany in early 2026, namely, that *for me* **self-help books should be listened to as audiobooks** rather than read as paperbacks. This simple change has made a world of difference. I previously found the act of reading such books quite tedious and dry, often given their prescriptive tone. Now I can use my morning and evening walks to actively listen to them. Since I have Spotify premium, many books (including those listed below) are included in the membership. In case you feel similarly, this tip might help you sample more of this genre. There is often *some* nugget to take away from each one.
+
+:::
+
+:::::: {layout="[15, 85]" layout-valign="top"}
 ![](images/feb26-life-changing-magic.jpg){fig-alt="Book cover of The Life-Changing Magic of Tidying Up by Marie Kondo"}
 
 :::: {}
@@ -125,7 +149,27 @@ This is a genuinely remarkable book and one that I'm more a decade late to. I ha
     *The Life-Changing Magic of Tidying Up*:
     [Open Library](https://openlibrary.org/isbn/9781607747307){target="_blank"}.
 
-:::::: {layout="[15, -2, 83]" layout-valign="top"}
+:::::: {layout="[15, 85]" layout-valign="top"}
+![](images/feb26-win-friends.jpg){fig-alt="Book cover of How to Win Friends and Influence People by Dale Carnegie"}
+
+:::: {}
+[How to Win Friends and Influence People (audiobook)](https://open.spotify.com/episode/1jDBhhffayv293DtCH4rSP){target="_blank"} by Dale Carnegie[^src-win-friends].
+
+::: {.callout-tip collapse="true" icon=false}
+
+## Key Takeaways
+
+- We really are in the era of markdown-driven development.
+
+:::
+::::
+::::::
+
+[^src-win-friends]: Image source for
+    *How to Win Friends and Influence People*:
+    [Spotify](https://open.spotify.com/episode/1jDBhhffayv293DtCH4rSP){target="_blank"}.
+
+:::::: {layout="[15, 85]" layout-valign="top"}
 ![](images/feb26-diary-of-a-ceo.jpg){fig-alt="Book cover of The Diary of a CEO by Steven Bartlett"}
 
 :::: {}
@@ -144,75 +188,50 @@ This is a genuinely remarkable book and one that I'm more a decade late to. I ha
 [^src-diary-of-a-ceo]: Image source for *The Diary of a CEO*:
     [Open Library](https://openlibrary.org/works/OL37187091W){target="_blank"}.
 
-:::::: {layout="[15, -2, 83]" layout-valign="top"}
-![](images/feb26-win-friends.jpg){fig-alt="Book cover of How to Win Friends and Influence People by Dale Carnegie"}
-
-:::: {}
-[How to Win Friends and Influence People (audiobook)](https://open.spotify.com/episode/1jDBhhffayv293DtCH4rSP){target="_blank"} by Dale Carnegie[^src-win-friends].
-
-::: {.callout-tip collapse="true" icon=false}
-
-## Key Takeaways
-
-- We really are in the era of markdown-driven development.
-
-:::
-::::
-::::::
-
-[^src-win-friends]: Image source for
-    *How to Win Friends and Influence People*:
-    [Simon & Schuster Audio](https://open.spotify.com/episode/1jDBhhffayv293DtCH4rSP){target="_blank"}.
-
-### Paperbacks
-
-:::::: {layout="[15, -2, 83]" layout-valign="top"}
-![](images/feb26-moonwalking-einstein.jpg){fig-alt="Book cover of Moonwalking with Einstein by Joshua Foer"}
-
-:::: {}
-[Moonwalking with Einstein](https://www.amazon.com.au/Moonwalking-Einstein-Science-Remembering-Everything/dp/0143120530){target="_blank"} by Joshua Foer[^src-moonwalking-einstein].
-
-::: {.callout-tip collapse="true" icon=false}
-
-## Key Takeaways
-
-- We really are in the era of markdown-driven development.
-
-:::
-::::
-::::::
-
-[^src-moonwalking-einstein]: Image source for
-    *Moonwalking with Einstein*:
-    [Open Library](https://openlibrary.org/isbn/9780143120537){target="_blank"}.
-
 ## Skills Learned
 
-Learning how to do the roadie wrap. It goes like this. And add
-one more point here. Try this again. And one more time.
+I really enjoy learning skills in a **principled manner**, so that the most mundane and routine tasks can be approached in a way that makes them approachable, easy, and fun!
+
+Here are some of the cool skills I picked up this month.
 
 ### The KonMari Fold
 
-[The KonMari Fold](https://www.youtube.com/watch?v=IjkmqbJTLBM&t=7s){target="_blank"} by Marie Kondo (YouTube channel).
-
-::: {.column-margin}
+:::::: {layout="[40, 60]" layout-valign="top"}
 ::: {#vid-feb26-konmari-fold}
 {{< video https://www.youtube.com/watch?v=IjkmqbJTLBM start="7" title="The KonMari Fold by Marie Kondo" aspect-ratio="4x3" >}}
 
-The KonMari Fold by Marie Kondo.
+[The KonMari Fold](https://www.youtube.com/watch?v=IjkmqbJTLBM&t=7s){target="_blank"}.
 :::
-:::
+
+:::: {}
+After becoming a [student of KonMari](#audiobooks), I decided to raise my folding game with her method. It is a game-changer. The The main idea can be summarized in three-steps:
+
+> 1. **Shapes matter.** Rectangular shapes are easiest to fold[^fn-konmari-3d].
+> 2. **Rectangulate.** So quickly first fold any item into the largest rectangle.
+> 3. **Divide and stand.** Repeatedly fold down the rectangle so that the item stands on its own.
+
+::::
+::::::
+
+[^fn-konmari-3d]: Technically we are in 3D land, but we mean
+    rectangles looking down 👀.
 
 ### Over/Under Roadie Wrap
 
-[Over/Under Roadie Wrap](https://www.youtube.com/watch?v=zjpBXx8oNOc&t=2s&pp=ygULcm9hZGllIHdyYXA%3D){target="_blank"} by Rattlesnake Cable Company (YouTube channel).
-
-::: {.column-margin}
+:::::: {layout="[40, 60]" layout-valign="top"}
 ::: {#vid-feb26-roadie-wrap}
 {{< video https://www.youtube.com/watch?v=zjpBXx8oNOc start="2" title="Over/Under Roadie Wrap by Rattlesnake Cable Company" aspect-ratio="4x3" >}}
 
-Over/Under Roadie Wrap by Rattlesnake Cable Company.
+[Over/Under Roadie Wrap](https://www.youtube.com/watch?v=zjpBXx8oNOc&t=2s){target="_blank"}.
 :::
-:::
+
+:::: {}
+After collecting hundreds of cables and wires, I realized that I'd never learned a proper way to coil them up. The "roadie-wrap" is a well-tested technique used by grips who have to coil (and uncoil!) hundreds of cables daily.
+
+> 1. **Tangle-free.** Uncoiling never leads to tangles.
+> 2. **Easy recoiling.** Recoiling is just a matter of nailing the over/under technique.
+> 3. **Works small.** You can use this on small cables, and your cables will last a lot longer.
+::::
+::::::
 
 ## Concluding Thoughts
