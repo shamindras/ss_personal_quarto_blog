@@ -35,6 +35,24 @@
 .quarto-float-vid {
   text-align: center;
 }
+.quarto-layout-panel .quarto-video {
+  max-width: 100%;
+  margin: 0;
+}
+.quarto-layout-panel .quarto-float-vid {
+  text-align: center;
+}
+.quarto-layout-panel .quarto-float-vid figcaption {
+  font-size: 0.85em;
+}
+.quarto-layout-panel .quarto-layout-row {
+  gap: 0;
+}
+.quarto-layout-panel blockquote {
+  border-left: 4px solid #c0392b;
+  padding-left: 1em;
+  margin-left: 0;
+}
 .column-margin .quarto-float-vid {
   width: 350px;
   max-width: none;
@@ -52,22 +70,10 @@
 <!-- 2-3 line overview of highlights: key skills learned, books read,
      articles discovered, and anything else notable this month. -->
 </section>
-<section id="interesting-tutorials" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="interesting-tutorials">Interesting Tutorials</h2>
-<p><a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" target="_blank">Large Language Models in Five Formulas</a> by Sasha Rush<sup>1</sup>.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<div id="vid-feb26-llm-five-formulas" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-vid figure">
-<div aria-describedby="vid-feb26-llm-five-formulas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-video ratio ratio-4x3"><iframe data-external="1" src="https://www.youtube.com/embed/KCXDr-UOb9A?start=2989" title="Large Language Models in Five Formulas by Sasha Rush" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-vid" id="vid-feb26-llm-five-formulas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Video&nbsp;1: Large Language Models in Five Formulas by Sasha Rush.
-</figcaption>
-</figure>
-</div>
-</div></div><div class="callout callout-style-default callout-tip no-icon callout-titled">
+<section id="interesting-articles" class="level2">
+<h2 class="anchored" data-anchor-id="interesting-articles">Interesting Articles</h2>
+<p><a href="https://www.anildash.com/2026/01/09/how-markdown-took-over-the-world/" target="_blank">How Markdown took over the world</a> by Anil Dash.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
@@ -80,48 +86,66 @@ Video&nbsp;1: Large Language Models in Five Formulas by Sasha Rush.
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li>A truly remarkable lecture distilling Prof.&nbsp;Rush’s deep insights into the five features of LLMs that make them ‘tick’.</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="interesting-articles" class="level2">
-<h2 class="anchored" data-anchor-id="interesting-articles">Interesting Articles</h2>
-<p><a href="https://www.anildash.com/2026/01/09/how-markdown-took-over-the-world/" target="_blank">How Markdown took over the world</a> by Anil Dash.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Key Takeaways
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
 <li>We really are in the era of markdown-driven development.</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
+<section id="interesting-tutorials" class="level2">
+<h2 class="anchored" data-anchor-id="interesting-tutorials">Interesting Tutorials</h2>
+<section id="large-language-models-in-five-formulas" class="level3">
+<h3 class="anchored" data-anchor-id="large-language-models-in-five-formulas">Large Language Models in Five Formulas</h3>
+<div class="quarto-layout-panel" data-layout="[40, 60]">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
+<div id="vid-feb26-llm-five-formulas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-vid figure">
+<div aria-describedby="vid-feb26-llm-five-formulas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-video ratio ratio-4x3"><iframe data-external="1" src="https://www.youtube.com/embed/KCXDr-UOb9A?start=2989" title="Large Language Models in Five Formulas by Sasha Rush" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-vid" id="vid-feb26-llm-five-formulas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Video&nbsp;1: <a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" target="_blank">LLMs in Five Formulas</a>.
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<p><a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" target="_blank">Large Language Models in Five Formulas</a> by Sasha Rush<sup>1</sup>.</p>
+<ul>
+<li>A truly remarkable lecture distilling Prof.&nbsp;Rush’s deep insights into the five features of LLMs that make them ‘tick’.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</section>
 <section id="interesting-books" class="level2">
 <h2 class="anchored" data-anchor-id="interesting-books">Interesting Books</h2>
 <section id="audiobooks" class="level3">
 <h3 class="anchored" data-anchor-id="audiobooks">Audiobooks</h3>
-<p>I came to a reading epiphany this month, that <em>for me</em> <strong>self-help books should be listened to as audiobooks</strong> rather than read on paperback. This simple change has made a world of difference. I previously found the act of reading such books quite tedious and dry, given their prescriptive tone. Now I can use my morning and evening walks to actively listen, without taking more time out of my day. Since I have Spotify premium, many books (including those listed below) are included in the membership. In case you feel similarly, this tip might help you sample more of this genre. There is often <em>some</em> nugget of truth to take away from each one.</p>
-<div class="quarto-layout-panel" data-layout="[15, -2, 83]">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Audiobook - Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>I came to a reading epiphany in early 2026, namely, that <em>for me</em> <strong>self-help books should be listened to as audiobooks</strong> rather than read as paperbacks. This simple change has made a world of difference. I previously found the act of reading such books quite tedious and dry, often given their prescriptive tone. Now I can use my morning and evening walks to actively listen to them. Since I have Spotify premium, many books (including those listed below) are included in the membership. In case you feel similarly, this tip might help you sample more of this genre. There is often <em>some</em> nugget to take away from each one.</p>
+</div>
+</div>
+</div>
+<div class="quarto-layout-panel" data-layout="[15, 85]">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: center;">
 <p><img src="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/feb26-life-changing-magic.jpg" class="img-fluid" alt="Book cover of The Life-Changing Magic of Tidying Up by Marie Kondo"></p>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 2.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 83.0%;justify-content: flex-start;">
+<div class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: flex-start;">
 <p><a href="https://open.spotify.com/show/4evjgM54KB8lxxT87caPCd" target="_blank">Life Changing Magic of Tidying Up (audiobook)</a> by Marie Kondo (narrated by Lucy Scott)<sup>2</sup>.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -142,16 +166,13 @@ Video&nbsp;1: Large Language Models in Five Formulas by Sasha Rush.
 </div>
 </div>
 </div>
-<div class="quarto-layout-panel" data-layout="[15, -2, 83]">
+<div class="quarto-layout-panel" data-layout="[15, 85]">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: center;">
-<p><img src="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/feb26-diary-of-a-ceo.jpg" class="img-fluid" alt="Book cover of The Diary of a CEO by Steven Bartlett"></p>
+<p><img src="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/feb26-win-friends.jpg" class="img-fluid" alt="Book cover of How to Win Friends and Influence People by Dale Carnegie"></p>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 2.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 83.0%;justify-content: flex-start;">
-<p><a href="https://open.spotify.com/show/7iQXmUT7XGuZSzAMjoNWlX" target="_blank">Diary of a CEO (audiobook)</a> by Steven Bartlett (narrated by the author)<sup>3</sup>.</p>
+<div class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: flex-start;">
+<p><a href="https://open.spotify.com/episode/1jDBhhffayv293DtCH4rSP" target="_blank">How to Win Friends and Influence People (audiobook)</a> by Dale Carnegie<sup>3</sup>.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -173,16 +194,13 @@ Video&nbsp;1: Large Language Models in Five Formulas by Sasha Rush.
 </div>
 </div>
 </div>
-<div class="quarto-layout-panel" data-layout="[15, -2, 83]">
+<div class="quarto-layout-panel" data-layout="[15, 85]">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: center;">
-<p><img src="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/feb26-win-friends.jpg" class="img-fluid" alt="Book cover of How to Win Friends and Influence People by Dale Carnegie"></p>
+<p><img src="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/feb26-diary-of-a-ceo.jpg" class="img-fluid" alt="Book cover of The Diary of a CEO by Steven Bartlett"></p>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 2.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 83.0%;justify-content: flex-start;">
-<p><a href="https://open.spotify.com/episode/1jDBhhffayv293DtCH4rSP" target="_blank">How to Win Friends and Influence People (audiobook)</a> by Dale Carnegie<sup>4</sup>.</p>
+<div class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: flex-start;">
+<p><a href="https://open.spotify.com/show/7iQXmUT7XGuZSzAMjoNWlX" target="_blank">Diary of a CEO (audiobook)</a> by Steven Bartlett (narrated by the author)<sup>4</sup>.</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -205,76 +223,69 @@ Video&nbsp;1: Large Language Models in Five Formulas by Sasha Rush.
 </div>
 </div>
 </section>
-<section id="paperbacks" class="level3">
-<h3 class="anchored" data-anchor-id="paperbacks">Paperbacks</h3>
-<div class="quarto-layout-panel" data-layout="[15, -2, 83]">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: center;">
-<p><img src="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/feb26-moonwalking-einstein.jpg" class="img-fluid" alt="Book cover of Moonwalking with Einstein by Joshua Foer"></p>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 2.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 83.0%;justify-content: flex-start;">
-<p><a href="https://www.amazon.com.au/Moonwalking-Einstein-Science-Remembering-Everything/dp/0143120530" target="_blank">Moonwalking with Einstein</a> by Joshua Foer<sup>5</sup>.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Key Takeaways
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li>We really are in the era of markdown-driven development.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </section>
-</section>
-<section id="skills-learned" class="level2 page-columns page-full">
+<section id="skills-learned" class="level2">
 <h2 class="anchored" data-anchor-id="skills-learned">Skills Learned</h2>
-<p>Learning how to do the roadie wrap. It goes like this. And add one more point here. Try this again. And one more time.</p>
-<section id="the-konmari-fold" class="level3 page-columns page-full">
+<p>I really enjoy learning skills in a <strong>principled manner</strong>, so that the most mundane and routine tasks can be approached in a way that makes them approachable, easy, and fun!</p>
+<p>Here are some of the cool skills I picked up this month.</p>
+<section id="the-konmari-fold" class="level3">
 <h3 class="anchored" data-anchor-id="the-konmari-fold">The KonMari Fold</h3>
-<p><a href="https://www.youtube.com/watch?v=IjkmqbJTLBM&amp;t=7s" target="_blank">The KonMari Fold</a> by Marie Kondo (YouTube channel).</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-layout-panel" data-layout="[40, 60]">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
 <div id="vid-feb26-konmari-fold" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-vid figure">
 <div aria-describedby="vid-feb26-konmari-fold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-video ratio ratio-4x3"><iframe data-external="1" src="https://www.youtube.com/embed/IjkmqbJTLBM?start=7" title="The KonMari Fold by Marie Kondo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-vid" id="vid-feb26-konmari-fold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Video&nbsp;2: The KonMari Fold by Marie Kondo.
+Video&nbsp;2: <a href="https://www.youtube.com/watch?v=IjkmqbJTLBM&amp;t=7s" target="_blank">The KonMari Fold</a>.
 </figcaption>
 </figure>
 </div>
-</div></div></section>
-<section id="overunder-roadie-wrap" class="level3 page-columns page-full">
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<p>After becoming a student of KonMari, I decided to raise my folding game with her method. It is a game-changer. The The main idea can be summarized in three-steps:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><strong>Shapes matter.</strong> Rectangular shapes are easiest to fold<sup>5</sup>.</li>
+<li><strong>Rectangulate.</strong> So quickly first fold any item into the largest rectangle.</li>
+<li><strong>Divide and stand.</strong> Repeatedly fold down the rectangle so that the item stands on its own.</li>
+</ol>
+</blockquote>
+</div>
+</div>
+</div>
+</section>
+<section id="overunder-roadie-wrap" class="level3">
 <h3 class="anchored" data-anchor-id="overunder-roadie-wrap">Over/Under Roadie Wrap</h3>
-<p><a href="https://www.youtube.com/watch?v=zjpBXx8oNOc&amp;t=2s&amp;pp=ygULcm9hZGllIHdyYXA%3D" target="_blank">Over/Under Roadie Wrap</a> by Rattlesnake Cable Company (YouTube channel).</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-layout-panel" data-layout="[40, 60]">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
 <div id="vid-feb26-roadie-wrap" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-vid figure">
 <div aria-describedby="vid-feb26-roadie-wrap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-video ratio ratio-4x3"><iframe data-external="1" src="https://www.youtube.com/embed/zjpBXx8oNOc?start=2" title="Over/Under Roadie Wrap by Rattlesnake Cable Company" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-vid" id="vid-feb26-roadie-wrap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Video&nbsp;3: Over/Under Roadie Wrap by Rattlesnake Cable Company.
+Video&nbsp;3: <a href="https://www.youtube.com/watch?v=zjpBXx8oNOc&amp;t=2s" target="_blank">Over/Under Roadie Wrap</a>.
 </figcaption>
 </figure>
 </div>
-</div></div></section>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<p>After collecting hundreds of cables and wires, I realized that I’d never learned a proper way to coil them up. The “roadie-wrap” is a well-tested technique used by grips who have to coil (and uncoil!) hundreds of cables daily.</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><strong>Tangle-free.</strong> Uncoiling never leads to tangles.</li>
+<li><strong>Easy recoiling.</strong> Recoiling is just a matter of nailing the over/under technique.</li>
+<li><strong>Works small.</strong> You can use this on small cables, and your cables will last a lot longer.</li>
+</ol>
+</blockquote>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="concluding-thoughts" class="level2">
 <h2 class="anchored" data-anchor-id="concluding-thoughts">Concluding Thoughts</h2>
@@ -288,18 +299,18 @@ Video&nbsp;3: Over/Under Roadie Wrap by Rattlesnake Cable Company.
 <ol>
 <li id="fn1"><p>There is also a recorded <a href="https://www.youtube.com/watch?v=k9DnQPrfJQs&amp;t=3571s" target="_blank">tutorial format</a> of this lecture if you prefer a slightly relaxed pace with interaction from the audience.↩︎</p></li>
 <li id="fn2"><p>Image source for <em>The Life-Changing Magic of Tidying Up</em>: <a href="https://openlibrary.org/isbn/9781607747307" target="_blank">Open Library</a>.↩︎</p></li>
-<li id="fn3"><p>Image source for <em>The Diary of a CEO</em>: <a href="https://openlibrary.org/works/OL37187091W" target="_blank">Open Library</a>.↩︎</p></li>
-<li id="fn4"><p>Image source for <em>How to Win Friends and Influence People</em>: <a href="https://open.spotify.com/episode/1jDBhhffayv293DtCH4rSP" target="_blank">Simon &amp; Schuster Audio</a>.↩︎</p></li>
-<li id="fn5"><p>Image source for <em>Moonwalking with Einstein</em>: <a href="https://openlibrary.org/isbn/9780143120537" target="_blank">Open Library</a>.↩︎</p></li>
+<li id="fn3"><p>Image source for <em>How to Win Friends and Influence People</em>: <a href="https://open.spotify.com/episode/1jDBhhffayv293DtCH4rSP" target="_blank">Spotify</a>.↩︎</p></li>
+<li id="fn4"><p>Image source for <em>The Diary of a CEO</em>: <a href="https://openlibrary.org/works/OL37187091W" target="_blank">Open Library</a>.↩︎</p></li>
+<li id="fn5"><p>Technically we are in 3D land, but we mean rectangles looking down 👀.↩︎</p></li>
 </ol>
-</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2026,
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2026february26roundup,
   author = {Shrotriya, Shamindra},
   title = {Shamindra’s {February} 2026 {Roundup}},
   date = {2026-02-28},
   url = {https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/},
   langid = {en}
 }
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2026" class="csl-entry quarto-appendix-citeas">
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2026february26roundup" class="csl-entry quarto-appendix-citeas">
 Shrotriya, Shamindra. 2026. <span>“Shamindra’s February 2026
 Roundup.”</span> February 28, 2026. <a href="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/">https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/</a>.
 </div></div></section></div> ]]></description>
