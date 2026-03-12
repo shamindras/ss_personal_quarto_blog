@@ -48,10 +48,22 @@
 .quarto-layout-panel .quarto-layout-row {
   gap: 0;
 }
-.quarto-layout-panel blockquote {
-  border-left: 4px solid #c0392b;
-  padding-left: 1em;
+blockquote {
+  border-left: 4px solid #2e7d32;
+  background-color: #f7fcf7;
+  padding: 0.75em 1em;
   margin-left: 0;
+  border-radius: 0 4px 4px 0;
+}
+blockquote table {
+  width: auto !important;
+  max-width: fit-content;
+  font-size: 0.95em;
+}
+blockquote table td {
+  border: none !important;
+  padding: 2px 6px !important;
+  white-space: nowrap;
 }
 .column-margin .quarto-float-vid {
   width: 350px;
@@ -60,10 +72,75 @@
 .column-margin .quarto-video {
   max-width: 100%;
 }
+.star-rating {
+  display: inline-block;
+  position: relative;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  cursor: default;
+}
+.star-rating:hover::after {
+  content: attr(data-rating);
+  position: absolute;
+  top: -2em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.7em;
+  white-space: nowrap;
+  letter-spacing: 0;
+}
+.star-rating .star-full {
+  color: #f5c518;
+}
+.star-rating .star-half {
+  position: relative;
+  display: inline-block;
+  color: #d0d0d0;
+}
+.star-rating .star-half::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  width: 50%;
+  color: #f5c518;
+}
+.star-rating .star-empty {
+  color: #d0d0d0;
+}
 </style>
+<style type="text/css">/**
+  * Author: Mikhail Popov
+  * License: MIT
+  */
+a.wiki {
+    /* color: #0645ad; */
+    text-decoration: none;
+    border-bottom: 1px dotted #0645ad;
+}
+.wiki::after {
+    font-family: serif;
+    content: " W";
+    vertical-align: super;
+    font-size: 6pt;
+}</style>
+<script src="https://unpkg.com/wikipedia-preview@1.8.0/dist/wikipedia-preview.production.js" type="text/javascript"></script>
+<script type="text/javascript">
+    window.onload = function() {
+      wikipediaPreview.init({
+        lang: 'en',
+        selector: '.wiki',
+        detectLinks: true
+      });
+    };</script>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Welcome to the February 2026 roundup! Similar to <a href="../../posts/2020-01-27-shrotriya2020january20roundup/" target="_blank">last time</a> I’m documenting anything interesting I come across and any activities I get up to. This is more for my personal benefit but may also help others.</p>
+<p>Welcome to the February 2026 roundup! Similar to <a href="../../posts/2020-01-27-shrotriya2020january20roundup/" target="_blank">last time</a> I’m documenting anything interesting I come across and any activities I get up to. This is more for my personal reference and benefit but may also help others.</p>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
@@ -72,30 +149,24 @@
 </section>
 <section id="interesting-articles" class="level2">
 <h2 class="anchored" data-anchor-id="interesting-articles">Interesting Articles</h2>
-<p><a href="https://www.anildash.com/2026/01/09/how-markdown-took-over-the-world/" target="_blank">How Markdown took over the world</a> by Anil Dash.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Key Takeaways
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li>We really are in the era of markdown-driven development.</li>
-</ul>
-</div>
-</div>
-</div>
+<section id="how-markdown-took-over-the-world" class="level3">
+<h3 class="anchored" data-anchor-id="how-markdown-took-over-the-world">How Markdown Took Over the World</h3>
+<p><em>by Anil Dash</em> <a href="https://www.anildash.com/2026/01/09/how-markdown-took-over-the-world/" target="_blank">🔗</a>.</p>
+<p>This was a really important historical overview over the rise of one of the most ubiquitous text document formats used on the web, i.e.&nbsp;<a href="https://daringfireball.net/projects/markdown/">markdown</a>. Dash worked at Movable Type, an influential blogging platform in the early 21st century. Key takeaways:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><strong>Motivation.</strong> <a href="https://daringfireball.net/">John Gruber</a> originally developed markdown <em>simplify</em> his blogging experience with Movable Type.</li>
+<li><strong>Success.</strong> Is owed to a collection of favorable events and good design, i.e.&nbsp;rise of blogging, brilliant branding (mark<em>down</em> as the simplification of mark<em>up</em>), easy syntax which could be picked up <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">in just a few minutes</a>, open-sourced (<strong>not monetized</strong>) with a helpful community.</li>
+</ol>
+</blockquote>
+<p>On a personal note, <a href="https://rmarkdown.rstudio.com/index.html"><code>Rmarkdown</code></a> was revolutionary to me (and the wider data science community) in helping to develop reproducible and version-controlled data analysis. It showcased the power of <a href="https://en.wikipedia.org/wiki/Literate_programming" class="wiki">literate programming</a> in the “Big Data” era. With the rise of amazing packages like <a href="https://quarto.org/docs/blog/">Quarto</a>, markdown continues to evolve and still shapes blogging<sup>1</sup> more than two decades later 🎆.</p>
+</section>
 </section>
 <section id="interesting-tutorials" class="level2">
 <h2 class="anchored" data-anchor-id="interesting-tutorials">Interesting Tutorials</h2>
-<section id="large-language-models-in-five-formulas" class="level3">
-<h3 class="anchored" data-anchor-id="large-language-models-in-five-formulas">Large Language Models in Five Formulas</h3>
+<section id="llms-in-five-formulas" class="level3">
+<h3 class="anchored" data-anchor-id="llms-in-five-formulas">LLMs in Five Formulas</h3>
+<p><em>by Sasha Rush</em> <a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" target="_blank">▶️</a>.</p>
 <div class="quarto-layout-panel" data-layout="[40, 60]">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
@@ -110,76 +181,150 @@ Video&nbsp;1: <a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" 
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
-<p><a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" target="_blank">Large Language Models in Five Formulas</a> by Sasha Rush<sup>1</sup>.</p>
-<ul>
-<li>A truly remarkable lecture distilling Prof.&nbsp;Rush’s deep insights into the five features of LLMs that make them ‘tick’.</li>
-</ul>
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<p>A truly remarkable lecture by Prof.&nbsp;Rush’s distilling the five features of LLMs that make them ‘tick’.</p>
+<blockquote class="blockquote">
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1. <strong>Perplexity</strong></td>
+<td style="text-align: center;">⟷</td>
+<td style="text-align: left;"><em>Generation</em>.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2. <strong>Attention</strong></td>
+<td style="text-align: center;">⟷</td>
+<td style="text-align: left;"><em>Memory</em>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3. <strong>GEMM</strong></td>
+<td style="text-align: center;">⟷</td>
+<td style="text-align: left;"><em>Scaling</em>.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4. <strong>Chinchilla</strong></td>
+<td style="text-align: center;">⟷</td>
+<td style="text-align: left;"><em>Efficiency</em>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5. <strong>RASP</strong></td>
+<td style="text-align: center;">⟷</td>
+<td style="text-align: left;"><em>Reasoning</em>.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
 </div>
 </div>
 </div>
+<p>This tutorial really helped me to build a good mental model when studying llms deeply, or applying them in practice. Prof.&nbsp;Rush intentionally leaves out certain topics<sup>2</sup> which are also useful for explaining LLM performance, e.g.&nbsp;human feedback, post-attention, new architectures, low-resource llms, and mechanistic interpretability.</p>
+<p>I plan to reflect on and return to this lecture multiple times<sup>3</sup>. Highly recommend!</p>
 </section>
 </section>
 <section id="interesting-books" class="level2">
 <h2 class="anchored" data-anchor-id="interesting-books">Interesting Books</h2>
 <section id="audiobooks" class="level3">
 <h3 class="anchored" data-anchor-id="audiobooks">Audiobooks</h3>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-default callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Audiobook - Tip
+<span class="screen-reader-only">Caution</span>🎯 Try Audiobooks - You Might Be Surprised
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>I came to a reading epiphany in early 2026, namely, that <em>for me</em> <strong>self-help books should be listened to as audiobooks</strong> rather than read as paperbacks. This simple change has made a world of difference. I previously found the act of reading such books quite tedious and dry, often given their prescriptive tone. Now I can use my morning and evening walks to actively listen to them. Since I have Spotify premium, many books (including those listed below) are included in the membership. In case you feel similarly, this tip might help you sample more of this genre. There is often <em>some</em> nugget to take away from each one.</p>
+<p>I came to a epiphany in early 2026, namely, that <strong><em>for me</em> self-help books should be listened to as audiobooks</strong> rather than read as paperbacks. This simple change has made a world of difference. I previously found the act of reading such books quite tedious and dry, given their often prescriptive tone. Now I can use my morning and evening walks to listen to them. Since I have Spotify premium, many books (including those listed below) are included in the membership. In case you feel similarly, this tip might help you sample more of this genre. There is often <em>some</em> nugget to take away from each one.</p>
 </div>
 </div>
 </div>
+<section id="the-life-changing-magic-of-tidying-up" class="level4">
+<h4 class="anchored" data-anchor-id="the-life-changing-magic-of-tidying-up">The Life Changing Magic of Tidying Up</h4>
 <div class="quarto-layout-panel" data-layout="[15, 85]">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: center;">
 <p><img src="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/feb26-life-changing-magic.jpg" class="img-fluid" alt="Book cover of The Life-Changing Magic of Tidying Up by Marie Kondo"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: flex-start;">
-<p><a href="https://open.spotify.com/show/4evjgM54KB8lxxT87caPCd" target="_blank">Life Changing Magic of Tidying Up (audiobook)</a> by Marie Kondo (narrated by Lucy Scott)<sup>2</sup>.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<p><em>by Marie Kondo</em> (narrator: Lucy Scott) <a href="https://open.spotify.com/show/4evjgM54KB8lxxT87caPCd" target="_blank">🎧</a><sup>4</sup>. <span class="star-rating" data-rating="4.5 / 5"><span class="star-full">★★★★</span><span class="star-half">★</span></span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Key Takeaways
+<span class="screen-reader-only">Note</span>Key Takeaways
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This is a genuinely remarkable book and one that I’m more a decade late to. I had heard all of the “spark joy” memes when the Netflix show landed, and simply assumed this was another basic decluttering gimmick and ignored it. How wrong I was. This is a very deep book about life prioritization disguised as a home tidying manifesto. I learned many practical skills, but the main three biggest takeaways were as follows. First, Marie Kondo (or ‘KonMari’) notes that tidying your home should be <em>one-off</em> activity, not a recurring one. Second, the book emphasizes the use of qualitative decision making over quantitative for tidying. And finally, maintaining tidyness can be done via principled methods, e.g.&nbsp;the KonMari folding technique. A bonus lesson from the book, is that tidying is the <em>first</em> step towards building a better you, not the final one.</p>
+<p>This is a genuinely remarkable book and one that I’m more a decade late to. I had heard all of the “spark joy” memes when the Netflix show landed, and simply assumed this was another decluttering gimmick and ignored it. How wrong I was. This is a very deep book about life prioritization disguised as a home tidying manifesto. I learned many practical skills, but the main three biggest takeaways were as follows.</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><strong>One and Done.</strong> Marie Kondo (or ‘KonMari’) notes that tidying your home should be <strong>one-off</strong> activity, <em>not</em> a recurring one as often recommended by other books in this genre. This is the key motivation to “get your house in order” as KonMari says.</li>
+<li><strong>Qualitative &gt; Quantitative.</strong> The book emphasizes the use of qualitative over quantitative decision making for tidying. So no more “one in, one out” type rules to remember. Instead you get advice like “when you are choosing what to keep, ask your heart, when you are choosing where to store something, ask your house”. Strangely, I found this to be very practical.</li>
+<li><strong>Principled.</strong> <em>Maintaining</em> tidyness can be done via principled methods, e.g.&nbsp;the KonMari folding technique.</li>
+</ol>
+</blockquote>
+<p>A overarching theme of the book is that tidying is only the <em>first</em> step towards prioritizing your life, not the final one. Highly Recommend.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
+</section>
+<section id="how-to-win-friends-and-influence-people" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-win-friends-and-influence-people">How to Win Friends and Influence People</h4>
 <div class="quarto-layout-panel" data-layout="[15, 85]">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: center;">
 <p><img src="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/feb26-win-friends.jpg" class="img-fluid" alt="Book cover of How to Win Friends and Influence People by Dale Carnegie"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: flex-start;">
-<p><a href="https://open.spotify.com/episode/1jDBhhffayv293DtCH4rSP" target="_blank">How to Win Friends and Influence People (audiobook)</a> by Dale Carnegie<sup>3</sup>.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<p><em>by Dale Carnegie</em> (narrator: Andrew MacMillan) <a href="https://open.spotify.com/show/3UfAQ6yAJQqHjifKaQ2Nm5" target="_blank">🎧</a><sup>5</sup>. <span class="star-rating" data-rating="3.5 / 5"><span class="star-full">★★★</span><span class="star-half">★</span><span class="star-empty">★</span></span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key Takeaways
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>We really are in the era of markdown-driven development.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="diary-of-a-ceo" class="level4">
+<h4 class="anchored" data-anchor-id="diary-of-a-ceo">Diary of a CEO</h4>
+<div class="quarto-layout-panel" data-layout="[15, 85]">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: center;">
+<p><img src="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/feb26-diary-of-a-ceo.jpg" class="img-fluid" alt="Book cover of The Diary of a CEO by Steven Bartlett"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: flex-start;">
+<p><em>by Steven Bartlett</em> (narrated by the author) <a href="https://open.spotify.com/show/7iQXmUT7XGuZSzAMjoNWlX" target="_blank">🎧</a><sup>6</sup>. <span class="star-rating" data-rating="2.5 / 5"><span class="star-full">★★</span><span class="star-half">★</span><span class="star-empty">★★</span></span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Key Takeaways
+<span class="screen-reader-only">Note</span>Key Takeaways
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -194,42 +339,16 @@ Video&nbsp;1: <a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" 
 </div>
 </div>
 </div>
-<div class="quarto-layout-panel" data-layout="[15, 85]">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: center;">
-<p><img src="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/feb26-diary-of-a-ceo.jpg" class="img-fluid" alt="Book cover of The Diary of a CEO by Steven Bartlett"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: flex-start;">
-<p><a href="https://open.spotify.com/show/7iQXmUT7XGuZSzAMjoNWlX" target="_blank">Diary of a CEO (audiobook)</a> by Steven Bartlett (narrated by the author)<sup>4</sup>.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Key Takeaways
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li>We really are in the era of markdown-driven development.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</section>
 </section>
 </section>
 <section id="skills-learned" class="level2">
 <h2 class="anchored" data-anchor-id="skills-learned">Skills Learned</h2>
-<p>I really enjoy learning skills in a <strong>principled manner</strong>, so that the most mundane and routine tasks can be approached in a way that makes them approachable, easy, and fun!</p>
-<p>Here are some of the cool skills I picked up this month.</p>
+<p>I really enjoy learning new practical skills in a <strong>principled manner</strong>. This way, even the most routine tasks become easy and, most importantly, <em>fun</em> 🤹.</p>
+<p>Here are some of the cool skills I picked up this month. Try them out!</p>
 <section id="the-konmari-fold" class="level3">
 <h3 class="anchored" data-anchor-id="the-konmari-fold">The KonMari Fold</h3>
+<p><em>by Marie Kondo</em> <a href="https://www.youtube.com/watch?v=IjkmqbJTLBM&amp;t=7s" target="_blank">▶️</a>.</p>
 <div class="quarto-layout-panel" data-layout="[40, 60]">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
@@ -245,12 +364,12 @@ Video&nbsp;2: <a href="https://www.youtube.com/watch?v=IjkmqbJTLBM&amp;t=7s" tar
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
-<p>After becoming a student of KonMari, I decided to raise my folding game with her method. It is a game-changer. The The main idea can be summarized in three-steps:</p>
+<p>After recently becoming a student of KonMari, I decided to raise my folding game with her method. Game changer! The main idea can be summarized in three-steps:</p>
 <blockquote class="blockquote">
 <ol type="1">
-<li><strong>Shapes matter.</strong> Rectangular shapes are easiest to fold<sup>5</sup>.</li>
-<li><strong>Rectangulate.</strong> So quickly first fold any item into the largest rectangle.</li>
-<li><strong>Divide and stand.</strong> Repeatedly fold down the rectangle so that the item stands on its own.</li>
+<li><strong>Shapes matter.</strong> Rectangular shapes are easiest to repeatedly fold down.</li>
+<li><strong>Rectangulate.</strong> First fold any item into the largest rectangle<sup>7</sup> (see video).</li>
+<li><strong>Divide and stand.</strong> Repeatedly fold down the rectangle so that the item stands vertically.</li>
 </ol>
 </blockquote>
 </div>
@@ -259,6 +378,7 @@ Video&nbsp;2: <a href="https://www.youtube.com/watch?v=IjkmqbJTLBM&amp;t=7s" tar
 </section>
 <section id="overunder-roadie-wrap" class="level3">
 <h3 class="anchored" data-anchor-id="overunder-roadie-wrap">Over/Under Roadie Wrap</h3>
+<p><em>by Rattlesnake Cable Company</em> <a href="https://www.youtube.com/watch?v=zjpBXx8oNOc&amp;t=2s" target="_blank">▶️</a>.</p>
 <div class="quarto-layout-panel" data-layout="[40, 60]">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
@@ -274,12 +394,12 @@ Video&nbsp;3: <a href="https://www.youtube.com/watch?v=zjpBXx8oNOc&amp;t=2s" tar
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
-<p>After collecting hundreds of cables and wires, I realized that I’d never learned a proper way to coil them up. The “roadie-wrap” is a well-tested technique used by grips who have to coil (and uncoil!) hundreds of cables daily.</p>
+<p>After collecting hundreds of cables and wires, I’d never learned a proper way to coil them. The “roadie-wrap” is a well-tested technique used by grips who have to coil (and uncoil!) hundreds of cables daily. It works a treat with these gains:</p>
 <blockquote class="blockquote">
 <ol type="1">
-<li><strong>Tangle-free.</strong> Uncoiling never leads to tangles.</li>
-<li><strong>Easy recoiling.</strong> Recoiling is just a matter of nailing the over/under technique.</li>
-<li><strong>Works small.</strong> You can use this on small cables, and your cables will last a lot longer.</li>
+<li><strong>Tangle-free.</strong> Uncoiling doesn’t lead to tangles.</li>
+<li><strong>Easy recoiling.</strong> Recoiling is a matter of nailing the over/under technique (see video).</li>
+<li><strong>Durability.</strong> Use this on all cables, and they will last a lot longer.</li>
 </ol>
 </blockquote>
 </div>
@@ -289,6 +409,22 @@ Video&nbsp;3: <a href="https://www.youtube.com/watch?v=zjpBXx8oNOc&amp;t=2s" tar
 </section>
 <section id="concluding-thoughts" class="level2">
 <h2 class="anchored" data-anchor-id="concluding-thoughts">Concluding Thoughts</h2>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>LLMs Usage Declaration
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>All reviews, opinions, and written content in this post, unless explicitly stated, are authored by me, a human. LLMs were used solely for formatting purposes, such as layout assistance, sourcing thumbnails, adding alt-text. and generating the thumbnail image for this post.</p>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -297,11 +433,13 @@ Video&nbsp;3: <a href="https://www.youtube.com/watch?v=zjpBXx8oNOc&amp;t=2s" tar
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>There is also a recorded <a href="https://www.youtube.com/watch?v=k9DnQPrfJQs&amp;t=3571s" target="_blank">tutorial format</a> of this lecture if you prefer a slightly relaxed pace with interaction from the audience.↩︎</p></li>
-<li id="fn2"><p>Image source for <em>The Life-Changing Magic of Tidying Up</em>: <a href="https://openlibrary.org/isbn/9781607747307" target="_blank">Open Library</a>.↩︎</p></li>
-<li id="fn3"><p>Image source for <em>How to Win Friends and Influence People</em>: <a href="https://open.spotify.com/episode/1jDBhhffayv293DtCH4rSP" target="_blank">Spotify</a>.↩︎</p></li>
-<li id="fn4"><p>Image source for <em>The Diary of a CEO</em>: <a href="https://openlibrary.org/works/OL37187091W" target="_blank">Open Library</a>.↩︎</p></li>
-<li id="fn5"><p>Technically we are in 3D land, but we mean rectangles looking down 👀.↩︎</p></li>
+<li id="fn1"><p>Including <a href="https://www.shamindras.com/posts" target="_blank">this very blog</a> 🎉↩︎</p></li>
+<li id="fn2"><p>However <a href="https://www.youtube.com/@srush_nlp" target="_blank">his channel</a> covers a few of these.↩︎</p></li>
+<li id="fn3"><p>There is also a recorded <a href="https://www.youtube.com/watch?v=k9DnQPrfJQs&amp;t=3571s" target="_blank">tutorial format</a> of this lecture if you prefer a slightly relaxed pace with interaction from the audience.↩︎</p></li>
+<li id="fn4"><p>Image source for <em>The Life-Changing Magic of Tidying Up</em>: <a href="https://openlibrary.org/isbn/9781607747307" target="_blank">Open Library</a>.↩︎</p></li>
+<li id="fn5"><p>Image source for <em>How to Win Friends and Influence People</em>: <a href="https://open.spotify.com/show/3UfAQ6yAJQqHjifKaQ2Nm5" target="_blank">Spotify</a>.↩︎</p></li>
+<li id="fn6"><p>Image source for <em>The Diary of a CEO</em>: <a href="https://openlibrary.org/works/OL37187091W" target="_blank">Open Library</a>.↩︎</p></li>
+<li id="fn7"><p>Technically we are in 3D land, but we mean rectangles looking down 👀.↩︎</p></li>
 </ol>
 </section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2026february26roundup,
   author = {Shrotriya, Shamindra},
@@ -318,7 +456,7 @@ Roundup.”</span> February 28, 2026. <a href="https://www.shamindras.com/posts/
   <category>roundup</category>
   <guid>https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/</guid>
   <pubDate>Fri, 27 Feb 2026 14:00:00 GMT</pubDate>
-  <media:content url="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/preview-february-2026-01.png" medium="image" type="image/png" height="85" width="144"/>
+  <media:content url="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/preview-february-2026-01.png" medium="image" type="image/png" height="80" width="144"/>
 </item>
 <item>
   <title>Sharp constants for finite dimensional norms</title>
