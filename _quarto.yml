@@ -19,7 +19,7 @@ website:
       - text: blog
         file: posts.qmd
       - text: software
-        file: software.qmd  
+        file: software.qmd
       - text: "CV"
         href: data/pdfs/shamindra-shrotriya_CV.pdf
       - text: "teaching"
@@ -31,7 +31,7 @@ website:
       - icon: rss
         href: posts.xml
   google-analytics: "UA-145015693-1"
-  page-footer: 
+  page-footer:
     right:
       - text: blog source
         href: https://github.com/shamindras/ss_personal_quarto_blog
