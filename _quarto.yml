@@ -5,7 +5,7 @@ project:
 
 website:
   title: "Shamindra Shrotriya"
-  draft-mode: visible
+  draft-mode: gone
   site-url: https://www.shamindras.com
   repo-url: https://github.com/shamindras/ss_personal_quarto_blog
   repo-actions: [edit, issue]
