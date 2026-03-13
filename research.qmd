@@ -110,7 +110,7 @@ findings through various examples and simulations.
 <div class="collapse" id="li2022ellinfboundsbtl">
   <br>
   <div class="card card-body">
-```{bibtex}
+```bibtex
 @inproceedings{li2022ellinfboundsbtl,
   title   = {
     {$\ell_{\infty}$}-Bounds of the {MLE} in the
@@ -172,7 +172,7 @@ data-driven approach for bandwidth tuning.
 <div class="collapse" id="bong2020nonparamestdynbtl">
   <br>
   <div class="card card-body">
-```{bibtex}
+```bibtex
 @inproceedings{bong2020nonparamestdynbtl,
   title   = {Nonparametric Estimation in the Dynamic Bradley-Terry Model},
   author  = {Heejong Bong and Wanshan Li and Shamindra Shrotriya and Alessandro Rinaldo},
@@ -235,7 +235,7 @@ research on wildfire models at a national scale.
 <div class="collapse" id="dalmasso2019firepred">
   <br>
   <div class="card card-body">
-```{bibtex}
+```bibtex
 @inproceedings{dalmasso2019firepred,
   title   = {Predictive Inference of a Wildfire Risk Pipeline in the United States},
   author  = {Dalmasso, Niccolo and Shrotriya, Shamindra and Reinhart, Alex},
@@ -283,7 +283,7 @@ densities. relevant trigger.
 <div class="collapse" id="shrotriya2022lecamminimax">
   <br>
   <div class="card card-body">
-```{bibtex}
+```bibtex
 @misc{shrotriya2022lecamminimax,
   title   = {
     Revisiting Le Cam's Equation: Exact Minimax Rates over Convex Density
@@ -340,7 +340,7 @@ simulations.
 <div class="collapse" id="shrotriya2022ascireg">
   <br>
   <div class="card card-body">
-```{bibtex}
+```bibtex
 @misc{shrotriya2022ascireg,
   title   = {Adversarial Sign-Corrupted Isotonic Regression},
   author  = {Shamindra Shrotriya and Matey Neykov},
@@ -397,7 +397,7 @@ statistical modeling in `R`.
 <div class="collapse" id="fogliato2021maars">
   <br>
   <div class="card card-body">
-```{bibtex}
+```bibtex
 @misc{fogliato2021maars,
   title   = {maars: Tidy Inference under the 'Models as Approximations' Framework in R},
   author  = {Riccardo Fogliato and Shamindra Shrotriya and Arun Kumar Kuchibhotla},
@@ -462,7 +462,7 @@ for our estimators, over a wide class of convex bodies.
 <div class="collapse" id="shrotriya2022phdthesis">
   <br>
   <div class="card card-body">
-```{bibtex}
+```bibtex
 @article{shrotriya2022phdthesis,
     title        = {{On Some Problems in Nonparametric and Location-Scale Estimation}},
     author       = {Shamindra Shrotriya},

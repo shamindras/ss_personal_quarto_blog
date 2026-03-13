@@ -277,7 +277,7 @@ rsconnect/
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,R,VisualStudioCode,Python
-n
 /.quarto/
+/site_libs/
 
 **/*.quarto_ipynb
