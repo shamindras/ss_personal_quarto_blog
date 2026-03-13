@@ -128,10 +128,10 @@ wikipediapreview::wp_init(use_unpkg = TRUE, use_alt_style = TRUE)
 ## Introduction
 
 Welcome to the February 2026 roundup! Similar to
-[last time](../../posts/2020-01-27-shrotriya2020january20roundup/){target="_blank"}
-I'm documenting anything interesting I come across and any activities
-I get up to. This is more for my personal reference and benefit but may also help
-others.
+[last time](../../posts/2020-01-27-shrotriya2020january20roundup/){target="_blank"},
+here I document anything interesting I come across each month, from
+articles and books to skills and beyond. This is more for my personal
+reference and benefit but may also help others.
 
 ## Summary
 
@@ -144,7 +144,7 @@ others.
 
 *by Anil Dash* [🔗](https://www.anildash.com/2026/01/09/how-markdown-took-over-the-world/){target="_blank"}.
 
-This was a really important historical overview over the rise of one of the most ubiquitous text document formats used on the web, i.e. [markdown](https://daringfireball.net/projects/markdown/). Dash worked at Movable Type, an influential blogging platform in the early 21st century. Key takeaways:
+This was a really important historical overview over the rise of one of the most ubiquitous[^fn-markdown-llms] text document formats used on the web, i.e. [markdown](https://daringfireball.net/projects/markdown/). Dash worked at Movable Type, an influential blogging platform in the early 21st century. Key takeaways:
 
 > 1. **Motivation.** [John Gruber](https://daringfireball.net/) originally developed markdown *simplify* his blogging experience with Movable Type.
 > 2. **Success.** Is owed to a collection of favorable events and good design, i.e. rise of blogging, brilliant branding (mark*down* as the simplification of mark*up*), easy syntax which could be picked up [in just a few minutes](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), open-sourced (**not monetized**) with a helpful community.
@@ -152,6 +152,10 @@ This was a really important historical overview over the rise of one of the most
 On a personal note, [Rmarkdown](https://rmarkdown.rstudio.com/index.html) was revolutionary in developing reproducible and version-controlled data science workflows. It showcased the power of [literate programming](https://en.wikipedia.org/wiki/Literate_programming){.wiki} in the "Big Data" era. With the rise of amazing packages like [Quarto](https://quarto.org/docs/blog/), markdown continues to evolve and still shapes blogging[^fn-this-blog] more than two decades later 🎆.
 
 [^fn-this-blog]: Including [this very blog](https://www.shamindras.com/posts){target="_blank"} 🎉
+
+[^fn-markdown-llms]: And increasingly so, with modern LLM specification docs like
+    [MCP](https://modelcontextprotocol.io/){target="_blank"} and
+    [skills](https://docs.anthropic.com/en/docs/claude-code/slash-commands){target="_blank"}.
 
 ## Tutorials
 
@@ -199,7 +203,7 @@ I plan to reflect on and return to this lecture multiple times[^src-llm-five-for
 
 ## 🎯 Try Audiobooks - You Might Be Surprised
 
-I came to a epiphany in early 2026, namely, that ***for me* self-help books should be listened to as audiobooks** rather than read as paperbacks. This simple change has made a world of difference. I previously found the act of reading such books quite tedious and dry, given their often prescriptive tone. Now I can use my morning and evening walks to listen to them. Many audiobook platforms (e.g. Spotify, Audible) include these titles in their memberships. In case you feel similarly, this tip might help you sample more of this genre. There is often *some* nugget to take away from each one.
+I came to a epiphany in early 2026, namely, that ***for me* self-help books should be listened to as audiobooks** rather than read as paperbacks. This simple change has made a world of difference. I previously found the act of reading such books quite tedious and dry, given their often prescriptive tone. Now I can use my idle walking time to listen to them. Many audiobook platforms (e.g. Spotify, Audible) include these titles in their premium memberships. In case you have felt similarly about this genre, this tip might help you sample more of it. There is often *some* nugget to take away from each one.
 
 :::
 
@@ -215,11 +219,12 @@ I came to a epiphany in early 2026, namely, that ***for me* self-help books shou
 
 ## Key Takeaways
 
-This is a genuinely remarkable book and one that I'm more a decade late to. I had heard all of the "spark joy" memes when the Netflix show landed, and simply assumed this was another decluttering gimmick and ignored it. How wrong I was. This is a very deep book about life prioritization disguised as a home tidying manifesto. I learned many practical skills, but the main three biggest takeaways were as follows.
+This is a genuinely remarkable book and one that I'm more a decade late to. I had heard all of the "spark joy" memes when the Netflix show landed, and simply assumed this was another decluttering gimmick and ignored it. How wrong I was. This is a very deep book about life prioritization disguised as a home tidying manifesto. I learned many practical skills, but the main four biggest takeaways were as follows.
 
 > 1. **One and Done.** Marie Kondo (or 'KonMari') notes that tidying your home should be **one-off** activity, *not* a recurring one as often recommended by other books in this genre. This is the key motivation to "get your house in order" as KonMari says.
->2. **Qualitative > Quantitative.** The book emphasizes the use of qualitative over quantitative decision making for tidying. So no more "one in, one out" type rules to remember. Instead you get advice like "when you are choosing what to keep, ask your heart, when you are choosing where to store something, ask your house". Strangely, I found this to be very practical.
-> 3. **Principled.** *Maintaining* tidyness can be done via principled methods, e.g. the [KonMari folding technique](#the-konmari-fold).
+> 2. **Categories not rooms.** An amazing approach of this book is to focus on categories of items rather than rooms, when tidying ones home. So tidying books doesn't mean to do a separate bookshelf each day, but *all* bookshelves in the house at once. Moreover KonMari mentions a prioritization order for categories to aid decision fatigue: clothes, books, papers, komono (miscellaneous), and sentimental items. It is **this** tip which makes the "one and done" approach to tidying feasible.
+> 3. **Qualitative > Quantitative.** The book emphasizes the use of qualitative over quantitative decision making for tidying. So no more "one in, one out" type rules to remember. Instead you get advice like "when you are choosing what to keep, ask your heart, when you are choosing where to store something, ask your house". Strangely, I found this to be very practical.
+> 4. **Principled.** *Maintaining* tidyness can be done via principled methods, e.g. the [KonMari folding technique](#the-konmari-fold).
 
 A overarching theme of the book is that tidying is only the *first* step towards prioritizing your life, not the final one. Highly Recommend.
 
@@ -273,9 +278,9 @@ Some critiques were that many of the references were a bit dated, but these can 
 
 This was recommended to me by Spotify audiobooks. The book title is eponymous with a wildly popular podcast run by the author, where he interviews various celebrities and entrepreneurs on lessons to improve ones daily life. I had never listened to the podcast previously, so went into this fresh. I enjoyed the fact that it was read by the author. Interestingly, I learned more about eloquent storytelling and techniques for effective message delivery through the audiobook reading than from the contents of the book.
 
-The book itself is framed as "thirty three laws for business and life" and strikes quite a serious tone. Much of the business advice is framed in the context of improving branding, e.g. "avoid wallpaper at all costs". This is unsurprising given the author's background in building a successful marketing firm in the UK. So ones mileage may vary depending on your personal and professional goals. My main practical takeaway was:
+The book itself is framed as "The 33 laws for business and life" and strikes quite a serious tone. Much of the business advice is framed in the context of improving branding, e.g. "avoid wallpaper at all costs". This is unsurprising given the author's background in building a successful marketing firm in the UK. So ones mileage may vary depending on your personal and professional goals. My main practical takeaway was:
 
-> 1. **Small details matter.** Bartlett notes that "you must sweat the small stuff", i.e. details matter. Here is emphasises the notion of Kaizen as a business philosophy to measure and focus on incremental gains in ones regular activities. He notes, for example, that his podcast team go all out in interview preparation for new guests. This involves thoroughly researching their guests and understanding their preferences on beverage, music, lighting, and calibrating the interview room accordingly. I found this type of focused attention to detail quite cool and practical. This inspired me to apply the same principle to my own relationships, by listening more attentively to friends and family and acting on those details.
+> 1. **Small details matter.** Bartlett notes that "you must sweat the small stuff", i.e. details matter. Here is emphasises the notion of Kaizen as a business philosophy to measure and focus on incremental gains in ones regular activities. He notes, for example, that his podcast team go all out in interview preparation for new guests. This involves thoroughly researching their guests and understanding their preferences on intricacies like beverage, music, lighting, and calibrating the interview room accordingly. I found this type of focused attention to detail quite cool and practical. This inspired me to apply the same principle to my own relationships, by listening more attentively to friends and family and acting on those details.
 
 Overall, a fun modern take on motivational self-help, but would only recommend if you are a fan of the podcast.
 
@@ -337,6 +342,8 @@ After collecting hundreds of cables and wires over the years, I'd never learned 
 ::::::
 
 ## Concluding Thoughts
+
+Overall, this was quite an eventful month of activities for me. Also it took all my energy to fire up the blog after a four year hiatus 😬. Hopefully I'll keep adding to it more regularly this year!
 
 ::: {.callout-warning collapse="true" icon=false}
 
