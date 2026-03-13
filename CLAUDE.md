@@ -13,7 +13,7 @@ All build recipes clean `_site/` first to avoid stale output.
 
 ```bash
 just dev                 # Dev server with drafts visible (clean + live reload)
-just build               # Production build + stage _site/ for commit
+just prod                # Production server with drafts hidden (clean + live reload)
 just clean               # Remove _site/ directory
 just renv-restore        # Restore R packages from renv.lock
 ```
@@ -74,9 +74,10 @@ Example: `/blog new --template roundup --month february --year 2026`
 
 ### Deploying to production
 
-1. `just build` — clean render (drafts hidden) + stage `_site/`
-2. `/commit` — commit the rendered output
-3. `git push` — Netlify serves `_site/` as static files (no CI build step)
+1. `just prod` — cleans, renders with drafts hidden, starts live-reload server
+2. Verify the site looks correct, then stop the server
+3. `/commit --all` — commit the rendered `_site/` output
+4. `git push` — Netlify serves `_site/` as static files (no CI build step)
 
 Draft visibility is controlled by Quarto profiles: `_quarto.yml` sets
 `draft-mode: gone` (production), `_quarto-dev.yml` sets `draft-mode: visible`.
