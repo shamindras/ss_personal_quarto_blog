@@ -9,7 +9,6 @@ citation:
 date: "2026-02-28"
 image: images/preview-february-2026-01.png
 bibliography: ../../refs.bib
-draft: true
 crossref:
   custom:
     - kind: float
