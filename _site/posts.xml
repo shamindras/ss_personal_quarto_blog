@@ -140,7 +140,7 @@ a.wiki {
     };</script>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Welcome to the February 2026 roundup! Similar to <a href="../../posts/2020-01-27-shrotriya2020january20roundup/" target="_blank">last time</a> I’m documenting anything interesting I come across and any activities I get up to. This is more for my personal reference and benefit but may also help others.</p>
+<p>Welcome to the February 2026 roundup! Similar to <a href="../../posts/2020-01-27-shrotriya2020january20roundup/" target="_blank">last time</a>, here I document anything interesting I come across each month, from articles and books to skills and beyond. This is more for my personal reference and benefit but may also help others.</p>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
@@ -152,14 +152,14 @@ a.wiki {
 <section id="how-markdown-took-over-the-world" class="level3">
 <h3 class="anchored" data-anchor-id="how-markdown-took-over-the-world">How Markdown Took Over the World</h3>
 <p><em>by Anil Dash</em> <a href="https://www.anildash.com/2026/01/09/how-markdown-took-over-the-world/" target="_blank">🔗</a>.</p>
-<p>This was a really important historical overview over the rise of one of the most ubiquitous text document formats used on the web, i.e.&nbsp;<a href="https://daringfireball.net/projects/markdown/">markdown</a>. Dash worked at Movable Type, an influential blogging platform in the early 21st century. Key takeaways:</p>
+<p>This was a really important historical overview over the rise of one of the most ubiquitous<sup>1</sup> text document formats used on the web, i.e.&nbsp;<a href="https://daringfireball.net/projects/markdown/">markdown</a>. Dash worked at Movable Type, an influential blogging platform in the early 21st century. Key takeaways:</p>
 <blockquote class="blockquote">
 <ol type="1">
 <li><strong>Motivation.</strong> <a href="https://daringfireball.net/">John Gruber</a> originally developed markdown <em>simplify</em> his blogging experience with Movable Type.</li>
 <li><strong>Success.</strong> Is owed to a collection of favorable events and good design, i.e.&nbsp;rise of blogging, brilliant branding (mark<em>down</em> as the simplification of mark<em>up</em>), easy syntax which could be picked up <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">in just a few minutes</a>, open-sourced (<strong>not monetized</strong>) with a helpful community.</li>
 </ol>
 </blockquote>
-<p>On a personal note, <a href="https://rmarkdown.rstudio.com/index.html">Rmarkdown</a> was revolutionary in developing reproducible and version-controlled data science workflows. It showcased the power of <a href="https://en.wikipedia.org/wiki/Literate_programming" class="wiki">literate programming</a> in the “Big Data” era. With the rise of amazing packages like <a href="https://quarto.org/docs/blog/">Quarto</a>, markdown continues to evolve and still shapes blogging<sup>1</sup> more than two decades later 🎆.</p>
+<p>On a personal note, <a href="https://rmarkdown.rstudio.com/index.html">Rmarkdown</a> was revolutionary in developing reproducible and version-controlled data science workflows. It showcased the power of <a href="https://en.wikipedia.org/wiki/Literate_programming" class="wiki">literate programming</a> in the “Big Data” era. With the rise of amazing packages like <a href="https://quarto.org/docs/blog/">Quarto</a>, markdown continues to evolve and still shapes blogging<sup>2</sup> more than two decades later 🎆.</p>
 </section>
 </section>
 <section id="tutorials" class="level2">
@@ -217,8 +217,8 @@ Video&nbsp;1: <a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" 
 </div>
 </div>
 </div>
-<p>This tutorial really helped me to build a good mental model when studying llms deeply, or applying them in practice. Prof.&nbsp;Rush intentionally leaves out certain topics<sup>2</sup> which are also useful for explaining LLM performance, e.g.&nbsp;human feedback, post-attention, new architectures, low-resource llms, and mechanistic interpretability.</p>
-<p>I plan to reflect on and return to this lecture multiple times<sup>3</sup>. Highly recommend!</p>
+<p>This tutorial really helped me to build a good mental model when studying llms deeply, or applying them in practice. Prof.&nbsp;Rush intentionally leaves out certain topics<sup>3</sup> which are also useful for explaining LLM performance, e.g.&nbsp;human feedback, post-attention, new architectures, low-resource llms, and mechanistic interpretability.</p>
+<p>I plan to reflect on and return to this lecture multiple times<sup>4</sup>. Highly recommend!</p>
 </section>
 </section>
 <section id="books" class="level2">
@@ -237,7 +237,7 @@ Video&nbsp;1: <a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" 
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>I came to a epiphany in early 2026, namely, that <strong><em>for me</em> self-help books should be listened to as audiobooks</strong> rather than read as paperbacks. This simple change has made a world of difference. I previously found the act of reading such books quite tedious and dry, given their often prescriptive tone. Now I can use my idle walking time to listen to them. Many audiobook platforms (e.g.&nbsp;Spotify, Audible) include these titles in their memberships. In case you feel similarly, this tip might help you sample more of this genre. There is often <em>some</em> nugget to take away from each one.</p>
+<p>I came to a epiphany in early 2026, namely, that <strong><em>for me</em> self-help books should be listened to as audiobooks</strong> rather than read as paperbacks. This simple change has made a world of difference. I previously found the act of reading such books quite tedious and dry, given their often prescriptive tone. Now I can use my idle walking time to listen to them. Many audiobook platforms (e.g.&nbsp;Spotify, Audible) include these titles in their premium memberships. In case you have felt similarly about this genre, this tip might help you sample more of it. There is often <em>some</em> nugget to take away from each one.</p>
 </div>
 </div>
 </div>
@@ -249,7 +249,7 @@ Video&nbsp;1: <a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" 
 <p><img src="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/feb26-life-changing-magic.jpg" class="img-fluid" alt="Book cover of The Life-Changing Magic of Tidying Up by Marie Kondo"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: flex-start;">
-<p><em>by Marie Kondo</em> (narrator: <em>Lucy Scott</em>) <a href="https://open.spotify.com/show/4evjgM54KB8lxxT87caPCd" target="_blank">🎧</a><sup>4</sup>. <span class="star-rating" data-rating="4.5 / 5"><span class="star-full">★★★★</span><span class="star-half">★</span></span></p>
+<p><em>by Marie Kondo</em> (narrator: <em>Lucy Scott</em>) <a href="https://open.spotify.com/show/4evjgM54KB8lxxT87caPCd" target="_blank">🎧</a><sup>5</sup>. <span class="star-rating" data-rating="4.5 / 5"><span class="star-full">★★★★</span><span class="star-half">★</span></span></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -262,10 +262,11 @@ Video&nbsp;1: <a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" 
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This is a genuinely remarkable book and one that I’m more a decade late to. I had heard all of the “spark joy” memes when the Netflix show landed, and simply assumed this was another decluttering gimmick and ignored it. How wrong I was. This is a very deep book about life prioritization disguised as a home tidying manifesto. I learned many practical skills, but the main three biggest takeaways were as follows.</p>
+<p>This is a genuinely remarkable book and one that I’m more a decade late to. I had heard all of the “spark joy” memes when the Netflix show landed, and simply assumed this was another decluttering gimmick and ignored it. How wrong I was. This is a very deep book about life prioritization disguised as a home tidying manifesto. I learned many practical skills, but the main four biggest takeaways were as follows.</p>
 <blockquote class="blockquote">
 <ol type="1">
 <li><strong>One and Done.</strong> Marie Kondo (or ‘KonMari’) notes that tidying your home should be <strong>one-off</strong> activity, <em>not</em> a recurring one as often recommended by other books in this genre. This is the key motivation to “get your house in order” as KonMari says.</li>
+<li><strong>Categories not rooms.</strong> An amazing approach of this book is to focus on categories of items rather than rooms, when tidying ones home. So tidying books doesn’t mean to do a separate bookshelf each day, but <em>all</em> bookshelves in the house at once. Moreover KonMari mentions a prioritization order for categories to aid decision fatigue: clothes, books, papers, komono (miscellaneous), and sentimental items. It is <strong>this</strong> tip which makes the “one and done” approach to tidying feasible.</li>
 <li><strong>Qualitative &gt; Quantitative.</strong> The book emphasizes the use of qualitative over quantitative decision making for tidying. So no more “one in, one out” type rules to remember. Instead you get advice like “when you are choosing what to keep, ask your heart, when you are choosing where to store something, ask your house”. Strangely, I found this to be very practical.</li>
 <li><strong>Principled.</strong> <em>Maintaining</em> tidyness can be done via principled methods, e.g.&nbsp;the KonMari folding technique.</li>
 </ol>
@@ -286,7 +287,7 @@ Video&nbsp;1: <a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" 
 <p><img src="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/feb26-win-friends.jpg" class="img-fluid" alt="Book cover of How to Win Friends and Influence People by Dale Carnegie"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: flex-start;">
-<p><em>by Dale Carnegie</em> (narrator: <em>Andrew MacMillan</em>) <a href="https://open.spotify.com/show/3UfAQ6yAJQqHjifKaQ2Nm5" target="_blank">🎧</a><sup>5</sup>. <span class="star-rating" data-rating="3.5 / 5"><span class="star-full">★★★</span><span class="star-half">★</span><span class="star-empty">★</span></span></p>
+<p><em>by Dale Carnegie</em> (narrator: <em>Andrew MacMillan</em>) <a href="https://open.spotify.com/show/3UfAQ6yAJQqHjifKaQ2Nm5" target="_blank">🎧</a><sup>6</sup>. <span class="star-rating" data-rating="3.5 / 5"><span class="star-full">★★★</span><span class="star-half">★</span><span class="star-empty">★</span></span></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -323,7 +324,7 @@ Video&nbsp;1: <a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" 
 <p><img src="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/images/feb26-diary-of-a-ceo.jpg" class="img-fluid" alt="Book cover of The Diary of a CEO by Steven Bartlett"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: flex-start;">
-<p><em>by Steven Bartlett</em> (narrated by <em>the author</em>) <a href="https://open.spotify.com/show/7iQXmUT7XGuZSzAMjoNWlX" target="_blank">🎧</a><sup>6</sup>. <span class="star-rating" data-rating="2.5 / 5"><span class="star-full">★★</span><span class="star-half">★</span><span class="star-empty">★★</span></span></p>
+<p><em>by Steven Bartlett</em> (narrated by <em>the author</em>) <a href="https://open.spotify.com/show/7iQXmUT7XGuZSzAMjoNWlX" target="_blank">🎧</a><sup>7</sup>. <span class="star-rating" data-rating="2.5 / 5"><span class="star-full">★★</span><span class="star-half">★</span><span class="star-empty">★★</span></span></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -337,10 +338,10 @@ Video&nbsp;1: <a href="https://www.youtube.com/watch?v=KCXDr-UOb9A&amp;t=2989s" 
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This was recommended to me by Spotify audiobooks. The book title is eponymous with a wildly popular podcast run by the author, where he interviews various celebrities and entrepreneurs on lessons to improve ones daily life. I had never listened to the podcast previously, so went into this fresh. I enjoyed the fact that it was read by the author. Interestingly, I learned more about eloquent storytelling and techniques for effective message delivery through the audiobook reading than from the contents of the book.</p>
-<p>The book itself is framed as “thirty three laws for business and life” and strikes quite a serious tone. Much of the business advice is framed in the context of improving branding, e.g.&nbsp;“avoid wallpaper at all costs”. This is unsurprising given the author’s background in building a successful marketing firm in the UK. So ones mileage may vary depending on your personal and professional goals. My main practical takeaway was:</p>
+<p>The book itself is framed as “The 33 laws for business and life” and strikes quite a serious tone. Much of the business advice is framed in the context of improving branding, e.g.&nbsp;“avoid wallpaper at all costs”. This is unsurprising given the author’s background in building a successful marketing firm in the UK. So ones mileage may vary depending on your personal and professional goals. My main practical takeaway was:</p>
 <blockquote class="blockquote">
 <ol type="1">
-<li><strong>Small details matter.</strong> Bartlett notes that “you must sweat the small stuff”, i.e.&nbsp;details matter. Here is emphasises the notion of Kaizen as a business philosophy to measure and focus on incremental gains in ones regular activities. He notes, for example, that his podcast team go all out in interview preparation for new guests. This involves thoroughly researching their guests and understanding their preferences on beverage, music, lighting, and calibrating the interview room accordingly. I found this type of focused attention to detail quite cool and practical. This inspired me to apply the same principle to my own relationships, by listening more attentively to friends and family and acting on those details.</li>
+<li><strong>Small details matter.</strong> Bartlett notes that “you must sweat the small stuff”, i.e.&nbsp;details matter. Here is emphasises the notion of Kaizen as a business philosophy to measure and focus on incremental gains in ones regular activities. He notes, for example, that his podcast team go all out in interview preparation for new guests. This involves thoroughly researching their guests and understanding their preferences on intricacies like beverage, music, lighting, and calibrating the interview room accordingly. I found this type of focused attention to detail quite cool and practical. This inspired me to apply the same principle to my own relationships, by listening more attentively to friends and family and acting on those details.</li>
 </ol>
 </blockquote>
 <p>Overall, a fun modern take on motivational self-help, but would only recommend if you are a fan of the podcast.</p>
@@ -379,7 +380,7 @@ Video&nbsp;2: <a href="https://www.youtube.com/watch?v=IjkmqbJTLBM&amp;t=7s" tar
 <blockquote class="blockquote">
 <ol type="1">
 <li><strong>Shapes matter.</strong> Rectangular shapes are easiest to repeatedly fold down.</li>
-<li><strong>Rectangulate.</strong> First fold any item into the largest rectangle<sup>7</sup> (see video).</li>
+<li><strong>Rectangulate.</strong> First fold any item into the largest rectangle<sup>8</sup> (see video).</li>
 <li><strong>Divide and stand.</strong> Repeatedly fold down the rectangle so that the item stands vertically.</li>
 </ol>
 </blockquote>
@@ -420,6 +421,7 @@ Video&nbsp;3: <a href="https://www.youtube.com/watch?v=zjpBXx8oNOc&amp;t=2s" tar
 </section>
 <section id="concluding-thoughts" class="level2">
 <h2 class="anchored" data-anchor-id="concluding-thoughts">Concluding Thoughts</h2>
+<p>Overall, this was quite an eventful month of activities for me. Also it took all my energy to fire up the blog after a four year hiatus 😬. Hopefully I’ll keep adding to it more regularly this year!</p>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -444,13 +446,14 @@ Video&nbsp;3: <a href="https://www.youtube.com/watch?v=zjpBXx8oNOc&amp;t=2s" tar
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Including <a href="https://www.shamindras.com/posts" target="_blank">this very blog</a> 🎉↩︎</p></li>
-<li id="fn2"><p>However <a href="https://www.youtube.com/@srush_nlp" target="_blank">his channel</a> covers a few of these.↩︎</p></li>
-<li id="fn3"><p>There is also a recorded <a href="https://www.youtube.com/watch?v=k9DnQPrfJQs&amp;t=3571s" target="_blank">tutorial format</a> of this lecture if you prefer a slightly relaxed pace with interaction from the audience.↩︎</p></li>
-<li id="fn4"><p>Image source for <em>The Life-Changing Magic of Tidying Up</em>: <a href="https://openlibrary.org/isbn/9781607747307" target="_blank">Open Library</a>.↩︎</p></li>
-<li id="fn5"><p>Image source for <em>How to Win Friends and Influence People</em>: <a href="https://open.spotify.com/show/3UfAQ6yAJQqHjifKaQ2Nm5" target="_blank">Spotify</a>.↩︎</p></li>
-<li id="fn6"><p>Image source for <em>The Diary of a CEO</em>: <a href="https://openlibrary.org/works/OL37187091W" target="_blank">Open Library</a>.↩︎</p></li>
-<li id="fn7"><p>Technically we are in 3D land, but we mean rectangles looking down 👀.↩︎</p></li>
+<li id="fn1"><p>And increasingly so, with modern LLM specification docs like <a href="https://modelcontextprotocol.io/" target="_blank">MCP</a> and <a href="https://docs.anthropic.com/en/docs/claude-code/slash-commands" target="_blank">skills</a>.↩︎</p></li>
+<li id="fn2"><p>Including <a href="https://www.shamindras.com/posts" target="_blank">this very blog</a> 🎉↩︎</p></li>
+<li id="fn3"><p>However <a href="https://www.youtube.com/@srush_nlp" target="_blank">his channel</a> covers a few of these.↩︎</p></li>
+<li id="fn4"><p>There is also a recorded <a href="https://www.youtube.com/watch?v=k9DnQPrfJQs&amp;t=3571s" target="_blank">tutorial format</a> of this lecture if you prefer a slightly relaxed pace with interaction from the audience.↩︎</p></li>
+<li id="fn5"><p>Image source for <em>The Life-Changing Magic of Tidying Up</em>: <a href="https://openlibrary.org/isbn/9781607747307" target="_blank">Open Library</a>.↩︎</p></li>
+<li id="fn6"><p>Image source for <em>How to Win Friends and Influence People</em>: <a href="https://open.spotify.com/show/3UfAQ6yAJQqHjifKaQ2Nm5" target="_blank">Spotify</a>.↩︎</p></li>
+<li id="fn7"><p>Image source for <em>The Diary of a CEO</em>: <a href="https://openlibrary.org/works/OL37187091W" target="_blank">Open Library</a>.↩︎</p></li>
+<li id="fn8"><p>Technically we are in 3D land, but we mean rectangles looking down 👀.↩︎</p></li>
 </ol>
 </section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2026february26roundup,
   author = {Shrotriya, Shamindra},
