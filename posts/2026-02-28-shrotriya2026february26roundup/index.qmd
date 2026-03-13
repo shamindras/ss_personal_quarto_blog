@@ -154,7 +154,7 @@ century. Key takeaways:
 
 > 1. **Motivation.**
 >    [John Gruber](https://daringfireball.net/) originally developed
->    markdown *simplify* his blogging experience with Movable Type.
+>    markdown *to simplify* his blogging experience with Movable Type.
 > 2. **Success.** Is owed to a collection of favorable events and good
 >    design, i.e. rise of blogging, brilliant branding (mark*down* as
 >    the simplification of mark*up*), easy syntax which could be picked
@@ -262,12 +262,13 @@ There is often *some* nugget to take away from each one.
 
 ## Key Takeaways
 
-This is a genuinely remarkable book and one that I'm more a decade late
-to. I had heard all of the "spark joy" memes when the Netflix show
-landed, and simply assumed this was another decluttering gimmick and
-ignored it. How wrong I was. This is a very deep book about life
-prioritization disguised as a home tidying manifesto. I learned many
-practical skills, but the main four biggest takeaways were as follows.
+This is a genuinely remarkable book and one that I'm more than a decade
+late to[^fn-konmari-julian]. I had heard all of the "spark joy" memes
+when the Netflix show landed, and simply assumed this was another
+decluttering gimmick and ignored it. How wrong I was. This is a very
+deep book about life prioritization disguised as a home tidying
+manifesto. I learned many practical skills, but the main four biggest
+takeaways were as follows.
 
 > 1. **One and Done.** Marie Kondo (or 'KonMari') notes that tidying
 >    your home should be **one-off** activity, *not* a recurring one as
@@ -291,9 +292,13 @@ practical skills, but the main four biggest takeaways were as follows.
 >    methods, e.g. the
 >    [KonMari folding technique](#the-konmari-fold).
 
-A overarching theme of the book is that tidying is only the *first*
+An overarching theme of the book is that tidying is only the *first*
 step towards prioritizing your life, not the final one. Highly
 Recommend.
+
+[^fn-konmari-julian]: Credit to
+    [Julian Schrittwieser's reading list](https://www.julian.ac/read/){target="_blank"}
+    for the recent nudge to finally pick this up.
 
 :::
 ::::
@@ -346,7 +351,7 @@ Carnegie often plays out the 'best case' scenario for using his
 strategies, and that many of his recommendations are not field tested
 with formal experiments. But again, erring on the side of positivity is
 not a bad approach to most interactions, so these should not be
-dealbreakers and could be supplmented with more modern literature. Would
+dealbreakers and could be supplemented with more modern literature. Would
 recommend.
 
 :::
@@ -388,7 +393,7 @@ successful marketing firm in the UK. So ones mileage may vary depending
 on your personal and professional goals. My main practical takeaway was:
 
 > 1. **Small details matter.** Bartlett notes that "you must sweat the
->    small stuff", i.e. details matter. Here is emphasises the notion of
+>    small stuff", i.e. details matter. Here he emphasises the notion of
 >    Kaizen as a business philosophy to measure and focus on incremental
 >    gains in ones regular activities. He notes, for example, that his
 >    podcast team go all out in interview preparation for new guests.
@@ -488,7 +493,7 @@ Hopefully I'll keep adding to it more regularly this year!
 All reviews, opinions, and written content in this post, unless
 explicitly stated, are authored by me, a human. LLMs were used solely
 for formatting purposes, such as layout assistance, writing git commits,
-sourcing thumbnails, adding alt-text. and generating the thumbnail image
+sourcing thumbnails, adding alt-text, and generating the thumbnail image
 for this post.
 
 :::
