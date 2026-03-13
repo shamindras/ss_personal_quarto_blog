@@ -281,5 +281,3 @@ rsconnect/
 /site_libs/
 
 **/*.quarto_ipynb
-_site/
-node_modules/
