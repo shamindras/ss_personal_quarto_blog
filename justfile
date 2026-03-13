@@ -2,27 +2,18 @@
 default:
     @just --list
 
-# Preview site locally (production mode, drafts hidden)
-preview:
-    @echo "🌐 Starting preview (production mode)..."
-    quarto preview
-
-# Preview site locally with draft posts visible
-preview-dev:
-    @echo "🔧 Starting preview with drafts visible..."
+# Start dev server with drafts visible (clean build + live reload)
+dev: clean
+    @echo "🔧 Starting dev preview (drafts visible)..."
     quarto preview --profile dev
 
-# Full site render (production mode, drafts hidden)
-render:
-    @echo "📦 Rendering site (production mode)..."
+# Build production site and stage for commit (drafts hidden)
+build: clean
+    @echo "📦 Building site (production mode)..."
     quarto render
-    @echo "✅ Site rendered to _site/"
-
-# Full site render with draft posts visible
-render-dev:
-    @echo "🔧 Rendering site with drafts visible..."
-    quarto render --profile dev
-    @echo "✅ Site rendered to _site/ (including drafts)"
+    @echo "📋 Staging _site/ for commit..."
+    git add _site/
+    @echo "✅ Site built and staged — ready to commit"
 
 # Clean rendered output
 clean:
