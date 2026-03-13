@@ -8,20 +8,15 @@ Personal academic website and research blog for Shamindra Shrotriya, built with 
 
 ## Build Commands
 
-Local development uses [just](https://github.com/casey/just) as a command runner:
+Local development uses [just](https://github.com/casey/just) as a command runner.
+All build recipes clean `_site/` first to avoid stale output.
 
 ```bash
-just preview             # Local dev server (production mode, drafts hidden)
-just preview-dev         # Local dev server with draft posts visible
-just render              # Full site render to _site/ (drafts hidden)
-just render-dev          # Full site render including draft posts
+just dev                 # Dev server with drafts visible (clean + live reload)
+just build               # Production build + stage _site/ for commit
 just clean               # Remove _site/ directory
 just renv-restore        # Restore R packages from renv.lock
-quarto render <file.qmd> # Render a single page/post
 ```
-
-Draft visibility is controlled by Quarto profiles: `_quarto.yml` sets `draft-mode: gone`
-(production), and `_quarto-dev.yml` sets `draft-mode: visible` (activated via `--profile dev`).
 
 ## R Environment
 
@@ -69,11 +64,19 @@ Uses `/blog` skill for blog post lifecycle. Subcommands: `new`, `preview`,
 
 Example: `/blog new --template roundup --month february --year 2026`
 
-## Deployment
+## Workflow
 
-Netlify builds the site from source using the `@quarto/netlify-plugin-quarto` plugin
-(configured in `netlify.toml` and `package.json`). The plugin installs Quarto and runs
-`quarto render`. Since `freeze: true` is set and `_freeze/` is committed, Netlify does
-not need R — it uses cached computational output. Pushing to `main` triggers automatic builds.
+### Developing (writing/editing posts)
 
-`_site/` is gitignored — it is only generated locally or by Netlify during CI.
+1. `just dev` — cleans, renders with drafts visible, starts live-reload server
+2. Edit `.qmd` files — browser refreshes on each save
+3. `/commit` to save progress on the feature branch
+
+### Deploying to production
+
+1. `just build` — clean render (drafts hidden) + stage `_site/`
+2. `/commit` — commit the rendered output
+3. `git push` — Netlify serves `_site/` as static files (no CI build step)
+
+Draft visibility is controlled by Quarto profiles: `_quarto.yml` sets
+`draft-mode: gone` (production), `_quarto-dev.yml` sets `draft-mode: visible`.
