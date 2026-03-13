@@ -1,28 +1,24 @@
-# Default: list available commands
-default:
-    @just --list
+_default:
+    @just --choose --unsorted
 
 # Start dev server with drafts visible (clean build + live reload)
 dev: clean
-    @echo "🔧 Starting dev preview (drafts visible)..."
+    @printf "🔧 Starting dev preview (drafts visible)...\n"
     quarto preview --profile dev
 
-# Build production site and stage for commit (drafts hidden)
-build: clean
-    @echo "📦 Building site (production mode)..."
-    quarto render
-    @echo "📋 Staging _site/ for commit..."
-    git add _site/
-    @echo "✅ Site built and staged — ready to commit"
+# Start production server with drafts hidden (clean build + live reload)
+prod: clean
+    @printf "📦 Starting prod preview (drafts hidden)...\n"
+    quarto preview
 
 # Clean rendered output
 clean:
-    @echo "🧹 Cleaning _site/ directory..."
-    rm -rf _site/
-    @echo "✅ Cleaned"
+    @printf "🧹 Cleaning _site/ and .quarto/ cache...\n"
+    @rm -rf _site/ .quarto/
+    @printf "✅ Cleaned!\n"
 
 # Restore R dependencies
 renv-restore:
-    @echo "📚 Restoring R packages from renv.lock..."
-    Rscript -e 'renv::restore()'
-    @echo "✅ R packages restored"
+    @printf "📚 Restoring R packages from renv.lock...\n"
+    @Rscript -e 'renv::restore()'
+    @printf "✅ R packages restored!\n"
