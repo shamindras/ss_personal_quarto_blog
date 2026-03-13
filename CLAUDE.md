@@ -8,13 +8,20 @@ Personal academic website and research blog for Shamindra Shrotriya, built with 
 
 ## Build Commands
 
+Local development uses [just](https://github.com/casey/just) as a command runner:
+
 ```bash
-quarto preview           # Local dev server with live reload
-quarto render            # Full site render to _site/
+just preview             # Local dev server (production mode, drafts hidden)
+just preview-dev         # Local dev server with draft posts visible
+just render              # Full site render to _site/ (drafts hidden)
+just render-dev          # Full site render including draft posts
+just clean               # Remove _site/ directory
+just renv-restore        # Restore R packages from renv.lock
 quarto render <file.qmd> # Render a single page/post
 ```
 
-No Makefile, justfile, or package.json exists — Quarto CLI is the sole build tool.
+Draft visibility is controlled by Quarto profiles: `_quarto.yml` sets `draft-mode: gone`
+(production), and `_quarto-dev.yml` sets `draft-mode: visible` (activated via `--profile dev`).
 
 ## R Environment
 
@@ -64,4 +71,9 @@ Example: `/blog new --template roundup --month february --year 2026`
 
 ## Deployment
 
-Netlify via Git integration — pushing to `main` triggers automatic builds. No CI/CD config files in the repo.
+Netlify builds the site from source using the `@quarto/netlify-plugin-quarto` plugin
+(configured in `netlify.toml` and `package.json`). The plugin installs Quarto and runs
+`quarto render`. Since `freeze: true` is set and `_freeze/` is committed, Netlify does
+not need R — it uses cached computational output. Pushing to `main` triggers automatic builds.
+
+`_site/` is gitignored — it is only generated locally or by Netlify during CI.
