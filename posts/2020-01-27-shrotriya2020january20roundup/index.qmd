@@ -6,15 +6,8 @@ categories: [personal, roundup, rstats, math]
 slug: shrotriya2019january20roundup
 date: "2020-01-27"
 image: images/preview-january-2020-01.png
-bibliography: ../../refs.bib
-format: 
-  html:
-    code-link: true
 execute:
   echo: true
-editor_options: 
-  markdown: 
-    wrap: 80
 ---
 
 ```{r setup, include=FALSE}

@@ -6,15 +6,8 @@ categories: [personal, roundup, rstats, math]
 slug: shrotriya2019july19roundup
 date: "2019-07-30"
 image: images/preview-july-2019-02.png
-bibliography: ../../refs.bib
-format: 
-  html:
-    code-link: true
 execute:
   echo: true
-editor_options: 
-  markdown: 
-    wrap: 80
 ---
 
 ```{r setup, include=FALSE}

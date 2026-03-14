@@ -8,15 +8,8 @@ categories: [tidyverse, rstats]
 slug: shrotriya2019tidyfunpt2
 date: "2019-08-24"
 image: images/logo-01.jpg
-bibliography: ../../refs.bib
-format: 
-  html: 
-    code-link: true
 execute:
   echo: true
-editor_options: 
-  markdown: 
-    wrap: 80
 ---
 
 ## Task: Generating LaTeX newcommand macros

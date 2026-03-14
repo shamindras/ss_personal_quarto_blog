@@ -9,15 +9,8 @@ categories: [tidyverse, rstats]
 date: "2019-07-15"
 image: images/logo-01.jpg
 slug: shrotriya2019tidyfunpt1
-bibliography: ../../refs.bib
-format: 
-  html:
-    code-link: true
 execute:
   echo: true
-editor_options: 
-  markdown: 
-    wrap: 80
 ---
 
 ```{r setup_01_01, echo=FALSE, results='asis'}

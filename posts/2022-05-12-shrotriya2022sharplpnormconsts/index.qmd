@@ -6,15 +6,8 @@ categories: [linear algebra, math, norms]
 slug: shrotriya2022normconvexity
 date: "2022-05-12"
 image: images/preview-shrotriya2021normtriconvexity.png
-bibliography: ../../refs.bib
-format: 
-  html:
-    code-link: true
 execute:
   echo: true
-editor_options: 
-  markdown: 
-    wrap: 80
 draft: true
 ---
 

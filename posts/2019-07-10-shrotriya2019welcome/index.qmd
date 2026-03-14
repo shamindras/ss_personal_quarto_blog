@@ -7,14 +7,8 @@ categories: [personal]
 slug: shrotriya2019welcome
 date: "2019-07-10"
 image: images/about-profile-circular-scaled-hex.jpg
-format: 
-  html:
-    code-link: true
 execute:
   echo: true
-editor_options: 
-  markdown: 
-    wrap: 80
 ---
 
 ```{r setup, include=FALSE}
