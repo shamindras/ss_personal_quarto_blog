@@ -8,7 +8,6 @@ citation:
   id: shrotriya2026february26roundup
 date: "2026-02-28"
 image: images/preview-february-2026-01.png
-bibliography: ../../refs.bib
 crossref:
   custom:
     - kind: float
@@ -19,9 +18,6 @@ format:
     code-link: false
 execute:
   echo: true
-editor_options:
-  markdown:
-    wrap: 80
 ---
 
 ```{=html}

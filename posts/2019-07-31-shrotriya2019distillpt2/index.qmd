@@ -6,15 +6,8 @@ categories: [distill]
 slug: shrotriya2019distillpt2
 date: "2019-07-31"
 image: images/step_01_disqus_02.png
-bibliography: ../../refs.bib
-format: 
-  html:
-    code-link: true
 execute:
   echo: true
-editor_options: 
-  markdown: 
-    wrap: 80
 ---
 
 ## Step 0: Introduction

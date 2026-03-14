@@ -7,15 +7,8 @@ categories: [tidyverse, rstats, reproducibility]
 date: "2019-07-21"
 image: images/logo-01.jpg
 slug: shrotriya2019reprtitanic
-bibliography: ../../refs.bib
-format: 
-  html:
-    code-link: true
 execute:
   echo: true
-editor_options: 
-  markdown: 
-    wrap: 80
 ---
 
 ## Background
