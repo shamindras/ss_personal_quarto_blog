@@ -60,9 +60,11 @@ Others (use when they clearly apply):
 
 | Type | When to use |
 |------|-------------|
+<!-- REPO-SPECIFIC: types-secondary -->
 | `test` | Added or updated tests |
 | `style` | Formatting-only (rare — most tools auto-format) |
 | `ci` | CI/CD pipeline files |
+<!-- END REPO-SPECIFIC -->
 
 ### Type Selection Heuristic
 
@@ -185,8 +187,10 @@ When a single file (e.g., `_quarto.yml`) contains changes for multiple scopes:
 - Always run `git` commands **from the repo root** using relative paths.
 - **Never** use `git -C <absolute-path>` — it generates non-portable permission
   entries in `.claude/settings.local.json` and causes repeated approval prompts.
+<!-- REPO-SPECIFIC: cmd-examples -->
 - Reference files with repo-relative paths (e.g. `git diff -- posts/`,
   not `git diff -- /Users/.../ss_personal_quarto_blog/posts/`).
+<!-- END REPO-SPECIFIC -->
 
 <!-- REPO-SPECIFIC: examples -->
 ## Examples

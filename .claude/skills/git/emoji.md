@@ -6,8 +6,10 @@ Format: `<type>(<scope>): <emoji> <description>`
 
 ## Mapping
 
+<!-- REPO-SPECIFIC: emoji-table-header -->
 | Type       | Emoji | Example                                      |
 |------------|-------|----------------------------------------------|
+<!-- END REPO-SPECIFIC -->
 <!-- REPO-SPECIFIC: emoji-examples -->
 | `feat`     | ✨    | `feat(posts): ✨ add new blog post on optimization` |
 | `fix`      | 🐛    | `fix(quarto): 🐛 correct navbar link ordering`     |
