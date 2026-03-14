@@ -22,30 +22,33 @@ just renv-restore        # Restore R packages from renv.lock
 
 - R 4.5.1 managed via **renv**. Run `renv::restore()` to install dependencies from `renv.lock`.
 - `.Rprofile` activates renv automatically.
-- Key R packages: tidyverse, knitr, plotly, emo, here, janitor, googlesheets4.
+- Key R packages: tidyverse, knitr, plotly, emo, here, janitor.
 
 ## Site Structure
 
 | File/Dir | Purpose |
 |----------|---------|
-| `_quarto.yml` | Main site config (navbar, theme, analytics, metadata) |
+| `_quarto.yml` | Main site config (navbar, theme, metadata) |
 | `index.qmd` | Landing page (about template) |
 | `posts.qmd` | Blog listing with search/filter/RSS |
 | `research.qmd` | Research papers and collaborators |
 | `software.qmd` | Open-source project descriptions |
+| `_brand.yml` | Single source for site colors and fonts (consumed by Quarto) |
 | `refs.bib` | Shared BibTeX bibliography |
-| `ember.scss` | Custom Bootstrap theme (Atkinson Hyperlegible font) |
+| `ember.scss` | Custom Bootstrap theme (litera base with brand overrides) |
+| `netlify.toml` | Netlify deploy config (publish dir, 404 redirect) |
 | `styles.css` | Additional CSS overrides |
 | `posts/_metadata.yml` | Shared metadata for all blog posts |
 | `_extensions/mcanouil/iconify/` | Icon shortcode extension |
 | `data/pdfs/` | CV, teaching statement, thesis PDFs |
+| `dependencies.R` | Declares implicit Quarto R deps (e.g. `downlit`) so renv tracks them |
 | `_freeze/` | Cached computational output (committed to git) |
 
 ## Blog Post Conventions
 
 - Posts live in `posts/YYYY-MM-DD-<slug>/index.qmd`
 - Each post directory may contain `images/` and `pdfs/` subdirectories
-- `posts/_metadata.yml` sets shared defaults: `freeze: true`, giscus comments, CC BY license, Shamindra as author, 80-char line wrap
+- `posts/_metadata.yml` sets shared defaults: `freeze: true`, giscus comments, CC BY license, Shamindra as author, 80-char line wrap, `bibliography`, `code-link: true`
 - Front matter typically includes: title, description, categories, slug, date, image, bibliography
 - Posts use `freeze: true` — computational output is cached in `_freeze/` and not re-executed unless explicitly invalidated
 
