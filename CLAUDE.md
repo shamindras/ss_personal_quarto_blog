@@ -49,13 +49,32 @@ just renv-restore        # Restore R packages from renv.lock
 - Front matter typically includes: title, description, categories, slug, date, image, bibliography
 - Posts use `freeze: true` — computational output is cached in `_freeze/` and not re-executed unless explicitly invalidated
 
+## Branch-First Rule
+
+**Before any non-trivial work — plans, implementations, or commits — check and
+declare the branch.**
+
+- **Plan mode**: The plan file MUST include a `**Feature branch**: \`<type>/<desc>\`
+  (from \`main\`)` line near the top, before implementation steps. If the plan omits
+  this, add it before calling ExitPlanMode.
+- **Implementation mode**: Before editing any file, run `git branch --show-current`.
+  If on `main` and the work is non-trivial (3+ files, new file, multi-scope, or
+  `feat`/`refactor` type), create or propose a feature branch **before** touching
+  code. Do not defer to commit time.
+- **Trivial exception**: Single-file typo fixes, one-line tweaks, or docs-only
+  changes may proceed on `main` without a branch.
+- **Branch format**: `<type>/<short-kebab-desc>` (e.g. `feat/add-new-post`,
+  `fix/quarto-config`).
+
+This rule takes priority over any skill-level branch check. The `/commit` skill
+has its own branch check at step 2, but that is a safety net, not the primary gate.
+
 ## Git Workflow
 
-Uses `/commit` skill with conventional commits: `<type>(<scope>): <description>`.
-Flags: `--staged`, `--all`, `--draft`, `--amend`, `--all-and-push`, `--no-split`,
-`--emoji`, `--land`, `--land-main`, `--help`.
-
-See `.claude/skills/git/workflow.md` for scopes and conventions.
+Conventional commits via `/commit`. See `.claude/skills/git/workflow.md`
+for types, scopes, and flags. Blog-specific overrides (including `--build`
+for `_site/` output) in `.claude/skills/git/blog-overrides.md`.
+Skill sync via `/sync-skill <name> --from <repo>`.
 
 ## Blog Skill
 

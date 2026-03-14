@@ -3,7 +3,9 @@
 ## Branching
 
 - Always branch from `main`.
+<!-- REPO-SPECIFIC: branching-examples -->
 - Format: `<type>/<short-kebab-desc>` (e.g. `feat/add-new-post`, `fix/quarto-config`).
+<!-- END REPO-SPECIFIC -->
 - Keep branch names short and descriptive.
 
 ## Proactive Branch Awareness
@@ -18,12 +20,17 @@ Goal: keep `main` clean by default without adding friction to quick fixes.
 
 ## Feature Branches in Plans
 
-When presenting a plan for user approval (via ExitPlanMode), always explicitly
-state the feature branch name that will be created from `main`. Use the
-standard branch naming format: `<type>/<short-kebab-desc>`.
+**REQUIRED**: When presenting a plan for user approval (via ExitPlanMode), the
+plan file MUST include the feature branch name near the top. This is non-negotiable
+— plans without an explicit branch declaration are incomplete.
 
-Example in plan file:
+Format:
+
+Place this immediately after the Context section, before implementation steps.
+
+<!-- REPO-SPECIFIC: plan-example -->
 > **Feature branch**: `feat/new-blog-post` (from `main`)
+<!-- END REPO-SPECIFIC -->
 
 ## Conventional Commits
 
@@ -41,11 +48,13 @@ Primary (used most often):
 
 | Type | When to use |
 |------|-------------|
+<!-- REPO-SPECIFIC: types -->
 | `feat` | New post, page, feature, or capability |
 | `fix` | Broken rendering, wrong config, runtime error fixed |
 | `refactor` | Restructured existing content/config, no behavior change |
 | `docs` | README, CLAUDE.md, skill files, comments-only changes |
 | `chore` | Deps, renv.lock, tooling, extensions |
+<!-- END REPO-SPECIFIC -->
 
 Others (use when they clearly apply):
 
@@ -57,22 +66,27 @@ Others (use when they clearly apply):
 
 ### Type Selection Heuristic
 
+<!-- REPO-SPECIFIC: type-heuristic-1 -->
 1. Does the diff add a **new** post/page/capability? → `feat`
+<!-- END REPO-SPECIFIC -->
 2. Does it **fix** something that was broken? → `fix`
 3. Does it **move/rename/restructure** without changing behavior? → `refactor`
 4. Is it **only** documentation or comments? → `docs`
+<!-- REPO-SPECIFIC: type-heuristic-5 -->
 5. Is it tooling, deps, renv.lock, or extensions? → `chore`
+<!-- END REPO-SPECIFIC -->
 6. Does it add/update **tests**? → `test`
 7. None of the above? Re-read the diff — one of the above almost always fits.
 
 ### Scopes
 
+<!-- REPO-SPECIFIC: scopes -->
 **By content area:**
 
 | Scope | Files |
 |-------|-------|
 | `(posts)` | `posts/*/` — blog post content |
-| `(quarto)` | `_quarto.yml`, `posts/_metadata.yml` |
+| `(quarto)` | `_quarto.yml`, `posts/_metadata.yml`, `_site/` build output, `justfile` |
 | `(theme)` | `ember.scss`, `styles.css`, `_extensions/` |
 | `(research)` | `research.qmd` |
 | `(software)` | `software.qmd` |
@@ -83,7 +97,9 @@ Others (use when they clearly apply):
 
 When a file doesn't clearly belong to a scope above, use the closest match
 or omit the scope for truly cross-cutting changes.
+<!-- END REPO-SPECIFIC -->
 
+<!-- REPO-SPECIFIC: splitting -->
 ## Commit Splitting (Blog Convention)
 
 ### Scope-based splitting (default)
@@ -92,12 +108,30 @@ or omit the scope for truly cross-cutting changes.
 - Even within shared files (`_quarto.yml`, `CLAUDE.md`), split hunks by the content area they relate to
 - Group related changes across multiple files by scope
 - This ensures a clean, semantic git history where each commit represents changes to a single content area
+- **Never combine `_site/` changes with source changes** in a single commit
 
 ### When to keep changes together
 
 - Atomic features that span multiple scopes (rare — ask user first)
 - User explicitly requests combining (override default)
 - Changes to shared infrastructure that genuinely affects all areas
+
+### Example
+
+❌ **Don't do this:**
+```
+feat(posts): add new post and update site
+- posts/2026-03-31-.../index.qmd
+- _site/ (200 files)
+- _quarto.yml
+```
+
+✅ **Do this instead:**
+```
+feat(posts): add march 2026 roundup draft
+refactor(quarto): add march roundup to navbar
+chore(quarto): update site build output
+```
 
 ### How to split
 
@@ -139,6 +173,7 @@ When a single file (e.g., `_quarto.yml`) contains changes for multiple scopes:
 2. Group hunks by scope
 3. Stage and commit each scope separately
 4. Present the grouping plan to the user before committing
+<!-- END REPO-SPECIFIC -->
 
 ## Attribution
 
@@ -153,27 +188,48 @@ When a single file (e.g., `_quarto.yml`) contains changes for multiple scopes:
 - Reference files with repo-relative paths (e.g. `git diff -- posts/`,
   not `git diff -- /Users/.../ss_personal_quarto_blog/posts/`).
 
+<!-- REPO-SPECIFIC: examples -->
 ## Examples
 
 Single-line:
 
 ```
-feat(posts): add new blog post on gradient descent
+feat(posts): add march 2026 roundup draft post
 ```
 
 ```
-fix(quarto): correct navbar link ordering
+feat(posts): remove draft status from feb roundup post
 ```
 
 ```
-chore(renv): update lock file
+fix(posts): correct broken image path in roundup post
+```
+
+```
+refactor(posts): reformat post to 80-char line wrapping
+```
+
+```
+chore(quarto): update site build output
+```
+
+```
+docs(docs): update build commands and workflow
 ```
 
 Multi-line:
 
 ```
-refactor(theme): improve mobile responsiveness
+feat(posts): add march 2026 roundup draft post
 
-Update ember.scss breakpoints and styles.css grid layout for better
-rendering on small screens. No content changes.
+Initial draft with sections for links, papers, and tools. Includes
+thumbnail image and bibliography entries.
 ```
+
+```
+refactor(quarto): simplify justfile with dev/prod preview recipes
+
+Replace separate clean/render/preview steps with unified recipes
+that handle the full pipeline. No behavior change.
+```
+<!-- END REPO-SPECIFIC -->
