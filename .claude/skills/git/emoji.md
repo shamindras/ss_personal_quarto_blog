@@ -8,6 +8,7 @@ Format: `<type>(<scope>): <emoji> <description>`
 
 | Type       | Emoji | Example                                      |
 |------------|-------|----------------------------------------------|
+<!-- REPO-SPECIFIC: emoji-examples -->
 | `feat`     | ✨    | `feat(posts): ✨ add new blog post on optimization` |
 | `fix`      | 🐛    | `fix(quarto): 🐛 correct navbar link ordering`     |
 | `refactor` | ♻️     | `refactor(theme): ♻️ improve mobile responsiveness` |
@@ -16,6 +17,7 @@ Format: `<type>(<scope>): <emoji> <description>`
 | `test`     | ✅    | `test(posts): ✅ add render validation`              |
 | `style`    | 🎨    | `style(theme): 🎨 reformat scss`                    |
 | `ci`       | 👷    | `ci(netlify): 👷 add build workflow`                 |
+<!-- END REPO-SPECIFIC -->
 
 ## Rules
 
