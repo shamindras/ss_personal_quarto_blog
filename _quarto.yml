@@ -10,6 +10,8 @@ website:
   repo-url: https://github.com/shamindras/ss_personal_quarto_blog
   repo-actions: [edit, issue]
   open-graph: true
+  twitter-card: true
+  reader-mode: true
   navbar:
     background: "#FFFFFF"
     foreground: "dark"
@@ -30,13 +32,15 @@ website:
         href: https://scholar.google.com/citations?user=zFUrGToAAAAJ&hl=en&oi=ao
       - icon: rss
         href: posts.xml
-  google-analytics: "UA-145015693-1"
   page-footer:
     right:
       - text: blog source
         href: https://github.com/shamindras/ss_personal_quarto_blog
 
+lang: en
+
 format:
   html:
     theme: ember.scss
     css: styles.css
+    html-math-method: mathjax

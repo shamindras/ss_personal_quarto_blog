@@ -21,13 +21,19 @@ citation: true
 
 # Enable giscus for comments
 comments:
-  giscus: 
+  giscus:
     repo: shamindras/ss_personal_quarto_blog
 
 # Enable CC licence appendix
 license: "CC BY"
 
+# Default bibliography
+bibliography: ../../refs.bib
+
+# Enable code linking by default
+code-link: true
+
 # markdown editor options
-editor_options: 
-  markdown: 
+editor-options:
+  markdown:
     wrap: 80

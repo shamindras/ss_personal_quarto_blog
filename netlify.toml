@@ -1,0 +1,8 @@
+[build]
+  publish = "_site"
+  command = "echo 'Pre-built site, no build needed'"
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
