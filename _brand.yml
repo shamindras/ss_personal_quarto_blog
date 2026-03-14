@@ -1,0 +1,23 @@
+meta:
+  name: "Shamindra Shrotriya"
+  link: https://www.shamindras.com
+color:
+  palette:
+    white: "#FFFFFF"
+    black: "#000000"
+  background: white
+  foreground: black
+typography:
+  base:
+    family: "Atkinson Hyperlegible"
+    weight: 400
+  headings:
+    family: "Atkinson Hyperlegible"
+    weight: 700
+  monospace:
+    family: "Fira Code"
+  fonts:
+    - family: "Atkinson Hyperlegible"
+      source: google
+    - family: "Fira Code"
+      source: google
