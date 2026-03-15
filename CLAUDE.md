@@ -35,22 +35,50 @@ just renv-restore        # Restore R packages from renv.lock
 | `software.qmd` | Open-source project descriptions |
 | `_brand.yml` | Single source for site colors and fonts (consumed by Quarto) |
 | `refs.bib` | Shared BibTeX bibliography |
-| `ember.scss` | Custom Bootstrap theme (litera base with brand overrides) |
+| `assets/css/ember.scss` | Custom Bootstrap theme (litera base with brand overrides) |
+| `assets/css/styles.css` | Additional CSS overrides |
 | `netlify.toml` | Netlify deploy config (publish dir, 404 redirect) |
-| `styles.css` | Additional CSS overrides |
 | `posts/_metadata.yml` | Shared metadata for all blog posts |
 | `_extensions/mcanouil/iconify/` | Icon shortcode extension |
+| `data/images/` | Shared images (profile pic) |
 | `data/pdfs/` | CV, teaching statement, thesis PDFs |
+| `data/qmds/includes/` | Reusable Quarto include fragments (`_*.qmd`) |
+| `.quartoignore` | Prevents `data/qmds/` and `README.md` from rendering |
+| `scripts/` | Maintenance scripts (e.g. `repo-hygiene.sh`) |
 | `dependencies.R` | Declares implicit Quarto R deps (e.g. `downlit`) so renv tracks them |
 | `_freeze/` | Cached computational output (committed to git) |
 
 ## Blog Post Conventions
 
 - Posts live in `posts/YYYY-MM-DD-<slug>/index.qmd`
-- Each post directory may contain `images/` and `pdfs/` subdirectories
+- Canonical post directory layout:
+  ```
+  posts/YYYY-MM-DD-shrotriyaYYYY<topic>/
+    index.qmd              # Root document (mandatory)
+    images/                 # All post images
+      preview-*.png         # Preview/thumbnail image
+      *.png|*.jpg           # Additional inline images
+  ```
+- No `pdfs/`, `data/`, or `figures/` subdirectories in posts — use `data/pdfs/` for shared PDFs
 - `posts/_metadata.yml` sets shared defaults: `freeze: true`, giscus comments, CC BY license, Shamindra as author, 80-char line wrap, `bibliography`, `code-link: true`
 - Front matter typically includes: title, description, categories, slug, date, image, bibliography
 - Posts use `freeze: true` — computational output is cached in `_freeze/` and not re-executed unless explicitly invalidated
+
+## Reusable Includes
+
+Include fragments live in `data/qmds/includes/` with underscore-prefixed filenames.
+Use via `{{< include >}}` shortcode in posts.
+
+| File | Purpose | Used by |
+|------|---------|---------|
+| `_acknowledgment-salil-profile.qmd` | Profile pic credit | welcome post |
+| `_acknowledgment-salil-hex.qmd` | Hex sticker preview credit | tidyfunpt1, reprtitanic, tidyfunpt2 |
+| `_llm-usage-full.qmd` | Full LLM usage declaration | feb2026 roundup |
+| `_llm-usage-thumbnail-only.qmd` | LLM used only for thumbnail | (future posts) |
+| `_llm-usage-formatting-only.qmd` | LLM used only for formatting | (future posts) |
+
+Paths resolve relative to the calling file, not the include.
+Include files must NOT have YAML frontmatter.
 
 ## Branch-First Rule
 
