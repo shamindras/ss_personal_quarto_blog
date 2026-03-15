@@ -41,6 +41,6 @@ lang: en
 
 format:
   html:
-    theme: ember.scss
-    css: styles.css
+    theme: assets/css/ember.scss
+    css: assets/css/styles.css
     html-math-method: mathjax
