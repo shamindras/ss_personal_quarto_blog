@@ -1,0 +1,5 @@
+# Do not render include fragments as standalone pages
+data/qmds/
+
+# Do not render README
+README.md

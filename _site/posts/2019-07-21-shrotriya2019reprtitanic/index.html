@@ -150,7 +150,7 @@ const typesetMath = (el) => {
 window.Quarto = {
   typesetMath
 };
-</script><link rel="stylesheet" href="../../styles.css">
+</script><link rel="stylesheet" href="../../assets/css/styles.css">
 <meta property="og:title" content="Reproducibility Challenge: Titanic Survivors Plot – Shamindra Shrotriya">
 <meta property="og:description" content="Using the Tidyverse to reproduce a plot on the survivorship of the Titanic">
 <meta property="og:image" content="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg">
@@ -310,8 +310,12 @@ window.Quarto = {
 <span>        <span class="fu">group_by</span><span class="op">(</span><span class="va">class</span>, <span class="va">new_sex</span>, <span class="va">survived</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>        <span class="fu">summarize</span><span class="op">(</span>n_sgnd <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n_sgnd</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'class', 'new_sex'. You can override using
-the `.groups` argument.</code></pre>
+<pre><code>`summarise()` has regrouped the output.
+ℹ Summaries were computed grouped by class, new_sex, and survived.
+ℹ Output is grouped by class and new_sex.
+ℹ Use `summarise(.groups = "drop_last")` to silence this message.
+ℹ Use `summarise(.by = c(class, new_sex, survived))` for per-operation grouping
+  (`?dplyr::dplyr_by`) instead.</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Crew (non-passenger) level aggregation</span></span>
 <span><span class="va">t3</span> <span class="op">&lt;-</span> <span class="va">t1</span> <span class="op">%&gt;%</span></span>
@@ -319,8 +323,12 @@ the `.groups` argument.</code></pre>
 <span>        <span class="fu">group_by</span><span class="op">(</span><span class="va">class</span>, <span class="va">new_sex</span>, <span class="va">survived</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>        <span class="fu">summarize</span><span class="op">(</span>n_sgnd <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n_sgnd</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'class', 'new_sex'. You can override using
-the `.groups` argument.</code></pre>
+<pre><code>`summarise()` has regrouped the output.
+ℹ Summaries were computed grouped by class, new_sex, and survived.
+ℹ Output is grouped by class and new_sex.
+ℹ Use `summarise(.groups = "drop_last")` to silence this message.
+ℹ Use `summarise(.by = c(class, new_sex, survived))` for per-operation grouping
+  (`?dplyr::dplyr_by`) instead.</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Combined cleaned plotting dataset</span></span>
 <span><span class="va">ttnc_cln</span> <span class="op">&lt;-</span> <span class="va">t1</span> <span class="op">%&gt;%</span></span>

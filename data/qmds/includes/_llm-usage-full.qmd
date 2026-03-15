@@ -1,0 +1,11 @@
+::: {.callout-warning collapse="true" icon=false}
+
+## LLMs Usage Declaration
+
+All reviews, opinions, and written content in this post, unless
+explicitly stated, are authored by me, a human. LLMs were used solely
+for formatting purposes, such as layout assistance, writing git commits,
+sourcing thumbnails, adding alt-text, and generating the thumbnail image
+for this post.
+
+:::
