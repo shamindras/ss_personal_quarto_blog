@@ -21,6 +21,7 @@ rsconnect/
 # === Quarto ===
 /.quarto/
 /site_libs/
+_freeze/site_libs/
 **/*.quarto_ipynb
 
 # === Build artifacts ===
