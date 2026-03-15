@@ -17,6 +17,10 @@ clean:
     @rm -rf _site/ .quarto/
     @printf "✅ Cleaned!\n"
 
+# Run all repo structure and hygiene checks
+repo-hygiene:
+    @bash scripts/repo-hygiene.sh
+
 # Restore R dependencies
 renv-restore:
     @printf "📚 Restoring R packages from renv.lock...\n"
