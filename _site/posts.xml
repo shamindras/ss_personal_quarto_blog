@@ -1237,7 +1237,6 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
 <p>Which generates the corresponding <code>mathcal</code> macros for <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7Ba%7D"> and <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BA%7D"> respectively.</p>
 <p>So finally we can generate all 52 letter macros at time by simply replacing <code>c("a", "A")</code> with <code>c(letters, LETTERS)</code> which uses the input lowercase/uppercase <code>letters</code>/<code>LETTERS</code> vectors in base <code>R</code>:</p>
-<div class="cell-output-display">
 <details closed=""><summary><span title="Click to Expand"> Full newcommand Demo Output </span>
 </summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"></span>
 <span id="cb7-2">\newcommand{\bfa}{\mathbf{a}}</span>
@@ -1293,10 +1292,9 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 <span id="cb7-52">\newcommand{\bfY}{\mathbf{Y}}</span>
 <span id="cb7-53">\newcommand{\bfZ}{\mathbf{Z}}</span></code></pre></div></div>
 </details><p><br></p>
-</div>
 <p>Hope you have fun using this to quickly generate your <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> <code>newcommand</code> macros ✌️.</p>
 </section></section><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
-<p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a></p>
+<p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a>.</p>
 
 
 </div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
@@ -1863,8 +1861,12 @@ font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'class', 'new_sex'. You can override using
-the `.groups` argument.</code></pre>
+<pre><code>`summarise()` has regrouped the output.
+ℹ Summaries were computed grouped by class, new_sex, and survived.
+ℹ Output is grouped by class and new_sex.
+ℹ Use `summarise(.groups = "drop_last")` to silence this message.
+ℹ Use `summarise(.by = c(class, new_sex, survived))` for per-operation grouping
+  (`?dplyr::dplyr_by`) instead.</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -1924,8 +1926,12 @@ font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'class', 'new_sex'. You can override using
-the `.groups` argument.</code></pre>
+<pre><code>`summarise()` has regrouped the output.
+ℹ Summaries were computed grouped by class, new_sex, and survived.
+ℹ Output is grouped by class and new_sex.
+ℹ Use `summarise(.groups = "drop_last")` to silence this message.
+ℹ Use `summarise(.by = c(class, new_sex, survived))` for per-operation grouping
+  (`?dplyr::dplyr_by`) instead.</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -2443,8 +2449,7 @@ Survivors Plot.”</span> July 21, 2019. <a href="https://www.shamindras.com/pos
   <title>Tidyverse Fun - Part 1</title>
   <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/</link>
-  <description><![CDATA[ <div class="cell-output-display">
-<style type="text/css">/**
+  <description><![CDATA[ <style type="text/css">/**
   * Author: Mikhail Popov
   * License: MIT
   */
@@ -2459,16 +2464,14 @@ a.wiki {
     vertical-align: super;
     font-size: 6pt;
 }</style>
-<script src="https://unpkg.com/wikipedia-preview@latest/dist/wikipedia-preview.production.js" type="text/javascript"></script><script type="text/javascript">
+<script src="https://unpkg.com/wikipedia-preview@1.8.0/dist/wikipedia-preview.production.js" type="text/javascript"></script><script type="text/javascript">
     window.onload = function() {
       wikipediaPreview.init({
         lang: 'en',
         selector: '.wiki',
         detectLinks: true
       });
-    };</script>
-</div>
-<section id="task-1-generating-oxford-comma-triples" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="task-1-generating-oxford-comma-triples">Task 1: Generating Oxford Comma Triples</h2>
+    };</script><section id="task-1-generating-oxford-comma-triples" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="task-1-generating-oxford-comma-triples">Task 1: Generating Oxford Comma Triples</h2>
 <section id="the-central-problem" class="level3"><h3 class="anchored" data-anchor-id="the-central-problem">The central problem</h3>
 <p>Based on a fun conversation with my statistics cohort over dinner we got to discussing the famous <a href="https://en.wikipedia.org/wiki/Serial_comma" class="wiki"><em>Oxford Comma</em></a> (or <em>Serial Comma</em> depending on your persuasion). I’ve never really adopted the use but my friends made a compelling argument on it’s apparent general lack of ambiguity when applied appropriately.</p>
 <p>We will use the Oxford comma on the famously <em>ambiguous</em> phrase (here used without the Oxford Comma before <em>leaves</em>):</p>

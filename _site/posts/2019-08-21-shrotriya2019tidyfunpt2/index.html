@@ -130,7 +130,7 @@ const typesetMath = (el) => {
 window.Quarto = {
   typesetMath
 };
-</script><link rel="stylesheet" href="../../styles.css">
+</script><link rel="stylesheet" href="../../assets/css/styles.css">
 <meta property="og:title" content="Tidyverse Fun - Part 2 – Shamindra Shrotriya">
 <meta property="og:description" content="Second part in a series of doing useful tasks with the Tidyverse. This time auto-generating sequential LaTeX newcommand macros">
 <meta property="og:image" content="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg">
@@ -310,7 +310,6 @@ window.Quarto = {
 </div>
 <p>Which generates the corresponding <code>mathcal</code> macros for <span class="math inline">\(\mathcal{a}\)</span> and <span class="math inline">\(\mathcal{A}\)</span> respectively.</p>
 <p>So finally we can generate all 52 letter macros at time by simply replacing <code>c("a", "A")</code> with <code>c(letters, LETTERS)</code> which uses the input lowercase/uppercase <code>letters</code>/<code>LETTERS</code> vectors in base <code>R</code>:</p>
-<div class="cell-output-display">
 <details closed=""><summary><span title="Click to Expand"> Full newcommand Demo Output </span>
 </summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfa}{\mathbf{a}}</span>
@@ -366,10 +365,9 @@ window.Quarto = {
 <span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfY}{\mathbf{Y}}</span>
 <span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>\newcommand{\bfZ}{\mathbf{Z}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><p><br></p>
-</div>
 <p>Hope you have fun using this to quickly generate your <span class="math inline">\(\LaTeX\)</span> <code>newcommand</code> macros ✌️.</p>
 </section></section><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
-<p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a></p>
+<p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a>.</p>
 
 
 </div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
