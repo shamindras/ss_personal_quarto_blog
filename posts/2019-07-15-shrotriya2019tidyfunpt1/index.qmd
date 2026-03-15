@@ -232,8 +232,4 @@ the comments any questions/feedback you may have `r emo::ji("thumbsup")`.
 
 Stay tuned for more blogposts solving more such tasks.
 
-## Acknowledgments {.appendix}
-
-I'd like to thank Salil Shrotriya for creating the preview image for this post.
-The hex sticker `png` files were sourced from
-[here](https://github.com/rstudio/hex-stickers).
+{{< include ../../data/qmds/includes/_acknowledgment-salil-hex.qmd >}}

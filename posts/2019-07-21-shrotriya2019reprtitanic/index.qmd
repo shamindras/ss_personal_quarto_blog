@@ -179,8 +179,4 @@ out_plot
     with the above and please post in the comments any questions/feedback you
     may have `r emo::ji("thumbsup")`.
 
-## Acknowledgments {.appendix}
-
-I'd like to thank Salil Shrotriya for creating the preview image for this post.
-The hex sticker `png` files were sourced from
-[here](https://github.com/rstudio/hex-stickers).
+{{< include ../../data/qmds/includes/_acknowledgment-salil-hex.qmd >}}

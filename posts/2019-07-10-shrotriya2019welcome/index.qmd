@@ -54,7 +54,4 @@ disappoint and create some useful content here `r emo::ji("vulcan_salute")`.
     about the bootstrap in our regular Skype chats (the rants will still
     continue though...`r emo::ji("smile")`).
 
-## Acknowledgments {.appendix}
-
-I'd like to thank Salil Shrotriya for taking my profile pic which is the preview
-image for this post.
+{{< include ../../data/qmds/includes/_acknowledgment-salil-profile.qmd >}}

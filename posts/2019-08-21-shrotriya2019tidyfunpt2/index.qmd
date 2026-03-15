@@ -104,8 +104,4 @@ c(letters, LETTERS) %>%
 Hope you have fun using this to quickly generate your $\LaTeX$ `newcommand`
 macros `r emo::ji("victory")`.
 
-## Acknowledgments {.appendix}
-
-I'd like to thank Salil Shrotriya for creating the preview image for this post.
-The hex sticker `png` files were sourced from
-[here](https://github.com/rstudio/hex-stickers).
+{{< include ../../data/qmds/includes/_acknowledgment-salil-hex.qmd >}}
