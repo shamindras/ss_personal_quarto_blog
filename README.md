@@ -1,10 +1,76 @@
+
+
 # shamindras.com
 
-[![Netlify
-Status](https://api.netlify.com/api/v1/badges/902e0dd6-7868-4e73-9b1a-c9114d53f6b6/deploy-status)](https://app.netlify.com/sites/ss-personal-quarto-blog/deploys)
+[![](https://api.netlify.com/api/v1/badges/902e0dd6-7868-4e73-9b1a-c9114d53f6b6/deploy-status.png)](https://app.netlify.com/sites/ss-personal-quarto-blog/deploys)
 
-This the source code for my [personal website](https://www.shamindras.com/) and
-[research blog](https://www.shamindras.com/posts.html). It is created using the
-[R quarto package](https://quarto.org/docs/websites/website-blog.html). This
-replaces my previous research blog which was created using the [R distill
-package](https://rstudio.github.io/distill/).
+## About
+
+Personal research blog by **Shamindra Shrotriya** — Principal AI
+Solution Architect with a PhD in Statistics from Carnegie Mellon
+University.
+
+Let’s Get Statistical! This blog covers statistical theory and
+methodology, machine learning research, rstats, python, books, sports,
+and whatever else catches my interest. Pull up a chair, leave a comment,
+and join me so we can explore together.
+
+Live at [shamindras.com](https://www.shamindras.com).
+
+## Tech Stack
+
+| Tool | Purpose |
+|----|----|
+| [Quarto](https://quarto.org/) | Static site generator |
+| R / [renv](https://rstudio.github.io/renv/) | Computational posts + dependency management |
+| [just](https://github.com/casey/just) | Command runner |
+| [giscus](https://giscus.app/) | GitHub-backed comments |
+| [Netlify](https://www.netlify.com/) | Hosting and deployment |
+
+Made with ❤️ using [Quarto](https://quarto.org).
+
+## Repo Structure
+
+| Path          | Purpose                                    |
+|---------------|--------------------------------------------|
+| `_quarto.yml` | Main site configuration                    |
+| `index.qmd`   | Landing / about page                       |
+| `posts.qmd`   | Blog listing with search and RSS           |
+| `posts/`      | Blog post source files                     |
+| `_freeze/`    | Cached computational output                |
+| `assets/css/` | Custom theme SCSS and CSS                  |
+| `data/`       | Shared images, PDFs, and include fragments |
+| `_brand.yml`  | Site colors and fonts                      |
+| `Justfile`    | Build recipes                              |
+
+## Local Development
+
+``` bash
+# Clone the repo
+git clone https://github.com/shamindras/ss_personal_quarto_blog.git
+cd ss_personal_quarto_blog
+
+# Restore R dependencies
+just renv-restore
+
+# Dev server (drafts visible, live reload)
+just dev
+
+# Production server (drafts hidden, live reload)
+just prod
+```
+
+## Post Naming
+
+Posts follow the convention:
+
+    posts/YYYY-MM-DD-shrotriyaYYYY<topic>/index.qmd
+
+Each post directory contains an `index.qmd` and an `images/` folder.
+
+## Contributing
+
+This is a personal blog — not accepting external contributions. If you
+spot an error or have feedback, feel free to leave a comment via
+[giscus](https://giscus.app/) on any post, or open an
+[issue](https://github.com/shamindras/ss_personal_quarto_blog/issues).
