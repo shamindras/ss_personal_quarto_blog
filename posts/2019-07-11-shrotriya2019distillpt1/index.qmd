@@ -10,6 +10,14 @@ execute:
   echo: true
 ---
 
+::: {.callout-important title="Historical Post"}
+This post documents the original [Distill](https://rstudio.github.io/distill/)-based
+blog setup and is preserved for historical reference. The blog now runs on
+[Quarto](https://quarto.org/), and comments use [giscus](https://giscus.app/) instead
+of Disqus. See the [GitHub repo](https://github.com/shamindras/ss_personal_quarto_blog)
+for the updated Quarto source code.
+:::
+
 ## Step 0: Introduction
 
 This is a meta blogpost to describe how I setup this personal academic blog. It
