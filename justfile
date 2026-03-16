@@ -21,6 +21,10 @@ clean:
 repo-hygiene:
     @bash scripts/repo-hygiene.sh
 
+# Render README.qmd to README.md for GitHub
+readme:
+    quarto render README.qmd
+
 # Restore R dependencies
 renv-restore:
     @printf "📚 Restoring R packages from renv.lock...\n"
