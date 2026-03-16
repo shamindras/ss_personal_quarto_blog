@@ -12,9 +12,13 @@ website:
   open-graph: true
   twitter-card: true
   reader-mode: true
+  search:
+    location: navbar
+    type: overlay
+    keyboard-shortcut: ["f", "/"]
+    show-item-context: tree
   navbar:
-    background: "#FFFFFF"
-    foreground: "dark"
+    background: light
     right:
       - text: research
         file: research.qmd
@@ -41,6 +45,8 @@ lang: en
 
 format:
   html:
-    theme: assets/css/ember.scss
+    theme:
+      light: assets/css/ember.scss
+      dark: [darkly, assets/css/ember-dark.scss]
     css: assets/css/styles.css
     html-math-method: mathjax
