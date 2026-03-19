@@ -48,4 +48,4 @@ format:
       light: assets/css/ember.scss
       dark: [darkly, assets/css/ember-dark.scss]
     css: assets/css/styles.css
-    html-math-method: mathjax
+    html-math-method: katex
