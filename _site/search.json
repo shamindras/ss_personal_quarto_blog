@@ -137,7 +137,7 @@
     "href": "posts/2019-08-21-shrotriya2019tidyfunpt2/index.html#acknowledgments",
     "title": "Tidyverse Fun - Part 2",
     "section": "Acknowledgments",
-    "text": "Acknowledgments\nI’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker png files were sourced from here."
+    "text": "Acknowledgments\nI’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker png files were sourced from here"
   },
   {
     "objectID": "posts/2019-07-30-shrotriya2019july19roundup/index.html",
@@ -221,7 +221,7 @@
     "href": "posts/2019-07-15-shrotriya2019tidyfunpt1/index.html#acknowledgments",
     "title": "Tidyverse Fun - Part 1",
     "section": "Acknowledgments",
-    "text": "Acknowledgments\nI’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker png files were sourced from here."
+    "text": "Acknowledgments\nI’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker png files were sourced from here"
   },
   {
     "objectID": "posts.html",
@@ -305,7 +305,7 @@
     "href": "posts/2019-07-11-shrotriya2019distillpt1/index.html#step-8-deploy-your-website-with-netlify",
     "title": "Setting up a Distill Blog with Netlify",
     "section": "Step 8: Deploy your website with Netlify",
-    "text": "Step 8: Deploy your website with Netlify\nNow that the domain name is bought, I just needed to deploy the newly created blog contents on the registered domain name. Enter netlify! This is a free (and awesome) deployment service. I created a personal account following the intructions on Netlify website.\nI then logged in to Netlify and clicked on the green New site from Git button to get started. In the following menu I clicked the Github Continuous Deployment icon:\n\n\nCreating New Site with Netlify\n\nI then manually searched for my blog repo i.e. ss_personal_distill_blog. Initially this did not appear, so I clicked the green Configure the Netlify app on GitHub link at the bottom and gave Netlify permissions to access this site. This is so Netlify can automatically sync with the github repo and deploy changes going forward as I make them directly to my github blog repo.\n\n\nGiving Netlify New Github repo Access\n\nI clicked on my site that appears and then ensured that I selected to ensure that the Branch to Deploy option is set to master.\n\n\nConfiguring Netlify Build Options\n\nThis simply means that netlify will only build the site based on what happens in my master branch in my github repo\nI then clicked Deploy Site and then saw the following deployment settings:\n\n\nDefault Netlify Site Name\n\nI clicked thee Site Settings button. Looks like my site name on Netlify is goofy-babbage-7f05c8. Cute, though I’ll personalize by clicking the Change Site Name button. I changed it to ss-personal-distill-blog for my easy reference.\nI clicked the Build and Deploy button next and after clicking the Edit Settings button modified the Publish directory to be _site as shown below:\n\n\nSetup Continuous Deployment with Netlify\n\nThis is where all our blogposts in our github repo will be rendered to html by distill once we knit them. Netlify will just pick them up from here everytime you refresh them and deploy our website accordingly\nNext I need to manage the domain i.e. tell Netlify to deploy my site on the custom domain I just purchased from Google Domains.\n\n\nCustomize Site Domains with Netlify\n\nAfter clicking verify we have the following domains now set, with www.shamindras.com being the primary domain.\n\n\nAll Custom Domains for Site with Netlify\n\nNetlify also tells me that the truncated url shamindras.com will also get routed to the blog. So I don’t event need to write the www. going forward. Thanks Netlify 🙇‍♀."
+    "text": "Step 8: Deploy your website with Netlify\nNow that the domain name is bought, I just needed to deploy the newly created blog contents on the registered domain name. Enter netlify! This is a free (and awesome) deployment service. I created a personal account following the intructions on Netlify website.\nI then logged in to Netlify and clicked on the green New site from Git button to get started. In the following menu I clicked the Github Continuous Deployment icon:\n\n\nCreating New Site with Netlify\n\nI then manually searched for my blog repo i.e. ss_personal_distill_blog. Initially this did not appear, so I clicked the green Configure the Netlify app on GitHub link at the bottom and gave Netlify permissions to access this site. This is so Netlify can automatically sync with the github repo and deploy changes going forward as I make them directly to my github blog repo.\n\n\nGiving Netlify New Github repo Access\n\nI clicked on my site that appears and then ensured that I selected to ensure that the Branch to Deploy option is set to master.\n\n\nConfiguring Netlify Build Options\n\nThis simply means that netlify will only build the site based on what happens in my master branch in my github repo\nI then clicked Deploy Site and then saw the following deployment settings:\n\n\nDefault Netlify Site Name\n\nI clicked thee Site Settings button. Looks like my site name on Netlify is goofy-babbage-7f05c8. Cute, though I’ll personalize by clicking the Change Site Name button. I changed it to ss-personal-distill-blog for my easy reference.\nI clicked the Build and Deploy button next and after clicking the Edit Settings button modified the Publish directory to be _site as shown below:\n\n\nSetup Continuous Deployment with Netlify\n\nThis is where all our blogposts in our github repo will be rendered to html by distill once we knit them. Netlify will just pick them up from here everytime you refresh them and deploy our website accordingly\nNext I need to manage the domain i.e. tell Netlify to deploy my site on the custom domain I just purchased from Google Domains.\n\n\nCustomize Site Domains with Netlify\n\nAfter clicking verify we have the following domains now set, with www.shamindras.com being the primary domain.\n\n\nAll Custom Domains for Site with Netlify\n\nNetlify also tells me that the truncated url shamindras.com will also get routed to the blog. So I don’t event need to write the www. going forward. Thanks Netlify 🙇."
   },
   {
     "objectID": "posts/2019-07-11-shrotriya2019distillpt1/index.html#step-9-patiently-wait-for-deployment",
@@ -375,7 +375,7 @@
     "href": "posts/2019-07-21-shrotriya2019reprtitanic/index.html#acknowledgments",
     "title": "Reproducibility Challenge: Titanic Survivors Plot",
     "section": "Acknowledgments",
-    "text": "Acknowledgments\nI’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker png files were sourced from here."
+    "text": "Acknowledgments\nI’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker png files were sourced from here"
   },
   {
     "objectID": "posts/2019-07-31-shrotriya2019distillpt2/index.html",
