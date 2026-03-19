@@ -423,7 +423,7 @@ window.Quarto = {
 <p>In a custom <span class="math inline">\(\LaTeX\)</span> macro file I needed to generate several sequential <span class="math inline">\(\LaTeX\)</span> <code>newcommand</code> entries of the form:</p>
 <pre class="markup"><code>\newcommand{\bfa}{\mathbf{a}}
 \newcommand{\bfA}{\mathbf{A}}</code></pre>
-<p>Where using <code>$\bfa$</code> produces <span class="math inline">\(\mathbf{a}\)</span> and using <code>$\bfA$</code> produces <span class="math inline">\(\mathbf{A}\)</span> i.e the lowecase/uppercase <code>mathbf</code> commands respectively.</p>
+<p>Where using <code>$\bfa$</code> produces <span class="math inline">\(\mathbf{a}\)</span> and using <code>$\bfA$</code> produces <span class="math inline">\(\mathbf{A}\)</span> i.e the lowercase/uppercase <code>mathbf</code> commands respectively.</p>
 <p>Specifically I needed to construct 52 such combined sequential entries for both lowercase/uppercase letter versions of these <code>newcommand</code> <span class="math inline">\(\LaTeX\)</span> macros. Rather than do this manually, I realized that this would be another fun scripting exercise with using the <code>tidyverse</code> packages <code>glue</code>, <code>purrr</code>, and <code>stringr</code> similar to this similar <a href="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/">previous post here</a>.</p>
 <p><strong>Goal:</strong> Create 52 such lowercase/uppercase <code>newcommand</code> entries and print to the console to directly-copy paste to my <span class="math inline">\(\LaTeX\)</span> macros file.</p>
 </section><section id="the-tidy-approach" class="level3"><h3 class="anchored" data-anchor-id="the-tidy-approach">The <code>tidy</code> approach</h3>

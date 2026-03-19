@@ -447,7 +447,7 @@ a.wiki {
 <aside><p><span class="citation" data-cites="robinson2020introfuncanalysis_book">(<a href="#ref-robinson2020introfuncanalysis_book" role="doc-biblioref">Robinson 2020</a>)</span> is a wonderful functional analysis book, highly recommend it 💯!</p>
 </aside></section><section id="background---norms" class="level1 page-columns page-full"><h1>Background - Norms</h1>
 <aside><p><br><br> Experienced readers can freely skip this Background section.</p>
-</aside><p>Normed linear spaces are a natural setting for much applied mathematics and statistics. These are vector spaces, <span class="math inline">\(V\)</span>, endowed with a norm function, <span class="math inline">\(\lVert \cdot \rVert_{V}\)</span>. Intuitively, norms give us a “yardstick” to measure the “lengths” of individual vectors in the given vector space space. A standard definition of a norm is as follows:</p>
+</aside><p>Normed linear spaces are a natural setting for much applied mathematics and statistics. These are vector spaces, <span class="math inline">\(V\)</span>, endowed with a norm function, <span class="math inline">\(\lVert \cdot \rVert_{V}\)</span>. Intuitively, norms give us a “yardstick” to measure the “lengths” of individual vectors in the given vector space. A standard definition of a norm is as follows:</p>
 <div id="def-norm" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Norms in vector spaces)</strong></span> For a given vector space <span class="math inline">\(V\)</span>, a norm <span class="math inline">\(\lVert \cdot \rVert_{V}: V \to \mathbb{R}\)</span>, is a function satisfying the following three properties.</p>
 <ol type="1">
@@ -511,7 +511,7 @@ a.wiki {
 </div>
 <p>In simple terms, the importance of <a href="#thm-normtrichar" class="quarto-xref">Theorem&nbsp;1</a> (as captured by <a href="#eq-normtrichar-01" class="quarto-xref">Equation&nbsp;1</a>) can be summarized as follows:</p>
 <blockquote class="blockquote">
-<p>Let <span class="math inline">\(N : V \to [0, \infty)\)</span> be a function satisfying positive definiteness and absolute homogeneity. Then <span class="math inline">\(N\)</span> satisfies the triangle inequality if and only if the unit ba induced by <span class="math inline">\(N\)</span>, i.e., <span class="math inline">\(\mathbb{B} := \{\mathbf{z} \in V \:|\: N(\mathbf{z}) \leq 1 \}\)</span>, is a convex set.</p>
+<p>Let <span class="math inline">\(N : V \to [0, \infty)\)</span> be a function satisfying positive definiteness and absolute homogeneity. Then <span class="math inline">\(N\)</span> satisfies the triangle inequality if and only if the unit ball induced by <span class="math inline">\(N\)</span>, i.e., <span class="math inline">\(\mathbb{B} := \{\mathbf{z} \in V \:|\: N(\mathbf{z}) \leq 1 \}\)</span>, is a convex set.</p>
 </blockquote>
 <details><summary><p>Remarks</p>
 </summary><div class="proof remark">
@@ -555,7 +555,7 @@ a.wiki {
 \end{equation}\]</span>
 <p>It follows that <span class="math inline">\(N_{\ell^{p}}(\lambda \mathbf{x} + (1 - \lambda) \mathbf{y}) \leq 1\)</span>, and so <span class="math inline">\(\lambda \mathbf{x} + (1 - \lambda) \mathbf{y} \in \mathbb{B}\)</span>, as required <span class="math inline">\(\blacksquare\)</span>.</p>
 <aside><p>This triangle inequality is proved in just four lines 🔥!</p>
-</aside><p>In fact, since it <span class="math inline">\(N_{\ell^{p}}\)</span> satisfies the three conditions for a norm per <a href="#def-norm" class="quarto-xref">Definition&nbsp;1</a> we can now denote it using the conventional <span class="math inline">\(\ell_{p}\)</span>-norm form, i.e., <span class="math inline">\(\| \mathbf{x} \|_{\ell^{p}} := N_{\ell^{p}}(\mathbf{x})\)</span></p>
+</aside><p>In fact, since <span class="math inline">\(N_{\ell^{p}}\)</span> satisfies the three conditions for a norm per <a href="#def-norm" class="quarto-xref">Definition&nbsp;1</a> we can now denote it using the conventional <span class="math inline">\(\ell_{p}\)</span>-norm form, i.e., <span class="math inline">\(\| \mathbf{x} \|_{\ell^{p}} := N_{\ell^{p}}(\mathbf{x})\)</span></p>
 </section><section id="application-2-l_p-norm-triangle-inequality" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="application-2-l_p-norm-triangle-inequality">Application 2: <span class="math inline">\(L_{p}\)</span>-norm triangle inequality</h3>
 <p>We can also similarly prove the triangle inequality norms involving integrals efficiently. This is seen in the next example.</p>
 <aside><p>Here <span class="math inline">\(C([0, 1])\)</span> is the space of continuous functions on the interval <span class="math inline">\([0, 1]\)</span>.</p>
@@ -584,7 +584,7 @@ a.wiki {
 <p>Again, we can now denote <span class="math inline">\(N_{L^{p}}\)</span> using the conventional <span class="math inline">\(L_{p}\)</span>-norm form, i.e., <span class="math inline">\(\| f \|_{L^{p}} := N_{L^{p}}(f)\)</span>.</p>
 </section></section><section id="punchline-what-did-theorem-1-buy-us" class="level1 page-columns page-full"><h1>Punchline: what did Theorem 1 buy us?</h1>
 <p>We just saw that applying <a href="#thm-normtrichar" class="quarto-xref">Theorem&nbsp;1</a> enabled us to write <strong>very short proofs</strong> of <a href="https://en.wikipedia.org/wiki/Minkowski_inequality" class="wiki"><strong>Minkowski’s inequality</strong></a> in <span class="math inline">\(\mathbb{F}^{n}\)</span> and <span class="math inline">\(C([0, 1])\)</span>.</p>
-<p>To appreciate this approach, note that proving Minkowski’s inequality typicay requires one to first prove <a href="https://en.wikipedia.org/wiki/Young%27s_inequality_for_products" class="wiki"><strong>Young’s inequality</strong></a> and then <a href="https://en.wikipedia.org/wiki/H%C3%B6lder%27s_inequality" class="wiki"><strong>Hölder’s inequality</strong></a>. Moreover these need to be done separately in <span class="math inline">\(\mathbb{F}^{n}\)</span> and <span class="math inline">\(C([0, 1])\)</span>. Using <a href="#thm-normtrichar" class="quarto-xref">Theorem&nbsp;1</a> aowed us to achieve both of these goals using near identical style of proofs 🎉!</p>
+<p>To appreciate this approach, note that proving Minkowski’s inequality typically requires one to first prove <a href="https://en.wikipedia.org/wiki/Young%27s_inequality_for_products" class="wiki"><strong>Young’s inequality</strong></a> and then <a href="https://en.wikipedia.org/wiki/H%C3%B6lder%27s_inequality" class="wiki"><strong>Hölder’s inequality</strong></a>. Moreover these need to be done separately in <span class="math inline">\(\mathbb{F}^{n}\)</span> and <span class="math inline">\(C([0, 1])\)</span>. Using <a href="#thm-normtrichar" class="quarto-xref">Theorem&nbsp;1</a> allowed us to achieve both of these goals using near identical style of proofs 🎉!</p>
 <aside><p><strong>Note:</strong> The proofs of Young’s and Hölder’s inequality are beautiful and studying them is also insightful.</p>
 </aside></section><section id="proof-of-theorem-1" class="level1 page-columns page-full"><h1>Proof of Theorem 1</h1>
 <p>Assuming <span class="math inline">\(N: V \to \mathbb{R_{\geq 0}}\)</span> satisfies the two properties in Theorem <a href="#thm-normtrichar" class="quarto-xref">Theorem&nbsp;1</a>, we need to prove both implications in Equation <a href="#eq-normtrichar-01" class="quarto-xref">Equation&nbsp;1</a>.</p>
@@ -602,7 +602,7 @@ a.wiki {
     \quad\text{($N$ satisfies triangle inequality)} \\
     &amp; = \lvert \lambda \rvert N(\mathbf{x}) + \lvert 1 - \lambda \rvert N(\mathbf{y})
     \quad\text{(by absolute homogeneity of $N$)} \\
-    &amp; = \lambda N(\mathbf{x}) + 1 - \lambda N(\mathbf{y})
+    &amp; = \lambda N(\mathbf{x}) + (1 - \lambda) N(\mathbf{y})
     \quad\text{(since $\lambda &gt; 0$)} \\
     &amp; \leq (\lambda) (1) + (1 - \lambda) (1)
     \quad\text{(since $N(\mathbf{z}) \leq 1$, for $\mathbf{z} \in \mathbb{B}$)} \\
@@ -667,7 +667,7 @@ a.wiki {
 <p>In this article we learned the following about <a href="#thm-normtrichar" class="quarto-xref">Theorem&nbsp;1</a>:</p>
 <ul>
 <li>It gives an alternative way to <strong>characterize</strong> the triangle inequality for <em>norm-like</em> functions.</li>
-<li>Using this characterization <strong>we can prove the triangle inequality</strong> for such norm-like functions using the convexity of the unit ba induced by such functions.</li>
+<li>Using this characterization <strong>we can prove the triangle inequality</strong> for such norm-like functions using the convexity of the unit ball induced by such functions.</li>
 <li>This is usuay easier since we have lots of <strong>tools from convex analysis</strong> to help us prove the convexity of <span class="math inline">\(\mathbb{B}\)</span>.</li>
 <li>We saw this in action since <a href="#thm-normtrichar" class="quarto-xref">Theorem&nbsp;1</a> enabled us to write <strong>very short proofs</strong> of <strong>Minkowski’s inequality</strong> in <span class="math inline">\(\mathbb{F}^{n}\)</span> and <span class="math inline">\(C([0, 1])\)</span>.</li>
 </ul>
@@ -683,7 +683,7 @@ Robinson, James C. 2020. <em><span class="nocase">An Introduction to Functional 
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 <ol>
-<li id="fn1"><p><strong>Note:</strong> The presentation in this post is <strong><em>intentionay</em></strong> verbose. The goal is to give lots of intuition of the key result and its usefulness, and ensure that the proofs are rigorous. It is written with an empathetic mindset to newcomers, and to myself for future reference.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p><strong>Note:</strong> The presentation in this post is <strong><em>intentionally</em></strong> verbose. The goal is to give lots of intuition of the key result and its usefulness, and ensure that the proofs are rigorous. It is written with an empathetic mindset to newcomers, and to myself for future reference.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>We refer to such an <span class="math inline">\(N: V \to \mathbb{R_{\geq 0}}\)</span> satisfying these properties, as a <em>norm-like</em> function.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2022,
   author = {Shrotriya, Shamindra},
