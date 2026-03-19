@@ -6,6 +6,7 @@ categories: [distill]
 slug: shrotriya2019distillpt1
 date: "2019-07-11"
 image: images/08_06_netlify_adding_custom_domain.png
+image-alt: "Screenshot of Netlify custom domain setup for a Distill blog"
 execute:
   echo: true
 ---

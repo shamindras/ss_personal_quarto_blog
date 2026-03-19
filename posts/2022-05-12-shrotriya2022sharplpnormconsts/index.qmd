@@ -6,6 +6,7 @@ categories: [linear algebra, math, norms]
 slug: shrotriya2022normconvexity
 date: "2022-05-12"
 image: images/preview-shrotriya2021normtriconvexity.png
+image-alt: "Preview thumbnail for sharp constants in finite dimensional Lp norms post"
 execute:
   echo: true
 draft: true

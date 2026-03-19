@@ -6,6 +6,7 @@ categories: [personal, roundup, rstats, math]
 slug: shrotriya2019september19roundup
 date: "2019-09-30"
 image: images/preview-september-2019-01.png
+image-alt: "Preview thumbnail for Shamindra's September 2019 Roundup"
 execute:
   echo: true
 ---

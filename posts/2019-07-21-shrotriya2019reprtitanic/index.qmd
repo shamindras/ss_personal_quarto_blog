@@ -6,6 +6,7 @@ description: |
 categories: [tidyverse, rstats, reproducibility]
 date: "2019-07-21"
 image: images/logo-01.jpg
+image-alt: "Hex sticker logo for the Titanic survivors reproducibility post"
 slug: shrotriya2019reprtitanic
 execute:
   echo: true
@@ -130,6 +131,7 @@ The main chart object is a barplot by sex and adult status and faceted by
 passenger class i.e. first class, second class etc. Great, let's do it!
 
 ```{r setup_ttnic_01_02, echo=TRUE}
+#| fig-alt: "Horizontal bar chart of Titanic passengers and crew, faceted by class, showing counts of saved versus not saved by sex"
 out_plot <- ttnc_cln %>%
               ggplot(data = .,
                               aes(x = new_sex, y = n_sgnd, fill = survived)) +

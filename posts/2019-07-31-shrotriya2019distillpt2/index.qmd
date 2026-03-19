@@ -6,6 +6,7 @@ categories: [distill]
 slug: shrotriya2019distillpt2
 date: "2019-07-31"
 image: images/step_01_disqus_02.png
+image-alt: "Screenshot of Disqus comment setup for upgrading Distill blog settings"
 execute:
   echo: true
 ---

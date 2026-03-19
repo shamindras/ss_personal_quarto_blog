@@ -8,6 +8,7 @@ categories: [tidyverse, rstats]
 slug: shrotriya2019tidyfunpt2
 date: "2019-08-24"
 image: images/logo-01.jpg
+image-alt: "Hex sticker logo for the Tidyverse Fun Part 2 post"
 execute:
   echo: true
 ---

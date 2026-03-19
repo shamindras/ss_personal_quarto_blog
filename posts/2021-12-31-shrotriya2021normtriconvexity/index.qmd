@@ -6,6 +6,7 @@ categories: [linear algebra, math, norms]
 slug: shrotriya2022normconvexity
 date: "2022-02-12"
 image: images/preview-shrotriya2021normtriconvexity.png
+image-alt: "Preview thumbnail for characterizing norm triangle inequalities via convexity post"
 execute:
   echo: true
 ---

@@ -8,6 +8,7 @@ citation:
   id: shrotriya2026february26roundup
 date: "2026-02-28"
 image: images/preview-february-2026-01.png
+image-alt: "Preview thumbnail for Shamindra's February 2026 Roundup"
 crossref:
   custom:
     - kind: float
