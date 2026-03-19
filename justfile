@@ -17,6 +17,10 @@ clean:
     @rm -rf _site/ .quarto/
     @printf "✅ Cleaned!\n"
 
+# Run blog linting checks (same checks as /maintain lint)
+lint:
+    @bash scripts/lint-posts.sh
+
 # Run all repo structure and hygiene checks
 repo-hygiene:
     @bash scripts/repo-hygiene.sh
