@@ -124,7 +124,21 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script><script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script><script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+<script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -572,7 +586,7 @@ window.Quarto = {
 </table>
 </div>
 </div>
-<p>Looks nice. As you can see, the data cleaning was done in stages where 3 datasets <code>t1, t2, t3</code> were built up. Essentially by staring at the plot it is clear that plots are split by class i.e.&nbsp;<span class="math inline">\(1^{st}\)</span> Class, <span class="math inline">\(2^{nd}\)</span> Class etc. This is the cleaned <code>t1</code> data frame. However there are aggregate versions of these classes at combined <em>Passenger</em> level and <em>Passenger and Crew</em> level which are the <code>t2</code> and <code>t3</code> tibbles respectively. Finally we concatenate them together into <code>ttnc_cln</code> and ensure our categorical variables are cast as <code>factors</code>.</p>
+<p>Looks nice. As you can see, the data cleaning was done in stages where 3 datasets <code>t1, t2, t3</code> were built up. Essentially by staring at the plot it is clear that plots are split by class i.e.&nbsp;<span class="math inline">1^{st}</span> Class, <span class="math inline">2^{nd}</span> Class etc. This is the cleaned <code>t1</code> data frame. However there are aggregate versions of these classes at combined <em>Passenger</em> level and <em>Passenger and Crew</em> level which are the <code>t2</code> and <code>t3</code> tibbles respectively. Finally we concatenate them together into <code>ttnc_cln</code> and ensure our categorical variables are cast as <code>factors</code>.</p>
 <p>Next step - plotting!</p>
 </section><section id="plotting-the-data" class="level2"><h2 class="anchored" data-anchor-id="plotting-the-data">Plotting the Data</h2>
 <p>The main chart object is a barplot by sex and adult status and faceted by passenger class i.e.&nbsp;first class, second class etc. Great, let’s do it!</p>
