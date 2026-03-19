@@ -1354,7 +1354,7 @@ August 24, 2019. <a href="https://www.shamindras.com/posts/2019-08-21-shrotriya2
 </div></div><p>With that said, here are some key upgrades I made to this blog.</p>
 </section>
 <section id="step-1-setup-disqus-comments" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="step-1-setup-disqus-comments">Step 1: Setup Disqus comments</h2>
+<h2 class="anchored" data-anchor-id="step-1-setup-disqus-comments">Step 1: Setup Disqus Comments</h2>
 <p>I really wanted to setup some comments system for each blogpost. This way I can learn new tips from readers and find out how to improve posts going forward. I will go with the recommended <a href="https://disqus.com" target="_blank">Disqus comments option</a> from the <a href="https://rstudio.github.io/distill/blog.html#comments-and-sharing" target="_blank">distill blog</a>. I simply created a <a href="https://disqus.com" target="_blank">Disqus</a> account and selected <strong>Get Started</strong>. I then clicked the following button to <em>Install Disqus on my site</em>.</p>
 <div id="step-01-02-screenshot" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -1422,7 +1422,7 @@ font-style: inherit;">hidden:</span> true</span></code></pre></div></div>
 <p>You can read more about setting up comments from the official <code>distill</code> blog <a href="https://rstudio.github.io/distill/blog.html#comments-and-sharing">here</a></p>
 </section>
 <section id="step-2-setup-google-analytics-tracking" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="step-2-setup-google-analytics-tracking">Step 2: Setup Google Analytics tracking</h2>
+<h2 class="anchored" data-anchor-id="step-2-setup-google-analytics-tracking">Step 2: Setup Google Analytics Tracking</h2>
 <p>I also wanted to setup basic user viewing tracking for my site. Fortunately <code>distill</code> can be easily configured to work with <a href="https://analytics.google.com/analytics/web" target="_blank">Google Analytics</a>. In order to set this up I simply created an account for <code>Google Analytics</code> (using my personal gmail account). I then logged in and selected the option to track my website as follows:</p>
 <div id="step-02-01-screenshot" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -1456,7 +1456,7 @@ font-style: inherit;">"UA-145015693-1"</span></span></code></pre></div></div>
 <p><strong>Note:</strong> You can see my <code>README.md</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md">here</a></p>
 </div></div></section>
 <section id="step-4-add-blog-post-sharing-options" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="step-4-add-blog-post-sharing-options">Step 4: Add blog post sharing options</h2>
+<h2 class="anchored" data-anchor-id="step-4-add-blog-post-sharing-options">Step 4: Add Blog Post Sharing Options</h2>
 <p>It is easy to configure distill to allow for easy sharing of posts using a variety of social media platforms. I allow for <strong>twitter, linkedin, pinterest, and facebook.</strong> I did this by simply adding the following line in the <code>_site.yml</code> file:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;
 background-color: null;
@@ -1493,7 +1493,7 @@ background-color: null;
 font-style: inherit;">"@shamindraas"</span></span></code></pre></div></div>
 </section>
 <section id="step-5-add-correctionschange-tracking-and-rss-feed" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="step-5-add-correctionschange-tracking-and-rss-feed">Step 5: Add Corrections/Change Tracking and RSS feed</h2>
+<h2 class="anchored" data-anchor-id="step-5-add-correctionschange-tracking-and-rss-feed">Step 5: Add Corrections/Change Tracking and RSS Feed</h2>
 <p>I frequently make edits to blogposts and intend to do so going forward. Fortunately <code>distill</code> makes it easy <strong>track changes/corrections</strong> made to blogposts. I did this by simply adding the site repo url to the <code>_site.yml</code> as follows:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="ex" style="color: null;
 background-color: null;
