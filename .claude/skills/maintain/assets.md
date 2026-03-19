@@ -31,12 +31,59 @@ pattern `images/preview-*.png`. Flag if:
 
 Show current name and suggest a conforming name.
 
-### 2. Thumbnail dimensions
+### 2. Thumbnail formatting (crop, resize, border)
 
-Use `sips` (macOS) or `file` command to check image dimensions. Flag if
-not 1376×768px. Show current dimensions.
+Use `sips` (macOS) to check image dimensions. Flag if the thumbnail does
+not match the canonical spec: 1376×768px with a 1px solid black border.
 
-Note: This is informational — resizing is a manual step. Report only.
+When `--apply` is approved, apply the full formatting pipeline
+automatically. **Back up the original first** — see §Backup Convention.
+
+#### Formatting pipeline
+
+Uses ImageMagick (`magick`) for all operations in a single command.
+**Do NOT crop** — cropping loses content. Instead, resize to fit and
+pad to fill the target dimensions.
+
+**Single-command pipeline:**
+
+```bash
+magick <path> \
+  -resize 1374x766^ \
+  -gravity center \
+  -extent 1374x766 \
+  -bordercolor black \
+  -border 1 \
+  <path>
+```
+
+This does:
+1. **Resize to fill** 1374×766 — the `^` flag scales so the *smaller*
+   dimension matches the target, preserving aspect ratio. The image
+   will be at least 1374×766, possibly larger in one dimension.
+2. **Trim overflow** from center — `-gravity center -extent` crops
+   any excess equally from both sides. Only a tiny sliver is lost
+   (typically 1–5% from the longer dimension).
+3. **Add 1px black border** on all sides → final size 1376×768
+
+The inner dimensions are 1374×766 (not 1376×768) because the 1px
+border adds 1px on each side.
+
+**Important:** Do NOT use `-resize WxH` (without `^`) — that fits
+*within* the box and leaves letterbox padding, causing thumbnails to
+appear different heights on the listing page. Do NOT use
+`sips --cropToHeightWidth` alone — that crops without resizing first
+and loses significant content.
+
+If ImageMagick is not installed, report:
+"Formatting not applied — ImageMagick not found. Install via
+`brew install imagemagick`."
+
+#### Detect existing border
+
+Before adding a border, visually inspect via the Read tool. If the
+thumbnail already has a visible black border, skip the border step
+and report "Border already present."
 
 ### 3. Thumbnail reuse
 
@@ -70,7 +117,7 @@ exists in the post directory. Flag broken image references.
 Always start with a summary table showing finding counts per post:
 
 ```
-| # | Post | naming | dimensions | reuse | structure | prohibited | path | Total |
+| # | Post | naming | formatting | reuse | structure | prohibited | path | Total |
 |---|------|--------|------------|-------|-----------|------------|------|-------|
 | 1 | shrotriya2019distillpt1 | 1 | 1 | - | - | - | - | 2 |
 | ...| | | | | | | | |
@@ -91,12 +138,37 @@ before and after values.
 | # | Check | Before | After |
 |---|-------|--------|-------|
 | 1 | naming | `image: "distill_img.png"` | `image: "images/preview-distill.png"` |
-| 2 | dimensions | 800×600 | 1376×768 (manual resize needed) |
+| 2 | formatting | 3350×1971px, no border | Crop → resize to 1376×768 → add 1px black border (backup → `*.original.png`) |
 | 3 | structure | `./plot.png` (in post root) | `./images/plot.png` |
 ```
 
 Every finding must show the literal current value and the literal proposed
 change. Never present a finding without both columns filled.
+
+## Backup Convention
+
+**Any destructive image operation (resize, convert, border-add) must
+back up the original first.** This allows easy reversion.
+
+Backup path: alongside the original, with `.original` before the
+extension:
+```
+images/preview-january-2020-01.png          ← resized (active)
+images/preview-january-2020-01.original.png ← backup of pre-resize file
+```
+
+Steps:
+1. Copy the file to the `.original` backup path.
+2. Perform the operation on the original path (so frontmatter `image:`
+   does not need updating).
+3. Report the backup path in the before/after table.
+
+If a `.original` backup already exists, skip the backup (idempotent —
+the first original is the one worth keeping).
+
+**Backups are gitignored by convention.** Add `*.original.png` (and
+`*.original.jpg`) to `.gitignore` if not already present, so backups
+stay local and don't bloat the repo.
 
 ## Approval Flow
 
@@ -114,11 +186,11 @@ change. Never present a finding without both columns filled.
 - Update `image:` frontmatter to point to new path
 - Create `images/` subdirectory if needed
 - Move loose images into `images/`
+- **Resize thumbnails** to canonical dimensions via `sips` (backup first)
+- **Add borders** to thumbnails via `sips` or ImageMagick (backup first)
 
 ### What `--apply` cannot do
 
-- Resize images (report dimensions, user resizes manually)
-- Add borders to images (report missing borders, user applies manually)
 - Delete prohibited subdirectories (report, user decides)
 
 Shortcuts: User can say "accept all" or "skip all" at any step.

@@ -38,5 +38,9 @@ README_files/
 .ionide
 *.code-workspace
 
+# === Asset backups (from /maintain assets) ===
+*.original.png
+*.original.jpg
+
 # === Relics (prevent re-adding) ===
 /profile.jpg
