@@ -191,7 +191,7 @@ later 🎆.
 :::
 
 :::: {}
-A truly remarkable lecture by Prof. Rush's distilling the five features
+A truly remarkable lecture by Prof. Rush distilling the five features
 of LLMs that make them 'tick'.
 
 > | | | |
@@ -232,7 +232,7 @@ times[^src-llm-five-formulas]. Highly recommend!
 
 ## 🎯 Try Audiobooks - You Might Be Surprised
 
-I came to a epiphany in early 2026, namely, that ***for me* self-help
+I came to an epiphany in early 2026, namely, that ***for me* self-help
 books should be listened to as audiobooks** rather than read as
 paperbacks. This simple change has made a world of difference. I
 previously found the act of reading such books quite tedious and dry,
@@ -267,7 +267,7 @@ manifesto. I learned many practical skills, but the main four biggest
 takeaways were as follows.
 
 > 1. **One and Done.** Marie Kondo (or 'KonMari') notes that tidying
->    your home should be **one-off** activity, *not* a recurring one as
+>    your home should be a **one-off** activity, *not* a recurring one as
 >    often recommended by other books in this genre. This is the key
 >    motivation to "get your house in order" as KonMari says.
 > 2. **Categories not rooms.** An amazing approach of this book is to
@@ -330,7 +330,7 @@ were as follows.
 > 1. **Positivity focus.** When dealing with other people always engage
 >    with positivity, empathy, and kindness.
 > 2. **Small sincere gestures.** Correctly pronouncing and acknowledging
->    the another's name ("the sweetest sound and most important sound to
+>    another's name ("the sweetest sound and most important sound to
 >    that person"), asking thoughtful questions, listening intently, and
 >    making the other person feel important are all good habits to
 >    cultivate daily in a sincere manner.
@@ -385,7 +385,7 @@ The book itself is framed as "The 33 laws for business and life" and
 strikes quite a serious tone. Much of the business advice is framed in
 the context of improving branding, e.g. "avoid wallpaper at all costs".
 This is unsurprising given the author's background in building a
-successful marketing firm in the UK. So ones mileage may vary depending
+successful marketing firm in the UK. So one's mileage may vary depending
 on your personal and professional goals. My main practical takeaway was:
 
 > 1. **Small details matter.** Bartlett notes that "you must sweat the
