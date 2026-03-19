@@ -76,7 +76,8 @@ following three properties.
 
 We often use many norms on a given vector space, depending on which seems
 "meaningful" for the given purpose. See
-[here](https://en.wikipedia.org/wiki/Norm_(mathematics)#Examples){.wiki} for common examples.
+[here](https://en.wikipedia.org/wiki/Norm_(mathematics)#Examples){.wiki}
+for common examples.
 
 :::
 
@@ -139,7 +140,7 @@ following properties:
 
 </details>
 
-# Main theorem
+# Main Theorem
 
 ::: {.column-margin}
 
@@ -149,7 +150,7 @@ following properties:
 
 ::: {#thm-normtrichar}
 
-## Characterization of norm triangle inequality
+## Characterization of Norm Triangle Inequality
 
 Let $N: V \to \mathbb{R_{\geq 0}}$, be a function satisfying the following two
 properties[^2].
@@ -201,7 +202,8 @@ In @thm-normtrichar, we note the following:
     $$
      \mathbb{B} := \{\mathbf{z} \in V \:|\: N(\mathbf{z}) \leq 1 \}
      \text{ is convex}
-    $${#eq-normtrichar-02} which will imply the triangle inequality for $N$ - huzzah!
+    $${#eq-normtrichar-02}
+    which will imply the triangle inequality for $N$ - huzzah!
 3.  The nice thing is, proving the convexity of $\mathbb{B}$ can be *much
     easier* to show than trying to prove the triangle inequality property of $N$
     directly, as we will soon see.
@@ -218,18 +220,18 @@ In @thm-normtrichar, we note the following:
 
 </details>
 
-# Applications: Minkowski inequalities
+# Applications: Minkowski Inequalities
 
 Before getting into the details of the proof, let's just see what Theorem
 @thm-normtrichar can do! We'll consider two related applications taken
 from [Lemma 3.6, Example 3.13 @robinson2020introfuncanalysis_book],
 respectively.
 
-### Application 1: $\ell_{p}$-norm triangle inequality in $\mathbb{F}^{n}$
+### Application 1: $\ell_{p}$-Norm Triangle Inequality in $\mathbb{F}^{n}$
 
 ::: {#exm-normtrilpsum}
 
-## Minkowski inequality in finite dimensions
+## Minkowski Inequality in Finite Dimensions
 
 Let us consider $(\mathbb{F}^{n}, \mathbb{F})$, where
 $\mathbb{F} = \mathbb{R} \text{ or } \mathbb{C}$. We then define the *norm-like*
@@ -291,7 +293,7 @@ In fact, since $N_{\ell^{p}}$ satisfies the three conditions for a norm per
 $\ell_{p}$-norm form, i.e.,
 $\| \mathbf{x} \|_{\ell^{p}} := N_{\ell^{p}}(\mathbf{x})$
 
-### Application 2: $L_{p}$-norm triangle inequality
+### Application 2: $L_{p}$-Norm Triangle Inequality
 
 We can also similarly prove the triangle inequality norms involving integrals
 efficiently. This is seen in the next example.
@@ -344,7 +346,7 @@ $\lambda f + (1 - \lambda) g \in \mathbb{B}$, as required $\blacksquare$.
 Again, we can now denote $N_{L^{p}}$ using the conventional $L_{p}$-norm form,
 i.e., $\| f \|_{L^{p}} := N_{L^{p}}(f)$.
 
-# Punchline: what did Theorem 1 buy us?
+# Punchline: What Did Theorem 1 Buy Us?
 
 We just saw that applying @thm-normtrichar enabled us to write **very short
 proofs** of [**Minkowski's
@@ -373,7 +375,7 @@ Assuming $N: V \to \mathbb{R_{\geq 0}}$ satisfies the two properties in Theorem
 @thm-normtrichar, we need to prove both implications in Equation
 @eq-normtrichar-01.
 
-### Proof - easy direction
+### Proof - Easy Direction
 
 Assume that $N(\mathbf{x} + \mathbf{y}) \leq N(\mathbf{x}) + N(\mathbf{y})$, for
 each $\mathbf{x}, \mathbf{y} \in V$. Let $\lambda \in [0, 1]$ be arbitrary. We
@@ -427,7 +429,7 @@ Which implies the convexity of $\mathbb{B}$, as required. $\blacksquare$
 
 </details>
 
-### Proof - interesting direction
+### Proof - Interesting Direction
 
 Assume $\mathbb{B}$ is a convex set. We need to show that this implies that
 $N(\mathbf{x} + \mathbf{y}) \leq N(\mathbf{x}) + N(\mathbf{y})$, for each

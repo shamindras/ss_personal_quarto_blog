@@ -20,7 +20,7 @@ wikipediapreview::wp_init(use_unpkg = TRUE, use_alt_style = TRUE)
 
 ## Task 1: Generating Oxford Comma Triples
 
-### The central problem
+### The Central Problem
 
 Based on a fun conversation with my statistics cohort over dinner we got to
 discussing the famous [*Oxford
@@ -42,7 +42,7 @@ After adding in the Oxford Comma this would become:
 phrase with and without the Oxford Comma using `R` and specifically the
 `tidyverse` packages.
 
-### Generating all word-triple permutations the `tidy` way
+### Generating All Word-Triple Permutations the `tidy` Way
 
 First, let's load our required packages.
 
@@ -134,7 +134,7 @@ triples to engage in civil discussions with your fellow grammar focused friends
 
 ## Task 2: Generating Sequentially Numbered BibTeX Entries
 
-### The central problem
+### The Central Problem
 
 In this case I needed to generate several BibTeX entries of the form:
 
@@ -159,7 +159,7 @@ scripting exercise with using the `tidyverse` packages `glue`, `purrr`, and
 **Goal:** Create 30 such BibTeX entries and print to the console to
 directly-copy paste to my BibTeX file.
 
-### The `tidy` approach
+### The `tidy` Approach
 
 First step is to write a function that takes a lecture number (integer) as an
 input and then outputs a single BibTeX entry for that lecture.
@@ -212,7 +212,7 @@ the lecture number in the pdf filename!
 **Note:** We used the `stringr` `str_pad` to convert `1` to `"01"`
 :::
 
-### Apply to all lectures using `purrr`
+### Apply to All Lectures Using `purrr`
 
 Let's finish this by creating all the entries using `purrr`:
 

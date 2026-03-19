@@ -57,13 +57,13 @@ the `distill` blogging package.
 
 :::
 
-## Step 1: Create new distill blog repo
+## Step 1: Create New distill Blog Repo
 
 I opted to manage my blog versioning using Git/Github. I started by going to my
 personal `github` account and created a new repository. I called mine
 `ss_personal_distill_blog` and also initialized it with a `README.md` and
-included an `.gitignore` for `R` since that will be the blogging language of choice
-here `r emo::ji("smile")`. This is shown in the screenshot below.
+included an `.gitignore` for `R` since that will be the blogging
+language of choice here `r emo::ji("smile")`. This is shown in the screenshot below.
 
 ![Setting up the Site Github
 repo](images/01_01_create_github_distill_repo.png){#step-01-01-screenshot
@@ -92,7 +92,7 @@ Newly created Github repo for the `distill` blog
 
 :::
 
-## Step 2: Clone the repo locally
+## Step 2: Clone the Repo Locally
 
 With the `github` repo created, I switched locally on my mac to `iterm2`
 terminal and cloned the repo locally using the following command:
@@ -138,7 +138,7 @@ Great, now the repo was setup locally. At this stage there is just a simple
 `README.md` which will get added to a bit later, but the main focus is to start
 creating the `distill` blog within this directory locally.
 
-## Step 3: Create the distill blog files
+## Step 3: Create the distill Blog Files
 
 In order to start creating the blog contents I opened up an instance of
 `RStudio` from within my new directory on my macbook via the following terminal
@@ -202,7 +202,7 @@ blogposts. And there is a directory called `docs` to store all our processed
 blogposts later. If we had set `gh_pages = FALSE` the `docs` directory would be
 automatically replaced by a `_site` directory. More on this point later.
 
-## Step 4: Customize the welcome blogpost
+## Step 4: Customize the Welcome Blogpost
 
 So `distill` already had us underway with a default welcome blogpost contained
 in the `welcome.Rmd` file for us. There are a bunch of javascript related files
@@ -277,7 +277,7 @@ for reference.
 
 :::
 
-## Step 5: Customize your blog layout
+## Step 5: Customize Your Blog Layout
 
 Now I needed to customize the blog header banner and setup links and update
 contents as required.
@@ -360,7 +360,7 @@ fig-alt="Screenshot of newly created distill blog (local)" fig-align="center"}
 
 Pretty cool - I now had a working local version of our blog in `RStudio`.
 
-## Step 6: Commit and push changes to github
+## Step 6: Commit and Push Changes to GitHub
 
 Note that all our changes are so far in our local git repo. We need to get this
 blog online! A first step is to `commit` and `push` them to our `github` repo. I
@@ -375,7 +375,7 @@ git push origin master
 
 And the changes are now reflected in the `github` `master` branch!
 
-## Step 7: Buy a Domain name (optional)
+## Step 7: Buy a Domain Name (Optional)
 
 Although the blog was our blog contents are in a public online place i.e.
 `github`, I just needed to link it to a service that deploys websites from
@@ -388,7 +388,7 @@ Pages](https://pages.github.com/){target="_blank"}, but I wanted to have
 ownership on my page and found the annual fee to be reasonable with Google
 Domains.
 
-## Step 8: Deploy your website with Netlify
+## Step 8: Deploy Your Website with Netlify
 
 Now that the domain name is bought, I just needed to deploy the newly created
 blog contents on the registered domain name. Enter
@@ -472,14 +472,14 @@ Netlify also tells me that the truncated url `shamindras.com` will also get
 routed to the blog. So I don't even need to write the `www.` going forward.
 Thanks Netlify `r emo::ji("thanks")`.
 
-## Step 9: Patiently wait for deployment
+## Step 9: Patiently Wait for Deployment
 
 With everything setup and configured on github/Netlify the deployment should be
 near instantaneous. But after about 20 mins my blog appeared at
 [www.shamindras.com](https://www.shamindras.com){target="_blank"}. So effectively
 Netlify and github were now talking to each other and site is setup!
 
-## Step 10: Future additions and extras
+## Step 10: Future Additions and Extras
 
 Now that the blog/site is created there are a number of features I'd like to
 add. The most important being more blogposts and personal content. However it

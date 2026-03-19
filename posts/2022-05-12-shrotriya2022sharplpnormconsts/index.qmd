@@ -18,8 +18,8 @@ wikipediapreview::wp_init(use_unpkg = TRUE, use_alt_style = TRUE)
 
 # TL;DR
 
-I walk through a cool and possibly less known result for sharp bounds on $\ell_{p}$ 
-norms in finite dimensional vector spaces. This result enables working with 
+I walk through a cool and possibly less known result for sharp bounds
+on $\ell_{p}$ norms in finite dimensional vector spaces. This result enables working with 
 $\ell_{p}$-norms directly rather than approximating them with more widely 
 used $\ell_{1}, \ell_{2}$, and $\ell_{\infty}$-norms, for example.
 This exposition is based on [Chapter 2, @holger2018numericallinalg]
@@ -33,14 +33,16 @@ newcomers, and to myself for future reference.].
 highly recommend it `r emo::ji("100")`!
 :::
 
-## $\ell_{p}$-norm on $\mathbb{R}^{d}$
+## $\ell_{p}$-Norm on $\mathbb{R}^{d}$
 
-Throughout this presentation we will work in the finite dimensional Euclidean 
-space $\mathbb{R}^{d}$, for some __fixed__ $d \in \mathbb{N}$. Moreover we will use the $\ell_{p}$-norm on this space, which is defined as follows:
+Throughout this presentation we will work in the finite dimensional
+Euclidean space $\mathbb{R}^{d}$, for some __fixed__
+$d \in \mathbb{N}$. Moreover we will use the $\ell_{p}$-norm on
+this space, which is defined as follows:
 
 ::: {#def-lp-norm}
 
-## $\ell_{p}$-norm on $\mathbb{R}^{d}$
+## $\ell_{p}$-Norm on $\mathbb{R}^{d}$
 
 For a fixed $p \in [1, \infty]$, the $\ell_{p}$-norm as
 denoted by $\lVert \cdot \rVert_{\ell_{p}}: \mathbb{R}^{d} \to \mathbb{R}_{\geq 0}$, is defined as follows:
@@ -62,7 +64,7 @@ We note (without proof) that @def-lp-norm does indeed define a valid norm on
 $\mathbb{R}^{d}$. A previous post showed more of these details. A more detailed 
 proof of this can be found in TODO.
 
-## Warm up: Relationships between $\ell_{1}, \ell_{2}$, and $\ell_{\infty}$-norms
+## Warm Up: Relationships between $\ell_{1}, \ell_{2}$, and $\ell_{\infty}$-Norms
 
 Our goal will be to prove bounds for ___any___ $p \in [1, \infty]$. However, we 
 we get our bearings by first shifting focus on the three most commonly used $\ell_{p}$-norms on $\mathbb{R}^{d}$. These are the $\ell_{1}, \ell_{2}$, and $\ell_{\infty}$-norms.
@@ -70,7 +72,7 @@ The main proposition is as follows:
 
 ::: {#prp-common-lp-norms}
 
-## $\ell_{p}$-norm on $\mathbb{R}^{d}$
+## $\ell_{p}$-Norm on $\mathbb{R}^{d}$
 
 For a fixed $p \in [1, \infty]$, the $\ell_{p}$-norm as
 denoted by $\lVert \cdot \rVert_{\ell_{p}}: \mathbb{R}^{d} \to \mathbb{R}_{\geq 0}$, is defined as follows:

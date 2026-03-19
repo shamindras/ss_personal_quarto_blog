@@ -80,9 +80,9 @@ on how to read internal `R` help documentation.
     
     - Wickham also has focused on bridging divides within the `R` community
     itself, namely in developing the `dtplyr` package to convert `dplyr` code
-    to the alternative `data.table` package syntax. This is a promising direction
-    ahead where `tidyverse` and `data.table` users can collaborate much more
-    easily
+    to the alternative `data.table` package syntax. This is a
+    promising direction ahead where `tidyverse` and `data.table`
+    users can collaborate much more easily
     - There is also a focus on encouraging diversity in `R` usage and actively
     developing communities. He asks:
     
@@ -150,7 +150,8 @@ this important presentation below.
     packaged functions created for use by the wider ACLU team
     - Here both statistics and law are used to tackle a major humanitarian 
     issue i.e. child border separation. This is deeply inspiring and the kind 
-    of applied work that I would like to contribute to meaningfully in the future
+    of applied work that I would like to contribute to meaningfully
+    in the future
     - I particularly appreciated the general data source skepticism showed by 
     the ACLU team. As a statistician it is important to not only explore data
     but be very skeptical of the source quality i.e. competing legal bodies may
