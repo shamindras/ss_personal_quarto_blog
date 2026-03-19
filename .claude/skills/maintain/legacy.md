@@ -29,7 +29,24 @@ Content here
 :::
 ```
 
-Handle both inline and multi-line `<aside>` blocks.
+**Formatting rules for Quarto fenced divs:**
+
+- The opening `:::` **must** be on its own line (no content after it).
+- The closing `:::` **must** be on its own line (no content before it).
+- A blank line after the opener and before the closer is recommended.
+- **Never** put content on the same line as `:::` — this causes Quarto
+  parse warnings ("string ::: found in document").
+
+Inline `<aside>` blocks like `<aside>Note text</aside>` must be
+expanded to multi-line format:
+
+```markdown
+::: {.column-margin}
+Note text
+:::
+```
+
+Do NOT produce: `::: {.column-margin} Note text :::`
 
 ### 2. Disqus references
 

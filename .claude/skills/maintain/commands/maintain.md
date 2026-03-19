@@ -45,10 +45,24 @@ found, warn and skip that slug.
 |------|--------|
 | *(no flag)* | Dry-run mode. Show findings with before/after previews. Nothing written to disk. |
 | `--apply` | Apply mode. Same approval flow, but approved changes are written to disk. |
+| `--except <skill1> <skill2> ...` | Skip the listed sub-skills. Only valid with `all` subcommand. |
 | `--help` | Show help text and **stop**. |
 
 Pass the `--apply` flag through to the sub-skill so it knows whether to
 write changes.
+
+### `--except` parsing
+
+When `--except` is present, collect all words after it until the next
+`--` flag or end of arguments. These are sub-skill names to exclude.
+
+- Validate each name against the sub-skill list: `lint`, `tags`, `prose`,
+  `ally`, `assets`, `legacy`. Warn and ignore unknown names.
+- Only valid with the `all` subcommand. If used with an individual
+  sub-skill (e.g., `/maintain lint --except tags`), warn that `--except`
+  is ignored for single sub-skills.
+- Pass the exclusion list to `all.md` so it skips those sub-skills in
+  both scanning and the summary matrix.
 
 ## Help Text
 
@@ -73,13 +87,16 @@ Scope (optional, after subcommand):
   <glob-pattern>            Glob against directory names (e.g. 2019-*)
 
 Flags:
-  --apply   Write approved changes to disk (default is dry-run)
-  --help    Show this help
+  --apply                   Write approved changes to disk (default is dry-run)
+  --except <s1> <s2> ...    Skip listed sub-skills (only with `all`)
+  --help                    Show this help
 
 Examples:
   /maintain tags
   /maintain tags shrotriya2026february26roundup
   /maintain lint 2019-*
   /maintain all --apply
+  /maintain all --except lint tags
+  /maintain all shrotriya2019distillpt1 --except prose --apply
   /maintain legacy shrotriya2019distillpt1 --apply
 ```

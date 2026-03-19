@@ -6,10 +6,11 @@ Run all maintenance sub-skills in sequence.
 
 - **Scope**: List of resolved post directories (from `commands/maintain.md`).
 - **Mode**: Dry-run (default) or `--apply`.
+- **Exclusions**: List of sub-skill names to skip (from `--except` flag).
 
 ## Execution Order
 
-Sub-skills run in this order (corrective first, validation last):
+The full sub-skill list, in order (corrective first, validation last):
 
 1. **legacy** — deepest structural changes (HTML cleanup)
 2. **tags** — frontmatter normalization
@@ -18,6 +19,10 @@ Sub-skills run in this order (corrective first, validation last):
 5. **prose** — proofreading on settled content
 6. **lint** — final validation pass catches anything others introduced
 
+If `--except` was provided, remove the listed sub-skills from this
+sequence before proceeding. E.g., `--except lint tags` reduces the
+list to: legacy, ally, assets, prose.
+
 ## Matrix-First Approach
 
 When running all sub-skills, use a summary matrix instead of sequential
@@ -25,9 +30,10 @@ traversal:
 
 ### Step 1: Full scan
 
-Run all sub-skills against all in-scope posts in one pass. Collect all
-findings without interaction. Read each sub-skill file to understand its
-checks, then execute them all.
+Run all non-excluded sub-skills against all in-scope posts in one pass.
+Collect all findings without interaction. Read each sub-skill file to
+understand its checks, then execute them all. Excluded sub-skills are
+not scanned and do not appear in the matrix.
 
 ### Step 2: Summary matrix
 
