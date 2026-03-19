@@ -118,7 +118,7 @@ Example: `/blog new --template roundup --month february --year 2026`
 ## Maintain Skill
 
 Uses `/maintain` skill for blog maintenance and auditing. Subcommands:
-`lint`, `tags`, `prose`, `ally`, `assets`, `legacy`, `all`.
+`lint`, `tags`, `format`, `prose`, `ally`, `assets`, `legacy`, `all`.
 See `.claude/skills/maintain/` for sub-skill specs.
 
 Default is dry-run (preview only). Use `--apply` to write changes.
