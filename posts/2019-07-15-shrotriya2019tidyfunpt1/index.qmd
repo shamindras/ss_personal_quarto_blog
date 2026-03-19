@@ -5,9 +5,10 @@ description: |
   the `tidyverse`. This time, we generate Oxford Comma
   triples, and sequentially numbered BibTeX
   entries
-categories: [tidyverse, rstats]
+categories: [rstats, tidyverse]
 date: "2019-07-15"
 image: images/logo-01.jpg
+image-alt: "Hex sticker logo for the Tidyverse Fun Part 1 post"
 slug: shrotriya2019tidyfunpt1
 execute:
   echo: true
@@ -25,7 +26,7 @@ Based on a fun conversation with my statistics cohort over dinner we got to
 discussing the famous [*Oxford
 Comma*](https://en.wikipedia.org/wiki/Serial_comma){.wiki} (or *Serial Comma*
 depending on your persuasion). I've never really adopted the use but my friends
-made a compelling argument on it's apparent general lack of ambiguity when
+made a compelling argument on its apparent general lack of ambiguity when
 applied appropriately.
 
 We will use the Oxford comma on the famously *ambiguous* phrase (here used
@@ -76,8 +77,10 @@ for unique triples using our `is_unq_perm` helper function applied _row-by-row_
 using `purrr::pmap_lgl`. The `_lgl` simply returns a `TRUE/FALSE` logical value
 as intended by the applied function.
 
-<aside> __Note:__ The `tidyr::crossing` generates a *Cartesian product* of all
-the 3 word triples, very handy</aside>
+::: {.column-margin}
+__Note:__ The `tidyr::crossing` generates a *Cartesian product* of all
+the 3 word triples, very handy
+:::
 
 ```{r setup_oxc_01_04, echo=TRUE}
 # Generate the unique word-triples
@@ -190,8 +193,10 @@ the `glue` package conveniently allows us to change the default opening and
 closing markers `r emo::ji("hundred")`! We simply set these to be angle
 brackets `< >` using the `.open` and `.close` options above.
 
-<aside> __Note:__ Luckily we don't have _literal_ angle brackets in our BibTeX
-output to deal with here</aside>
+::: {.column-margin}
+__Note:__ Luckily we don't have _literal_ angle brackets in our BibTeX
+output to deal with here
+:::
 
 Let's just test this out quickly:
 
@@ -203,8 +208,9 @@ get_lec_bibtex(lec_num = lec_no)
 Great - looks like it is working as required with the correct string padding in
 the lecture number in the pdf filename!
 
-<aside> **Note:** We used the `stringr` `str_pad` to convert `1` to `"01"`
-</aside>
+::: {.column-margin}
+**Note:** We used the `stringr` `str_pad` to convert `1` to `"01"`
+:::
 
 ### Apply to all lectures using `purrr`
 

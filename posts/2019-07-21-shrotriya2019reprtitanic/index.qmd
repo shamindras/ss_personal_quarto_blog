@@ -3,9 +3,10 @@ title: "Reproducibility Challenge: Titanic Survivors Plot"
 description: |
     Using the `Tidyverse` to reproduce a plot on the
     survivorship of the Titanic
-categories: [tidyverse, rstats, reproducibility]
+categories: [reproducibility, rstats, tidyverse]
 date: "2019-07-21"
 image: images/logo-01.jpg
+image-alt: "Hex sticker logo for the Titanic survivors reproducibility post"
 slug: shrotriya2019reprtitanic
 execute:
   echo: true
@@ -22,12 +23,12 @@ Although the subject is rather tragic, by reading the article I did get a better
 appreciation of how the information of the crash survivorship was conveyed to
 the general public through data visualization.
 
-<aside>
+::: {.column-margin}
 
 ![cover](images/feb-2019-significance-cover.png){#main-src-cover
 fig-alt="cover alt-text" fig-align="center" width="24cm"}
 
-</aside>
+:::
 
 ## Reproducibility Challenge
 
@@ -43,12 +44,12 @@ reproducibility of results not only as a basic check, but to really appreciate
 the results and more importantly any implicit assumptions behind the results. So
 this led to the following goal and effectively this blogpost:
 
-<aside>
+::: {.column-margin}
 
 **Note:** Replicability is better, but reproducibility is a good start and often
 a more practically feasible undertaking
 
-</aside>
+:::
 
 **Goal:** Given the same Titanic survivors data could we recreate a similar
 looking chart using `R` and specifically the `tidyverse` set of tools?
@@ -56,7 +57,6 @@ looking chart using `R` and specifically the `tidyverse` set of tools?
 ## Collecting and cleaning the data
 
 First let's begin by loading our required data cleaning and plotting packages.
-First we will load the required libraries needed for the analysis.
 
 ```{r setup_ttnic_01_00, echo=FALSE, warning=FALSE, message=FALSE}
 library(knitr)
@@ -130,6 +130,7 @@ The main chart object is a barplot by sex and adult status and faceted by
 passenger class i.e. first class, second class etc. Great, let's do it!
 
 ```{r setup_ttnic_01_02, echo=TRUE}
+#| fig-alt: "Horizontal bar chart of Titanic passengers and crew, faceted by class, showing counts of saved versus not saved by sex"
 out_plot <- ttnc_cln %>%
               ggplot(data = .,
                               aes(x = new_sex, y = n_sgnd, fill = survived)) +
@@ -173,7 +174,7 @@ out_plot
     scale, but this was the quick hack I could perform to get bars flipped for
     non-survivors vs. survivors
 -   **Summary:** Overall this was a really fun challenge and I learned a lot
-    about old-school data visualization using the glorius modern `tidyverse`
+    about old-school data visualization using the glorious modern `tidyverse`
     ecosystem we have at our fingertips. Will do a similar reproducibility
     challenge again for sure `r emo::ji("victory")`. Have fun playing around
     with the above and please post in the comments any questions/feedback you

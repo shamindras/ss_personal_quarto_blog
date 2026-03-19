@@ -6,6 +6,7 @@ categories: [distill]
 slug: shrotriya2019distillpt1
 date: "2019-07-11"
 image: images/08_06_netlify_adding_custom_domain.png
+image-alt: "Screenshot of Netlify custom domain setup for a Distill blog"
 execute:
   echo: true
 ---
@@ -23,7 +24,7 @@ for the updated Quarto source code.
 This is a meta blogpost to describe how I setup this personal academic blog. It
 is based on the relatively new
 [distill](https://rstudio.github.io/distill/){target="_blank"} package by the
-[RStudio](https://www.rstudio.com/){target="_blank"} team. The main tools used I used
+[RStudio](https://www.rstudio.com/){target="_blank"} team. The main tools I used
 to create this blog are:
 
 -   My personal [Github account](https://github.com/shamindras){target="_blank"}
@@ -38,7 +39,7 @@ to create this blog are:
     also my personal domain bought from [Google
     Domains](https://domains.google/){target="_blank"}
 
-The details of *how* I used the tools used are all noted below in a step-by-step
+The details of *how* I used these tools are all noted below in a step-by-step
 manner.
 
 Importantly, I should note that the RStudio `distill` team has already created
@@ -49,19 +50,19 @@ my own words so that I can personally remember the details going forward. I also
 added more details on deployment with Google Domains and Netlify that would
 hopefully be useful to new `R` users waiting to deploy a similar `distill` blog.
 
-<aside>
+::: {.column-margin}
 
 Admittedly this blogpost is verbose, but hopefully the details help users new to
 the `distill` blogging package.
 
-</aside>
+:::
 
 ## Step 1: Create new distill blog repo
 
 I opted to manage my blog versioning using Git/Github. I started by going to my
-personal `github` account and create a new repository. I called mine
+personal `github` account and created a new repository. I called mine
 `ss_personal_distill_blog` and also initialized it with a `README.md` and
-included an `.gitignore` for `R` since that will the blogging language of choice
+included an `.gitignore` for `R` since that will be the blogging language of choice
 here `r emo::ji("smile")`. This is shown in the screenshot below.
 
 ![Setting up the Site Github
@@ -70,11 +71,11 @@ alt="Setting up the Site Github repo"
 fig-alt="Screenshot of image of setting up the site github repo"
 fig-align="center"}
 
-<aside>
+::: {.column-margin}
 
 Options for creating the Github repo for the `distill` blog
 
-</aside>
+:::
 
 Once created the repo will appear in `github` as seen in the following
 screenshot
@@ -85,11 +86,11 @@ alt="New Site Github repo with README.md"
 fig-alt="Screenshot of setting up new site github repo with README.md"
 fig-align="center"}
 
-<aside>
+::: {.column-margin}
 
 Newly created Github repo for the `distill` blog
 
-</aside>
+:::
 
 ## Step 2: Clone the repo locally
 
@@ -147,12 +148,12 @@ command:
 open -a /Applications/RStudio.app .
 ```
 
-<aside>
+::: {.column-margin}
 
 **Note:** The `.` at the end of the command ensures that `RStudio` opens in this
 newly created blog directory
 
-</aside>
+:::
 
 With `RStudio` opened we can now run the following `R` commands in just the
 `console` to create the install the required and `distill` blog setup packages:
@@ -232,11 +233,11 @@ terminal:
 rm -rf _posts/welcome
 ```
 
-<aside>
+::: {.column-margin}
 
 **Note:** `r emo::ji("warning")` Always be careful using `rm -rf`
 
-</aside>
+:::
 
 With the default welcome blogpost deleted, I created my own custom welcome
 blogpost as follows:
@@ -259,7 +260,7 @@ Neat - just how I like it! I then modified the content of the new welcome
 blogpost by going to the following file:
 
 ``` markup
-_posts/2019-06-21-welcome-to-shamindras-blog/welcome-to-shamindras-blog.Rmd
+_posts/2019-07-10-welcome-to-shamindras-blog/welcome-to-shamindras-blog.Rmd
 ```
 
 I modified the contents and then **knitted** the `Rmd` file once done to refresh
@@ -268,13 +269,13 @@ and save the contents.
 Now I had locally created my first personalized content, a simple welcome post
 `r emo::ji("sunglasses")`.
 
-<aside>
+::: {.column-margin}
 
 My welcome blog entry can be found
 [here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_posts/2019-07-10-shrotriya2019welcome/shrotriya2019welcome.Rmd)
 for reference.
 
-</aside>
+:::
 
 ## Step 5: Customize your blog layout
 
@@ -307,25 +308,25 @@ base_url: https://www.shamindras.com/
 output: distill::distill_article
 ```
 
-<aside>
+::: {.column-margin}
 
 My `_site.yml` file can be found
 [here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml){target="_blank"}
 for reference.
 
-</aside>
+:::
 
 I updated the `About.Rmd` file as required and knit it. This is a default `Rmd`
 that `distill` conveniently creates this file to give readers some background on
 the site purpose and of course about the author.
 
-<aside>
+::: {.column-margin}
 
 My `About.Rmd` file can be found
 [here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/about.Rmd){target="_blank"}
 for reference.
 
-</aside>
+:::
 
 No need to update the default `distill` `Index.Rmd` file that is automatically
 created. I simply opened it and `knit` it manually in `RStudio` to update the
@@ -335,13 +336,13 @@ I also updated the `README.md` to add some useful information (for any users who
 stumble onto the `github` page) and saved it. No need to knit anything here as
 it is a simple `markdown file`.
 
-<aside>
+::: {.column-margin}
 
 My `README.md` can be found
 [here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md){target="_blank"}
 for reference.
 
-</aside>
+:::
 
 Now in `Rstudio` I just knit the `welcome.Rmd` post and also ran the following
 command in the `console`
@@ -393,7 +394,7 @@ Now that the domain name is bought, I just needed to deploy the newly created
 blog contents on the registered domain name. Enter
 [netlify](https://www.netlify.com/){target="_blank"}! This is a free (and
 awesome) deployment service. I created a personal account following the
-intructions on Netlify website.
+instructions on Netlify website.
 
 I then logged in to Netlify and clicked on the green `New site from Git` button
 to get started. In the following menu I clicked the
@@ -420,13 +421,13 @@ that the **Branch to Deploy** option is set to `master`.
 Options](images/08_03_netlify_deploy_master_branch_blog.png){#step-08-03-screenshot
 fig-alt="Screenshot of configuring Netlify build options" fig-align="center"}
 
-<aside>
+::: {.column-margin}
 
 This simply means that netlify will only build the site based on what happens in
 my `master` branch in my [github
 repo](https://github.com/shamindras/ss_personal_distill_blog)
 
-</aside>
+:::
 
 I then clicked **Deploy Site** and then saw the following deployment settings:
 
@@ -434,7 +435,7 @@ I then clicked **Deploy Site** and then saw the following deployment settings:
 Name](images/08_04_netlify_deployment_settings.png){#step-08-04-screenshot
 fig-alt="Screenshot of default Netlify site name" fig-align="center"}
 
-I clicked thee **Site Settings** button. Looks like my site name on `Netlify` is
+I clicked the **Site Settings** button. Looks like my site name on `Netlify` is
 `goofy-babbage-7f05c8`. Cute, though I'll personalize by clicking the **Change
 Site Name** button. I changed it to `ss-personal-distill-blog` for my easy
 reference.
@@ -450,7 +451,7 @@ fig-align="center"}
 
 This is where all our blogposts in our `github` repo will be rendered to `html`
 by `distill` once we `knit` them. Netlify will just pick them up from here
-everytime you refresh them and deploy our website accordingly
+every time you refresh them and deploy our website accordingly
 
 Next I need to manage the domain i.e. tell Netlify to deploy my site on the
 custom domain I just purchased from Google Domains.
@@ -468,14 +469,14 @@ fig-alt="Screenshot of all custom domains for site with Netlify"
 fig-align="center"}
 
 Netlify also tells me that the truncated url `shamindras.com` will also get
-routed to the blog. So I don't event need to write the `www.` going forward.
+routed to the blog. So I don't even need to write the `www.` going forward.
 Thanks Netlify `r emo::ji("thanks")`.
 
 ## Step 9: Patiently wait for deployment
 
 With everything setup and configured on github/Netlify the deployment should be
 near instantaneous. But after about 20 mins my blog appeared at
-[www.shamindras.com](www.shamindras.com){target="_blank"}. So effectively
+[www.shamindras.com](https://www.shamindras.com){target="_blank"}. So effectively
 Netlify and github were now talking to each other and site is setup!
 
 ## Step 10: Future additions and extras

@@ -111,11 +111,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta property="og:site_name" content="Shamindra Shrotriya">
 <meta property="og:image:height" content="387">
 <meta property="og:image:width" content="707">
+<meta property="og:image:alt" content="Screenshot of Netlify custom domain setup for a Distill blog">
 <meta name="twitter:title" content="Setting up a Distill Blog with Netlify – Shamindra Shrotriya">
 <meta name="twitter:description" content="First part of a series on how I setup this distill themed blog with Netlify">
 <meta name="twitter:image" content="https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png">
 <meta name="twitter:image-height" content="387">
 <meta name="twitter:image-width" content="707">
+<meta name="twitter:image:alt" content="Screenshot of Netlify custom domain setup for a Distill blog">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -412,7 +414,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <section id="step-0-introduction" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-0-introduction">Step 0: Introduction</h2>
-<p>This is a meta blogpost to describe how I setup this personal academic blog. It is based on the relatively new <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="https://www.rstudio.com/" target="_blank">RStudio</a> team. The main tools used I used to create this blog are:</p>
+<p>This is a meta blogpost to describe how I setup this personal academic blog. It is based on the relatively new <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="https://www.rstudio.com/" target="_blank">RStudio</a> team. The main tools I used to create this blog are:</p>
 <ul>
 <li>My personal <a href="https://github.com/shamindras" target="_blank">Github account</a>
 </li>
@@ -424,11 +426,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>My personal <a href="https://app.netlify.com" target="_blank">netlify account</a> and also my personal domain bought from <a href="https://domains.google/" target="_blank">Google Domains</a>
 </li>
 </ul>
-<p>The details of <em>how</em> I used the tools used are all noted below in a step-by-step manner.</p>
+<p>The details of <em>how</em> I used these tools are all noted below in a step-by-step manner.</p>
 <p>Importantly, I should note that the RStudio <code>distill</code> team has already created an <a href="https://rstudio.github.io/distill/blog.html" target="_blank">excellent distill blog creation tutorial</a> which I thoroughly used and highly recommend to new users. I wrote this meta blogpost in my own words so that I can personally remember the details going forward. I also added more details on deployment with Google Domains and Netlify that would hopefully be useful to new <code>R</code> users waiting to deploy a similar <code>distill</code> blog.</p>
 <aside><p>Admittedly this blogpost is verbose, but hopefully the details help users new to the <code>distill</code> blogging package.</p>
 </aside></section><section id="step-1-create-new-distill-blog-repo" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-1-create-new-distill-blog-repo">Step 1: Create new distill blog repo</h2>
-<p>I opted to manage my blog versioning using Git/Github. I started by going to my personal <code>github</code> account and create a new repository. I called mine <code>ss_personal_distill_blog</code> and also initialized it with a <code>README.md</code> and included an <code>.gitignore</code> for <code>R</code> since that will the blogging language of choice here 😄. This is shown in the screenshot below.</p>
+<p>I opted to manage my blog versioning using Git/Github. I started by going to my personal <code>github</code> account and created a new repository. I called mine <code>ss_personal_distill_blog</code> and also initialized it with a <code>README.md</code> and included an <code>.gitignore</code> for <code>R</code> since that will be the blogging language of choice here 😄. This is shown in the screenshot below.</p>
 <div id="step-01-01-screenshot" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="images/01_01_create_github_distill_repo.png" class="img-fluid figure-img" alt="Screenshot of image of setting up the site github repo"></p>
 <figcaption>Setting up the Site Github repo</figcaption></figure>
@@ -521,7 +523,7 @@ Receiving objects: 100% (4/4), done.</code></pre>
 <pre class="markup"><code>_posts/2019-07-10-welcome-to-shamindras-blog
 └── welcome-to-shamindras-blog.Rmd`</code></pre>
 <p>Neat - just how I like it! I then modified the content of the new welcome blogpost by going to the following file:</p>
-<pre class="markup"><code>_posts/2019-06-21-welcome-to-shamindras-blog/welcome-to-shamindras-blog.Rmd</code></pre>
+<pre class="markup"><code>_posts/2019-07-10-welcome-to-shamindras-blog/welcome-to-shamindras-blog.Rmd</code></pre>
 <p>I modified the contents and then <strong>knitted</strong> the <code>Rmd</code> file once done to refresh and save the contents.</p>
 <p>Now I had locally created my first personalized content, a simple welcome post 😎.</p>
 <aside><p>My welcome blog entry can be found <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_posts/2019-07-10-shrotriya2019welcome/shrotriya2019welcome.Rmd">here</a> for reference.</p>
@@ -575,7 +577,7 @@ output: distill::distill_article</code></pre>
 <p>Although the blog was our blog contents are in a public online place i.e. <code>github</code>, I just needed to link it to a service that deploys websites from <code>github</code>. But first I needed to go buy a domain name for my blog. I went to <a href="https://domains.google/#/">Google Domains</a> and bought <code>www.shamindras.com</code> for about $15/yr.</p>
 <p>There are free alternatives e.g.&nbsp;<a href="https://pages.github.com/" target="_blank">Github Pages</a>, but I wanted to have ownership on my page and found the annual fee to be reasonable with Google Domains.</p>
 </section><section id="step-8-deploy-your-website-with-netlify" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="step-8-deploy-your-website-with-netlify">Step 8: Deploy your website with Netlify</h2>
-<p>Now that the domain name is bought, I just needed to deploy the newly created blog contents on the registered domain name. Enter <a href="https://www.netlify.com/" target="_blank">netlify</a>! This is a free (and awesome) deployment service. I created a personal account following the intructions on Netlify website.</p>
+<p>Now that the domain name is bought, I just needed to deploy the newly created blog contents on the registered domain name. Enter <a href="https://www.netlify.com/" target="_blank">netlify</a>! This is a free (and awesome) deployment service. I created a personal account following the instructions on Netlify website.</p>
 <p>I then logged in to Netlify and clicked on the green <code>New site from Git</code> button to get started. In the following menu I clicked the <code>Github Continuous Deployment</code> icon:</p>
 <div id="step-08-01-screenshot" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="images/08_01_netlify_github_continuous_deployment.png" class="img-fluid figure-img" alt="Screenshot of creating new site with Netlify"></p>
@@ -597,13 +599,13 @@ output: distill::distill_article</code></pre>
 <figure class="figure"><p><img src="images/08_04_netlify_deployment_settings.png" class="img-fluid figure-img" alt="Screenshot of default Netlify site name"></p>
 <figcaption>Default Netlify Site Name</figcaption></figure>
 </div>
-<p>I clicked thee <strong>Site Settings</strong> button. Looks like my site name on <code>Netlify</code> is <code>goofy-babbage-7f05c8</code>. Cute, though I’ll personalize by clicking the <strong>Change Site Name</strong> button. I changed it to <code>ss-personal-distill-blog</code> for my easy reference.</p>
+<p>I clicked the <strong>Site Settings</strong> button. Looks like my site name on <code>Netlify</code> is <code>goofy-babbage-7f05c8</code>. Cute, though I’ll personalize by clicking the <strong>Change Site Name</strong> button. I changed it to <code>ss-personal-distill-blog</code> for my easy reference.</p>
 <p>I clicked the <strong>Build and Deploy</strong> button next and after clicking the <strong>Edit Settings</strong> button modified the <strong>Publish directory</strong> to be <code>_site</code> as shown below:</p>
 <div id="step-08-05-screenshot" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="images/08_05_netlify_continous_deployment_settings.png" class="img-fluid figure-img" alt="Screenshot of setup continuous deployment with Netlify"></p>
 <figcaption>Setup Continuous Deployment with Netlify</figcaption></figure>
 </div>
-<p>This is where all our blogposts in our <code>github</code> repo will be rendered to <code>html</code> by <code>distill</code> once we <code>knit</code> them. Netlify will just pick them up from here everytime you refresh them and deploy our website accordingly</p>
+<p>This is where all our blogposts in our <code>github</code> repo will be rendered to <code>html</code> by <code>distill</code> once we <code>knit</code> them. Netlify will just pick them up from here every time you refresh them and deploy our website accordingly</p>
 <p>Next I need to manage the domain i.e.&nbsp;tell Netlify to deploy my site on the custom domain I just purchased from Google Domains.</p>
 <div id="step-08-06-screenshot" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="images/08_06_netlify_adding_custom_domain.png" class="img-fluid figure-img" alt="Screenshot customize site domains with Netlify"></p>
@@ -614,9 +616,9 @@ output: distill::distill_article</code></pre>
 <figure class="figure"><p><img src="images/08_07_netlify_checking_custom_domains.png" class="img-fluid figure-img" alt="Screenshot of all custom domains for site with Netlify"></p>
 <figcaption>All Custom Domains for Site with Netlify</figcaption></figure>
 </div>
-<p>Netlify also tells me that the truncated url <code>shamindras.com</code> will also get routed to the blog. So I don’t event need to write the <code>www.</code> going forward. Thanks Netlify 🙇‍♀.</p>
+<p>Netlify also tells me that the truncated url <code>shamindras.com</code> will also get routed to the blog. So I don’t even need to write the <code>www.</code> going forward. Thanks Netlify 🙇.</p>
 </section><section id="step-9-patiently-wait-for-deployment" class="level2"><h2 class="anchored" data-anchor-id="step-9-patiently-wait-for-deployment">Step 9: Patiently wait for deployment</h2>
-<p>With everything setup and configured on github/Netlify the deployment should be near instantaneous. But after about 20 mins my blog appeared at <a href="www.shamindras.com" target="_blank">www.shamindras.com</a>. So effectively Netlify and github were now talking to each other and site is setup!</p>
+<p>With everything setup and configured on github/Netlify the deployment should be near instantaneous. But after about 20 mins my blog appeared at <a href="https://www.shamindras.com" target="_blank">www.shamindras.com</a>. So effectively Netlify and github were now talking to each other and site is setup!</p>
 </section><section id="step-10-future-additions-and-extras" class="level2"><h2 class="anchored" data-anchor-id="step-10-future-additions-and-extras">Step 10: Future additions and extras</h2>
 <p>Now that the blog/site is created there are a number of features I’d like to add. The most important being more blogposts and personal content. However it would also be nice to have the following features:</p>
 <ul>

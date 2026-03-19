@@ -4,10 +4,11 @@ description: |
   Second part in a series of doing useful tasks with
   the `Tidyverse`. This time auto-generating sequential
   LaTeX `newcommand` macros
-categories: [tidyverse, rstats]
+categories: [rstats, tidyverse]
 slug: shrotriya2019tidyfunpt2
 date: "2019-08-24"
 image: images/logo-01.jpg
+image-alt: "Hex sticker logo for the Tidyverse Fun Part 2 post"
 execute:
   echo: true
 ---
@@ -25,13 +26,13 @@ $\LaTeX$ `newcommand` entries of the form:
 ```
 
 Where using `$\bfa$` produces $\mathbf{a}$ and using `$\bfA$` produces
-$\mathbf{A}$ i.e the lowecase/uppercase `mathbf` commands respectively.
+$\mathbf{A}$ i.e the lowercase/uppercase `mathbf` commands respectively.
 
 Specifically I needed to construct 52 such combined sequential entries for both
 lowercase/uppercase letter versions of these `newcommand` $\LaTeX$ macros.
 Rather than do this manually, I realized that this would be another fun
 scripting exercise with using the `tidyverse` packages `glue`, `purrr`, and
-`stringr` similar to this similar [previous post
+`stringr` similar to this [previous post
 here](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/).
 
 **Goal:** Create 52 such lowercase/uppercase `newcommand` entries and print to
@@ -47,7 +48,7 @@ First step is to write a function that takes as an input the following:
 - the specific $\LaTeX$ command that we are creating a macro shortcut for
 i.e. `"mathbf"` in this case
 
-The function then outputs a single `newcommand` entry for that lecture i.e
+The function then outputs a single `newcommand` entry for that letter i.e
 `\newcommand{\bfa}{\mathbf{a}}` in this case. Let's do it!
 
 ```{r latx_01_01, eval=TRUE, echo=TRUE, message=FALSE}

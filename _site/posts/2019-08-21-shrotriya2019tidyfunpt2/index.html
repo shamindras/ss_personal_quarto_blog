@@ -134,9 +134,11 @@ window.Quarto = {
 <meta property="og:description" content="Second part in a series of doing useful tasks with the Tidyverse. This time auto-generating sequential LaTeX newcommand macros">
 <meta property="og:image" content="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg">
 <meta property="og:site_name" content="Shamindra Shrotriya">
+<meta property="og:image:alt" content="Hex sticker logo for the Tidyverse Fun Part 2 post">
 <meta name="twitter:title" content="Tidyverse Fun - Part 2 – Shamindra Shrotriya">
 <meta name="twitter:description" content="Second part in a series of doing useful tasks with the Tidyverse. This time auto-generating sequential LaTeX newcommand macros">
 <meta name="twitter:image" content="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg">
+<meta name="twitter:image:alt" content="Hex sticker logo for the Tidyverse Fun Part 2 post">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -370,8 +372,8 @@ window.Quarto = {
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">tidyverse</div>
                 <div class="quarto-category">rstats</div>
+                <div class="quarto-category">tidyverse</div>
               </div>
                   </div>
   </div>
@@ -421,8 +423,8 @@ window.Quarto = {
 <p>In a custom <span class="math inline">\(\LaTeX\)</span> macro file I needed to generate several sequential <span class="math inline">\(\LaTeX\)</span> <code>newcommand</code> entries of the form:</p>
 <pre class="markup"><code>\newcommand{\bfa}{\mathbf{a}}
 \newcommand{\bfA}{\mathbf{A}}</code></pre>
-<p>Where using <code>$\bfa$</code> produces <span class="math inline">\(\mathbf{a}\)</span> and using <code>$\bfA$</code> produces <span class="math inline">\(\mathbf{A}\)</span> i.e the lowecase/uppercase <code>mathbf</code> commands respectively.</p>
-<p>Specifically I needed to construct 52 such combined sequential entries for both lowercase/uppercase letter versions of these <code>newcommand</code> <span class="math inline">\(\LaTeX\)</span> macros. Rather than do this manually, I realized that this would be another fun scripting exercise with using the <code>tidyverse</code> packages <code>glue</code>, <code>purrr</code>, and <code>stringr</code> similar to this similar <a href="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/">previous post here</a>.</p>
+<p>Where using <code>$\bfa$</code> produces <span class="math inline">\(\mathbf{a}\)</span> and using <code>$\bfA$</code> produces <span class="math inline">\(\mathbf{A}\)</span> i.e the lowercase/uppercase <code>mathbf</code> commands respectively.</p>
+<p>Specifically I needed to construct 52 such combined sequential entries for both lowercase/uppercase letter versions of these <code>newcommand</code> <span class="math inline">\(\LaTeX\)</span> macros. Rather than do this manually, I realized that this would be another fun scripting exercise with using the <code>tidyverse</code> packages <code>glue</code>, <code>purrr</code>, and <code>stringr</code> similar to this <a href="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/">previous post here</a>.</p>
 <p><strong>Goal:</strong> Create 52 such lowercase/uppercase <code>newcommand</code> entries and print to the console to directly-copy paste to my <span class="math inline">\(\LaTeX\)</span> macros file.</p>
 </section><section id="the-tidy-approach" class="level3"><h3 class="anchored" data-anchor-id="the-tidy-approach">The <code>tidy</code> approach</h3>
 <p>First step is to write a function that takes as an input the following:</p>
@@ -432,7 +434,7 @@ window.Quarto = {
 <li>the macro shortcut command prefix you prefer e.g <code>"bf"</code> (for <strong>b</strong>old <strong>f</strong>ont in case you were wondering!)</li>
 <li>the specific <span class="math inline">\(\LaTeX\)</span> command that we are creating a macro shortcut for i.e.&nbsp;<code>"mathbf"</code> in this case</li>
 </ul>
-<p>The function then outputs a single <code>newcommand</code> entry for that lecture i.e <code>\newcommand{\bfa}{\mathbf{a}}</code> in this case. Let’s do it!</p>
+<p>The function then outputs a single <code>newcommand</code> entry for that letter i.e <code>\newcommand{\bfa}{\mathbf{a}}</code> in this case. Let’s do it!</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load required libraries</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
@@ -529,7 +531,7 @@ window.Quarto = {
 </details><p><br></p>
 <p>Hope you have fun using this to quickly generate your <span class="math inline">\(\LaTeX\)</span> <code>newcommand</code> macros ✌️.</p>
 </section></section><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
-<p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a>.</p>
+<p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a></p>
 
 
 </div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,

@@ -3,9 +3,10 @@ title: "Sharp constants for finite dimensional norms"
 description: |
   A general result about deriving sharp constants for finite dimensional $\ell_{p}$-norms
 categories: [linear algebra, math, norms]
-slug: shrotriya2022normconvexity
+slug: shrotriya2022sharplpnormconsts
 date: "2022-05-12"
 image: images/preview-shrotriya2021normtriconvexity.png
+image-alt: "Preview thumbnail for sharp constants in finite dimensional Lp norms post"
 execute:
   echo: true
 draft: true
@@ -19,7 +20,7 @@ wikipediapreview::wp_init(use_unpkg = TRUE, use_alt_style = TRUE)
 
 I walk through a cool and possibly less known result for sharp bounds on $\ell_{p}$ 
 norms in finite dimensional vector spaces. This result enables working with 
-$\ell_{p}$-norms directly rather than approximating them with with more widely 
+$\ell_{p}$-norms directly rather than approximating them with more widely 
 used $\ell_{1}, \ell_{2}$, and $\ell_{\infty}$-norms, for example.
 This exposition is based on [Chapter 2, @holger2018numericallinalg]
 ^[__Note:__ The presentation in this post is ___intentionally___ verbose. The goal
@@ -27,16 +28,15 @@ is to give lots of intuition of the key result and its usefulness, and ensure
 that the proofs are rigorous. It is written with an empathetic mindset to
 newcomers, and to myself for future reference.].
 
-<aside>
+::: {.column-margin}
 [@holger2018numericallinalg] is a wonderful (numerical) linear algebra book,
 highly recommend it `r emo::ji("100")`!
-</aside>
+:::
 
 ## $\ell_{p}$-norm on $\mathbb{R}^{d}$
 
 Throughout this presentation we will work in the finite dimensional Euclidean 
-space $\mathbb{R}^{d}$, for some __fixed__ $d \in \mathbb{N}$. Moreover we will
-we will use the $\ell_{p}$-norm on this space, which is defined as follows:
+space $\mathbb{R}^{d}$, for some __fixed__ $d \in \mathbb{N}$. Moreover we will use the $\ell_{p}$-norm on this space, which is defined as follows:
 
 ::: {#def-lp-norm}
 
@@ -50,13 +50,13 @@ $$ {#eq-lp-norm-01}
 
 :::
 
-<aside>
+::: {.column-margin}
 
 __Note:__ Sometimes @def-lp-norm is also just called the $p$-norm in many 
 textbooks, and has the abbreviated notation $\lVert \mathbf{x} \rVert_{p}$.
 We will use this notation going forward.
 
-</aside>
+:::
 
 We note (without proof) that @def-lp-norm does indeed define a valid norm on 
 $\mathbb{R}^{d}$. A previous post showed more of these details. A more detailed 

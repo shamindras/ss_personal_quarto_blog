@@ -2,10 +2,11 @@
 title: "Shamindra's August 2019 Roundup"
 description: |
     A quick roundup of any interesting August 2019 activities
-categories: [personal, roundup, rstats, math]
+categories: [math, personal, roundup, rstats]
 slug: shrotriya2019august19roundup
 date: "2019-08-31"
 image: images/preview-august-2019-01.png
+image-alt: "Preview thumbnail for Shamindra's August 2019 Roundup"
 execute:
   echo: true
 ---
@@ -41,13 +42,13 @@ This is more for my personal benefit but may also help others.
     book](https://www.youtube.com/watch?v=82c2HDp-ntg&feature=youtu.be){target="_blank"}
     to get you excited!
 
-<aside>
+::: {.column-margin}
 
 ![Prime Suspects cover](images/prime-suspects-book.png){#main-src-cover
 fig-alt="Image of the cover of the book \"Prime Suspects\" by Granville et. al."
 fig-align="center"}
 
-</aside>
+:::
 
 <details>
 
@@ -59,7 +60,7 @@ Key Takeaways
 
 -   This is essentially an introduction to analytic number theory disguised as a
     fast-moving graphic novel murder mystery
--   For any mathematics fans (who isn't though?) there are lots of funny easter
+-   For any mathematics fans (and who isn't?) there are lots of funny easter
     eggs to be found in the frame backgrounds
 -   This a very unique exposition on number theory, a subject in which I have
     negligible knowledge (like most subjects)
@@ -85,12 +86,12 @@ Key Takeaways
     interviews from this [Career Yoga podcast](http://www.careeryoga.life/)
     going forward.
 
-<aside>
+::: {.column-margin}
 
 **Note:** This interview was co-conducted Ms. Narkis Alon, the daughter of Prof.
 Alon which led to a really personal dynamic!
 
-</aside>
+:::
 
 <details>
 
@@ -140,7 +141,7 @@ Key Takeaways
     to solve problems
 
 > You go to conferences, talk to people, read papers etc. Many times you just
-> need to be in a different state of mind e.g. if you forget someones name, just
+> need to be in a different state of mind e.g. if you forget someone's name, just
 > thinking about it does not always make you remember, just need to try
 > something else at times. This may explain why you see people staring in the
 > air! Sometimes you can go and take walks.

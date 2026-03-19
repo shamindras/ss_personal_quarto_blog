@@ -73,7 +73,16 @@ Each post directory contains an `index.qmd` and an `images/` folder.
 
 ## Contributing
 
-This is a personal blog — not accepting external contributions. If you spot an
-error or have feedback, feel free to leave a comment via
-[giscus](https://giscus.app/) on any post, or open an
-[issue](https://github.com/shamindras/ss_personal_quarto_blog/issues).
+This is a personal blog, so I'm not accepting feature contributions. That said,
+if you spot a typo, broken link, or factual error, I'd appreciate a heads-up.
+You can:
+
+- Leave a comment via [giscus](https://giscus.app/) on any post
+- Open an [issue](https://github.com/shamindras/ss_personal_quarto_blog/issues)
+- Send a pull request with the fix
+
+## LLM Usage
+
+All written content in this repository, unless explicitly stated, is authored
+by me. LLMs (Claude Code) are used for scaffolding tasks: formatting, layout,
+git commits, alt-text, thumbnail generation, and code automation.

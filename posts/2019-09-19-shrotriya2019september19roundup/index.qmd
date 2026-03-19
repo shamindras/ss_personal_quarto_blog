@@ -2,10 +2,11 @@
 title: "Shamindra's September 2019 Roundup"
 description: |
     A quick roundup of any interesting September 2019 activities
-categories: [personal, roundup, rstats, math]
+categories: [math, personal, roundup, rstats]
 slug: shrotriya2019september19roundup
 date: "2019-09-30"
 image: images/preview-september-2019-01.png
+image-alt: "Preview thumbnail for Shamindra's September 2019 Roundup"
 execute:
   echo: true
 ---
@@ -158,7 +159,7 @@ this important presentation below.
     </details>
 
 ## Teaching
-- I'm a TA for the [amazing graduate statiscal computing course at CMU](https://36-750.github.io){target="_blank"}. This is an intensive (but very
+- I'm a TA for the [amazing graduate statistical computing course at CMU](https://36-750.github.io){target="_blank"}. This is an intensive (but very
 rewarding) programming course designed by CMU statistics professors [Alex Reinhart](https://www.refsmmat.com/){target="_blank"} and 
 [Chris Genovese](http://www.stat.cmu.edu/~genovese/?p=research){target="_blank"}. I
 highly recommend checking out this course website as a general programming 

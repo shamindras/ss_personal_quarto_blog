@@ -134,12 +134,14 @@ window.Quarto = {
 <meta property="og:description" content="First part in a series of doing useful tasks with the tidyverse. This time, we generate Oxford Comma triples, and sequentially numbered BibTeX entries">
 <meta property="og:image" content="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg">
 <meta property="og:site_name" content="Shamindra Shrotriya">
+<meta property="og:image:alt" content="Hex sticker logo for the Tidyverse Fun Part 1 post">
 <meta name="twitter:title" content="Tidyverse Fun - Part 1 – Shamindra Shrotriya">
 <meta name="twitter:description" content="First part in a series of doing useful tasks with the tidyverse. This time, we generate Oxford Comma triples, and sequentially numbered BibTeX entries">
 <meta name="twitter:image" content="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg">
+<meta name="twitter:image:alt" content="Hex sticker logo for the Tidyverse Fun Part 1 post">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="floating nav-fixed slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -370,8 +372,8 @@ window.Quarto = {
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">tidyverse</div>
                 <div class="quarto-category">rstats</div>
+                <div class="quarto-category">tidyverse</div>
               </div>
                   </div>
   </div>
@@ -449,7 +451,7 @@ a.wiki {
       });
     };</script><section id="task-1-generating-oxford-comma-triples" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="task-1-generating-oxford-comma-triples">Task 1: Generating Oxford Comma Triples</h2>
 <section id="the-central-problem" class="level3"><h3 class="anchored" data-anchor-id="the-central-problem">The central problem</h3>
-<p>Based on a fun conversation with my statistics cohort over dinner we got to discussing the famous <a href="https://en.wikipedia.org/wiki/Serial_comma" class="wiki"><em>Oxford Comma</em></a> (or <em>Serial Comma</em> depending on your persuasion). I’ve never really adopted the use but my friends made a compelling argument on it’s apparent general lack of ambiguity when applied appropriately.</p>
+<p>Based on a fun conversation with my statistics cohort over dinner we got to discussing the famous <a href="https://en.wikipedia.org/wiki/Serial_comma" class="wiki"><em>Oxford Comma</em></a> (or <em>Serial Comma</em> depending on your persuasion). I’ve never really adopted the use but my friends made a compelling argument on its apparent general lack of ambiguity when applied appropriately.</p>
 <p>We will use the Oxford comma on the famously <em>ambiguous</em> phrase (here used without the Oxford Comma before <em>leaves</em>):</p>
 <blockquote class="blockquote">
 <p>Eats, shoots and leaves</p>
@@ -479,8 +481,10 @@ a.wiki {
 <span><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>We can now simply generate every possible triple <em>with replacement</em> using the <code><a href="https://tidyr.tidyverse.org/reference/expand.html">tidyr::crossing</a></code> function. We proceed to <em>filter</em> these <span class="math inline">\(3^3 = 27\)</span> triples for unique triples using our <code>is_unq_perm</code> helper function applied <em>row-by-row</em> using <code><a href="https://purrr.tidyverse.org/reference/pmap.html">purrr::pmap_lgl</a></code>. The <code>_lgl</code> simply returns a <code>TRUE/FALSE</code> logical value as intended by the applied function.</p>
-<aside><strong>Note:</strong> The <code><a href="https://tidyr.tidyverse.org/reference/expand.html">tidyr::crossing</a></code> generates a <em>Cartesian product</em> of all the 3 word triples, very handy
-</aside><div class="cell">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Note:</strong> The <code><a href="https://tidyr.tidyverse.org/reference/expand.html">tidyr::crossing</a></code> generates a <em>Cartesian product</em> of all the 3 word triples, very handy</p>
+</div></div><div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Generate the unique word-triples</span></span>
 <span><span class="va">all_perms</span> <span class="op">&lt;-</span> <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/expand.html">crossing</a></span><span class="op">(</span>word1 <span class="op">=</span> <span class="va">WORD_VALS</span>,</span>
 <span>                             word2 <span class="op">=</span> <span class="va">WORD_VALS</span>,</span>
@@ -631,8 +635,10 @@ url           = {https://statschool/~doe/stats10A/Lectures/Lecture01.pdf},
 <span><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Note that by default <code>glue</code> allows you to substitute input text in between <code>{</code> and <code>}</code> markers. However BibTeX entries <em>already have</em> literal default <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code> tags that we need to include in our function output. Rather than escaping them the <code>glue</code> package conveniently allows us to change the default opening and closing markers 💯! We simply set these to be angle brackets <code>&lt; &gt;</code> using the <code>.open</code> and <code>.close</code> options above.</p>
-<aside><strong>Note:</strong> Luckily we don’t have <em>literal</em> angle brackets in our BibTeX output to deal with here
-</aside><p>Let’s just test this out quickly:</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Note:</strong> Luckily we don’t have <em>literal</em> angle brackets in our BibTeX output to deal with here</p>
+</div></div><p>Let’s just test this out quickly:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">lec_no</span> <span class="op">&lt;-</span> <span class="fl">1</span></span>
 <span><span class="fu">get_lec_bibtex</span><span class="op">(</span>lec_num <span class="op">=</span> <span class="va">lec_no</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -646,8 +652,10 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec01.pdf}}</code></pre>
 </div>
 </div>
 <p>Great - looks like it is working as required with the correct string padding in the lecture number in the pdf filename!</p>
-<aside><strong>Note:</strong> We used the <code>stringr</code> <code>str_pad</code> to convert <code>1</code> to <code>"01"</code>
-</aside></section><section id="apply-to-all-lectures-using-purrr" class="level3"><h3 class="anchored" data-anchor-id="apply-to-all-lectures-using-purrr">Apply to all lectures using <code>purrr</code>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Note:</strong> We used the <code>stringr</code> <code>str_pad</code> to convert <code>1</code> to <code>"01"</code></p>
+</div></div></section><section id="apply-to-all-lectures-using-purrr" class="level3"><h3 class="anchored" data-anchor-id="apply-to-all-lectures-using-purrr">Apply to all lectures using <code>purrr</code>
 </h3>
 <p>Let’s finish this by creating all the entries using <code>purrr</code>:</p>
 <div class="cell">
@@ -677,7 +685,7 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec30.pdf}}</code></pre>
 <p>This post was for me to document and serve as a guide to automating a couple of fun text-based tasks that I came across in my work (and social life!). Using the <code>tidy</code> framework can be a fun way to solve these tasks (but certainly not the only way in <code>R</code>). Have fun playing around with the above and please post in the comments any questions/feedback you may have 👍.</p>
 <p>Stay tuned for more blogposts solving more such tasks.</p>
 </section><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
-<p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a>.</p>
+<p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a></p>
 
 
 </div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
