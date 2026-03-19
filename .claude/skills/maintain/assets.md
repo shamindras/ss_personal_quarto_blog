@@ -110,6 +110,52 @@ Flag if any of these exist.
 Verify the `image:` field in frontmatter points to a file that actually
 exists in the post directory. Flag broken image references.
 
+### 7. Image file size limits
+
+Flag any image (thumbnail or inline) that exceeds these thresholds:
+
+| Image type | Max size | Rationale |
+|------------|----------|-----------|
+| Thumbnail (`preview-*.png`) | 400KB | Loads on listing page for every visitor |
+| Profile image (`data/images/about-profile-*`) | 300KB | Loads on landing page for every visitor |
+| Inline post image | 500KB | Embedded in post body |
+
+Report the file, its current size, and the threshold it exceeds.
+
+### 8. PNG compression (oxipng)
+
+Check whether PNG files have been losslessly compressed. Run
+`oxipng -o 4 --strip safe --pretend` (dry-run mode) to detect
+potential savings. Flag any PNG where oxipng reports ≥5% savings.
+
+When `--apply` is approved, run the full compression:
+```bash
+oxipng -o 4 --strip safe <path>
+```
+
+If oxipng is not installed, report:
+"Compression check skipped — oxipng not found. Install via
+`brew install oxipng`."
+
+**Note:** `just img-optimize` runs oxipng across all posts and shared
+images as a bulk alternative.
+
+### 9. Image dimensions
+
+Flag images whose pixel dimensions are significantly larger than their
+display size. Common oversized patterns:
+
+| Image type | Max dimensions | Rationale |
+|------------|---------------|-----------|
+| Profile image | 384×384px | Displayed at ~192px (2× retina) |
+| Thumbnails | 1376×768px | Canonical thumbnail spec |
+| Inline images | 1600px wide | 2× retina for ~800px content column |
+
+Report the file, current dimensions, and suggested target.
+
+When `--apply` is approved, resize with `sips --resampleWidth <target>`
+(backup first — see §Backup Convention).
+
 ## Output Format
 
 ### Summary table
@@ -117,10 +163,10 @@ exists in the post directory. Flag broken image references.
 Always start with a summary table showing finding counts per post:
 
 ```
-| # | Post | naming | formatting | reuse | structure | prohibited | path | Total |
-|---|------|--------|------------|-------|-----------|------------|------|-------|
-| 1 | shrotriya2019distillpt1 | 1 | 1 | - | - | - | - | 2 |
-| ...| | | | | | | | |
+| # | Post | naming | formatting | reuse | structure | prohibited | path | filesize | compression | dimensions | Total |
+|---|------|--------|------------|-------|-----------|------------|------|---------|-------------|------------|-------|
+| 1 | shrotriya2019distillpt1 | 1 | 1 | - | - | - | - | - | 1 | - | 3 |
+| ...| | | | | | | | | | | |
 ```
 
 Summary line: `Found N issues in M posts. (K posts clean.)`
@@ -188,6 +234,8 @@ stay local and don't bloat the repo.
 - Move loose images into `images/`
 - **Resize thumbnails** to canonical dimensions via `sips` (backup first)
 - **Add borders** to thumbnails via `sips` or ImageMagick (backup first)
+- **Compress PNGs** losslessly via `oxipng -o 4 --strip safe`
+- **Resize oversized images** via `sips --resampleWidth` (backup first)
 
 ### What `--apply` cannot do
 

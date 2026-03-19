@@ -78,7 +78,7 @@ Subcommands:
   format    Heading case normalization, prose wrapping at 80 chars
   prose     Spelling, grammar, broken links
   ally      Accessibility: alt-text, heading levels
-  assets    Thumbnail size/naming/borders, image organization
+  assets    Thumbnail size/naming/borders, image compression, file size limits
   legacy    Distill-era syntax cleanup
   all       Run all sub-skills in sequence
 
