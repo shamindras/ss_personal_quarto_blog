@@ -15,6 +15,7 @@ All build recipes clean `_site/` first to avoid stale output.
 just dev                 # Dev server with drafts visible (clean + live reload)
 just prod                # Production server with drafts hidden (clean + live reload)
 just clean               # Remove _site/ directory
+just lint                # Run blog linting checks (same as /maintain lint)
 just renv-restore        # Restore R packages from renv.lock
 ```
 
@@ -113,6 +114,25 @@ Uses `/blog` skill for blog post lifecycle. Subcommands: `new`, `preview`,
 `finalize`, `publish`. See `.claude/skills/blog/conventions.md` for naming rules.
 
 Example: `/blog new --template roundup --month february --year 2026`
+
+## Maintain Skill
+
+Uses `/maintain` skill for blog maintenance and auditing. Subcommands:
+`lint`, `tags`, `prose`, `ally`, `assets`, `legacy`, `all`.
+See `.claude/skills/maintain/` for sub-skill specs.
+
+Default is dry-run (preview only). Use `--apply` to write changes.
+Scope by slug, multiple slugs, or glob pattern (default: all posts).
+
+Examples:
+```bash
+/maintain tags                                    # Audit all post categories (dry-run)
+/maintain lint shrotriya2026february26roundup      # Lint one post
+/maintain legacy 2019-* --apply                    # Fix Distill syntax in 2019 posts
+/maintain all                                      # Full audit, all skills, all posts
+```
+
+Also wired as `just lint` for running lint checks outside Claude Code.
 
 ## Workflow
 
