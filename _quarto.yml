@@ -8,7 +8,6 @@ website:
   draft-mode: gone
   site-url: https://www.shamindras.com
   repo-url: https://github.com/shamindras/ss_personal_quarto_blog
-  repo-actions: [edit, issue]
   open-graph: true
   twitter-card: true
   reader-mode: true
@@ -37,9 +36,9 @@ website:
       - icon: rss
         href: posts.xml
   page-footer:
-    right:
-      - text: blog source
-        href: https://github.com/shamindras/ss_personal_quarto_blog
+    center: |
+      Made with ❤️ using [Quarto](https://quarto.org) ·
+      [Source](https://github.com/shamindras/ss_personal_quarto_blog)
 
 lang: en
 
