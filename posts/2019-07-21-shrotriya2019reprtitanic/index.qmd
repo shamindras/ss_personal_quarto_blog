@@ -54,7 +54,7 @@ a more practically feasible undertaking
 **Goal:** Given the same Titanic survivors data could we recreate a similar
 looking chart using `R` and specifically the `tidyverse` set of tools?
 
-## Collecting and cleaning the data
+## Collecting and Cleaning the Data
 
 First let's begin by loading our required data cleaning and plotting packages.
 

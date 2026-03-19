@@ -13,9 +13,9 @@ execute:
   echo: true
 ---
 
-## Task: Generating LaTeX newcommand macros
+## Task: Generating LaTeX newcommand Macros
 
-### The central problem
+### The Central Problem
 
 In a custom $\LaTeX$ macro file I needed to generate several sequential
 $\LaTeX$ `newcommand` entries of the form:
@@ -38,7 +38,7 @@ here](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/).
 **Goal:** Create 52 such lowercase/uppercase `newcommand` entries and print to
 the console to directly-copy paste to my $\LaTeX$ macros file.
 
-### The `tidy` approach
+### The `tidy` Approach
 
 First step is to write a function that takes as an input the following:
 

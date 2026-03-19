@@ -32,7 +32,8 @@ where I detailed the steps to setup this blog using Netlify and Google Domains.
 If you haven't setup a `distill` themed blog then you are encouraged to check it
 out before reading this post.
 
-Fortunately `distill` comes with easy to configure settings as we will see below.
+Fortunately `distill` comes with easy to configure settings as we
+will see below.
 I've only implemented some of the options available. I should note that the
 RStudio `distill` team has already created an [excellent distill blog creation
 tutorial](https://rstudio.github.io/distill/blog.html){target="_blank"} which I
@@ -47,7 +48,7 @@ users** of the `distill` blogging package.
 
 With that said, here are some key upgrades I made to this blog.
 
-## Step 1: Setup Disqus comments
+## Step 1: Setup Disqus Comments
 
 I really wanted to setup some comments system for each blogpost. This way I can
 learn new tips from readers and find out how to improve posts going forward. I
@@ -137,7 +138,7 @@ fig-alt="Screenshot of Distill Disqus comments selection" fig-align="center"}
 You can read more about setting up comments from the official `distill` blog
 [here](https://rstudio.github.io/distill/blog.html#comments-and-sharing)
 
-## Step 2: Setup Google Analytics tracking
+## Step 2: Setup Google Analytics Tracking
 
 I also wanted to setup basic user viewing tracking for my site. Fortunately
 `distill` can be easily configured to work with [Google
@@ -194,7 +195,7 @@ page](https://github.com/shamindras/ss_personal_distill_blog){target="_blank"}.
 
 :::
 
-## Step 4: Add blog post sharing options
+## Step 4: Add Blog Post Sharing Options
 
 It is easy to configure distill to allow for easy sharing of posts using a
 variety of social media platforms. I allow for **twitter, linkedin, pinterest,
@@ -230,7 +231,7 @@ twitter:
   creator: "@shamindraas"
 ```
 
-## Step 5: Add Corrections/Change Tracking and RSS feed
+## Step 5: Add Corrections/Change Tracking and RSS Feed
 
 I frequently make edits to blogposts and intend to do so going forward.
 Fortunately `distill` makes it easy **track changes/corrections** made to
