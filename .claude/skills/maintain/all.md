@@ -14,14 +14,15 @@ The full sub-skill list, in order (corrective first, validation last):
 
 1. **legacy** — deepest structural changes (HTML cleanup)
 2. **tags** — frontmatter normalization
-3. **ally** — accessibility additions (alt-text, image-alt)
-4. **assets** — thumbnail/image fixes
-5. **prose** — proofreading on settled content
-6. **lint** — final validation pass catches anything others introduced
+3. **format** — heading case normalization, prose wrapping at 80 chars
+4. **ally** — accessibility additions (alt-text, image-alt)
+5. **assets** — thumbnail/image fixes
+6. **prose** — proofreading on settled content
+7. **lint** — final validation pass catches anything others introduced
 
 If `--except` was provided, remove the listed sub-skills from this
 sequence before proceeding. E.g., `--except lint tags` reduces the
-list to: legacy, ally, assets, prose.
+list to: legacy, format, ally, assets, prose.
 
 ## Matrix-First Approach
 

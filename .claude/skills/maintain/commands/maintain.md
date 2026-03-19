@@ -9,6 +9,7 @@ positional words (scope), and flags.
 |------------|--------|
 | `lint` | Read `.claude/skills/maintain/lint.md`. Follow the steps there. |
 | `tags` | Read `.claude/skills/maintain/tags.md`. Follow the steps there. |
+| `format` | Read `.claude/skills/maintain/format.md`. Follow the steps there. |
 | `prose` | Read `.claude/skills/maintain/prose.md`. Follow the steps there. |
 | `ally` | Read `.claude/skills/maintain/ally.md`. Follow the steps there. |
 | `assets` | Read `.claude/skills/maintain/assets.md`. Follow the steps there. |
@@ -56,8 +57,8 @@ write changes.
 When `--except` is present, collect all words after it until the next
 `--` flag or end of arguments. These are sub-skill names to exclude.
 
-- Validate each name against the sub-skill list: `lint`, `tags`, `prose`,
-  `ally`, `assets`, `legacy`. Warn and ignore unknown names.
+- Validate each name against the sub-skill list: `lint`, `tags`, `format`,
+  `prose`, `ally`, `assets`, `legacy`. Warn and ignore unknown names.
 - Only valid with the `all` subcommand. If used with an individual
   sub-skill (e.g., `/maintain lint --except tags`), warn that `--except`
   is ignored for single sub-skills.
@@ -74,6 +75,7 @@ Blog maintenance and auditing tool.
 Subcommands:
   lint      Frontmatter validation, Quarto best practices
   tags      Category audit, alphabetize, flag non-canonical
+  format    Heading case normalization, prose wrapping at 80 chars
   prose     Spelling, grammar, broken links
   ally      Accessibility: alt-text, heading levels
   assets    Thumbnail size/naming/borders, image organization
