@@ -70,9 +70,9 @@ Each post directory contains an `index.qmd` and an `images/` folder.
 
 ## Contributing
 
-This is a personal blog, so I’m not accepting feature contributions.
-That said, if you spot a typo, broken link, or factual error, I’d
-appreciate a heads-up. You can:
+Spotted a typo, broken link, factual error, or missing citation? I’d
+love to hear about it 🙏 I’ll happily acknowledge your contribution. You
+can:
 
 - Leave a comment via [giscus](https://giscus.app/) on any post
 - Open an
