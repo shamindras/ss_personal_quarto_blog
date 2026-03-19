@@ -29,6 +29,12 @@ repo-hygiene:
 readme:
     quarto render README.qmd
 
+# Lossless PNG compression across all posts and shared images
+img-optimize:
+    @printf "Optimizing images...\n"
+    @find posts data/images -name "*.png" -exec oxipng -o 4 --strip safe {} +
+    @printf "Done!\n"
+
 # Restore R dependencies
 renv-restore:
     @printf "📚 Restoring R packages from renv.lock...\n"
