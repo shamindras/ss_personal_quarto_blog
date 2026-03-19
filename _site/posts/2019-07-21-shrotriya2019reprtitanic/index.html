@@ -161,7 +161,7 @@ window.Quarto = {
 <meta name="twitter:image:alt" content="Hex sticker logo for the Titanic survivors reproducibility post">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="floating nav-fixed slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -392,9 +392,9 @@ window.Quarto = {
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">tidyverse</div>
-                <div class="quarto-category">rstats</div>
                 <div class="quarto-category">reproducibility</div>
+                <div class="quarto-category">rstats</div>
+                <div class="quarto-category">tidyverse</div>
               </div>
                   </div>
   </div>
@@ -439,21 +439,25 @@ window.Quarto = {
 <!-- main -->
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content"><section id="background" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>In the February 2019 issue of <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">Significance Magazine</a> notably featured a story of the titanic disaster <span class="citation" data-cites="friendly2019titanicviz">(<a href="#ref-friendly2019titanicviz" role="doc-biblioref">Friendly, Symanzik, and Onder 2019</a>)</span> and visualization of key survival statistics. As a fan of <code>R</code> and data visualization I enjoyed this article and recommended it to anyone with similar interests. Although the subject is rather tragic, by reading the article I did get a better appreciation of how the information of the crash survivorship was conveyed to the general public through data visualization.</p>
-<aside><div id="main-src-cover" class="quarto-figure quarto-figure-center anchored">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="main-src-cover" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="images/feb-2019-significance-cover.png" class="img-fluid figure-img" style="width:24cm" alt="cover alt-text"></p>
 <figcaption>cover</figcaption></figure>
 </div>
-</aside></section><section id="reproducibility-challenge" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="reproducibility-challenge">Reproducibility Challenge</h2>
+</div></div></section><section id="reproducibility-challenge" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="reproducibility-challenge">Reproducibility Challenge</h2>
 <p>Of particular note in the article was the following data visualization poster printed shortly after the tragedy:</p>
 <div id="main-src-poster" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="images/main-titanic-poster.png" class="img-fluid figure-img" style="width:12cm" alt="G.Bron's chart of The Loss of the Titanic, from The Sphere, 4 May 1912"></p>
 <figcaption>G.Bron’s chart of “The Loss of the ‘Titanic’”, from <em>The Sphere</em>, 4 May 1912</figcaption></figure>
 </div>
 <p>I found this to be a very cool data visualization of the survivorship by class, gender, and adulthood. As a statistics graduate student, I care a lot about reproducibility of results not only as a basic check, but to really appreciate the results and more importantly any implicit assumptions behind the results. So this led to the following goal and effectively this blogpost:</p>
-<aside><p><strong>Note:</strong> Replicability is better, but reproducibility is a good start and often a more practically feasible undertaking</p>
-</aside><p><strong>Goal:</strong> Given the same Titanic survivors data could we recreate a similar looking chart using <code>R</code> and specifically the <code>tidyverse</code> set of tools?</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Note:</strong> Replicability is better, but reproducibility is a good start and often a more practically feasible undertaking</p>
+</div></div><p><strong>Goal:</strong> Given the same Titanic survivors data could we recreate a similar looking chart using <code>R</code> and specifically the <code>tidyverse</code> set of tools?</p>
 </section><section id="collecting-and-cleaning-the-data" class="level2"><h2 class="anchored" data-anchor-id="collecting-and-cleaning-the-data">Collecting and cleaning the data</h2>
-<p>First let’s begin by loading our required data cleaning and plotting packages. First we will load the required libraries needed for the analysis.</p>
+<p>First let’s begin by loading our required data cleaning and plotting packages.</p>
 <p>In the article the authors cite several resources for collecting the data for this task. Per the article we note that the data is already <em>pre-baked</em> into <code>R</code> and located in <code><a href="https://rdrr.io/r/datasets/Titanic.html">datasets::Titanic</a></code> when <code>R</code> loads, which is convenient 😎.</p>
 <p>We can source the data and start cleaning it for our exploration, using the handy <code>clean_names</code> function for column name cleaning and converting various categorical variables (<em>age, sex, survivorship, and passenger class</em>) to factors for easy plotting later.</p>
 <div class="cell">
@@ -614,7 +618,7 @@ window.Quarto = {
 <li>To get the colors to be close to the plot, I simply opened the <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">article online</a> and used the <a href="http://colorzilla.com/chrome/">Colorzilla for Chrome</a> addin to select the color manually. This is a really nice tool to use for reproducing colors viewed through a browser</li>
 <li>I don’t quite like that the non-survivors here are shown on a negative scale, but this was the quick hack I could perform to get bars flipped for non-survivors vs.&nbsp;survivors</li>
 <li>
-<strong>Summary:</strong> Overall this was a really fun challenge and I learned a lot about old-school data visualization using the glorius modern <code>tidyverse</code> ecosystem we have at our fingertips. Will do a similar reproducibility challenge again for sure ✌️. Have fun playing around with the above and please post in the comments any questions/feedback you may have 👍.</li>
+<strong>Summary:</strong> Overall this was a really fun challenge and I learned a lot about old-school data visualization using the glorious modern <code>tidyverse</code> ecosystem we have at our fingertips. Will do a similar reproducibility challenge again for sure ✌️. Have fun playing around with the above and please post in the comments any questions/feedback you may have 👍.</li>
 </ul></section><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
 <p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a></p>
 

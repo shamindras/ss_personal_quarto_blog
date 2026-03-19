@@ -129,7 +129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="floating nav-fixed slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -440,10 +440,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This is a meta blogpost and a second-part in a series to describe how I setup this personal academic blog using the amazing <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="https://www.rstudio.com/" target="_blank">RStudio</a> team.</p>
 <p>The first part of this meta blogpost series can be <a href="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/" target="_blank">found here</a>, where I detailed the steps to setup this blog using Netlify and Google Domains. If you haven’t setup a <code>distill</code> themed blog then you are encouraged to check it out before reading this post.</p>
 <p>Fortunately <code>distill</code> comes with easy to configure settings as we will see below. I’ve only implemented some of the options available. I should note that the RStudio <code>distill</code> team has already created an <a href="https://rstudio.github.io/distill/blog.html" target="_blank">excellent distill blog creation tutorial</a> which I thoroughly used and highly recommend to new users to check out.</p>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p>Admittedly this blogpost is verbose, but hopefully the details help <strong>new users</strong> of the <code>distill</code> blogging package.</p>
-</aside>
-<p>With that said, here are some key upgrades I made to this blog.</p>
+</div></div><p>With that said, here are some key upgrades I made to this blog.</p>
 </section>
 <section id="step-1-setup-disqus-comments" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="step-1-setup-disqus-comments">Step 1: Setup Disqus comments</h2>
@@ -462,10 +462,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>After clicking <strong>Create Site</strong> in the previous menu I proceeded to select the <em>free</em> plan option by subscribing to the <em>Basic, Free, Ads Supported</em> comments option as seen below:</p>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p>As a student I’ve got to always know when to get a freebie <code>r emo::ji("smile")</code></p>
-</aside>
-<div id="step-01-04-screenshot" class="quarto-figure quarto-figure-center anchored">
+</div></div><div id="step-01-04-screenshot" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/step_01_disqus_04.png" class="img-fluid figure-img" alt="Screenshot of select basic (Free, Ads supported) mode"></p>
 <figcaption>Select Basic (Free, Ads supported) mode</figcaption>
@@ -486,10 +486,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>Finally to ensure that the implementation is completed I added the following line to the <code>_site.yml</code> post using the <strong>Disqus shortname</strong> set earlier i.e. <code>shamindras-distill</code> and ensuring <code>hidden: true</code> so that the comments are not expanded by default:</p>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
-</aside>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">collections:</span></span>
+</div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">collections:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">posts:</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">disqus:</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="ex">shortname:</span> shamindras-distill</span>
@@ -513,10 +513,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>Note that I specified the <strong>Website Name</strong> field to be <code>shamindras-distill</code>. This is indeed the same as the Disqus shortname from earlier but did not have to be. I just did it for consistency and easy reference. I was then given a <strong>Google Analytics token</strong> and concluded this setup by adding the token to the <code>_site.yml</code> file as follows:</p>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
-</aside>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">google_analytics:</span> <span class="st">"UA-145015693-1"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">google_analytics:</span> <span class="st">"UA-145015693-1"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You can read more about setting up Google Analytics from the official <code>distill</code> blog <a href="https://rstudio.github.io/distill/website.html#google-analytics">here</a></p>
 </section>
 <section id="step-3-add-netlify-status-badge" class="level2 page-columns page-full">
@@ -529,10 +529,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>I copy-pasted the above code in at the top of my site <code>README.md</code> file. This lets me quickly know whether my website is up and running as expected by simply checking out my <a href="https://github.com/shamindras/ss_personal_distill_blog" target="_blank">github page</a>.</p>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p><strong>Note:</strong> You can see my <code>README.md</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md">here</a></p>
-</aside>
-</section>
+</div></div></section>
 <section id="step-4-add-blog-post-sharing-options" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="step-4-add-blog-post-sharing-options">Step 4: Add blog post sharing options</h2>
 <p>It is easy to configure distill to allow for easy sharing of posts using a variety of social media platforms. I allow for <strong>twitter, linkedin, pinterest, and facebook.</strong> I did this by simply adding the following line in the <code>_site.yml</code> file:</p>
@@ -547,10 +547,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>I also added in the following lines to <code>_site.yml</code> to ensure that <a href="https://rstudio.github.io/distill/metadata.html#twitter-card" target="_blank">twitter cards</a> are correctly generated when posts are shared on twitter:</p>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
-</aside>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">twitter:</span></span>
+</div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">twitter:</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">site:</span> <span class="st">"@shamindraas"</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">creator:</span> <span class="st">"@shamindraas"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
@@ -572,10 +572,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">left:</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">-</span> icon: fa fa-rss</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>      <span class="ex">href:</span> index.xml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
-</aside>
-<p>The critical elements are adding in the <code>base_url</code> fields and adding in <code>fa fa-rss</code> which is derived from the <code>index.xml</code> file. The <code>index.xml</code> file is automatically generated from the <code>index.Rmd</code> when you render the <code>distill</code> blog using the usual command:</p>
+</div></div><p>The critical elements are adding in the <code>base_url</code> fields and adding in <code>fa fa-rss</code> which is derived from the <code>index.xml</code> file. The <code>index.xml</code> file is automatically generated from the <code>index.Rmd</code> when you render the <code>distill</code> blog using the usual command:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rmarkdown::render_site</span><span class="er">(</span><span class="fu">here::here()</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="next-steps" class="level2">

@@ -709,7 +709,7 @@ Inequalites via Convexity.”</span> February 12, 2022. <a href="https://www.sha
 </li>
 <li><p>Please read the article in more detail on each of the above points and also to considerations for high risk individuals, a sick family member/friend, and if you are a healthcare responder</p></li>
 <li><p>Overall, great practical advice! It is great to see statisticians such as Prof.&nbsp;Murray take the lead and address the community at large with their knowledge and expertise, when we live in an era of misinformation</p></li>
-<li><p>I enjoyed the emphasisis on solving this challenge (like many others) as a community</p></li>
+<li><p>I enjoyed the emphasis on solving this challenge (like many others) as a community</p></li>
 </ul></details>
 </li>
 </ul></section><section id="teaching" class="level2"><h2 class="anchored" data-anchor-id="teaching">Teaching</h2>
@@ -730,10 +730,10 @@ Inequalites via Convexity.”</span> February 12, 2022. <a href="https://www.sha
 Shrotriya, Shamindra. 2020. <span>“Shamindra’s January 2020
 Roundup.”</span> January 27, 2020. <a href="https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/">https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/</a>.
 </div></div></section></div> ]]></description>
+  <category>math</category>
   <category>personal</category>
   <category>roundup</category>
   <category>rstats</category>
-  <category>math</category>
   <guid>https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/</guid>
   <pubDate>Sun, 26 Jan 2020 14:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/images/preview-january-2020-01.png" medium="image" type="image/png" height="85" width="144"/>
@@ -833,7 +833,7 @@ Roundup.”</span> January 27, 2020. <a href="https://www.shamindras.com/posts/2
 </li>
 </ul></section><section id="teaching" class="level2"><h2 class="anchored" data-anchor-id="teaching">Teaching</h2>
 <ul>
-<li>I’m a TA for the <a href="https://36-750.github.io" target="_blank">amazing graduate statiscal computing course at CMU</a>. This is an intensive (but very rewarding) programming course designed by CMU statistics professors <a href="https://www.refsmmat.com/" target="_blank">Alex Reinhart</a> and <a href="http://www.stat.cmu.edu/~genovese/?p=research" target="_blank">Chris Genovese</a>. I highly recommend checking out this course website as a general programming reference in daily work/research. I know that I certainly will be 😄.</li>
+<li>I’m a TA for the <a href="https://36-750.github.io" target="_blank">amazing graduate statistical computing course at CMU</a>. This is an intensive (but very rewarding) programming course designed by CMU statistics professors <a href="https://www.refsmmat.com/" target="_blank">Alex Reinhart</a> and <a href="http://www.stat.cmu.edu/~genovese/?p=research" target="_blank">Chris Genovese</a>. I highly recommend checking out this course website as a general programming reference in daily work/research. I know that I certainly will be 😄.</li>
 </ul>
 
 
@@ -848,10 +848,10 @@ Roundup.”</span> January 27, 2020. <a href="https://www.shamindras.com/posts/2
 Shrotriya, Shamindra. 2019. <span>“Shamindra’s September 2019
 Roundup.”</span> September 30, 2019. <a href="https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/">https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/</a>.
 </div></div></section></div> ]]></description>
+  <category>math</category>
   <category>personal</category>
   <category>roundup</category>
   <category>rstats</category>
-  <category>math</category>
   <guid>https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/</guid>
   <pubDate>Sun, 29 Sep 2019 14:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/images/preview-september-2019-01.png" medium="image" type="image/png" height="85" width="144"/>
@@ -872,14 +872,16 @@ Roundup.”</span> September 30, 2019. <a href="https://www.shamindras.com/posts
 <ul>
 <li>Started reading this fantastic book <span class="citation" data-cites="granville2019primesuspects_book">(Granville, Granville, and Lewis 2019)</span> called the <em>Prime Suspects</em> by <strong>Andrew Granville, Jennifer Granville, and Robert J. Lewis (illustrator)</strong>. Here is a <a href="https://www.youtube.com/watch?v=82c2HDp-ntg&amp;feature=youtu.be" target="_blank">youtube trailer for the book</a> to get you excited!</li>
 </ul>
-<aside><div id="main-src-cover" class="quarto-figure quarto-figure-center anchored">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="main-src-cover" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/images/prime-suspects-book.png" class="img-fluid figure-img" alt="Image of the cover of the book &quot;Prime Suspects&quot; by Granville et. al."></p>
 <figcaption>Prime Suspects cover</figcaption></figure>
 </div>
-</aside><details><summary><p>Key Takeaways</p>
+</div></div><details><summary><p>Key Takeaways</p>
 </summary><ul>
 <li>This is essentially an introduction to analytic number theory disguised as a fast-moving graphic novel murder mystery</li>
-<li>For any mathematics fans (who isn’t though?) there are lots of funny easter eggs to be found in the frame backgrounds</li>
+<li>For any mathematics fans (and who isn’t?) there are lots of funny easter eggs to be found in the frame backgrounds</li>
 <li>This a very unique exposition on number theory, a subject in which I have negligible knowledge (like most subjects)</li>
 <li>The pedagogy is gentle and yet exciting emphasizing not just mathematics but the importance of communication of mathematical ideas to the wider public i.e.&nbsp;a meta novel if you like</li>
 <li>I hope to see more books in this mathematical graphic novel genre. The last one I read (and know of) is Logicomix <span class="citation" data-cites="doxiadis2009logicomix_book">(Doxiadis et al. 2009)</span> which I highly recommend as well for anyone wishing to venture into the mysteries of infinity!</li>
@@ -887,8 +889,10 @@ Roundup.”</span> September 30, 2019. <a href="https://www.shamindras.com/posts
 <ul>
 <li>Really enjoyed <a href="http://www.careeryoga.life/440ebcdf?fbclid=IwAR2BWeyMdhTg2fbdHp5U-D9gCy2oqLZBk2ljRBMhjtyAEtSgqBCt7kMlSFk">this interview</a> with Prof.&nbsp;Noga Alon a leading mathematician specializing in combinatorics, graph theory etc. Fantastic insights into the life of a (leading) theoretical researcher and certainly someone for me to look up to and learn from. I enjoyed the fact that it was so brief but dense as I normally don’t have much time for podcasts. I may check out a few more scientific based interviews from this <a href="http://www.careeryoga.life/">Career Yoga podcast</a> going forward.</li>
 </ul>
-<aside><p><strong>Note:</strong> This interview was co-conducted Ms.&nbsp;Narkis Alon, the daughter of Prof. Alon which led to a really personal dynamic!</p>
-</aside><details><summary><p>Key Takeaways</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Note:</strong> This interview was co-conducted Ms.&nbsp;Narkis Alon, the daughter of Prof. Alon which led to a really personal dynamic!</p>
+</div></div><details><summary><p>Key Takeaways</p>
 </summary><ul>
 <li>This 20min interview is really part of a podcast on careers, and the focus here being the lessons/insights learned from a very successful career in theoretical mathematical research from Prof.&nbsp;Alon</li>
 <li>Prof.&nbsp;Alon appears to be extremely organized in all aspects of life, including packing for trips. Was asked specifically not to prepare for this interview 😄</li>
@@ -917,7 +921,7 @@ Roundup.”</span> September 30, 2019. <a href="https://www.shamindras.com/posts
 <li>Question: Do you sometimes try to initiate situations that will inspire you to solve problems</li>
 </ul>
 <blockquote class="blockquote">
-<p>You go to conferences, talk to people, read papers etc. Many times you just need to be in a different state of mind e.g.&nbsp;if you forget someones name, just thinking about it does not always make you remember, just need to try something else at times. This may explain why you see people staring in the air! Sometimes you can go and take walks.</p>
+<p>You go to conferences, talk to people, read papers etc. Many times you just need to be in a different state of mind e.g.&nbsp;if you forget someone’s name, just thinking about it does not always make you remember, just need to try something else at times. This may explain why you see people staring in the air! Sometimes you can go and take walks.</p>
 </blockquote>
 <ul>
 <li>Question: When did you know you wanted to be a mathematician?</li>
@@ -982,10 +986,10 @@ Granville, Andrew, Jennifer Granville, and Robert J. Lewis. 2019. <em><span clas
 Shrotriya, Shamindra. 2019. <span>“Shamindra’s August 2019
 Roundup.”</span> August 31, 2019. <a href="https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/">https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/</a>.
 </div></div></section></div> ]]></description>
+  <category>math</category>
   <category>personal</category>
   <category>roundup</category>
   <category>rstats</category>
-  <category>math</category>
   <guid>https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/</guid>
   <pubDate>Fri, 30 Aug 2019 14:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/images/preview-august-2019-01.png" medium="image" type="image/png" height="72" width="144"/>
@@ -1000,7 +1004,7 @@ Roundup.”</span> August 31, 2019. <a href="https://www.shamindras.com/posts/20
 <pre class="markup"><code>\newcommand{\bfa}{\mathbf{a}}
 \newcommand{\bfA}{\mathbf{A}}</code></pre>
 <p>Where using <code>$\bfa$</code> produces <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Ba%7D"> and using <code>$\bfA$</code> produces <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BA%7D"> i.e the lowercase/uppercase <code>mathbf</code> commands respectively.</p>
-<p>Specifically I needed to construct 52 such combined sequential entries for both lowercase/uppercase letter versions of these <code>newcommand</code> <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> macros. Rather than do this manually, I realized that this would be another fun scripting exercise with using the <code>tidyverse</code> packages <code>glue</code>, <code>purrr</code>, and <code>stringr</code> similar to this similar <a href="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/">previous post here</a>.</p>
+<p>Specifically I needed to construct 52 such combined sequential entries for both lowercase/uppercase letter versions of these <code>newcommand</code> <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> macros. Rather than do this manually, I realized that this would be another fun scripting exercise with using the <code>tidyverse</code> packages <code>glue</code>, <code>purrr</code>, and <code>stringr</code> similar to this <a href="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/">previous post here</a>.</p>
 <p><strong>Goal:</strong> Create 52 such lowercase/uppercase <code>newcommand</code> entries and print to the console to directly-copy paste to my <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> macros file.</p>
 </section><section id="the-tidy-approach" class="level3"><h3 class="anchored" data-anchor-id="the-tidy-approach">The <code>tidy</code> approach</h3>
 <p>First step is to write a function that takes as an input the following:</p>
@@ -1010,7 +1014,7 @@ Roundup.”</span> August 31, 2019. <a href="https://www.shamindras.com/posts/20
 <li>the macro shortcut command prefix you prefer e.g <code>"bf"</code> (for <strong>b</strong>old <strong>f</strong>ont in case you were wondering!)</li>
 <li>the specific <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> command that we are creating a macro shortcut for i.e.&nbsp;<code>"mathbf"</code> in this case</li>
 </ul>
-<p>The function then outputs a single <code>newcommand</code> entry for that lecture i.e <code>\newcommand{\bfa}{\mathbf{a}}</code> in this case. Let’s do it!</p>
+<p>The function then outputs a single <code>newcommand</code> entry for that letter i.e <code>\newcommand{\bfa}{\mathbf{a}}</code> in this case. Let’s do it!</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -1309,8 +1313,8 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 Shrotriya, Shamindra. 2019. <span>“Tidyverse Fun - Part 2.”</span>
 August 24, 2019. <a href="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/">https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/</a>.
 </div></div></section></div> ]]></description>
-  <category>tidyverse</category>
   <category>rstats</category>
+  <category>tidyverse</category>
   <guid>https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/</guid>
   <pubDate>Fri, 23 Aug 2019 14:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg" medium="image" type="image/jpeg"/>
@@ -1344,10 +1348,10 @@ August 24, 2019. <a href="https://www.shamindras.com/posts/2019-08-21-shrotriya2
 <p>This is a meta blogpost and a second-part in a series to describe how I setup this personal academic blog using the amazing <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="https://www.rstudio.com/" target="_blank">RStudio</a> team.</p>
 <p>The first part of this meta blogpost series can be <a href="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/" target="_blank">found here</a>, where I detailed the steps to setup this blog using Netlify and Google Domains. If you haven’t setup a <code>distill</code> themed blog then you are encouraged to check it out before reading this post.</p>
 <p>Fortunately <code>distill</code> comes with easy to configure settings as we will see below. I’ve only implemented some of the options available. I should note that the RStudio <code>distill</code> team has already created an <a href="https://rstudio.github.io/distill/blog.html" target="_blank">excellent distill blog creation tutorial</a> which I thoroughly used and highly recommend to new users to check out.</p>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p>Admittedly this blogpost is verbose, but hopefully the details help <strong>new users</strong> of the <code>distill</code> blogging package.</p>
-</aside>
-<p>With that said, here are some key upgrades I made to this blog.</p>
+</div></div><p>With that said, here are some key upgrades I made to this blog.</p>
 </section>
 <section id="step-1-setup-disqus-comments" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="step-1-setup-disqus-comments">Step 1: Setup Disqus comments</h2>
@@ -1366,10 +1370,10 @@ August 24, 2019. <a href="https://www.shamindras.com/posts/2019-08-21-shrotriya2
 </figure>
 </div>
 <p>After clicking <strong>Create Site</strong> in the previous menu I proceeded to select the <em>free</em> plan option by subscribing to the <em>Basic, Free, Ads Supported</em> comments option as seen below:</p>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p>As a student I’ve got to always know when to get a freebie <code>r emo::ji("smile")</code></p>
-</aside>
-<div id="step-01-04-screenshot" class="quarto-figure quarto-figure-center anchored">
+</div></div><div id="step-01-04-screenshot" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_04.png" class="img-fluid figure-img" alt="Screenshot of select basic (Free, Ads supported) mode"></p>
 <figcaption>Select Basic (Free, Ads supported) mode</figcaption>
@@ -1390,10 +1394,10 @@ August 24, 2019. <a href="https://www.shamindras.com/posts/2019-08-21-shrotriya2
 </figure>
 </div>
 <p>Finally to ensure that the implementation is completed I added the following line to the <code>_site.yml</code> post using the <strong>Disqus shortname</strong> set earlier i.e. <code>shamindras-distill</code> and ensuring <code>hidden: true</code> so that the comments are not expanded by default:</p>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
-</aside>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
+</div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">collections:</span></span>
 <span id="cb1-2">  <span class="ex" style="color: null;
@@ -1427,10 +1431,10 @@ font-style: inherit;">hidden:</span> true</span></code></pre></div></div>
 </figure>
 </div>
 <p>Note that I specified the <strong>Website Name</strong> field to be <code>shamindras-distill</code>. This is indeed the same as the Disqus shortname from earlier but did not have to be. I just did it for consistency and easy reference. I was then given a <strong>Google Analytics token</strong> and concluded this setup by adding the token to the <code>_site.yml</code> file as follows:</p>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
-</aside>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
+</div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">google_analytics:</span> <span class="st" style="color: #20794D;
 background-color: null;
@@ -1447,10 +1451,10 @@ font-style: inherit;">"UA-145015693-1"</span></span></code></pre></div></div>
 </figure>
 </div>
 <p>I copy-pasted the above code in at the top of my site <code>README.md</code> file. This lets me quickly know whether my website is up and running as expected by simply checking out my <a href="https://github.com/shamindras/ss_personal_distill_blog" target="_blank">github page</a>.</p>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p><strong>Note:</strong> You can see my <code>README.md</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md">here</a></p>
-</aside>
-</section>
+</div></div></section>
 <section id="step-4-add-blog-post-sharing-options" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="step-4-add-blog-post-sharing-options">Step 4: Add blog post sharing options</h2>
 <p>It is easy to configure distill to allow for easy sharing of posts using a variety of social media platforms. I allow for <strong>twitter, linkedin, pinterest, and facebook.</strong> I did this by simply adding the following line in the <code>_site.yml</code> file:</p>
@@ -1471,10 +1475,10 @@ font-style: inherit;">share:</span> [twitter, linkedin, pinterest, facebook]</sp
 </figure>
 </div>
 <p>I also added in the following lines to <code>_site.yml</code> to ensure that <a href="https://rstudio.github.io/distill/metadata.html#twitter-card" target="_blank">twitter cards</a> are correctly generated when posts are shared on twitter:</p>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
-</aside>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;
+</div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">twitter:</span></span>
 <span id="cb4-2">  <span class="ex" style="color: null;
@@ -1518,10 +1522,10 @@ font-style: inherit;">-</span> icon: fa fa-rss</span>
 <span id="cb6-5">      <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">href:</span> index.xml</span></code></pre></div></div>
-<aside>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p><strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a></p>
-</aside>
-<p>The critical elements are adding in the <code>base_url</code> fields and adding in <code>fa fa-rss</code> which is derived from the <code>index.xml</code> file. The <code>index.xml</code> file is automatically generated from the <code>index.Rmd</code> when you render the <code>distill</code> blog using the usual command:</p>
+</div></div><p>The critical elements are adding in the <code>base_url</code> fields and adding in <code>fa fa-rss</code> which is derived from the <code>index.xml</code> file. The <code>index.xml</code> file is automatically generated from the <code>index.Rmd</code> when you render the <code>distill</code> blog using the usual command:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">rmarkdown::render_site</span><span class="er" style="color: #AD0000;
@@ -1587,8 +1591,10 @@ Settings.”</span> July 31, 2019. <a href="https://www.shamindras.com/posts/201
 <ul>
 <li>Continued reading this fantastic book <span class="citation" data-cites="steele2004cauchyscwarzmaster_book">(Steele 2004)</span> called the <em>Art of Mathematical inequalities</em> by <a href="http://www-stat.wharton.upenn.edu/~steele/" target="_blank">Prof.&nbsp;Michael Steele</a>. This book is simply amazing in that Prof.&nbsp;Steele walks through deriving mathematical inequalities as if you were having a casual chat together using a whiteboard. I’ve been working through through the problems in detail and they are a great challenge! I’ll blog more about this as I finish the book in the August 2019 roundup.</li>
 </ul>
-<aside><strong>Note:</strong> the text contains full solutions making it ideal for self-study (but I refuse to peek for now)
-</aside></section><section id="fiction" class="level3"><h3 class="anchored" data-anchor-id="fiction">Fiction</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Note:</strong> the text contains full solutions making it ideal for self-study (but I refuse to peek for now)</p>
+</div></div></section><section id="fiction" class="level3"><h3 class="anchored" data-anchor-id="fiction">Fiction</h3>
 <ul>
 <li>Read Celeste Ng’s <a href="https://www.celesteng.com/everything-i-never-told-you" target="_blank">Everything I Never Told You</a>. Very nicely written debut novel by Ng, though quite dark and brooding in tone. Would not recommend as a pick me up but certainly would for a nice American-Asian character study set in the 1970s.</li>
 </ul></section></section><section id="interesting-papers" class="level2"><h2 class="anchored" data-anchor-id="interesting-papers">Interesting Papers</h2>
@@ -1627,10 +1633,10 @@ Steele, J Michael. 2004.<em><span class="nocase">The Cauchy-Schwarz master class
 Shrotriya, Shamindra. 2019. <span>“Shamindra’s July 2019
 Roundup.”</span> July 30, 2019. <a href="https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/">https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/</a>.
 </div></div></section></div> ]]></description>
+  <category>math</category>
   <category>personal</category>
   <category>roundup</category>
   <category>rstats</category>
-  <category>math</category>
   <guid>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/</guid>
   <pubDate>Mon, 29 Jul 2019 14:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png" medium="image" type="image/png" height="74" width="144"/>
@@ -1641,21 +1647,25 @@ Roundup.”</span> July 30, 2019. <a href="https://www.shamindras.com/posts/2019
   <link>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/</link>
   <description><![CDATA[ <section id="background" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>In the February 2019 issue of <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">Significance Magazine</a> notably featured a story of the titanic disaster <span class="citation" data-cites="friendly2019titanicviz">(Friendly, Symanzik, and Onder 2019)</span> and visualization of key survival statistics. As a fan of <code>R</code> and data visualization I enjoyed this article and recommended it to anyone with similar interests. Although the subject is rather tragic, by reading the article I did get a better appreciation of how the information of the crash survivorship was conveyed to the general public through data visualization.</p>
-<aside><div id="main-src-cover" class="quarto-figure quarto-figure-center anchored">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="main-src-cover" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/feb-2019-significance-cover.png" class="img-fluid figure-img" style="width:24cm" alt="cover alt-text"></p>
 <figcaption>cover</figcaption></figure>
 </div>
-</aside></section><section id="reproducibility-challenge" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="reproducibility-challenge">Reproducibility Challenge</h2>
+</div></div></section><section id="reproducibility-challenge" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="reproducibility-challenge">Reproducibility Challenge</h2>
 <p>Of particular note in the article was the following data visualization poster printed shortly after the tragedy:</p>
 <div id="main-src-poster" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/main-titanic-poster.png" class="img-fluid figure-img" style="width:12cm" alt="G.Bron's chart of The Loss of the Titanic, from The Sphere, 4 May 1912"></p>
 <figcaption>G.Bron’s chart of “The Loss of the ‘Titanic’”, from <em>The Sphere</em>, 4 May 1912</figcaption></figure>
 </div>
 <p>I found this to be a very cool data visualization of the survivorship by class, gender, and adulthood. As a statistics graduate student, I care a lot about reproducibility of results not only as a basic check, but to really appreciate the results and more importantly any implicit assumptions behind the results. So this led to the following goal and effectively this blogpost:</p>
-<aside><p><strong>Note:</strong> Replicability is better, but reproducibility is a good start and often a more practically feasible undertaking</p>
-</aside><p><strong>Goal:</strong> Given the same Titanic survivors data could we recreate a similar looking chart using <code>R</code> and specifically the <code>tidyverse</code> set of tools?</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Note:</strong> Replicability is better, but reproducibility is a good start and often a more practically feasible undertaking</p>
+</div></div><p><strong>Goal:</strong> Given the same Titanic survivors data could we recreate a similar looking chart using <code>R</code> and specifically the <code>tidyverse</code> set of tools?</p>
 </section><section id="collecting-and-cleaning-the-data" class="level2"><h2 class="anchored" data-anchor-id="collecting-and-cleaning-the-data">Collecting and cleaning the data</h2>
-<p>First let’s begin by loading our required data cleaning and plotting packages. First we will load the required libraries needed for the analysis.</p>
+<p>First let’s begin by loading our required data cleaning and plotting packages.</p>
 <p>In the article the authors cite several resources for collecting the data for this task. Per the article we note that the data is already <em>pre-baked</em> into <code>R</code> and located in <code><a href="https://rdrr.io/r/datasets/Titanic.html">datasets::Titanic</a></code> when <code>R</code> loads, which is convenient 😎.</p>
 <p>We can source the data and start cleaning it for our exploration, using the handy <code>clean_names</code> function for column name cleaning and converting various categorical variables (<em>age, sex, survivorship, and passenger class</em>) to factors for easy plotting later.</p>
 <div class="cell">
@@ -2418,7 +2428,7 @@ font-style: inherit;">out_plot</span></span></code></pre></div></div>
 <li>To get the colors to be close to the plot, I simply opened the <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">article online</a> and used the <a href="http://colorzilla.com/chrome/">Colorzilla for Chrome</a> addin to select the color manually. This is a really nice tool to use for reproducing colors viewed through a browser</li>
 <li>I don’t quite like that the non-survivors here are shown on a negative scale, but this was the quick hack I could perform to get bars flipped for non-survivors vs.&nbsp;survivors</li>
 <li>
-<strong>Summary:</strong> Overall this was a really fun challenge and I learned a lot about old-school data visualization using the glorius modern <code>tidyverse</code> ecosystem we have at our fingertips. Will do a similar reproducibility challenge again for sure ✌️. Have fun playing around with the above and please post in the comments any questions/feedback you may have 👍.</li>
+<strong>Summary:</strong> Overall this was a really fun challenge and I learned a lot about old-school data visualization using the glorious modern <code>tidyverse</code> ecosystem we have at our fingertips. Will do a similar reproducibility challenge again for sure ✌️. Have fun playing around with the above and please post in the comments any questions/feedback you may have 👍.</li>
 </ul></section><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
 <p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a></p>
 
@@ -2439,9 +2449,9 @@ Friendly, Michael, Jürgen Symanzik, and Ortac Onder. 2019. <span>“<span class
 Shrotriya, Shamindra. 2019. <span>“Reproducibility Challenge: Titanic
 Survivors Plot.”</span> July 21, 2019. <a href="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/">https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/</a>.
 </div></div></section></div> ]]></description>
-  <category>tidyverse</category>
-  <category>rstats</category>
   <category>reproducibility</category>
+  <category>rstats</category>
+  <category>tidyverse</category>
   <guid>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/</guid>
   <pubDate>Sat, 20 Jul 2019 14:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg" medium="image" type="image/jpeg"/>
@@ -2628,8 +2638,10 @@ background-color: null;
 font-style: inherit;">}</span></span></code></pre></div></div>
 </div>
 <p>We can now simply generate every possible triple <em>with replacement</em> using the <code><a href="https://tidyr.tidyverse.org/reference/expand.html">tidyr::crossing</a></code> function. We proceed to <em>filter</em> these <img src="https://latex.codecogs.com/png.latex?3%5E3%20=%2027"> triples for unique triples using our <code>is_unq_perm</code> helper function applied <em>row-by-row</em> using <code><a href="https://purrr.tidyverse.org/reference/pmap.html">purrr::pmap_lgl</a></code>. The <code>_lgl</code> simply returns a <code>TRUE/FALSE</code> logical value as intended by the applied function.</p>
-<aside><strong>Note:</strong> The <code><a href="https://tidyr.tidyverse.org/reference/expand.html">tidyr::crossing</a></code> generates a <em>Cartesian product</em> of all the 3 word triples, very handy
-</aside><div class="cell">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Note:</strong> The <code><a href="https://tidyr.tidyverse.org/reference/expand.html">tidyr::crossing</a></code> generates a <em>Cartesian product</em> of all the 3 word triples, very handy</p>
+</div></div><div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Generate the unique word-triples</span></span>
@@ -3072,8 +3084,10 @@ background-color: null;
 font-style: inherit;">}</span></span></code></pre></div></div>
 </div>
 <p>Note that by default <code>glue</code> allows you to substitute input text in between <code>{</code> and <code>}</code> markers. However BibTeX entries <em>already have</em> literal default <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code> tags that we need to include in our function output. Rather than escaping them the <code>glue</code> package conveniently allows us to change the default opening and closing markers 💯! We simply set these to be angle brackets <code>&lt; &gt;</code> using the <code>.open</code> and <code>.close</code> options above.</p>
-<aside><strong>Note:</strong> Luckily we don’t have <em>literal</em> angle brackets in our BibTeX output to deal with here
-</aside><p>Let’s just test this out quickly:</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Note:</strong> Luckily we don’t have <em>literal</em> angle brackets in our BibTeX output to deal with here</p>
+</div></div><p>Let’s just test this out quickly:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;
 background-color: null;
@@ -3103,8 +3117,10 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec01.pdf}}</code></pre>
 </div>
 </div>
 <p>Great - looks like it is working as required with the correct string padding in the lecture number in the pdf filename!</p>
-<aside><strong>Note:</strong> We used the <code>stringr</code> <code>str_pad</code> to convert <code>1</code> to <code>"01"</code>
-</aside></section><section id="apply-to-all-lectures-using-purrr" class="level3"><h3 class="anchored" data-anchor-id="apply-to-all-lectures-using-purrr">Apply to all lectures using <code>purrr</code>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>Note:</strong> We used the <code>stringr</code> <code>str_pad</code> to convert <code>1</code> to <code>"01"</code></p>
+</div></div></section><section id="apply-to-all-lectures-using-purrr" class="level3"><h3 class="anchored" data-anchor-id="apply-to-all-lectures-using-purrr">Apply to all lectures using <code>purrr</code>
 </h3>
 <p>Let’s finish this by creating all the entries using <code>purrr</code>:</p>
 <div class="cell">
@@ -3204,8 +3220,8 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec30.pdf}}</code></pre>
 Shrotriya, Shamindra. 2019. <span>“Tidyverse Fun - Part 1.”</span> July
 15, 2019. <a href="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/">https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/</a>.
 </div></div></section></div> ]]></description>
-  <category>tidyverse</category>
   <category>rstats</category>
+  <category>tidyverse</category>
   <guid>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/</guid>
   <pubDate>Sun, 14 Jul 2019 14:00:00 GMT</pubDate>
   <media:content url="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg" medium="image" type="image/jpeg"/>
@@ -3445,7 +3461,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 <pre class="markup"><code>_posts/2019-07-10-welcome-to-shamindras-blog
 └── welcome-to-shamindras-blog.Rmd`</code></pre>
 <p>Neat - just how I like it! I then modified the content of the new welcome blogpost by going to the following file:</p>
-<pre class="markup"><code>_posts/2019-06-21-welcome-to-shamindras-blog/welcome-to-shamindras-blog.Rmd</code></pre>
+<pre class="markup"><code>_posts/2019-07-10-welcome-to-shamindras-blog/welcome-to-shamindras-blog.Rmd</code></pre>
 <p>I modified the contents and then <strong>knitted</strong> the <code>Rmd</code> file once done to refresh and save the contents.</p>
 <p>Now I had locally created my first personalized content, a simple welcome post 😎.</p>
 <aside><p>My welcome blog entry can be found <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_posts/2019-07-10-shrotriya2019welcome/shrotriya2019welcome.Rmd">here</a> for reference.</p>
@@ -3574,7 +3590,7 @@ font-style: inherit;">git</span> push origin master</span></code></pre></div></d
 <figure class="figure"><p><img src="https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/images/08_07_netlify_checking_custom_domains.png" class="img-fluid figure-img" alt="Screenshot of all custom domains for site with Netlify"></p>
 <figcaption>All Custom Domains for Site with Netlify</figcaption></figure>
 </div>
-<p>Netlify also tells me that the truncated url <code>shamindras.com</code> will also get routed to the blog. So I don’t even need to write the <code>www.</code> going forward. Thanks Netlify 🙇‍♀.</p>
+<p>Netlify also tells me that the truncated url <code>shamindras.com</code> will also get routed to the blog. So I don’t even need to write the <code>www.</code> going forward. Thanks Netlify 🙇.</p>
 </section><section id="step-9-patiently-wait-for-deployment" class="level2"><h2 class="anchored" data-anchor-id="step-9-patiently-wait-for-deployment">Step 9: Patiently wait for deployment</h2>
 <p>With everything setup and configured on github/Netlify the deployment should be near instantaneous. But after about 20 mins my blog appeared at <a href="https://www.shamindras.com" target="_blank">www.shamindras.com</a>. So effectively Netlify and github were now talking to each other and site is setup!</p>
 </section><section id="step-10-future-additions-and-extras" class="level2"><h2 class="anchored" data-anchor-id="step-10-future-additions-and-extras">Step 10: Future additions and extras</h2>
