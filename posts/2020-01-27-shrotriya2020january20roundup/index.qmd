@@ -29,7 +29,7 @@ This is more for my personal benefit but may also help others.
 
     <details> <summary>Key Takeaways</summary>
     
-    - This the latest post from the [ACLU Tech & Analytics blog](https://medium.com/aclu-tech-analytics){target="_blank"}. This post explains
+    - This is the latest post from the [ACLU Tech & Analytics blog](https://medium.com/aclu-tech-analytics){target="_blank"}. This post explains
     the key focus of the ACLU analytics team on having clean data pipelines and
     using testing and assertions to facilitate this process
     - Using functions like `assertthat::noNA(df$source)` will return a `FALSE`
@@ -67,7 +67,7 @@ This is more for my personal benefit but may also help others.
     - In the event of well publicized (ready mass hysteria) virus spreads such
     as the recent Coronavirus outbreak, it is important to listen to level-headed
     healthcare professionals. In this case it is Prof. Elie Murray, an 
-    epidimiologist from Boston University
+    epidemiologist from Boston University
     - Since I'm definitely a newbie to understanding this epidemic, I found this
     to be a very pragmatic guide to help prepare and prevent any further spread
     of such diseases
@@ -86,7 +86,7 @@ This is more for my personal benefit but may also help others.
       - Call a medical professional if you or a relative was in Wuhan recently
       - Seek urgent medical care if you feel really sick
     
-    - Please read the article on more detail on each
+    - Please read the article in more detail on each
     of the above points and also to considerations for high risk individuals,
     a sick family member/friend, and if you are a healthcare responder
     
@@ -94,7 +94,7 @@ This is more for my personal benefit but may also help others.
     as Prof. Murray take the lead and address the community at large with their
     knowledge and expertise, when we live in an era of misinformation
     
-    - I enjoyed the emphasisis on solving this challenge (like many others) as
+    - I enjoyed the emphasis on solving this challenge (like many others) as
     a community
     
     </details>

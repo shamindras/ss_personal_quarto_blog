@@ -159,7 +159,7 @@ this important presentation below.
     </details>
 
 ## Teaching
-- I'm a TA for the [amazing graduate statiscal computing course at CMU](https://36-750.github.io){target="_blank"}. This is an intensive (but very
+- I'm a TA for the [amazing graduate statistical computing course at CMU](https://36-750.github.io){target="_blank"}. This is an intensive (but very
 rewarding) programming course designed by CMU statistics professors [Alex Reinhart](https://www.refsmmat.com/){target="_blank"} and 
 [Chris Genovese](http://www.stat.cmu.edu/~genovese/?p=research){target="_blank"}. I
 highly recommend checking out this course website as a general programming 

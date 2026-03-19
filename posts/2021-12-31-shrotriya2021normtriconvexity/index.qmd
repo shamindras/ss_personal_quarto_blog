@@ -28,7 +28,7 @@ triangle inequality for a proposed norm function are significantly simplified.
 This exposition is based on [Chapter 3, @robinson2020introfuncanalysis_book]
 [^1].
 
-[^1]: **Note:** The presentation in this post is ***intentionay*** verbose.
+[^1]: **Note:** The presentation in this post is ***intentionally*** verbose.
     The goal is to give lots of intuition of the key result and its usefulness,
     and ensure that the proofs are rigorous. It is written with an empathetic
     mindset to newcomers, and to myself for future reference.
@@ -51,7 +51,7 @@ highly recommend it `r emo::ji("100")`!
 Normed linear spaces are a natural setting for much applied mathematics and
 statistics. These are vector spaces, $V$, endowed with a norm function,
 $\lVert \cdot \rVert_{V}$. Intuitively, norms give us a "yardstick" to measure
-the "lengths" of individual vectors in the given vector space space. A standard
+the "lengths" of individual vectors in the given vector space. A standard
 definition of a norm is as follows:
 
 ::: {#def-norm}
@@ -177,7 +177,7 @@ by @eq-normtrichar-01) can be summarized as follows:
 
 > Let $N : V \to [0, \infty)$ be a function satisfying positive definiteness and
 > absolute homogeneity. Then $N$ satisfies the triangle inequality if and only
-> if the unit ba induced by $N$, i.e.,
+> if the unit ball induced by $N$, i.e.,
 > $\mathbb{B} := \{\mathbf{z} \in V \:|\: N(\mathbf{z}) \leq 1 \}$, is a convex
 > set.
 
@@ -286,7 +286,7 @@ This triangle inequality is proved in just four lines `r emo::ji("fire")`!
 
 </aside>
 
-In fact, since it $N_{\ell^{p}}$ satisfies the three conditions for a norm per
+In fact, since $N_{\ell^{p}}$ satisfies the three conditions for a norm per
 @def-norm we can now denote it using the conventional
 $\ell_{p}$-norm form, i.e.,
 $\| \mathbf{x} \|_{\ell^{p}} := N_{\ell^{p}}(\mathbf{x})$
@@ -351,12 +351,12 @@ proofs** of [**Minkowski's
 inequality**](https://en.wikipedia.org/wiki/Minkowski_inequality){.wiki} in
 $\mathbb{F}^{n}$ and $C([0, 1])$.
 
-To appreciate this approach, note that proving Minkowski's inequality typicay
+To appreciate this approach, note that proving Minkowski's inequality typically
 requires one to first prove [**Young's
 inequality**](https://en.wikipedia.org/wiki/Young%27s_inequality_for_products){.wiki} and then
 [**Hölder's
 inequality**](https://en.wikipedia.org/wiki/H%C3%B6lder%27s_inequality){.wiki}. Moreover these need to be done separately in
-$\mathbb{F}^{n}$ and $C([0, 1])$. Using @thm-normtrichar aowed
+$\mathbb{F}^{n}$ and $C([0, 1])$. Using @thm-normtrichar allowed
 us to achieve both of these goals using near identical style of proofs
 `r emo::ji("tada")`!
 
@@ -412,7 +412,7 @@ assumption. Now fix $\lambda \in (0, 1)$. We then note:
     \quad\text{($N$ satisfies triangle inequality)} \\
     & = \lvert \lambda \rvert N(\mathbf{x}) + \lvert 1 - \lambda \rvert N(\mathbf{y})
     \quad\text{(by absolute homogeneity of $N$)} \\
-    & = \lambda N(\mathbf{x}) + 1 - \lambda N(\mathbf{y})
+    & = \lambda N(\mathbf{x}) + (1 - \lambda) N(\mathbf{y})
     \quad\text{(since $\lambda > 0$)} \\
     & \leq (\lambda) (1) + (1 - \lambda) (1)
     \quad\text{(since $N(\mathbf{z}) \leq 1$, for $\mathbf{z} \in \mathbb{B}$)} \\
@@ -539,9 +539,9 @@ In this article we learned the following about @thm-normtrichar:
 -   It gives an alternative way to **characterize** the triangle inequality for
     *norm-like* functions.
 -   Using this characterization **we can prove the triangle inequality** for
-    such norm-like functions using the convexity of the unit ba induced by
+    such norm-like functions using the convexity of the unit ball induced by
     such functions.
--   This is usuay easier since we have lots of **tools from convex analysis**
+-   This is usually easier since we have lots of **tools from convex analysis**
     to help us prove the convexity of $\mathbb{B}$.
 -   We saw this in action since @thm-normtrichar enabled us to
     write **very short proofs** of **Minkowski's inequality** in

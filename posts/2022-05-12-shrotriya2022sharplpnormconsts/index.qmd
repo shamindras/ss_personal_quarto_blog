@@ -3,7 +3,7 @@ title: "Sharp constants for finite dimensional norms"
 description: |
   A general result about deriving sharp constants for finite dimensional $\ell_{p}$-norms
 categories: [linear algebra, math, norms]
-slug: shrotriya2022normconvexity
+slug: shrotriya2022sharplpnormconsts
 date: "2022-05-12"
 image: images/preview-shrotriya2021normtriconvexity.png
 image-alt: "Preview thumbnail for sharp constants in finite dimensional Lp norms post"
@@ -20,7 +20,7 @@ wikipediapreview::wp_init(use_unpkg = TRUE, use_alt_style = TRUE)
 
 I walk through a cool and possibly less known result for sharp bounds on $\ell_{p}$ 
 norms in finite dimensional vector spaces. This result enables working with 
-$\ell_{p}$-norms directly rather than approximating them with with more widely 
+$\ell_{p}$-norms directly rather than approximating them with more widely 
 used $\ell_{1}, \ell_{2}$, and $\ell_{\infty}$-norms, for example.
 This exposition is based on [Chapter 2, @holger2018numericallinalg]
 ^[__Note:__ The presentation in this post is ___intentionally___ verbose. The goal
@@ -36,8 +36,7 @@ highly recommend it `r emo::ji("100")`!
 ## $\ell_{p}$-norm on $\mathbb{R}^{d}$
 
 Throughout this presentation we will work in the finite dimensional Euclidean 
-space $\mathbb{R}^{d}$, for some __fixed__ $d \in \mathbb{N}$. Moreover we will
-we will use the $\ell_{p}$-norm on this space, which is defined as follows:
+space $\mathbb{R}^{d}$, for some __fixed__ $d \in \mathbb{N}$. Moreover we will use the $\ell_{p}$-norm on this space, which is defined as follows:
 
 ::: {#def-lp-norm}
 

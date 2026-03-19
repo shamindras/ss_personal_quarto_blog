@@ -26,7 +26,7 @@ Based on a fun conversation with my statistics cohort over dinner we got to
 discussing the famous [*Oxford
 Comma*](https://en.wikipedia.org/wiki/Serial_comma){.wiki} (or *Serial Comma*
 depending on your persuasion). I've never really adopted the use but my friends
-made a compelling argument on it's apparent general lack of ambiguity when
+made a compelling argument on its apparent general lack of ambiguity when
 applied appropriately.
 
 We will use the Oxford comma on the famously *ambiguous* phrase (here used

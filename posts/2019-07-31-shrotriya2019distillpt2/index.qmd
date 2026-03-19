@@ -24,7 +24,7 @@ for the updated Quarto source code.
 This is a meta blogpost and a second-part in a series to describe how I setup
 this personal academic blog using the amazing
 [distill](https://rstudio.github.io/distill/){target="_blank"} package by the
-[RStudio](h//www.rstudio.com/){target="_blank"} team.
+[RStudio](https://www.rstudio.com/){target="_blank"} team.
 
 The first part of this meta blogpost series can be [found
 here](https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/){target="_blank"},
@@ -32,7 +32,7 @@ where I detailed the steps to setup this blog using Netlify and Google Domains.
 If you haven't setup a `distill` themed blog then you are encouraged to check it
 out before reading this post.
 
-Fortunately `distill` comes with easy to configure settings as well see below.
+Fortunately `distill` comes with easy to configure settings as we will see below.
 I've only implemented some of the options available. I should note that the
 RStudio `distill` team has already created an [excellent distill blog creation
 tutorial](https://rstudio.github.io/distill/blog.html){target="_blank"} which I
@@ -64,7 +64,7 @@ alt="Getting Started with Disqus"
 fig-alt="Screenshot of getting started with Disqus" fig-align="center"}
 
 I was then presented with the following Disqus site configuration menu. I
-entered `https:://www.shamindras.com/` for my **Website Name** and manually set
+entered `https://www.shamindras.com/` for my **Website Name** and manually set
 my **Disqus shortname** to be `shamindras-distill` to be easier to remember and
 specific to this site, in case I make more websites later on. This Disqus
 shortname is important to note down (`r emo::ji("pen")`) as we'll see shortly.
@@ -79,7 +79,7 @@ option as seen below:
 
 <aside>
 
-As a student got to always know when to get a freebie `r emo::ji("smile")`
+As a student I've got to always know when to get a freebie `r emo::ji("smile")`
 
 </aside>
 
@@ -98,7 +98,7 @@ alt="Manual installation of Disqus"
 fig-alt="Screenshot of manual installation of Disqus" fig-align="center"}
 
 Before finishing the manual installation of `Disqus` I ensured that I set the
-following configuration options. I particularly like setting an opiononated
+following configuration options. I particularly like setting an opinionated
 comments policy and selected the [Grist Comment
 Policy](https://grist.org/grist-comment-policy/){target="_blank"}:
 
@@ -183,7 +183,7 @@ alt="Netlify Badge Code" fig-alt="Screenshot of Netlify badge code"
 fig-align="center"}
 
 I copy-pasted the above code in at the top of my site `README.md` file. This
-let's me quickly know whether my website is up and running as expected by simply
+lets me quickly know whether my website is up and running as expected by simply
 checking out my [github
 page](https://github.com/shamindras/ss_personal_distill_blog){target="_blank"}.
 

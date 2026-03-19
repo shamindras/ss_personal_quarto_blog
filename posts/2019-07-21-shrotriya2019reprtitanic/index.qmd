@@ -57,7 +57,6 @@ looking chart using `R` and specifically the `tidyverse` set of tools?
 ## Collecting and cleaning the data
 
 First let's begin by loading our required data cleaning and plotting packages.
-First we will load the required libraries needed for the analysis.
 
 ```{r setup_ttnic_01_00, echo=FALSE, warning=FALSE, message=FALSE}
 library(knitr)
@@ -175,7 +174,7 @@ out_plot
     scale, but this was the quick hack I could perform to get bars flipped for
     non-survivors vs. survivors
 -   **Summary:** Overall this was a really fun challenge and I learned a lot
-    about old-school data visualization using the glorius modern `tidyverse`
+    about old-school data visualization using the glorious modern `tidyverse`
     ecosystem we have at our fingertips. Will do a similar reproducibility
     challenge again for sure `r emo::ji("victory")`. Have fun playing around
     with the above and please post in the comments any questions/feedback you

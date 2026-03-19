@@ -24,7 +24,7 @@ for the updated Quarto source code.
 This is a meta blogpost to describe how I setup this personal academic blog. It
 is based on the relatively new
 [distill](https://rstudio.github.io/distill/){target="_blank"} package by the
-[RStudio](https://www.rstudio.com/){target="_blank"} team. The main tools used I used
+[RStudio](https://www.rstudio.com/){target="_blank"} team. The main tools I used
 to create this blog are:
 
 -   My personal [Github account](https://github.com/shamindras){target="_blank"}
@@ -39,7 +39,7 @@ to create this blog are:
     also my personal domain bought from [Google
     Domains](https://domains.google/){target="_blank"}
 
-The details of *how* I used the tools used are all noted below in a step-by-step
+The details of *how* I used these tools are all noted below in a step-by-step
 manner.
 
 Importantly, I should note that the RStudio `distill` team has already created
@@ -60,9 +60,9 @@ the `distill` blogging package.
 ## Step 1: Create new distill blog repo
 
 I opted to manage my blog versioning using Git/Github. I started by going to my
-personal `github` account and create a new repository. I called mine
+personal `github` account and created a new repository. I called mine
 `ss_personal_distill_blog` and also initialized it with a `README.md` and
-included an `.gitignore` for `R` since that will the blogging language of choice
+included an `.gitignore` for `R` since that will be the blogging language of choice
 here `r emo::ji("smile")`. This is shown in the screenshot below.
 
 ![Setting up the Site Github
@@ -260,7 +260,7 @@ Neat - just how I like it! I then modified the content of the new welcome
 blogpost by going to the following file:
 
 ``` markup
-_posts/2019-06-21-welcome-to-shamindras-blog/welcome-to-shamindras-blog.Rmd
+_posts/2019-07-10-welcome-to-shamindras-blog/welcome-to-shamindras-blog.Rmd
 ```
 
 I modified the contents and then **knitted** the `Rmd` file once done to refresh
@@ -394,7 +394,7 @@ Now that the domain name is bought, I just needed to deploy the newly created
 blog contents on the registered domain name. Enter
 [netlify](https://www.netlify.com/){target="_blank"}! This is a free (and
 awesome) deployment service. I created a personal account following the
-intructions on Netlify website.
+instructions on Netlify website.
 
 I then logged in to Netlify and clicked on the green `New site from Git` button
 to get started. In the following menu I clicked the
@@ -435,7 +435,7 @@ I then clicked **Deploy Site** and then saw the following deployment settings:
 Name](images/08_04_netlify_deployment_settings.png){#step-08-04-screenshot
 fig-alt="Screenshot of default Netlify site name" fig-align="center"}
 
-I clicked thee **Site Settings** button. Looks like my site name on `Netlify` is
+I clicked the **Site Settings** button. Looks like my site name on `Netlify` is
 `goofy-babbage-7f05c8`. Cute, though I'll personalize by clicking the **Change
 Site Name** button. I changed it to `ss-personal-distill-blog` for my easy
 reference.
@@ -451,7 +451,7 @@ fig-align="center"}
 
 This is where all our blogposts in our `github` repo will be rendered to `html`
 by `distill` once we `knit` them. Netlify will just pick them up from here
-everytime you refresh them and deploy our website accordingly
+every time you refresh them and deploy our website accordingly
 
 Next I need to manage the domain i.e. tell Netlify to deploy my site on the
 custom domain I just purchased from Google Domains.
@@ -469,14 +469,14 @@ fig-alt="Screenshot of all custom domains for site with Netlify"
 fig-align="center"}
 
 Netlify also tells me that the truncated url `shamindras.com` will also get
-routed to the blog. So I don't event need to write the `www.` going forward.
+routed to the blog. So I don't even need to write the `www.` going forward.
 Thanks Netlify `r emo::ji("thanks")`.
 
 ## Step 9: Patiently wait for deployment
 
 With everything setup and configured on github/Netlify the deployment should be
 near instantaneous. But after about 20 mins my blog appeared at
-[www.shamindras.com](www.shamindras.com){target="_blank"}. So effectively
+[www.shamindras.com](https://www.shamindras.com){target="_blank"}. So effectively
 Netlify and github were now talking to each other and site is setup!
 
 ## Step 10: Future additions and extras
