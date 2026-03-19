@@ -38,12 +38,12 @@ RStudio `distill` team has already created an [excellent distill blog creation
 tutorial](https://rstudio.github.io/distill/blog.html){target="_blank"} which I
 thoroughly used and highly recommend to new users to check out.
 
-<aside>
+::: {.column-margin}
 
 Admittedly this blogpost is verbose, but hopefully the details help **new
 users** of the `distill` blogging package.
 
-</aside>
+:::
 
 With that said, here are some key upgrades I made to this blog.
 
@@ -77,11 +77,11 @@ After clicking **Create Site** in the previous menu I proceeded to select the
 *free* plan option by subscribing to the *Basic, Free, Ads Supported* comments
 option as seen below:
 
-<aside>
+::: {.column-margin}
 
 As a student I've got to always know when to get a freebie `r emo::ji("smile")`
 
-</aside>
+:::
 
 ![Select Basic (Free, Ads supported)
 mode](images/step_01_disqus_04.png){#step-01-04-screenshot
@@ -112,12 +112,12 @@ line to the `_site.yml` post using the **Disqus shortname** set earlier i.e.
 `shamindras-distill` and ensuring `hidden: true` so that the comments are not
 expanded by default:
 
-<aside>
+::: {.column-margin}
 
 **Note:** You can see my `_site.yml` with these settings
 [here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml)
 
-</aside>
+:::
 
 ```bash
 collections:
@@ -156,12 +156,12 @@ be. I just did it for consistency and easy reference. I was then given a
 **Google Analytics token** and concluded this setup by adding the token to the
 `_site.yml` file as follows:
 
-<aside>
+::: {.column-margin}
 
 **Note:** You can see my `_site.yml` with these settings
 [here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml)
 
-</aside>
+:::
 
 ```bash
 google_analytics: "UA-145015693-1"
@@ -187,12 +187,12 @@ lets me quickly know whether my website is up and running as expected by simply
 checking out my [github
 page](https://github.com/shamindras/ss_personal_distill_blog){target="_blank"}.
 
-<aside>
+::: {.column-margin}
 
 **Note:** You can see my `README.md` with these settings
 [here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md)
 
-</aside>
+:::
 
 ## Step 4: Add blog post sharing options
 
@@ -217,12 +217,12 @@ I also added in the following lines to `_site.yml` to ensure that [twitter
 cards](https://rstudio.github.io/distill/metadata.html#twitter-card){target="_blank"}
 are correctly generated when posts are shared on twitter:
 
-<aside>
+::: {.column-margin}
 
 **Note:** You can see my `_site.yml` with these settings
 [here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml)
 
-</aside>
+:::
 
 ```bash
 twitter:
@@ -262,12 +262,12 @@ navbar:
       href: index.xml
 ```
 
-<aside>
+::: {.column-margin}
 
 **Note:** You can see my `_site.yml` with these settings
 [here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml)
 
-</aside>
+:::
 
 The critical elements are adding in the `base_url` fields and adding in
 `fa fa-rss` which is derived from the `index.xml` file. The `index.xml` file is

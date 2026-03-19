@@ -33,20 +33,20 @@ This exposition is based on [Chapter 3, @robinson2020introfuncanalysis_book]
     and ensure that the proofs are rigorous. It is written with an empathetic
     mindset to newcomers, and to myself for future reference.
 
-<aside>
+::: {.column-margin}
 
 [@robinson2020introfuncanalysis_book] is a wonderful functional analysis book,
 highly recommend it `r emo::ji("100")`!
 
-</aside>
+:::
 
 # Background - Norms
 
-<aside>
+::: {.column-margin}
 
 <br> <br> Experienced readers can freely skip this Background section.
 
-</aside>
+:::
 
 Normed linear spaces are a natural setting for much applied mathematics and
 statistics. These are vector spaces, $V$, endowed with a norm function,
@@ -72,13 +72,13 @@ following three properties.
     for a $\mathbf{x}, \mathbf{y} \in V$.
 :::
 
-<aside>
+::: {.column-margin}
 
 We often use many norms on a given vector space, depending on which seems
 "meaningful" for the given purpose. See
 [here](https://en.wikipedia.org/wiki/Norm_(mathematics)#Examples){.wiki} for common examples.
 
-</aside>
+:::
 
 <details>
 
@@ -141,11 +141,11 @@ following properties:
 
 # Main theorem
 
-<aside>
+::: {.column-margin}
 
 <br> <br> This is based on [Lemmas 3.3-3.4 @robinson2020introfuncanalysis_book].
 
-</aside>
+:::
 
 ::: {#thm-normtrichar}
 
@@ -250,7 +250,7 @@ that for each $t \in \mathbb{R}, t \mapsto |t|^{p}$ is convex. Let
 $\mathbf{x}, \mathbf{y} \in \mathbb{B}$, we then have that for
 $\lambda \in [0, 1]$:
 
-<aside>
+::: {.column-margin}
 
 **Note:** $t \mapsto |t|^{p}$, is convex, for each $t \in \mathbb{R}$ and
 $p \in [1, \infty)$. **Sketch:** We have, $|t|^{p} =: h(t) := (g \circ f) (t)$.
@@ -258,7 +258,7 @@ Here, for each $x \in \mathbb{R}$, we observe $g : x \mapsto x^{p}$ is
 increasing and convex, and $f : x \mapsto |x|$ is convex. Thus,
 $h(t) := |t|^{p}$ is convex. $\blacksquare$
 
-</aside>
+:::
 
 ```{=tex}
 \begin{equation}
@@ -280,11 +280,11 @@ $N_{\ell^{p}}(\lambda \mathbf{x} + (1 - \lambda) \mathbf{y}) \leq 1$, and so
 $\lambda \mathbf{x} + (1 - \lambda) \mathbf{y} \in \mathbb{B}$, as required
 $\blacksquare$.
 
-<aside>
+::: {.column-margin}
 
 This triangle inequality is proved in just four lines `r emo::ji("fire")`!
 
-</aside>
+:::
 
 In fact, since $N_{\ell^{p}}$ satisfies the three conditions for a norm per
 @def-norm we can now denote it using the conventional
@@ -296,11 +296,11 @@ $\| \mathbf{x} \|_{\ell^{p}} := N_{\ell^{p}}(\mathbf{x})$
 We can also similarly prove the triangle inequality norms involving integrals
 efficiently. This is seen in the next example.
 
-<aside>
+::: {.column-margin}
 
 Here $C([0, 1])$ is the space of continuous functions on the interval $[0, 1]$.
 
-</aside>
+:::
 
 ::: {#normtrilpint .example name="Minkowski inequality in integral form"}
 Let us consider $(C([0, 1]), \mathbb{R})$. We then define the *norm-like*
@@ -317,12 +317,12 @@ $\mathbb{B} := \{h \in C([0, 1]) \:|\: N_{L^{p}}(h) \leq 1 \}  = \{h \in C([0, 1
 We now need to show that $\mathbb{B}$ is convex. Let $f, g \in \mathbb{B}$, we
 then have that for $\lambda \in [0, 1]$:
 
-<aside>
+::: {.column-margin}
 
 Once again, one can show that $N_{\ell^{p}}$ satisfies positive definiteness and
 absolute homogeneity.
 
-</aside>
+:::
 
 ```{=tex}
 \begin{equation}
@@ -360,12 +360,12 @@ $\mathbb{F}^{n}$ and $C([0, 1])$. Using @thm-normtrichar allowed
 us to achieve both of these goals using near identical style of proofs
 `r emo::ji("tada")`!
 
-<aside>
+::: {.column-margin}
 
 **Note:** The proofs of Young's and Hölder's inequality are beautiful and
 studying them is also insightful.
 
-</aside>
+:::
 
 # Proof of Theorem 1
 
@@ -433,12 +433,12 @@ Assume $\mathbb{B}$ is a convex set. We need to show that this implies that
 $N(\mathbf{x} + \mathbf{y}) \leq N(\mathbf{x}) + N(\mathbf{y})$, for each
 $\mathbf{x}, \mathbf{y} \in V$.
 
-<aside>
+::: {.column-margin}
 
 **Tip:** In linear algebra proofs, it is best to **first** deal with the zero
 vector, $\mathbf{0}_{V}$, separately.
 
-</aside>
+:::
 
 <details>
 

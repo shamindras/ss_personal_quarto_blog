@@ -2,7 +2,7 @@
 title: "Shamindra's August 2019 Roundup"
 description: |
     A quick roundup of any interesting August 2019 activities
-categories: [personal, roundup, rstats, math]
+categories: [math, personal, roundup, rstats]
 slug: shrotriya2019august19roundup
 date: "2019-08-31"
 image: images/preview-august-2019-01.png
@@ -42,13 +42,13 @@ This is more for my personal benefit but may also help others.
     book](https://www.youtube.com/watch?v=82c2HDp-ntg&feature=youtu.be){target="_blank"}
     to get you excited!
 
-<aside>
+::: {.column-margin}
 
 ![Prime Suspects cover](images/prime-suspects-book.png){#main-src-cover
 fig-alt="Image of the cover of the book \"Prime Suspects\" by Granville et. al."
 fig-align="center"}
 
-</aside>
+:::
 
 <details>
 
@@ -86,12 +86,12 @@ Key Takeaways
     interviews from this [Career Yoga podcast](http://www.careeryoga.life/)
     going forward.
 
-<aside>
+::: {.column-margin}
 
 **Note:** This interview was co-conducted Ms. Narkis Alon, the daughter of Prof.
 Alon which led to a really personal dynamic!
 
-</aside>
+:::
 
 <details>
 

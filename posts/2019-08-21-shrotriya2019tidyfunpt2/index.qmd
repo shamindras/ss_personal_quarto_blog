@@ -4,7 +4,7 @@ description: |
   Second part in a series of doing useful tasks with
   the `Tidyverse`. This time auto-generating sequential
   LaTeX `newcommand` macros
-categories: [tidyverse, rstats]
+categories: [rstats, tidyverse]
 slug: shrotriya2019tidyfunpt2
 date: "2019-08-24"
 image: images/logo-01.jpg

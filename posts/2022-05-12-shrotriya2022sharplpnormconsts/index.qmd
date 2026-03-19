@@ -28,10 +28,10 @@ is to give lots of intuition of the key result and its usefulness, and ensure
 that the proofs are rigorous. It is written with an empathetic mindset to
 newcomers, and to myself for future reference.].
 
-<aside>
+::: {.column-margin}
 [@holger2018numericallinalg] is a wonderful (numerical) linear algebra book,
 highly recommend it `r emo::ji("100")`!
-</aside>
+:::
 
 ## $\ell_{p}$-norm on $\mathbb{R}^{d}$
 
@@ -50,13 +50,13 @@ $$ {#eq-lp-norm-01}
 
 :::
 
-<aside>
+::: {.column-margin}
 
 __Note:__ Sometimes @def-lp-norm is also just called the $p$-norm in many 
 textbooks, and has the abbreviated notation $\lVert \mathbf{x} \rVert_{p}$.
 We will use this notation going forward.
 
-</aside>
+:::
 
 We note (without proof) that @def-lp-norm does indeed define a valid norm on 
 $\mathbb{R}^{d}$. A previous post showed more of these details. A more detailed 

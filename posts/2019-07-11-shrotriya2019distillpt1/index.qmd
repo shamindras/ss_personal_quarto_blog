@@ -50,12 +50,12 @@ my own words so that I can personally remember the details going forward. I also
 added more details on deployment with Google Domains and Netlify that would
 hopefully be useful to new `R` users waiting to deploy a similar `distill` blog.
 
-<aside>
+::: {.column-margin}
 
 Admittedly this blogpost is verbose, but hopefully the details help users new to
 the `distill` blogging package.
 
-</aside>
+:::
 
 ## Step 1: Create new distill blog repo
 
@@ -71,11 +71,11 @@ alt="Setting up the Site Github repo"
 fig-alt="Screenshot of image of setting up the site github repo"
 fig-align="center"}
 
-<aside>
+::: {.column-margin}
 
 Options for creating the Github repo for the `distill` blog
 
-</aside>
+:::
 
 Once created the repo will appear in `github` as seen in the following
 screenshot
@@ -86,11 +86,11 @@ alt="New Site Github repo with README.md"
 fig-alt="Screenshot of setting up new site github repo with README.md"
 fig-align="center"}
 
-<aside>
+::: {.column-margin}
 
 Newly created Github repo for the `distill` blog
 
-</aside>
+:::
 
 ## Step 2: Clone the repo locally
 
@@ -148,12 +148,12 @@ command:
 open -a /Applications/RStudio.app .
 ```
 
-<aside>
+::: {.column-margin}
 
 **Note:** The `.` at the end of the command ensures that `RStudio` opens in this
 newly created blog directory
 
-</aside>
+:::
 
 With `RStudio` opened we can now run the following `R` commands in just the
 `console` to create the install the required and `distill` blog setup packages:
@@ -233,11 +233,11 @@ terminal:
 rm -rf _posts/welcome
 ```
 
-<aside>
+::: {.column-margin}
 
 **Note:** `r emo::ji("warning")` Always be careful using `rm -rf`
 
-</aside>
+:::
 
 With the default welcome blogpost deleted, I created my own custom welcome
 blogpost as follows:
@@ -269,13 +269,13 @@ and save the contents.
 Now I had locally created my first personalized content, a simple welcome post
 `r emo::ji("sunglasses")`.
 
-<aside>
+::: {.column-margin}
 
 My welcome blog entry can be found
 [here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_posts/2019-07-10-shrotriya2019welcome/shrotriya2019welcome.Rmd)
 for reference.
 
-</aside>
+:::
 
 ## Step 5: Customize your blog layout
 
@@ -308,25 +308,25 @@ base_url: https://www.shamindras.com/
 output: distill::distill_article
 ```
 
-<aside>
+::: {.column-margin}
 
 My `_site.yml` file can be found
 [here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml){target="_blank"}
 for reference.
 
-</aside>
+:::
 
 I updated the `About.Rmd` file as required and knit it. This is a default `Rmd`
 that `distill` conveniently creates this file to give readers some background on
 the site purpose and of course about the author.
 
-<aside>
+::: {.column-margin}
 
 My `About.Rmd` file can be found
 [here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/about.Rmd){target="_blank"}
 for reference.
 
-</aside>
+:::
 
 No need to update the default `distill` `Index.Rmd` file that is automatically
 created. I simply opened it and `knit` it manually in `RStudio` to update the
@@ -336,13 +336,13 @@ I also updated the `README.md` to add some useful information (for any users who
 stumble onto the `github` page) and saved it. No need to knit anything here as
 it is a simple `markdown file`.
 
-<aside>
+::: {.column-margin}
 
 My `README.md` can be found
 [here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md){target="_blank"}
 for reference.
 
-</aside>
+:::
 
 Now in `Rstudio` I just knit the `welcome.Rmd` post and also ran the following
 command in the `console`
@@ -421,13 +421,13 @@ that the **Branch to Deploy** option is set to `master`.
 Options](images/08_03_netlify_deploy_master_branch_blog.png){#step-08-03-screenshot
 fig-alt="Screenshot of configuring Netlify build options" fig-align="center"}
 
-<aside>
+::: {.column-margin}
 
 This simply means that netlify will only build the site based on what happens in
 my `master` branch in my [github
 repo](https://github.com/shamindras/ss_personal_distill_blog)
 
-</aside>
+:::
 
 I then clicked **Deploy Site** and then saw the following deployment settings:
 

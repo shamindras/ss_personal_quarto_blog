@@ -2,7 +2,7 @@
 title: "Shamindra's January 2020 Roundup"
 description: |
   A quick roundup of any interesting January 2020 activities
-categories: [personal, roundup, rstats, math]
+categories: [math, personal, roundup, rstats]
 slug: shrotriya2019january20roundup
 date: "2020-01-27"
 image: images/preview-january-2020-01.png

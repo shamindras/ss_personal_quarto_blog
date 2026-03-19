@@ -3,7 +3,7 @@ title: "Reproducibility Challenge: Titanic Survivors Plot"
 description: |
     Using the `Tidyverse` to reproduce a plot on the
     survivorship of the Titanic
-categories: [tidyverse, rstats, reproducibility]
+categories: [reproducibility, rstats, tidyverse]
 date: "2019-07-21"
 image: images/logo-01.jpg
 image-alt: "Hex sticker logo for the Titanic survivors reproducibility post"
@@ -23,12 +23,12 @@ Although the subject is rather tragic, by reading the article I did get a better
 appreciation of how the information of the crash survivorship was conveyed to
 the general public through data visualization.
 
-<aside>
+::: {.column-margin}
 
 ![cover](images/feb-2019-significance-cover.png){#main-src-cover
 fig-alt="cover alt-text" fig-align="center" width="24cm"}
 
-</aside>
+:::
 
 ## Reproducibility Challenge
 
@@ -44,12 +44,12 @@ reproducibility of results not only as a basic check, but to really appreciate
 the results and more importantly any implicit assumptions behind the results. So
 this led to the following goal and effectively this blogpost:
 
-<aside>
+::: {.column-margin}
 
 **Note:** Replicability is better, but reproducibility is a good start and often
 a more practically feasible undertaking
 
-</aside>
+:::
 
 **Goal:** Given the same Titanic survivors data could we recreate a similar
 looking chart using `R` and specifically the `tidyverse` set of tools?

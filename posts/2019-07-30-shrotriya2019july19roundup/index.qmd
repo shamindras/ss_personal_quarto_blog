@@ -2,7 +2,7 @@
 title: "Shamindra's July 2019 Roundup"
 description: |
     A quick roundup of any interesting July 2019 activities
-categories: [personal, roundup, rstats, math]
+categories: [math, personal, roundup, rstats]
 slug: shrotriya2019july19roundup
 date: "2019-07-30"
 image: images/preview-july-2019-02.png
@@ -41,8 +41,10 @@ as if you were having a casual chat together using a whiteboard. I've been
 working through through the problems in detail and they are a great challenge!
 I'll blog more about this as I finish the book in the August 2019 roundup.
 
-<aside> __Note:__ the text contains full solutions making it ideal for
-self-study (but I refuse to peek for now) </aside>
+::: {.column-margin}
+__Note:__ the text contains full solutions making it ideal for
+self-study (but I refuse to peek for now)
+:::
 
 ### Fiction
 

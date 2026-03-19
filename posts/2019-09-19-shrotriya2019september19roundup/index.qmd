@@ -2,7 +2,7 @@
 title: "Shamindra's September 2019 Roundup"
 description: |
     A quick roundup of any interesting September 2019 activities
-categories: [personal, roundup, rstats, math]
+categories: [math, personal, roundup, rstats]
 slug: shrotriya2019september19roundup
 date: "2019-09-30"
 image: images/preview-september-2019-01.png
