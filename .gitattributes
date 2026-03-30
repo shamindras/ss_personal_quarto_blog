@@ -1,0 +1,26 @@
+# Auto detect text files and perform LF normalization
+*              text=auto
+
+# Diff drivers — better hunk headers in diffs
+*.css          text diff=css
+*.scss         text diff=css
+*.md           text diff=markdown
+*.qmd          text diff=markdown
+*.R            text diff=python
+*.lua          text diff=python
+
+# Lock files — keep verbatim, no merge tricks
+renv.lock      text -diff
+
+# Binary assets — never normalize or diff
+*.png          binary
+*.jpg          binary
+*.jpeg         binary
+*.gif          binary
+*.pdf          binary
+*.woff         binary
+*.woff2        binary
+
+# Exclude repo plumbing from git archive exports
+.gitattributes export-ignore
+.gitignore     export-ignore
