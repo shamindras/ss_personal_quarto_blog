@@ -27,6 +27,8 @@ website:
         file: software.qmd
       - text: "CV"
         href: data/pdfs/shamindra-shrotriya_CV.pdf
+      - text: "resume"
+        href: data/pdfs/shamindra-shrotriya_resume.pdf
       - text: "teaching"
         href: data/pdfs/shamindra-shrotriya_teaching-statement.pdf
       - icon: github
