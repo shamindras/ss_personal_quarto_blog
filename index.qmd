@@ -43,11 +43,12 @@ I also have fun writing a
 [blog](https://www.shamindras.com/posts.html){target="\_blank"} about various
 topics of interest in statistics and machine learning.
 
-You can also learn more about me from my
-[CV](https://www.shamindras.com/data/pdfs/shamindra-shrotriya_resume.pdf){target="\_blank"},
+You can also learn more from my
+[CV](https://www.shamindras.com/data/pdfs/shamindra-shrotriya_CV.pdf){target="\_blank"}
+(or shorter
+[resume](https://www.shamindras.com/data/pdfs/shamindra-shrotriya_resume.pdf){target="\_blank"})
 and [open-source
-software](https://www.shamindras.com/software.html){target="\_blank"}
-contributions.
+software](https://www.shamindras.com/software.html){target="\_blank"}.
 
 Please browse around, and feel free to get in touch for any collaborations.
 
