@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.38">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Shamindra Shrotriya">
 <meta name="dcterms.date" content="2019-07-21">
 <meta name="description" content="Using the Tidyverse to reproduce a plot on the survivorship of the Titanic">
 <title>Reproducibility Challenge: Titanic Survivors Plot – Shamindra Shrotriya</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -59,7 +62,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -86,19 +88,18 @@ div.csl-indent {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8caf6eaa0938078aad3b4e3e78d03e50.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-391dc9eaa9d5ee7385b50e8209b8eefe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8caf6eaa0938078aad3b4e3e78d03e50.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e7c471939560e2f6eb964f999844d0dd.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-07c2cd2d1550bacde3abce9b2c0779ae.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e7c471939560e2f6eb964f999844d0dd.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a0ee761653836d8a9baa2df867f16212.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-6aadd0dfebfe47558140835cb7d8db7f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-a0ee761653836d8a9baa2df867f16212.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1e08a12251e1de53a68bee9aac84725a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-c795965c4d6ebb734af644ef804b12d3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1e08a12251e1de53a68bee9aac84725a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -369,6 +370,10 @@ window.Quarto = {
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../data/pdfs/shamindra-shrotriya_resume.pdf"> 
+<span class="menu-text">resume</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../data/pdfs/shamindra-shrotriya_teaching-statement.pdf"> 
 <span class="menu-text">teaching</span></a>
   </li>  
@@ -452,7 +457,7 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content"><section id="background" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>In the February 2019 issue of <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">Significance Magazine</a> notably featured a story of the titanic disaster <span class="citation" data-cites="friendly2019titanicviz">(<a href="#ref-friendly2019titanicviz" role="doc-biblioref">Friendly, Symanzik, and Onder 2019</a>)</span> and visualization of key survival statistics. As a fan of <code>R</code> and data visualization I enjoyed this article and recommended it to anyone with similar interests. Although the subject is rather tragic, by reading the article I did get a better appreciation of how the information of the crash survivorship was conveyed to the general public through data visualization.</p>
+<p>In the February 2019 issue of <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">Significance Magazine</a> notably featured a story of the titanic disaster <span class="citation" data-cites="friendly2019titanicviz">(<a href="#ref-friendly2019titanicviz" role="doc-biblioref">Friendly et al. 2019</a>)</span> and visualization of key survival statistics. As a fan of <code>R</code> and data visualization I enjoyed this article and recommended it to anyone with similar interests. Although the subject is rather tragic, by reading the article I did get a better appreciation of how the information of the crash survivorship was conveyed to the general public through data visualization.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div id="main-src-cover" class="quarto-figure quarto-figure-center anchored">
@@ -638,7 +643,7 @@ window.Quarto = {
 
 
 
-</div></section><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+</div></section><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-friendly2019titanicviz" class="csl-entry" role="listitem">
 Friendly, Michael, Jürgen Symanzik, and Ortac Onder. 2019. <span>“<span class="nocase">Visualising the Titanic disaster</span>.”</span> <em>Significance</em> 16 (1): 14–19. <a href="https://doi.org/10.1111/j.1740-9713.2019.01229.x">https://doi.org/10.1111/j.1740-9713.2019.01229.x</a>.
 </div>
@@ -651,7 +656,7 @@ Friendly, Michael, Jürgen Symanzik, and Ortac Onder. 2019. <span>“<span class
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2019" class="csl-entry quarto-appendix-citeas" role="listitem">
 Shrotriya, Shamindra. 2019. <span>“Reproducibility Challenge: Titanic
-Survivors Plot.”</span> July 21, 2019. <a href="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/">https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/</a>.
+Survivors Plot.”</span> July 21. <a href="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/">https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/</a>.
 </div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
