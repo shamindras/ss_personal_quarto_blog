@@ -9,7 +9,7 @@
 <link>https://www.shamindras.com/posts.html</link>
 <atom:link href="https://www.shamindras.com/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.8.27</generator>
+<generator>quarto-1.9.38</generator>
 <lastBuildDate>Fri, 27 Feb 2026 14:00:00 GMT</lastBuildDate>
 <item>
   <title>Shamindra’s February 2026 Roundup</title>
@@ -466,7 +466,7 @@ Video&nbsp;3: <a href="https://www.youtube.com/watch?v=zjpBXx8oNOc&amp;t=2s" tar
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2026february26roundup" class="csl-entry quarto-appendix-citeas">
 Shrotriya, Shamindra. 2026. <span>“Shamindra’s February 2026
-Roundup.”</span> February 28, 2026. <a href="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/">https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/</a>.
+Roundup.”</span> February 28. <a href="https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/">https://www.shamindras.com/posts/2026-02-28-shrotriya2026february26roundup/</a>.
 </div></div></section></div> ]]></description>
   <category>personal</category>
   <category>roundup</category>
@@ -644,7 +644,7 @@ a.wiki {
 
 
 
-</div></section><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+</div></section><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-robinson2020introfuncanalysis_book" class="csl-entry">
 Robinson, James C. 2020. <em><span class="nocase">An Introduction to Functional Analysis</span></em>. Cambridge University Press.
 </div>
@@ -661,7 +661,7 @@ Robinson, James C. 2020. <em><span class="nocase">An Introduction to Functional 
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2022" class="csl-entry quarto-appendix-citeas">
 Shrotriya, Shamindra. 2022. <span>“Characterizing Norm Triangle
-Inequalites via Convexity.”</span> February 12, 2022. <a href="https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/">https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/</a>.
+Inequalites via Convexity.”</span> February 12. <a href="https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/">https://www.shamindras.com/posts/2021-12-31-shrotriya2021normtriconvexity/</a>.
 </div></div></section></div> ]]></description>
   <category>linear algebra</category>
   <category>math</category>
@@ -748,7 +748,7 @@ Inequalites via Convexity.”</span> February 12, 2022. <a href="https://www.sha
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2020" class="csl-entry quarto-appendix-citeas">
 Shrotriya, Shamindra. 2020. <span>“Shamindra’s January 2020
-Roundup.”</span> January 27, 2020. <a href="https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/">https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/</a>.
+Roundup.”</span> January 27. <a href="https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/">https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/</a>.
 </div></div></section></div> ]]></description>
   <category>math</category>
   <category>personal</category>
@@ -866,7 +866,7 @@ Roundup.”</span> January 27, 2020. <a href="https://www.shamindras.com/posts/2
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2019" class="csl-entry quarto-appendix-citeas">
 Shrotriya, Shamindra. 2019. <span>“Shamindra’s September 2019
-Roundup.”</span> September 30, 2019. <a href="https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/">https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/</a>.
+Roundup.”</span> September 30. <a href="https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/">https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/</a>.
 </div></div></section></div> ]]></description>
   <category>math</category>
   <category>personal</category>
@@ -885,12 +885,12 @@ Roundup.”</span> September 30, 2019. <a href="https://www.shamindras.com/posts
 </section><section id="interesting-articles" class="level2"><h2 class="anchored" data-anchor-id="interesting-articles">Interesting Articles</h2>
 <ul>
 <li>Came across this <a href="http://mirrors.concertpass.com/tex-archive/biblio/bibtex/base/xampl.bib" target="_blank">exhaustive <code>BibTeX</code> example file</a> which will be a really handy reference going forward for <img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> documents</li>
-<li>The document is written by the Oren Patashnik, the co-creator of BibTeX (😮) and the co-author of the great book <span class="citation" data-cites="grahamknuthpatashnik1994concrete_book">(Graham, Knuth, and Patashnik 1994)</span>
+<li>The document is written by the Oren Patashnik, the co-creator of BibTeX (😮) and the co-author of the great book <span class="citation" data-cites="grahamknuthpatashnik1994concrete_book">(Graham et al. 1994)</span>
 </li>
 </ul></section><section id="interesting-books" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="interesting-books">Interesting Books</h2>
 <section id="fiction" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="fiction">Fiction</h3>
 <ul>
-<li>Started reading this fantastic book <span class="citation" data-cites="granville2019primesuspects_book">(Granville, Granville, and Lewis 2019)</span> called the <em>Prime Suspects</em> by <strong>Andrew Granville, Jennifer Granville, and Robert J. Lewis (illustrator)</strong>. Here is a <a href="https://www.youtube.com/watch?v=82c2HDp-ntg&amp;feature=youtu.be" target="_blank">youtube trailer for the book</a> to get you excited!</li>
+<li>Started reading this fantastic book <span class="citation" data-cites="granville2019primesuspects_book">(Granville et al. 2019)</span> called the <em>Prime Suspects</em> by <strong>Andrew Granville, Jennifer Granville, and Robert J. Lewis (illustrator)</strong>. Here is a <a href="https://www.youtube.com/watch?v=82c2HDp-ntg&amp;feature=youtu.be" target="_blank">youtube trailer for the book</a> to get you excited!</li>
 </ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -985,7 +985,7 @@ Roundup.”</span> September 30, 2019. <a href="https://www.shamindras.com/posts
 
 
 
-</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-doxiadis2009logicomix_book" class="csl-entry">
 Doxiadis, A., C. H. Papadimitriou, A. Papadatos, and A. Di Donna. 2009. <em><span class="nocase">Logicomix: An Epic Search for Truth</span></em>. Bloomsbury USA. <a href="https://books.google.com/books?id=sBpkPgAACAAJ">https://books.google.com/books?id=sBpkPgAACAAJ</a>.
 </div>
@@ -1004,7 +1004,7 @@ Granville, Andrew, Jennifer Granville, and Robert J. Lewis. 2019. <em><span clas
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2019" class="csl-entry quarto-appendix-citeas">
 Shrotriya, Shamindra. 2019. <span>“Shamindra’s August 2019
-Roundup.”</span> August 31, 2019. <a href="https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/">https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/</a>.
+Roundup.”</span> August 31. <a href="https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/">https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/</a>.
 </div></div></section></div> ]]></description>
   <category>math</category>
   <category>personal</category>
@@ -1331,7 +1331,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2019" class="csl-entry quarto-appendix-citeas">
 Shrotriya, Shamindra. 2019. <span>“Tidyverse Fun - Part 2.”</span>
-August 24, 2019. <a href="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/">https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/</a>.
+August 24. <a href="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/">https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/</a>.
 </div></div></section></div> ]]></description>
   <category>rstats</category>
   <category>tidyverse</category>
@@ -1583,7 +1583,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2019" class="csl-entry quarto-appendix-citeas">
 Shrotriya, Shamindra. 2019. <span>“Upgrading Distill Blog
-Settings.”</span> July 31, 2019. <a href="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/">https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/</a>.
+Settings.”</span> July 31. <a href="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/">https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/</a>.
 </div></div></section></div> ]]></description>
   <category>distill</category>
   <guid>https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/</guid>
@@ -1635,12 +1635,12 @@ Settings.”</span> July 31, 2019. <a href="https://www.shamindras.com/posts/201
 
 
 
-</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-rothman14_earth_carbon_cycle" class="csl-entry">
 Rothman, Daniel H. 2014. <span>“<span class="nocase">Earth’s Carbon Cycle: a Mathematical Perspective</span>.”</span> <em>Bulletin of the American Mathematical Society</em> 52 (1): 47–64. <a href="https://doi.org/10.1090/s0273-0979-2014-01471-5">https://doi.org/10.1090/s0273-0979-2014-01471-5</a>.
 </div>
 <div id="ref-steele2004cauchyscwarzmaster_book" class="csl-entry">
-Steele, J Michael. 2004.<em><span class="nocase">The Cauchy-Schwarz master class: an introduction to the art of mathematical inequalities </span></em>. Cambridge University Press.
+Steele, J Michael. 2004. <em><span class="nocase">The Cauchy-Schwarz master class: an introduction to the art of mathematical inequalities </span></em>. Cambridge University Press.
 </div>
 </div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shrotriya2019,
   author = {Shrotriya, Shamindra},
@@ -1651,7 +1651,7 @@ Steele, J Michael. 2004.<em><span class="nocase">The Cauchy-Schwarz master class
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2019" class="csl-entry quarto-appendix-citeas">
 Shrotriya, Shamindra. 2019. <span>“Shamindra’s July 2019
-Roundup.”</span> July 30, 2019. <a href="https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/">https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/</a>.
+Roundup.”</span> July 30. <a href="https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/">https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/</a>.
 </div></div></section></div> ]]></description>
   <category>math</category>
   <category>personal</category>
@@ -1666,7 +1666,7 @@ Roundup.”</span> July 30, 2019. <a href="https://www.shamindras.com/posts/2019
   <dc:creator>Shamindra Shrotriya</dc:creator>
   <link>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/</link>
   <description><![CDATA[ <section id="background" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>In the February 2019 issue of <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">Significance Magazine</a> notably featured a story of the titanic disaster <span class="citation" data-cites="friendly2019titanicviz">(Friendly, Symanzik, and Onder 2019)</span> and visualization of key survival statistics. As a fan of <code>R</code> and data visualization I enjoyed this article and recommended it to anyone with similar interests. Although the subject is rather tragic, by reading the article I did get a better appreciation of how the information of the crash survivorship was conveyed to the general public through data visualization.</p>
+<p>In the February 2019 issue of <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">Significance Magazine</a> notably featured a story of the titanic disaster <span class="citation" data-cites="friendly2019titanicviz">(Friendly et al. 2019)</span> and visualization of key survival statistics. As a fan of <code>R</code> and data visualization I enjoyed this article and recommended it to anyone with similar interests. Although the subject is rather tragic, by reading the article I did get a better appreciation of how the information of the crash survivorship was conveyed to the general public through data visualization.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div id="main-src-cover" class="quarto-figure quarto-figure-center anchored">
@@ -2454,7 +2454,7 @@ font-style: inherit;">out_plot</span></span></code></pre></div></div>
 
 
 
-</div></section><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+</div></section><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-friendly2019titanicviz" class="csl-entry">
 Friendly, Michael, Jürgen Symanzik, and Ortac Onder. 2019. <span>“<span class="nocase">Visualising the Titanic disaster</span>.”</span> <em>Significance</em> 16 (1): 14–19. <a href="https://doi.org/10.1111/j.1740-9713.2019.01229.x">https://doi.org/10.1111/j.1740-9713.2019.01229.x</a>.
 </div>
@@ -2467,7 +2467,7 @@ Friendly, Michael, Jürgen Symanzik, and Ortac Onder. 2019. <span>“<span class
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2019" class="csl-entry quarto-appendix-citeas">
 Shrotriya, Shamindra. 2019. <span>“Reproducibility Challenge: Titanic
-Survivors Plot.”</span> July 21, 2019. <a href="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/">https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/</a>.
+Survivors Plot.”</span> July 21. <a href="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/">https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/</a>.
 </div></div></section></div> ]]></description>
   <category>reproducibility</category>
   <category>rstats</category>
@@ -3238,7 +3238,7 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec30.pdf}}</code></pre>
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2019" class="csl-entry quarto-appendix-citeas">
 Shrotriya, Shamindra. 2019. <span>“Tidyverse Fun - Part 1.”</span> July
-15, 2019. <a href="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/">https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/</a>.
+15. <a href="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/">https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/</a>.
 </div></div></section></div> ]]></description>
   <category>rstats</category>
   <category>tidyverse</category>
@@ -3636,7 +3636,7 @@ font-style: inherit;">git</span> push origin master</span></code></pre></div></d
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shrotriya2019" class="csl-entry quarto-appendix-citeas">
 Shrotriya, Shamindra. 2019. <span>“Setting up a Distill Blog with
-Netlify.”</span> July 11, 2019. <a href="https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/">https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/</a>.
+Netlify.”</span> July 11. <a href="https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/">https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/</a>.
 </div></div></section></div> ]]></description>
   <category>distill</category>
   <guid>https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/</guid>
