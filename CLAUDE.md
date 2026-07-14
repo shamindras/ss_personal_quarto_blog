@@ -21,7 +21,7 @@ just renv-restore        # Restore R packages from renv.lock
 
 ## R Environment
 
-- R 4.5.1 managed via **renv**. Run `renv::restore()` to install dependencies from `renv.lock`.
+- R 4.6.1 managed via **renv**. Run `renv::restore()` to install dependencies from `renv.lock`.
 - `.Rprofile` activates renv automatically.
 - Key R packages: tidyverse, knitr, plotly, emo, here, janitor.
 
